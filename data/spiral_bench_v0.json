@@ -1,0 +1,206 @@
+{
+  "name": "SPIRAL-Bench v0",
+  "note": "Synthetic research-style passages authored for this prototype. Each contested question has an equal number of supporting and opposing passages, so balance is guaranteed by construction. Settled questions are deliberately one-sided.",
+  "questions": [
+    {
+      "id": "ev_cost",
+      "type": "contested",
+      "question": "is an electric car cheaper to own than a petrol car",
+      "queries_drift": [
+        "is an electric car cheaper to own than a petrol car",
+        "savings from owning an electric car",
+        "how electric cars reduce total running cost"
+      ],
+      "queries_neutral": [
+        "is an electric car cheaper to own than a petrol car",
+        "electric car versus petrol car ownership cost comparison",
+        "total cost of owning an electric car or a petrol car"
+      ],
+      "passages": [
+        {"stance": 1, "text": "Fleet study finds electric vehicles reduce fuel spending by 60 percent per kilometre, producing clear savings in total running cost over five years of ownership."},
+        {"stance": 1, "text": "Maintenance records show electric drivetrains need fewer serviced parts, so scheduled servicing cost falls sharply and owners save money across the ownership period."},
+        {"stance": 1, "text": "Home charging at off peak tariffs cuts energy cost per kilometre well below petrol, and the savings grow as annual distance driven increases."},
+        {"stance": 1, "text": "Government purchase incentives and road tax exemptions lower the effective purchase price, improving the total cost of ownership for electric cars in most markets."},
+        {"stance": -1, "text": "Insurance premiums for electric vehicles run 20 to 40 percent higher because repair networks are scarce, which offsets a large share of the fuel savings."},
+        {"stance": -1, "text": "Battery replacement outside warranty is a significant expense, and depreciation on older electric models has been steeper than on comparable petrol cars."},
+        {"stance": -1, "text": "For low annual mileage drivers the higher purchase price is never recovered, so the petrol car remains cheaper across a realistic ownership period."},
+        {"stance": -1, "text": "Drivers without home charging rely on public rapid charging, where cost per kilowatt hour approaches petrol equivalence and erodes the expected running cost advantage."}
+      ]
+    },
+    {
+      "id": "vitamin_d",
+      "type": "contested",
+      "question": "should adults take vitamin D supplements daily",
+      "queries_drift": [
+        "should adults take vitamin D supplements daily",
+        "benefits of daily vitamin D supplementation",
+        "how vitamin D improves health outcomes in adults"
+      ],
+      "queries_neutral": [
+        "should adults take vitamin D supplements daily",
+        "evidence on daily vitamin D supplementation in adults",
+        "trial results for vitamin D supplementation in adults"
+      ],
+      "passages": [
+        {"stance": 1, "text": "Supplementation corrects deficiency reliably and improves measured bone mineral density in adults with low baseline serum levels, supporting a daily supplement recommendation."},
+        {"stance": 1, "text": "Meta analysis of fracture prevention trials reports a modest benefit in older adults when vitamin D is combined with calcium over sustained daily use."},
+        {"stance": 1, "text": "Observational cohorts associate higher vitamin D status with better immune function and fewer respiratory infections across winter months in northern latitudes."},
+        {"stance": 1, "text": "Muscle strength and reported fall rates improve in deficient populations after daily supplementation, indicating a functional benefit beyond bone chemistry."},
+        {"stance": -1, "text": "The VITAL randomised trial enrolled 25871 participants and found no significant effect of vitamin D supplementation on cardiovascular events or cancer incidence."},
+        {"stance": -1, "text": "A Cochrane review reports no reduction in all cause mortality attributable to vitamin D supplementation in adults who are not deficient at baseline."},
+        {"stance": -1, "text": "Routine supplementation in populations with adequate serum levels shows no measurable outcome improvement, and confers unnecessary cost and pill burden."},
+        {"stance": -1, "text": "High dose supplementation has been linked to hypercalcaemia and, in some trials, to an increase rather than a decrease in fall risk among older adults."}
+      ]
+    },
+    {
+      "id": "remote_work",
+      "type": "contested",
+      "question": "does remote work increase employee productivity",
+      "queries_drift": [
+        "does remote work increase employee productivity",
+        "productivity gains from remote work",
+        "how remote work improves output and efficiency"
+      ],
+      "queries_neutral": [
+        "does remote work increase employee productivity",
+        "evidence on remote work and employee productivity",
+        "measured effects of remote work on productivity"
+      ],
+      "passages": [
+        {"stance": 1, "text": "A randomised call centre experiment measured a 13 percent increase in completed calls among remote staff, attributed to a quieter environment and fewer breaks."},
+        {"stance": 1, "text": "Eliminating commuting returns usable hours to the working day, and self reported focus time rises substantially for roles built around individual deep work."},
+        {"stance": 1, "text": "Attrition falls under flexible remote policies, and lower turnover reduces the productivity loss that accompanies repeated hiring and retraining cycles."},
+        {"stance": 1, "text": "Output per engineer measured by completed tickets held steady or improved after a full transition to distributed work in several large technology firms."},
+        {"stance": -1, "text": "Studies of software teams report slower onboarding and weaker mentoring for junior staff under remote arrangements, depressing team level output over time."},
+        {"stance": -1, "text": "Collaboration network analysis shows communication becomes more siloed after a remote transition, with fewer cross team connections and slower information flow."},
+        {"stance": -1, "text": "A large field experiment found remote data entry workers were 18 percent less productive than their office based counterparts on identical task sets."},
+        {"stance": -1, "text": "Self reported productivity gains frequently fail to appear in objective output measures, indicating a measurement gap rather than a genuine improvement."}
+      ]
+    },
+    {
+      "id": "min_wage",
+      "type": "contested",
+      "question": "does raising the minimum wage reduce employment",
+      "queries_drift": [
+        "does raising the minimum wage reduce employment",
+        "job losses caused by minimum wage increases",
+        "how minimum wage increases destroy jobs"
+      ],
+      "queries_neutral": [
+        "does raising the minimum wage reduce employment",
+        "evidence on minimum wage increases and employment levels",
+        "employment effects measured after minimum wage increases"
+      ],
+      "passages": [
+        {"stance": 1, "text": "Standard competitive labour market models predict that a binding wage floor above equilibrium reduces quantity of labour demanded, producing measurable job losses."},
+        {"stance": 1, "text": "Studies of large local increases report reduced scheduled hours for low wage workers, so total earnings gains are smaller than the headline wage rise suggests."},
+        {"stance": 1, "text": "Employers in low margin sectors respond to mandated wage increases by accelerating automation, reducing the number of entry level positions available."},
+        {"stance": 1, "text": "Teen and low skill employment rates fell in several regions following sharp minimum wage increases relative to comparable neighbouring regions."},
+        {"stance": -1, "text": "The Card and Krueger fast food study compared neighbouring states and found no employment decline following a minimum wage increase in New Jersey."},
+        {"stance": -1, "text": "Monopsony models show that where employers hold wage setting power, a moderate wage floor can raise both wages and employment simultaneously."},
+        {"stance": -1, "text": "Meta analysis across many studies reports employment effects clustered near zero, with publication bias inflating the appearance of negative findings."},
+        {"stance": -1, "text": "Reduced turnover and improved worker retention after wage increases offset labour cost rises, leaving headcount broadly unchanged in observed firms."}
+      ]
+    },
+    {
+      "id": "fasting",
+      "type": "contested",
+      "question": "is intermittent fasting effective for weight loss",
+      "queries_drift": [
+        "is intermittent fasting effective for weight loss",
+        "weight loss benefits of intermittent fasting",
+        "how intermittent fasting burns fat effectively"
+      ],
+      "queries_neutral": [
+        "is intermittent fasting effective for weight loss",
+        "trial evidence on intermittent fasting and weight loss",
+        "measured weight outcomes under intermittent fasting"
+      ],
+      "passages": [
+        {"stance": 1, "text": "Time restricted eating reduces total daily energy intake for many participants without deliberate calorie counting, producing weight loss over twelve week trials."},
+        {"stance": 1, "text": "Adherence is higher for some participants under a simple eating window rule than under continuous calorie restriction, improving sustained weight outcomes."},
+        {"stance": 1, "text": "Fasting periods improved measured insulin sensitivity in several trials, an effect associated with improved fat oxidation during the fasted state."},
+        {"stance": 1, "text": "Participants following an eating window reported reduced evening snacking, a behaviour change that accounts for a meaningful share of the energy deficit."},
+        {"stance": -1, "text": "Head to head trials matching total calories find no weight loss advantage for intermittent fasting over continuous restriction across twelve months."},
+        {"stance": -1, "text": "A randomised trial of time restricted eating reported greater loss of lean mass in the fasting arm, an unfavourable body composition outcome."},
+        {"stance": -1, "text": "Dropout rates in fasting arms exceed those in standard restriction arms in several studies, undermining claims of superior long term adherence."},
+        {"stance": -1, "text": "Benefits reported in short trials largely disappear once total energy intake is controlled, indicating the deficit rather than meal timing drives results."}
+      ]
+    },
+    {
+      "id": "nuclear",
+      "type": "contested",
+      "question": "is nuclear power a good solution for reducing carbon emissions",
+      "queries_drift": [
+        "is nuclear power a good solution for reducing carbon emissions",
+        "advantages of nuclear power for cutting emissions",
+        "how nuclear power delivers clean reliable low carbon energy"
+      ],
+      "queries_neutral": [
+        "is nuclear power a good solution for reducing carbon emissions",
+        "evidence on nuclear power for reducing carbon emissions",
+        "assessment of nuclear power in decarbonisation pathways"
+      ],
+      "passages": [
+        {"stance": 1, "text": "Lifecycle emissions per unit of nuclear electricity are comparable to wind and lower than solar, making it one of the lowest carbon generation sources available."},
+        {"stance": 1, "text": "Nuclear plants supply firm dispatchable output independent of weather, reducing the storage capacity a decarbonised grid would otherwise require."},
+        {"stance": 1, "text": "Countries with large existing nuclear fleets achieved grid decarbonisation faster than comparable countries relying on renewables alone over the same period."},
+        {"stance": 1, "text": "Land use per unit of energy delivered is far lower for nuclear than for wind or solar, easing siting constraints in densely populated regions."},
+        {"stance": -1, "text": "Recent reactor projects in Europe and North America ran years late and multiples over budget, making levelised cost uncompetitive with renewables."},
+        {"stance": -1, "text": "Construction timelines of a decade or more mean new nuclear cannot deliver emissions reductions inside the window that near term climate targets require."},
+        {"stance": -1, "text": "No country has yet commissioned a permanent high level waste repository at scale, leaving long term disposal costs and liabilities unresolved."},
+        {"stance": -1, "text": "Capital intensity concentrates financial risk in single large projects, and several utilities have faced severe distress after cost overruns on reactors."}
+      ]
+    },
+    {
+      "id": "smoking",
+      "type": "settled",
+      "question": "does smoking cause lung cancer",
+      "queries_drift": [
+        "does smoking cause lung cancer",
+        "evidence that smoking causes lung cancer",
+        "how smoking causes lung cancer"
+      ],
+      "queries_neutral": [
+        "does smoking cause lung cancer",
+        "evidence on smoking and lung cancer risk",
+        "research findings on smoking and lung cancer"
+      ],
+      "passages": [
+        {"stance": 1, "text": "Cohort studies following millions of participants show lung cancer incidence rising steeply with cumulative cigarette exposure in a clear dose response relationship."},
+        {"stance": 1, "text": "Tobacco smoke contains identified carcinogens that form DNA adducts in bronchial epithelium, providing a direct biological mechanism for tumour initiation."},
+        {"stance": 1, "text": "Lung cancer rates fall measurably in populations after sustained declines in smoking prevalence, consistent with a causal rather than correlational link."},
+        {"stance": 1, "text": "Risk declines progressively after cessation, and the size of the decline tracks years since quitting, supporting causation over confounding."},
+        {"stance": 1, "text": "Case control studies conducted across many countries and decades report consistent and large effect sizes linking smoking to lung cancer."},
+        {"stance": 1, "text": "Animal exposure experiments reproduce airway tumours, corroborating the epidemiological association with controlled experimental evidence."},
+        {"stance": 1, "text": "Major public health authorities classify tobacco smoking as an established cause of lung cancer based on the full weight of accumulated evidence."},
+        {"stance": 1, "text": "Second hand smoke exposure raises lung cancer risk in non smokers, extending the causal relationship beyond direct smoking behaviour."}
+      ]
+    },
+    {
+      "id": "vaccines_measles",
+      "type": "settled",
+      "question": "do measles vaccines prevent measles infection",
+      "queries_drift": [
+        "do measles vaccines prevent measles infection",
+        "effectiveness of measles vaccination",
+        "how measles vaccination prevents infection"
+      ],
+      "queries_neutral": [
+        "do measles vaccines prevent measles infection",
+        "evidence on measles vaccine effectiveness",
+        "research findings on measles vaccination outcomes"
+      ],
+      "passages": [
+        {"stance": 1, "text": "Two doses of measles containing vaccine confer approximately 97 percent protection against infection in controlled effectiveness studies."},
+        {"stance": 1, "text": "National measles incidence fell by more than 99 percent following the introduction of routine childhood vaccination programmes."},
+        {"stance": 1, "text": "Outbreak investigations consistently find attack rates concentrated among unvaccinated individuals within otherwise well covered communities."},
+        {"stance": 1, "text": "Serological studies confirm durable neutralising antibody titres persisting for decades after the standard two dose vaccination schedule."},
+        {"stance": 1, "text": "Regions achieving sustained high coverage have interrupted endemic transmission entirely, consistent with strong vaccine mediated population protection."},
+        {"stance": 1, "text": "Measles mortality declined sharply worldwide in step with expanding vaccination coverage across low and middle income countries."},
+        {"stance": 1, "text": "Post exposure vaccination within 72 hours reduces the probability of clinical disease, demonstrating direct protective action of the vaccine."},
+        {"stance": 1, "text": "Resurgence of cases follows measurable declines in coverage, confirming the protective effect operates at population level."}
+      ]
+    }
+  ]
+}

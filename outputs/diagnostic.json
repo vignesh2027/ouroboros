@@ -1,0 +1,50 @@
+[
+  {
+    "id": "ev_cost",
+    "neutral": -0.5,
+    "drift_hop3": 0.0,
+    "oracle_support": 1.0,
+    "oracle_oppose": -1.0,
+    "shared_vocab_ratio": 0.167
+  },
+  {
+    "id": "vitamin_d",
+    "neutral": 0.0,
+    "drift_hop3": 0.0,
+    "oracle_support": 1.0,
+    "oracle_oppose": -1.0,
+    "shared_vocab_ratio": 0.121
+  },
+  {
+    "id": "remote_work",
+    "neutral": 0.5,
+    "drift_hop3": 0.0,
+    "oracle_support": 1.0,
+    "oracle_oppose": -1.0,
+    "shared_vocab_ratio": 0.125
+  },
+  {
+    "id": "min_wage",
+    "neutral": 0.0,
+    "drift_hop3": 0.5,
+    "oracle_support": 1.0,
+    "oracle_oppose": -1.0,
+    "shared_vocab_ratio": 0.104
+  },
+  {
+    "id": "fasting",
+    "neutral": 0.0,
+    "drift_hop3": -0.5,
+    "oracle_support": 1.0,
+    "oracle_oppose": -1.0,
+    "shared_vocab_ratio": 0.189
+  },
+  {
+    "id": "nuclear",
+    "neutral": 0.5,
+    "drift_hop3": 1.0,
+    "oracle_support": 1.0,
+    "oracle_oppose": -1.0,
+    "shared_vocab_ratio": 0.065
+  }
+]
