@@ -1,0 +1,384 @@
+{
+  "automated": [
+    {
+      "id": "TC-01",
+      "input": "identical vectors give one",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestCosine"
+    },
+    {
+      "id": "TC-02",
+      "input": "orthogonal vectors give zero",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestCosine"
+    },
+    {
+      "id": "TC-03",
+      "input": "zero vector does not divide by zero",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestCosine"
+    },
+    {
+      "id": "TC-04",
+      "input": "opposite vectors give minus one",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestCosine"
+    },
+    {
+      "id": "TC-05",
+      "input": "result stays within minus one and one",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestCosine"
+    },
+    {
+      "id": "TC-06",
+      "input": "query equal to question gives zero",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestBaqd"
+    },
+    {
+      "id": "TC-07",
+      "input": "query aligned with belief is positive",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestBaqd"
+    },
+    {
+      "id": "TC-08",
+      "input": "query away from belief is negative",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestBaqd"
+    },
+    {
+      "id": "TC-09",
+      "input": "zero belief is handled",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestBaqd"
+    },
+    {
+      "id": "TC-10",
+      "input": "all supporting gives plus one",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestEvidenceBalance"
+    },
+    {
+      "id": "TC-11",
+      "input": "all opposing gives minus one",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestEvidenceBalance"
+    },
+    {
+      "id": "TC-12",
+      "input": "balanced set gives zero",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestEvidenceBalance"
+    },
+    {
+      "id": "TC-13",
+      "input": "empty set does not crash",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestEvidenceBalance"
+    },
+    {
+      "id": "TC-14",
+      "input": "balance loss is never negative",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestEvidenceBalance"
+    },
+    {
+      "id": "TC-15",
+      "input": "encoding is deterministic",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestEncoder"
+    },
+    {
+      "id": "TC-16",
+      "input": "out of vocabulary text gives zero vector",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestEncoder"
+    },
+    {
+      "id": "TC-17",
+      "input": "empty string does not crash",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestEncoder"
+    },
+    {
+      "id": "TC-18",
+      "input": "encode many matches encode one",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestEncoder"
+    },
+    {
+      "id": "TC-19",
+      "input": "returns exactly k results",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestRetriever"
+    },
+    {
+      "id": "TC-20",
+      "input": "k larger than corpus returns whole corpus",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestRetriever"
+    },
+    {
+      "id": "TC-21",
+      "input": "ranking is deterministic",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestRetriever"
+    },
+    {
+      "id": "TC-22",
+      "input": "scores are in descending order",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestRetriever"
+    },
+    {
+      "id": "TC-23",
+      "input": "every hit carries a stance",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestRetriever"
+    },
+    {
+      "id": "TC-24",
+      "input": "out of vocabulary query still returns k results",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestRetriever"
+    },
+    {
+      "id": "TC-25",
+      "input": "leading query outranks opposing passages",
+      "expected": "A query using only supporting vocabulary should surface supporting text first.",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestRetriever"
+    },
+    {
+      "id": "TC-26",
+      "input": "retriever does not mutate the corpus",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestRetriever"
+    },
+    {
+      "id": "TC-27",
+      "input": "every contested question is balanced",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestCorpusIntegrity"
+    },
+    {
+      "id": "TC-28",
+      "input": "settled questions are one sided",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestCorpusIntegrity"
+    },
+    {
+      "id": "TC-29",
+      "input": "stance is only plus or minus one",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestCorpusIntegrity"
+    },
+    {
+      "id": "TC-30",
+      "input": "question ids are unique",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestCorpusIntegrity"
+    },
+    {
+      "id": "TC-31",
+      "input": "both arms have the same number of hops",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestCorpusIntegrity"
+    },
+    {
+      "id": "TC-32",
+      "input": "first query of each arm is the neutral question",
+      "expected": "Hop 1 must be identical in both arms, otherwise the comparison is unfair.",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestCorpusIntegrity"
+    },
+    {
+      "id": "TC-33",
+      "input": "no passage text is duplicated",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestCorpusIntegrity"
+    },
+    {
+      "id": "TC-34",
+      "input": "no query is empty",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestCorpusIntegrity"
+    },
+    {
+      "id": "TC-35",
+      "input": "k of zero returns empty list",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestRetrieverEdges"
+    },
+    {
+      "id": "TC-36",
+      "input": "negative k returns empty list not whole corpus",
+      "expected": "A negative k must not silently slice from the end of the ranking.",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestRetrieverEdges"
+    },
+    {
+      "id": "TC-37",
+      "input": "score is rounded to four places",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestRetrieverEdges"
+    },
+    {
+      "id": "TC-38",
+      "input": "encoder must be fitted on the whole collection",
+      "expected": "Fitting on one question's passages alone destroys the ranking signal.",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestEncoderRegression"
+    },
+    {
+      "id": "TC-39",
+      "input": "trace log has one row per retrieval",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestExperimentInvariants"
+    },
+    {
+      "id": "TC-40",
+      "input": "hop one drift score is zero by construction",
+      "expected": "At hop 1 the query is the question and the belief is the question.",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestExperimentInvariants"
+    },
+    {
+      "id": "TC-41",
+      "input": "settled questions cannot lose balance",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestExperimentInvariants"
+    },
+    {
+      "id": "TC-42",
+      "input": "oracle spread is the full range",
+      "expected": "The headline claim: query wording can reach both extremes.",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestExperimentInvariants"
+    },
+    {
+      "id": "TC-43",
+      "input": "balance loss matches manual computation",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestBalanceHelper"
+    }
+  ],
+  "defects": [
+    {
+      "id": "TC-36",
+      "input": "Retriever.search(query, k=-1)",
+      "expected": "Empty list, because a negative k is not a valid request",
+      "actual": "Returned 7 of 8 passages, the worst ranked ones",
+      "status": "FAIL",
+      "remarks": "Python slice scored[:-1] cuts from the end, so a negative k silently returned the lowest scoring matches instead of nothing"
+    },
+    {
+      "id": "TC-36-R1",
+      "input": "Retriever.search(query, k=-1) after adding a guard for k <= 0",
+      "expected": "Empty list",
+      "actual": "Empty list",
+      "status": "PASS",
+      "remarks": "Guard added in ouroboros/retrieval.py. Defect resolved"
+    },
+    {
+      "id": "TC-38",
+      "input": "Encoder fitted on one question's 8 passages, then asked to encode a query using vocabulary from another question",
+      "expected": "A usable vector, so ranking still works across the collection",
+      "actual": "All zero vector, so every passage scored 0.0 and ranking was noise",
+      "status": "FAIL",
+      "remarks": "Inverse document frequency was computed over 8 documents. The first experiment run produced meaningless balance figures"
+    },
+    {
+      "id": "TC-38-R1",
+      "input": "Same query after fitting the encoder over the whole collection",
+      "expected": "A non zero vector",
+      "actual": "Non zero vector, ranking restored",
+      "status": "PASS",
+      "remarks": "run_experiment.py now fits one encoder over every passage and query before the loop. Defect resolved, pinned by this test"
+    }
+  ],
+  "total": 43,
+  "failures": 0
+}

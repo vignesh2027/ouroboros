@@ -84,6 +84,7 @@
     <div class="links">
       <a class="btn p" href="https://huggingface.co/datasets/vigneshwar234/spiral-bench">SPIRAL-Bench on Hugging Face</a>
       <a class="btn" href="https://github.com/vignesh2027/ouroboros">Source code</a>
+      <a class="btn" href="review1-report.html">Review One report</a>
       <a class="btn" href="#reproduce">Reproduce in two commands</a>
     </div>
   </div>
@@ -186,6 +187,28 @@ python3 make_chart.py        # rebuilds the figure above</code></pre>
     <tr><td><b>Larger corpus</b><br><span class="g">SPIRAL-Bench v1</span></td>
         <td class="g">Six contested questions and a top-k of four make every measurement coarse.</td></tr>
   </table>
+</section>
+
+<section>
+  <h2>Design and verification</h2>
+  <p>The design phase is documented as four diagrams, and the module is covered by an automated
+    test suite whose results table is generated from an actual run rather than written by hand.</p>
+  <table>
+    <tr><th>Artefact</th><th>What it shows</th></tr>
+    <tr><td><a href="diagrams/use-case.svg">Use case diagram</a></td>
+        <td class="g">Three actors, and which use cases include which sub functions</td></tr>
+    <tr><td><a href="diagrams/activity.svg">Activity diagram</a></td>
+        <td class="g">The triple nested loop over questions, arms and hops</td></tr>
+    <tr><td><a href="diagrams/flowchart-baqd.svg">Flowchart</a></td>
+        <td class="g">The drift score at statement level, including the empty belief guard</td></tr>
+    <tr><td><a href="diagrams/data-flow.svg">Data flow diagram</a></td>
+        <td class="g">Which modules already exist and which ones are the contribution</td></tr>
+    <tr><td><a href="review1-report.html">Review One report</a></td>
+        <td class="g">Requirements, all four diagrams, the running module and 43 test cases</td></tr>
+  </table>
+  <div class="note"><b>Two defects were found, fixed and retested</b> during this phase. Both are
+    recorded in the report with the failing input, the cause and the passing retest, and both are
+    now pinned by regression tests so they cannot return silently.</div>
 </section>
 
 <section>

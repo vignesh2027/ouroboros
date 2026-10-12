@@ -41,6 +41,10 @@ class Retriever:
         self.matrix = encoder.encode_many([p["text"] for p in passages])
 
     def search(self, query, k=4):
+        # A negative k would slice from the end of the ranking and quietly
+        # return the worst matches, so guard it rather than trusting the slice.
+        if k <= 0:
+            return []
         qv = self.encoder.encode(query)
         scored = [
             (cosine(qv, self.matrix[i]), i) for i in range(len(self.passages))

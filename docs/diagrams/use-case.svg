@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" font-family="Helvetica, Arial, sans-serif">
+  <rect width="960" height="600" fill="#FFFFFF"/>
+
+  <text x="480" y="34" text-anchor="middle" font-size="19" font-weight="bold" fill="#111111">Use Case Diagram</text>
+  <text x="480" y="54" text-anchor="middle" font-size="12.5" fill="#5E5E5E">Ouroboros retrieval analysis system</text>
+
+  <!-- system boundary -->
+  <rect x="250" y="76" width="470" height="470" fill="none" stroke="#111111" stroke-width="1.6"/>
+  <text x="485" y="98" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#111111" letter-spacing="1">OUROBOROS SYSTEM</text>
+
+  <!-- primary use cases, left column -->
+  <g stroke="#1B5E9E" stroke-width="1.6" fill="#EDF3F9">
+    <ellipse cx="368" cy="140" rx="98" ry="25"/>
+    <ellipse cx="368" cy="282" rx="98" ry="25"/>
+    <ellipse cx="368" cy="400" rx="98" ry="25"/>
+    <ellipse cx="368" cy="492" rx="98" ry="25"/>
+  </g>
+  <g font-size="12" fill="#111111" text-anchor="middle">
+    <text x="368" y="137">Run drift</text><text x="368" y="151">experiment</text>
+    <text x="368" y="279">Run oracle</text><text x="368" y="293">diagnostic</text>
+    <text x="368" y="397">Generate results</text><text x="368" y="411">chart</text>
+    <text x="368" y="489">Validate corpus</text><text x="368" y="503">integrity</text>
+  </g>
+
+  <!-- included use cases, right column -->
+  <g stroke="#157A57" stroke-width="1.6" fill="#EAF3EF">
+    <ellipse cx="610" cy="134" rx="90" ry="23"/>
+    <ellipse cx="610" cy="196" rx="90" ry="23"/>
+    <ellipse cx="610" cy="258" rx="90" ry="23"/>
+    <ellipse cx="610" cy="340" rx="90" ry="23"/>
+  </g>
+  <g font-size="11.5" fill="#111111" text-anchor="middle">
+    <text x="610" y="131">Encode question,</text><text x="610" y="144">belief and query</text>
+    <text x="610" y="193">Compute BAQD</text><text x="610" y="206">drift score</text>
+    <text x="610" y="255">Retrieve top k</text><text x="610" y="268">passages</text>
+    <text x="610" y="337">Measure evidence</text><text x="610" y="350">balance</text>
+  </g>
+
+  <!-- include relationships -->
+  <g stroke="#157A57" stroke-width="1.2" stroke-dasharray="6 4" fill="none">
+    <path d="M466 134 H520"/>
+    <path d="M466 143 L520 196"/>
+    <path d="M466 150 L520 252"/>
+    <path d="M466 158 L520 334"/>
+  </g>
+  <g fill="#157A57">
+    <path d="M520 134 l-10 -4 v8 z"/><path d="M520 196 l-10 -2 l-1 8 z"/>
+    <path d="M520 252 l-10 -1 l-2 8 z"/><path d="M520 334 l-10 0 l-3 7 z"/>
+  </g>
+  <text x="493" y="124" text-anchor="middle" font-size="9.5" fill="#157A57" font-style="italic">&#171;include&#187;</text>
+
+  <!-- diagnostic includes retrieval -->
+  <path d="M466 282 C510 282 500 268 520 262" stroke="#157A57" stroke-width="1.2" stroke-dasharray="6 4" fill="none"/>
+  <path d="M520 262 l-10 1 l-1 -8 z" fill="#157A57"/>
+
+  <!-- actors -->
+  <!-- Researcher -->
+  <g stroke="#111111" stroke-width="1.6" fill="none">
+    <circle cx="120" cy="178" r="15"/>
+    <path d="M120 193 v34 M100 205 h40 M120 227 l-15 26 M120 227 l15 26"/>
+  </g>
+  <text x="120" y="275" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#111111">Researcher</text>
+  <text x="120" y="291" text-anchor="middle" font-size="10.5" fill="#5E5E5E">runs and inspects</text>
+
+  <!-- CI pipeline -->
+  <g stroke="#111111" stroke-width="1.6" fill="none">
+    <circle cx="120" cy="420" r="15"/>
+    <path d="M120 435 v34 M100 447 h40 M120 469 l-15 26 M120 469 l15 26"/>
+  </g>
+  <text x="120" y="517" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#111111">CI pipeline</text>
+  <text x="120" y="533" text-anchor="middle" font-size="10.5" fill="#5E5E5E">automated on push</text>
+
+  <!-- Review panel -->
+  <g stroke="#111111" stroke-width="1.6" fill="none">
+    <circle cx="845" cy="378" r="15"/>
+    <path d="M845 393 v34 M825 405 h40 M845 427 l-15 26 M845 427 l15 26"/>
+  </g>
+  <text x="845" y="475" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#111111">Review panel</text>
+  <text x="845" y="491" text-anchor="middle" font-size="10.5" fill="#5E5E5E">views results</text>
+
+  <!-- actor associations -->
+  <g stroke="#111111" stroke-width="1.3" fill="none">
+    <path d="M150 190 L270 142"/>
+    <path d="M150 215 L270 278"/>
+    <path d="M150 432 L270 486"/>
+    <path d="M150 410 L270 152"/>
+    <path d="M815 388 L466 402"/>
+  </g>
+
+  <!-- legend -->
+  <g font-size="10.5" fill="#5E5E5E">
+    <rect x="250" y="562" width="16" height="11" fill="#EDF3F9" stroke="#1B5E9E" stroke-width="1.4"/>
+    <text x="274" y="572">use case invoked directly by an actor</text>
+    <rect x="530" y="562" width="16" height="11" fill="#EAF3EF" stroke="#157A57" stroke-width="1.4"/>
+    <text x="554" y="572">included sub function</text>
+  </g>
+</svg>

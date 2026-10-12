@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" width="960" height="620" font-family="Helvetica, Arial, sans-serif">
+  <rect width="960" height="620" fill="#FFFFFF"/>
+
+  <text x="480" y="34" text-anchor="middle" font-size="19" font-weight="bold" fill="#111111">Data Flow and Module Diagram</text>
+  <text x="480" y="54" text-anchor="middle" font-size="12.5" fill="#5E5E5E">What each module owns, and what moves between them</text>
+
+  <defs>
+    <marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5E5E5E"/>
+    </marker>
+    <marker id="a3g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#157A57"/>
+    </marker>
+  </defs>
+
+  <!-- data store -->
+  <g>
+    <rect x="30" y="110" width="170" height="60" fill="#F4F6F8" stroke="#111111" stroke-width="1.6"/>
+    <line x1="30" y1="128" x2="200" y2="128" stroke="#111111" stroke-width="1.2"/>
+    <text x="115" y="123" text-anchor="middle" font-size="9.5" fill="#5E5E5E" letter-spacing="1">DATA STORE</text>
+    <text x="115" y="147" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#111111">SPIRAL-Bench v0</text>
+    <text x="115" y="162" text-anchor="middle" font-size="10" fill="#5E5E5E">8 questions, 64 passages</text>
+  </g>
+
+  <!-- encoder -->
+  <rect x="268" y="100" width="180" height="80" rx="8" fill="#EDF3F9" stroke="#1B5E9E" stroke-width="1.8"/>
+  <text x="358" y="124" text-anchor="middle" font-size="13" font-weight="bold" fill="#1B5E9E">Encoder</text>
+  <text x="358" y="141" text-anchor="middle" font-size="10" fill="#5E5E5E">retrieval.py</text>
+  <text x="358" y="160" text-anchor="middle" font-size="10.5" fill="#111111">text to vector</text>
+  <text x="358" y="173" text-anchor="middle" font-size="10" fill="#5E5E5E">one shared vocabulary</text>
+
+  <!-- retriever -->
+  <rect x="268" y="256" width="180" height="80" rx="8" fill="#EDF3F9" stroke="#1B5E9E" stroke-width="1.8"/>
+  <text x="358" y="280" text-anchor="middle" font-size="13" font-weight="bold" fill="#1B5E9E">Retriever</text>
+  <text x="358" y="297" text-anchor="middle" font-size="10" fill="#5E5E5E">retrieval.py</text>
+  <text x="358" y="316" text-anchor="middle" font-size="10.5" fill="#111111">ranks by cosine</text>
+  <text x="358" y="329" text-anchor="middle" font-size="10" fill="#5E5E5E">returns top k passages</text>
+
+  <!-- metric -->
+  <rect x="268" y="412" width="180" height="80" rx="8" fill="#EAF3EF" stroke="#157A57" stroke-width="2"/>
+  <text x="358" y="436" text-anchor="middle" font-size="13" font-weight="bold" fill="#157A57">Metric</text>
+  <text x="358" y="453" text-anchor="middle" font-size="10" fill="#5E5E5E">metric.py</text>
+  <text x="358" y="472" text-anchor="middle" font-size="10.5" fill="#111111">BAQD and skew</text>
+  <text x="358" y="485" text-anchor="middle" font-size="10" fill="#5E5E5E">our contribution</text>
+
+  <!-- experiment controller -->
+  <rect x="516" y="190" width="192" height="212" rx="8" fill="#FFFFFF" stroke="#111111" stroke-width="1.8"/>
+  <text x="612" y="214" text-anchor="middle" font-size="13" font-weight="bold" fill="#111111">Experiment controller</text>
+  <text x="612" y="231" text-anchor="middle" font-size="10" fill="#5E5E5E">run_experiment.py</text>
+  <line x1="536" y1="244" x2="688" y2="244" stroke="#D5D5D5" stroke-width="1"/>
+  <g font-size="10.5" fill="#111111">
+    <text x="536" y="266">1. load corpus</text>
+    <text x="536" y="286">2. fit encoder once</text>
+    <text x="536" y="306">3. loop questions</text>
+    <text x="536" y="326">4. loop arms</text>
+    <text x="536" y="346">5. loop hops</text>
+    <text x="536" y="366">6. score and retrieve</text>
+    <text x="536" y="386">7. update belief</text>
+  </g>
+
+  <!-- outputs -->
+  <g>
+    <rect x="770" y="110" width="166" height="56" fill="#F4F6F8" stroke="#111111" stroke-width="1.6"/>
+    <line x1="770" y1="128" x2="936" y2="128" stroke="#111111" stroke-width="1.2"/>
+    <text x="853" y="123" text-anchor="middle" font-size="9.5" fill="#5E5E5E" letter-spacing="1">DATA STORE</text>
+    <text x="853" y="150" text-anchor="middle" font-size="12" font-weight="bold" fill="#111111">traces.jsonl</text>
+  </g>
+
+  <rect x="770" y="206" width="166" height="62" rx="8" fill="#EAF3EF" stroke="#157A57" stroke-width="1.8"/>
+  <text x="853" y="230" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#157A57">Diagnostic</text>
+  <text x="853" y="246" text-anchor="middle" font-size="10" fill="#5E5E5E">run_diagnostic.py</text>
+  <text x="853" y="260" text-anchor="middle" font-size="10" fill="#111111">oracle comparison</text>
+
+  <rect x="770" y="308" width="166" height="62" rx="8" fill="#EAF3EF" stroke="#157A57" stroke-width="1.8"/>
+  <text x="853" y="332" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#157A57">Chart builder</text>
+  <text x="853" y="348" text-anchor="middle" font-size="10" fill="#5E5E5E">make_chart.py</text>
+  <text x="853" y="362" text-anchor="middle" font-size="10" fill="#111111">results figure</text>
+
+  <rect x="770" y="410" width="166" height="62" rx="8" fill="#FBF5E3" stroke="#8A6D0B" stroke-width="1.8"/>
+  <text x="853" y="434" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#8A6D0B">Test suite</text>
+  <text x="853" y="450" text-anchor="middle" font-size="10" fill="#5E5E5E">run_tests.py</text>
+  <text x="853" y="464" text-anchor="middle" font-size="10" fill="#111111">43 cases, table output</text>
+
+  <!-- flows -->
+  <g stroke="#5E5E5E" stroke-width="1.5" fill="none" marker-end="url(#a3)">
+    <path d="M200 140 H262"/>
+    <path d="M358 180 V250"/>
+    <path d="M448 140 H490 V236 H510"/>
+    <path d="M448 296 H510"/>
+    <path d="M448 452 H490 V356 H510"/>
+    <path d="M708 240 H764"/>
+    <path d="M708 296 H740 V237 H764"/>
+    <path d="M708 330 H764"/>
+  </g>
+  <g stroke="#157A57" stroke-width="1.5" fill="none" marker-end="url(#a3g)">
+    <path d="M853 268 V302"/>
+    <path d="M853 166 V200"/>
+  </g>
+  <g stroke="#8A6D0B" stroke-width="1.4" fill="none" stroke-dasharray="5 4">
+    <path d="M770 440 H470 V470 L452 470"/>
+    <path d="M770 452 H740 V520 H358 V496"/>
+  </g>
+
+  <!-- flow labels -->
+  <g font-size="10" fill="#5E5E5E">
+    <text x="231" y="134" text-anchor="middle">passages</text>
+    <text x="372" y="218">vectors</text>
+    <text x="470" y="134" text-anchor="middle">encoder</text>
+    <text x="479" y="290" text-anchor="middle">hits</text>
+    <text x="470" y="412" text-anchor="middle">scores</text>
+    <text x="736" y="233" text-anchor="middle">rows</text>
+    <text x="736" y="324" text-anchor="middle">figure</text>
+  </g>
+  <text x="556" y="536" font-size="10" fill="#8A6D0B">tests exercise the metric and the retriever directly</text>
+
+  <!-- legend -->
+  <g font-size="10.5" fill="#5E5E5E">
+    <rect x="30" y="556" width="16" height="11" rx="3" fill="#EDF3F9" stroke="#1B5E9E" stroke-width="1.4"/>
+    <text x="54" y="566">existing RAG component</text>
+    <rect x="240" y="556" width="16" height="11" rx="3" fill="#EAF3EF" stroke="#157A57" stroke-width="1.4"/>
+    <text x="264" y="566">our contribution</text>
+    <rect x="420" y="556" width="16" height="11" rx="3" fill="#FBF5E3" stroke="#8A6D0B" stroke-width="1.4"/>
+    <text x="444" y="566">verification</text>
+    <rect x="570" y="556" width="16" height="11" fill="#F4F6F8" stroke="#111111" stroke-width="1.4"/>
+    <text x="594" y="566">data store</text>
+  </g>
+</svg>

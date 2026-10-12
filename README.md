@@ -58,6 +58,33 @@ BAQD(n) = cos(query_n, belief_n-1) - cos(question_0, belief_n-1)
 
 Three embeddings, two cosine similarities, one subtraction. No training, no labelled data, no GPU.
 
+## Design and testing
+
+Four design diagrams and an automated test suite cover the implemented module.
+
+| Artefact | What it shows |
+|---|---|
+| [Use case diagram](docs/diagrams/use-case.svg) | Three actors, and which use cases include which sub functions |
+| [Activity diagram](docs/diagrams/activity.svg) | The triple nested loop over questions, arms and hops |
+| [Flowchart](docs/diagrams/flowchart-baqd.svg) | The drift score at statement level, including the empty belief guard |
+| [Data flow diagram](docs/diagrams/data-flow.svg) | Which modules already exist and which ones are the contribution |
+| [Review One report](https://vignesh2027.github.io/ouroboros/review1-report.html) | Requirements, diagrams, running module, 43 test cases |
+
+```bash
+python3 run_tests.py     # 43 cases, writes outputs/TEST_CASES.md
+```
+
+Two defects were found, fixed and retested during this phase.
+
+| ID | Input | Expected | Actual | Status |
+|---|---|---|---|---|
+| TC-36 | `search(query, k=-1)` | Empty list | Returned the 7 worst ranked passages | **FAIL** |
+| TC-36-R1 | Same input after adding a guard for `k <= 0` | Empty list | Empty list | **PASS** |
+| TC-38 | Encoder fitted on one question's 8 passages | A usable vector | All zero vector, ranking was noise | **FAIL** |
+| TC-38-R1 | Same query after fitting on the whole collection | A non zero vector | Non zero vector | **PASS** |
+
+Both are now pinned by regression tests, so they cannot return without the suite failing.
+
 ## Layout
 
 ```
