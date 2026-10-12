@@ -1,0 +1,26 @@
+First trace row, pretty printed:
+
+{
+  "question_id": "ev_cost",
+  "type": "contested",
+  "arm": "drift",
+  "hop": 1,
+  "query": "is an electric car cheaper to own than a petrol car",
+  "baqd": 0.0,
+  "support": 1,
+  "oppose": 3,
+  "skew": -0.5,
+  "balance_loss": 0.5,
+  "retrieved": [
+    {
+      "stance": -1,
+      "score": 0.3418,
+      "text": "For low annual mileage drivers the higher purc..."
+    },
+    {
+      "stance": -1,
+      "score": 0.1457,
+      "text": "Battery replacement outside warranty is a sign..."
+    }
+  ]
+}

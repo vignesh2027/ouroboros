@@ -25,6 +25,10 @@ SHOTS = [
     ("tc36_after", "raw_tc36_after_short.txt",
      "python3 -m unittest tests.test_experiment.TestRetrieverEdges -v   # guard restored",
      1020, "good"),
+    ("tree", "raw_tree.txt", "find . -type f | sort", 1020, "ok"),
+    ("git", "raw_git.txt", "git log --pretty=format:'%h  %ad  %s' --date=short", 1180, "ok"),
+    ("trace", "raw_trace.txt", "head -1 outputs/traces.jsonl | python3 -m json.tool", 1020, "ok"),
+    ("ci", "raw_ci.txt", "gh run list --repo vignesh2027/ouroboros", 1180, "ok"),
 ]
 
 CSS = """

@@ -115,29 +115,6 @@
   <div class="foot"><span>Department of Artificial Intelligence and Data Science</span><span>1</span></div>
 </section>
 
-<!-- 2 COMMITMENTS -->
-<section class="slide"><div class="frame"></div>
-  <div class="head"><span><b>Ouroboros</b></span><span>Progress Against Plan</span></div>
-  <div class="stack">
-    <h2>What was asked for this review, and what is done</h2>
-    <table>
-      <tr><th style="width:38%">Required for Review One</th><th style="width:14%">Status</th><th>Evidence in this deck</th></tr>
-      <tr><td><b>Module requirements</b></td><td class="pos">DONE</td><td class="dim">6 functional and 3 non functional, in the report</td></tr>
-      <tr><td><b>Use case diagram</b></td><td class="pos">DONE</td><td class="dim">Slide 3</td></tr>
-      <tr><td><b>Activity diagram</b></td><td class="pos">DONE</td><td class="dim">Slide 4</td></tr>
-      <tr><td><b>Flow diagram</b></td><td class="pos">DONE</td><td class="dim">Slide 5</td></tr>
-      <tr><td><b>Other design figures</b></td><td class="pos">DONE</td><td class="dim">Slide 6, data flow and module diagram</td></tr>
-      <tr><td><b>Around 20 percent implementation</b></td><td class="pos">DONE</td><td class="dim">Slide 7, runs in two commands</td></tr>
-      <tr><td><b>Running demonstration</b></td><td class="pos">DONE</td><td class="dim">Slides 8 and 9, live terminal output</td></tr>
-      <tr><td><b>Test cases, passing</b></td><td class="pos">DONE</td><td class="dim">Slide 10, 43 automated cases</td></tr>
-      <tr><td><b>Failure test cases with fixes</b></td><td class="pos">DONE</td><td class="dim">Slide 11, real failure reproduced on screen</td></tr>
-    </table>
-    <p class="closing"><b>Everything in this deck runs today</b> on an ordinary laptop with no GPU, no paid
-      service and no model download. Every screenshot is real output from the commands shown above it.</p>
-  </div>
-  <div class="foot"><span>github.com/vignesh2027/ouroboros</span><span>2</span></div>
-</section>
-
 <!-- 3 USE CASE -->
 <section class="slide"><div class="frame"></div>
   <div class="head"><span><b>Design Phase</b></span><span>Use Case Diagram</span></div>
@@ -148,7 +125,7 @@
       pulled in by them, shown with include relationships. Validating corpus integrity stands alone because
       the continuous integration pipeline runs it as its own check.</p>
   </div>
-  <div class="foot"><span>Figure 1</span><span>3</span></div>
+  <div class="foot"><span>Figure 1</span><span>2</span></div>
 </section>
 
 <!-- 4 ACTIVITY -->
@@ -160,7 +137,7 @@
     <p class="closing"><b>The step that matters</b> is setting the belief to whatever was just read. That is the
       step which closes the loop this project studies, and it is why the diagram loops back to the query.</p>
   </div>
-  <div class="foot"><span>Figure 2</span><span>4</span></div>
+  <div class="foot"><span>Figure 2</span><span>3</span></div>
 </section>
 
 <!-- 5 FLOWCHART -->
@@ -172,7 +149,7 @@
     <p class="closing"><b>Deliberately small.</b> Three encodings, one guard against an empty belief vector,
       two cosine similarities and a subtraction. The guard is pinned by test case TC-09.</p>
   </div>
-  <div class="foot"><span>Figure 3</span><span>5</span></div>
+  <div class="foot"><span>Figure 3</span><span>4</span></div>
 </section>
 
 <!-- 6 DFD -->
@@ -185,7 +162,7 @@
       any retrieval system and we do not change them. Green is the contribution, one small measurement added
       at the query stage.</p>
   </div>
-  <div class="foot"><span>Figure 4</span><span>6</span></div>
+  <div class="foot"><span>Figure 4</span><span>5</span></div>
 </section>
 
 <!-- 7 IMPLEMENTATION -->
@@ -218,7 +195,7 @@
     <div class="note"><b>Scope.</b> This is roughly a fifth of the full project. Still to come are a dense
       encoder, a live language model writing its own queries, and a larger benchmark.</div>
   </div>
-  <div class="foot"><span>python3 run_experiment.py</span><span>7</span></div>
+  <div class="foot"><span>python3 run_experiment.py</span><span>6</span></div>
 </section>
 
 <!-- 8 PROOF: EXPERIMENT -->
@@ -228,7 +205,7 @@
     <h2>Live output, captured from the machine</h2>
     <div class="shot"><img src="evidence/experiment.png" alt="Terminal output of run_experiment.py"></div>
   </div>
-  <div class="foot"><span>Real stdout. 6 contested questions, 2 settled, 3 hops, 48 retrievals logged</span><span>8</span></div>
+  <div class="foot"><span>Real stdout. 6 contested questions, 2 settled, 3 hops, 48 retrievals logged</span><span>7</span></div>
 </section>
 
 <!-- 9 PROOF: DIAGNOSTIC -->
@@ -238,7 +215,7 @@
     <h2>Query wording alone moves the evidence across the full range</h2>
     <div class="shot"><img src="evidence/diagnostic.png" alt="Terminal output of run_diagnostic.py"></div>
   </div>
-  <div class="foot"><span>Oracle spread +2.00. Our first drift probe captured 4.2 percent of it</span><span>9</span></div>
+  <div class="foot"><span>Oracle spread +2.00. Our first drift probe captured 4.2 percent of it</span><span>8</span></div>
 </section>
 
 <!-- 10 PROOF: TESTS -->
@@ -262,7 +239,7 @@
       </div>
     </div>
   </div>
-  <div class="foot"><span>python3 run_tests.py writes outputs/TEST_CASES.md</span><span>10</span></div>
+  <div class="foot"><span>python3 run_tests.py writes outputs/TEST_CASES.md</span><span>9</span></div>
 </section>
 
 <!-- 11 PROOF: DEFECT -->
@@ -284,7 +261,7 @@
       means everything except the last item, so instead of returning nothing the retriever silently returned the
       seven worst ranked passages. A wrong answer with no error raised. Guarded, retested, now pinned by TC-36.</div>
   </div>
-  <div class="foot"><span>Real output, trimmed to the essential lines. The failure was reproduced by temporarily removing the guard, then restored</span><span>11</span></div>
+  <div class="foot"><span>Real output, trimmed to the essential lines. The failure was reproduced by temporarily removing the guard, then restored</span><span>10</span></div>
 </section>
 
 <!-- 12 TEST TABLE -->
@@ -315,7 +292,55 @@
       <div><p class="n" style="color:var(--blue);">48</p><p class="l">retrievals logged per run</p></div>
     </div>
   </div>
-  <div class="foot"><span>Full 43 row table in the Review One report</span><span>12</span></div>
+  <div class="foot"><span>Full 43 row table in the Review One report</span><span>11</span></div>
+</section>
+
+<!-- PUBLISHED: DATASET -->
+<section class="slide"><div class="frame"></div>
+  <div class="head"><span><b>Published</b></span><span>Benchmark Dataset</span></div>
+  <div class="stack">
+    <h2>SPIRAL-Bench is live and public on Hugging Face</h2>
+    <div class="shot"><img src="evidence/live_hf_crop.png" alt="Live Hugging Face dataset page"></div>
+    <p class="closing"><b>Anyone can load it in three lines.</b> Three configs, 64 passages, 48 queries and
+      48 trace rows, with the dataset viewer working and the balance visible in the stance column.</p>
+  </div>
+  <div class="foot"><span>huggingface.co/datasets/vigneshwar234/spiral-bench</span><span>12</span></div>
+</section>
+
+<!-- PUBLISHED: SITE -->
+<section class="slide"><div class="frame"></div>
+  <div class="head"><span><b>Published</b></span><span>Code And Documentation</span></div>
+  <div class="stack">
+    <h2>Project site, built and deployed by the pipeline</h2>
+    <div class="shot"><img src="evidence/live_pages_crop.png" alt="Live GitHub Pages project site"></div>
+    <p class="closing"><b>Not hand uploaded.</b> A GitHub Actions workflow builds and deploys this page on every
+      push, so the figures and numbers on it are regenerated rather than pasted.</p>
+  </div>
+  <div class="foot"><span>vignesh2027.github.io/ouroboros</span><span>13</span></div>
+</section>
+
+<!-- REPRODUCIBILITY -->
+<section class="slide"><div class="frame"></div>
+  <div class="head"><span><b>Verification</b></span><span>Reproducibility</span></div>
+  <div class="stack">
+    <h2>Every number rebuilds itself on a clean machine</h2>
+    <div class="two" style="gap:2.4cqw;">
+      <div style="display:flex;flex-direction:column;min-width:0;gap:1.1cqw;">
+        <div><p class="kicker">Continuous integration, latest runs</p>
+          <div class="shot" style="flex:none;"><img src="evidence/ci.png" alt="CI run list showing success"></div></div>
+        <div><p class="kicker">Commit history and authorship</p>
+          <div class="shot" style="flex:none;"><img src="evidence/git.png" alt="Git log and single author"></div></div>
+      </div>
+      <div style="display:flex;flex-direction:column;min-width:0;">
+        <p class="kicker">One logged retrieval, as stored</p>
+        <div class="shot"><img src="evidence/trace.png" alt="A single trace row as JSON"></div>
+      </div>
+    </div>
+    <div class="note"><b>Why this matters.</b> The chart and the report are generated from this trace log by
+      script. CI reruns the tests and both experiments on a fresh Ubuntu machine on every push, so the figures
+      shown in this deck are verified by machine rather than asserted by us.</div>
+  </div>
+  <div class="foot"><span>Sole author on every commit, zero co-author trailers</span><span>14</span></div>
 </section>
 
 <!-- 13 NEXT -->
@@ -352,5 +377,5 @@
           <td class="dim">Enough resolution to separate a real effect from noise</td></tr>
     </table>
   </div>
-  <div class="foot"><span>A negative result on the metric, a positive result on the mechanism</span><span>13</span></div>
+  <div class="foot"><span>A negative result on the metric, a positive result on the mechanism</span><span>15</span></div>
 </section>

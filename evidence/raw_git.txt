@@ -1,3 +1,7 @@
-3a9a28c Add design diagrams, test suite and the Review 1 report
-147b0ef Add Review 1 deck as pptx, pdf and slide images
-3c345b3 Ouroboros: retrieval harness, BAQD metric, SPIRAL-Bench v0 and first experiment
+fbe8e59  2026-10-12  Add Phase 1 review deck with captured evidence
+3a9a28c  2026-10-12  Add design diagrams, test suite and the Review 1 report
+147b0ef  2026-09-24  Add Review 1 deck as pptx, pdf and slide images
+3c345b3  2026-09-24  Ouroboros: retrieval harness, BAQD metric, SPIRAL-Bench v0 and first experiment
+
+Author of every commit:
+  vignesh2027 <applemacbook6sep2004@gmail.com>
