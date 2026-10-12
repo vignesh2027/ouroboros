@@ -1,0 +1,8 @@
+test_tc35_k_of_zero_returns_empty_list ... ok
+test_tc36_negative_k_returns_empty_list_not_whole_corpus ... ok
+test_tc37_score_is_rounded_to_four_places ... ok
+
+----------------------------------------------------------
+Ran 3 tests in 0.008s
+
+OK

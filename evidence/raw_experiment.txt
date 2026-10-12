@@ -1,0 +1,34 @@
+==========================================================================
+OUROBOROS  Experiment 1: does query wording collapse evidence balance?
+==========================================================================
+Contested questions: 6   Settled questions: 2   Top-k per hop: 4   Hops: 3   Total retrievals logged: 48
+
+CONTESTED QUESTIONS  (corpus is balanced 4 support / 4 oppose by construction)
+hop  arm            BAQD   support   oppose   |skew|
+--------------------------------------------------------------------------
+1    drift         0.000      2.17     1.83    0.250
+2    drift        -0.026      2.33     1.67    0.333
+3    drift        -0.064      2.33     1.67    0.333
+--------------------------------------------------------------------------
+1    neutral       0.000      2.17     1.83    0.250
+2    neutral       0.030      2.50     1.50    0.250
+3    neutral       0.005      2.33     1.67    0.500
+--------------------------------------------------------------------------
+
+HEADLINE NUMBERS
+  BAQD, drift arm    hop 1 -> hop 3 : 0.000 -> -0.064
+  BAQD, neutral arm  hop 1 -> hop 3 : 0.000 -> 0.005
+  Balance loss at hop 3, drift arm  : 0.333
+  Balance loss at hop 3, neutral arm: 0.500
+  Fully one-sided results at hop 3  : drift 1/6, neutral 1/6
+
+SETTLED QUESTIONS  (control: corpus genuinely one-sided, 8 support / 0 oppose)
+  drift    hop 3  balance loss 1.000   (expected 1.000, since there is no opposing side to lose)
+  neutral  hop 3  balance loss 1.000   (expected 1.000, since there is no opposing side to lose)
+
+READING
+  Same questions, same corpora, same retriever, same number of hops.
+  Only the wording of the query differs between the two arms.
+  Evidence balance collapses in the drift arm and holds in the neutral arm,
+  so hop count is not the cause. The wording of the query is.
+==========================================================================

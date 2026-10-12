@@ -1,0 +1,12 @@
+==========================================================================
+OUROBOROS  Test suite
+==========================================================================
+Automated cases run : 43
+Passed              : 43
+Failed              : 0
+Defects logged      : 2 found, 2 resolved
+
+Written:
+  outputs/test_report.json
+  outputs/TEST_CASES.md
+==========================================================================

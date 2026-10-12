@@ -1,0 +1,3 @@
+3a9a28c Add design diagrams, test suite and the Review 1 report
+147b0ef Add Review 1 deck as pptx, pdf and slide images
+3c345b3 Ouroboros: retrieval harness, BAQD metric, SPIRAL-Bench v0 and first experiment

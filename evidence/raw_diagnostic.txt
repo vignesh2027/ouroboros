@@ -1,0 +1,26 @@
+==========================================================================
+OUROBOROS  Diagnostic: locating the cause of the null result
+==========================================================================
+Retrieved-set skew, where +1 is all supporting and -1 is all opposing.
+
+question             neutral   drift h3   oracle +   oracle -  shared vocab
+--------------------------------------------------------------------------
+ev_cost                -0.50       0.00       1.00      -1.00         0.167
+vitamin_d               0.00       0.00       1.00      -1.00         0.121
+remote_work             0.50       0.00       1.00      -1.00         0.125
+min_wage                0.00       0.50       1.00      -1.00         0.104
+fasting                 0.00      -0.50       1.00      -1.00         0.189
+nuclear                 0.50       1.00       1.00      -1.00         0.065
+--------------------------------------------------------------------------
+mean                    0.08       0.17       1.00      -1.00         0.129
+
+FINDINGS
+  Oracle spread, best case a query could ever achieve : +2.00
+  Actual shift produced by our drifting query wording : +0.08
+  Fraction of the achievable spread we captured       : 4.2%
+
+  The retriever CAN be steered. An oracle query moves the retrieved
+  balance strongly, so the mechanism is available in principle.
+  Our natural-language drift queries did not exploit it, which points
+  at the query wording and the lexical encoder, not at the mechanism.
+==========================================================================

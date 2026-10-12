@@ -1,0 +1,25 @@
+test_tc35_k_of_zero_returns_empty_list (tests.test_experiment.TestRetrieverEdges.test_tc35_k_of_zero_returns_empty_list) ... ok
+test_tc36_negative_k_returns_empty_list_not_whole_corpus (tests.test_experiment.TestRetrieverEdges.test_tc36_negative_k_returns_empty_list_not_whole_corpus)
+A negative k must not silently slice from the end of the ranking. ... FAIL
+test_tc37_score_is_rounded_to_four_places (tests.test_experiment.TestRetrieverEdges.test_tc37_score_is_rounded_to_four_places) ... ok
+
+======================================================================
+FAIL: test_tc36_negative_k_returns_empty_list_not_whole_corpus (tests.test_experiment.TestRetrieverEdges.test_tc36_negative_k_returns_empty_list_not_whole_corpus)
+A negative k must not silently slice from the end of the ranking.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/vignesh/ouroboros/tests/test_experiment.py", line 49, in test_tc36_negative_k_returns_empty_list_not_whole_corpus
+    self.assertEqual(self.r.search(self.item["question"], k=-1), [])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [{'stance': -1, 'text': 'For low annual mi[1350 chars]604}] != []
+
+First list contains 7 additional elements.
+First extra element 0:
+{'stance': -1, 'text': 'For low annual mileage drivers the higher purchase price is never recovered, so the petrol car remains cheaper across a realistic ownership period.', 'score': 0.3418}
+
+Diff is 1689 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.007s
+
+FAILED (failures=1)

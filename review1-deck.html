@@ -90,8 +90,11 @@
   .closing{font-size:1.45cqw;line-height:1.42;color:var(--grey);
            padding-top:1.5cqw;margin-top:1.5cqw;border-top:1px solid var(--faint);flex:none;}
   .closing b{color:var(--ink);font-weight:700;}
-  @media print{body{background:#fff;padding:0;gap:0;}
-    .slide{border:none;box-shadow:none;max-width:none;page-break-after:always;}}
+  @media print{
+    @page{size:338.67mm 190.5mm;margin:0;}
+    body{background:#fff;padding:0;gap:0;display:block;}
+    .slide{border:none;box-shadow:none;max-width:none;width:338.67mm;height:190.5mm;
+           aspect-ratio:auto;page-break-after:always;margin:0;}}
 </style>
 
 <!-- 1 TITLE -->

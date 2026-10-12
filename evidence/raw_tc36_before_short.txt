@@ -1,0 +1,17 @@
+test_tc35_k_of_zero_returns_empty_list ... ok
+test_tc36_negative_k_returns_empty_list_not_whole_corpus ... FAIL
+test_tc37_score_is_rounded_to_four_places ... ok
+
+==========================================================
+FAIL: test_tc36_negative_k_returns_empty_list_not_whole_corpus
+A negative k must not silently slice from the end of the ranking.
+----------------------------------------------------------
+    self.assertEqual(self.r.search(q, k=-1), [])
+AssertionError: Lists differ: [{'stance': -1, ...}] != []
+
+First list contains 7 additional elements.
+
+----------------------------------------------------------
+Ran 3 tests in 0.007s
+
+FAILED (failures=1)

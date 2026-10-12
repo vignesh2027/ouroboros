@@ -1,0 +1,9 @@
+test_tc35_k_of_zero_returns_empty_list (tests.test_experiment.TestRetrieverEdges.test_tc35_k_of_zero_returns_empty_list) ... ok
+test_tc36_negative_k_returns_empty_list_not_whole_corpus (tests.test_experiment.TestRetrieverEdges.test_tc36_negative_k_returns_empty_list_not_whole_corpus)
+A negative k must not silently slice from the end of the ranking. ... ok
+test_tc37_score_is_rounded_to_four_places (tests.test_experiment.TestRetrieverEdges.test_tc37_score_is_rounded_to_four_places) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.008s
+
+OK
