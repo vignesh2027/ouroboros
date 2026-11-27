@@ -72,7 +72,7 @@ Four design diagrams and an automated test suite cover the implemented module.
 | [Review One report](https://vignesh2027.github.io/ouroboros/review1-report.html) | Requirements, diagrams, running module, 43 test cases |
 
 ```bash
-python3 run_tests.py     # 43 cases, writes outputs/TEST_CASES.md
+python3 run_tests.py     # 199 cases, writes outputs/TEST_CASES.md
 ```
 
 Two defects were found, fixed and retested during this phase.
@@ -102,7 +102,7 @@ docs/                        Project page published to GitHub Pages
 
 ## Reproduce
 
-No GPU, no API key, no model download.
+The Phase I experiment needs no GPU, no API key and no model download.
 
 ```bash
 pip install -r requirements.txt
@@ -148,7 +148,7 @@ bash run_platform.sh
 # landing page: http://localhost:8000   app: http://localhost:8000/app
 ```
 
-Model access is configured on the server (see the private setup notes), and `OFFLINE=1` replays cached
+Live questions need a model credential on the machine running the server. Without one the app still replays every saved example from the cache, and `OFFLINE=1` makes that explicit and replays cached
 work only. Every model call is cached on disk under `outputs/.cache`.
 
 To rerun the live experiment on the SPIRAL-Bench v0 closed corpus (8 questions, both modes, 4 hops,
@@ -178,18 +178,17 @@ larger, real corpora.
 1. The passages are **synthetic** research-style text written for this prototype. They describe
    real findings in outline but are not quotations and must not be cited as literature.
 2. The benchmark is **small**: 8 questions, 64 passages.
-3. Queries in v0 are **authored probes, not agent output**. Whether a live model writes queries
-   like these is the open question.
+3. Queries in the Phase I experiment (v0) are **authored probes**. The Phase II live experiment uses
+   queries the model wrote itself.
 4. Balance is balanced **by construction**, not by sampling from a real corpus.
 
 ## Next
 
-A dense sentence encoder in place of TF-IDF, a live model writing its own follow-up queries, and a
-larger question set.
+A dense sentence encoder in place of TF-IDF, a larger question set, and a larger real corpus so that guarded and standard agents have room to differ.
 
 ## Team
 
-Department of Artificial Intelligence and Data Science, Project Phase I.
+Department of Artificial Intelligence and Data Science, Project Phase I and II.
 
 | Member | Register number | Coordinates | GitHub |
 |---|---|---|---|

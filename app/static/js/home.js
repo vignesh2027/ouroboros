@@ -8,7 +8,7 @@
     var composer = O.composer({
       large: true,
       placeholder: 'Ask a question',
-      onSubmit: function (q, o) { O.startThread({ question: q, guarded: o.guarded, hops: o.hops }); }
+      onSubmit: function (q, o) { try { composer.setValue(''); } catch (e) {} O.startThread({ question: q, guarded: o.guarded, hops: o.hops }); }
     });
 
     var hero = h('header', { class: 'hero' },

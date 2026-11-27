@@ -385,6 +385,14 @@
       "remarks": "LLMTest"
     },
     {
+      "id": "TEST_APP_IS_THE_CHAT_SHELL",
+      "input": "test app is the chat shell",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestPages"
+    },
+    {
       "id": "TEST_ARXIV",
       "input": "test arxiv",
       "expected": "Behaviour holds as specified",
@@ -721,6 +729,14 @@
       "remarks": "TestSearchAll"
     },
     {
+      "id": "TEST_FAVICON",
+      "input": "test favicon",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestPages"
+    },
+    {
       "id": "TEST_FETCHED_DOCS_ENTER_THE_POOL",
       "input": "test fetched docs enter the pool",
       "expected": "Behaviour holds as specified",
@@ -871,6 +887,22 @@
       "actual": "As expected",
       "status": "PASS",
       "remarks": "SearchTests"
+    },
+    {
+      "id": "TEST_LANDING_HAS_NO_INTERNAL_WORDS",
+      "input": "test landing has no internal words",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestPages"
+    },
+    {
+      "id": "TEST_LANDING_IS_STANDALONE",
+      "input": "test landing is standalone",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestPages"
     },
     {
       "id": "TEST_LAZY_REFIT_SEES_NEW_DOCUMENTS",
@@ -1177,12 +1209,36 @@
       "remarks": "AuditFlow"
     },
     {
+      "id": "TEST_PUBLIC_DEMO_SERVES_NO_CODE",
+      "input": "test public demo serves no code",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestAllowList"
+    },
+    {
       "id": "TEST_PUBLIC_IP_ALLOWED",
       "input": "test public ip allowed",
       "expected": "Behaviour holds as specified",
       "actual": "As expected",
       "status": "PASS",
       "remarks": "SSRF"
+    },
+    {
+      "id": "TEST_PUBLIC_QUOTA",
+      "input": "test public quota",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestAllowList"
+    },
+    {
+      "id": "TEST_PUBLIC_RUNS_FEATURED_ONLY",
+      "input": "test public runs featured only",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestAllowList"
     },
     {
       "id": "TEST_PUBMED",
@@ -1287,6 +1343,14 @@
       "actual": "As expected",
       "status": "PASS",
       "remarks": "TestChat"
+    },
+    {
+      "id": "TEST_ROUTES_REGISTERED",
+      "input": "test routes registered",
+      "expected": "Behaviour holds as specified",
+      "actual": "As expected",
+      "status": "PASS",
+      "remarks": "TestPages"
     },
     {
       "id": "TEST_RUN_ID_AND_BAD_RUN_LOOKUP",
@@ -1563,6 +1627,6 @@
       "remarks": "run_experiment.py now fits one encoder over every passage and query before the loop. Defect resolved, pinned by this test"
     }
   ],
-  "total": 191,
+  "total": 199,
   "failures": 0
 }

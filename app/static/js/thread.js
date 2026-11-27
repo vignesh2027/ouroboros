@@ -38,8 +38,8 @@
     var facts = [];
     if (O.isNum(sc.distinct_domains)) facts.push(O.plural(sc.distinct_domains, 'website') + ' behind the claims');
     var multi = pctOf(sc.multi_source_share);
-    if (multi && nSup) facts.push(multi + ' backed by two or more');
-    facts.push(nCon + ' contradicted');
+    if (multi && nSup) facts.push(multi + ' of claims backed by two or more websites');
+    facts.push(nCon ? nCon + ' contradicted' : 'None contradicted');
 
     function row(label, value) { return h('div', { class: 'ev-row' }, h('dt', null, label), h('dd', null, value)); }
     var rows = [];
@@ -69,10 +69,10 @@
         h('div', { class: 'ev-text' },
           h('div', { class: 'ev-cap' }, 'Evidence Support Score'),
           h('div', { class: 'ev-grade ' + O.gradeClass(report.grade) }, report.grade || 'No grade'),
-          h('div', { class: 'ev-sub' }, nSup + ' of ' + O.plural(claims.length, 'claim') + ' backed'),
+          h('div', { class: 'ev-sub' }, nSup + ' of ' + O.plural(claims.length, 'claim') + (nMix ? ' fully backed, ' + nMix + ' mixed counted as half' : ' backed')),
           report.grade === 'Partly supported' && O.isNum(score) && score >= 80 ? h('div', { class: 'ev-sub ev-qual' }, 'Few sources agree with each other, so the grade is held back.') : null),
         tog),
-      h('p', { class: 'ev-facts' }, facts.join(', ')),
+      h('p', { class: 'ev-facts' }, facts.join('. ') + '.'),
       more);
   };
 
@@ -729,7 +729,7 @@
     var sources = h('p', { class: 'hop-sources' }, 'Searching sources');
     var body = h('div', { class: 'hop-body' }, h('p', { class: 'hop-wait' }, O.spinner(), 'Reading what came back'));
     var li = h('li', { class: 'hop' + (origin === 'counter' ? ' is-counter' : '') },
-      h('div', { class: 'hop-head' }, h('span', { class: 'hop-num' }, 'Hop ' + n), h('span', { class: 'hop-origin' }, ORIGIN[origin] || origin)),
+      h('div', { class: 'hop-head' }, h('span', { class: 'hop-num' }, 'Round ' + n), h('span', { class: 'hop-origin' }, ORIGIN[origin] || origin)),
       h('code', { class: 'hop-query' }, query),
       sources, body);
     return { li: li, sources: sources, body: body, origin: origin, metrics: null, banner: null };
@@ -764,11 +764,11 @@
           h('div', { class: 'hop-passage-meta' }, metaLine(p), h('span', { class: 'stance ' + st.cls }, st.label)),
           p.reason ? h('p', { class: 'hop-reason' }, p.reason) : null);
       }))) : h('p', { class: 'hop-none' }, 'No new passages were read in this round.');
-    O.clear(c.body).append(list,
+    O.clear(c.body).append.apply(c.body, [list,
       ev.belief ? h('div', { class: 'hop-note' },
         h('div', { class: 'hop-label' }, 'What the agent believed after reading' + (O.isNum(ev.confidence) ? ' (confidence ' + Math.round(ev.confidence) + '%)' : '')),
         h('p', null, ev.belief)) : null,
-      ev.next_query ? h('div', { class: 'hop-note' }, h('div', { class: 'hop-label' }, 'Its own next search'), h('code', { class: 'hop-code' }, ev.next_query)) : null);
+      ev.next_query ? h('div', { class: 'hop-note' }, h('div', { class: 'hop-label' }, 'Its own next search'), h('code', { class: 'hop-code' }, ev.next_query)) : null].filter(Boolean));
   };
 
   Turn.prototype.on_hop_metrics = function (ev) {
@@ -782,7 +782,7 @@
         h('div', { class: 'metric-label' }, 'Drift toward the belief (BAQD)'),
         O.baqdBar(ev.baqd),
         h('div', { class: 'metric-val' }, ev.baqd.toFixed(3) + (ev.baqd > 0.05 ? ', above 0.05, so this counts as drift' : ', at or below 0.05, so no drift')))
-      : h('div', { class: 'metric' }, h('div', { class: 'metric-label' }, 'Drift toward the belief (BAQD)'), h('div', { class: 'metric-val' }, 'Not measured, there is no earlier belief in round 1'));
+      : h('div', { class: 'metric' }, h('div', { class: 'metric-label' }, 'Drift toward the belief (BAQD)'), h('div', { class: 'metric-val' }, (ev.hop > 1 && !(s + n + k) ? 'Not measured, no passages were read in this round' : 'Not measured, there is no earlier belief in round 1')));
     var balance = h('div', { class: 'metric' },
       h('div', { class: 'metric-label' }, 'Balance of the passages'),
       O.balanceBar(s, n, k),
@@ -897,10 +897,10 @@
     O.clear(this.progress);
     O.clear(this.errorHost).append(h('div', { class: 'run-error', role: 'alert' },
       h('strong', null, 'This research could not finish. '), message || 'Something went wrong.',
-      h('div', { class: 'run-error-actions' }, h('button', { type: 'button', class: 'btn btn-quiet', onclick: function () { self.thread.retry(self); } }, O.icon('refresh', 16), 'Try again'))));
+      /not available right now/.test(message || '') ? null : h('div', { class: 'run-error-actions' }, h('button', { type: 'button', class: 'btn btn-quiet', onclick: function () { self.thread.retry(self); } }, O.icon('refresh', 16), 'Try again'))));
     var empty = !this.cites.sources().length;
     if (!this.answered || empty) O.clear(this.answerHost).append(h('p', { class: 'muted' }, 'No answer was written.'));
-    if (empty) this.renderSources();
+    if (empty) { this.renderSources(); if (this.tabs && this.tabs.setCount) this.tabs.setCount('steps', 0); }
     O.clear(this.evidenceHost);
     this.thread.turnFinished(this, true);
   };

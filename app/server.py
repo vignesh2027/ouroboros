@@ -404,9 +404,8 @@ def friendly_error(message: str) -> str:
     Nothing about the provider, model or credentials is ever returned."""
     m = message or ""
     if "LLMOffline" in m:
-        return ("This demo is running without internet, so only questions that were "
-                "already saved can be replayed. Try one of the saved runs, or start the "
-                "server online.")
+        return ("New questions are not available right now. The saved example "
+                "questions still work.")
     if "Cancelled" in m:
         return "The run was stopped."
     if "rate limited" in m:
@@ -793,14 +792,14 @@ def _page(name: str):
     return FileResponse(p, headers={"Cache-Control": "no-cache"})
 
 
-@app.get("/")
+@app.api_route("/", methods=["GET", "HEAD"])
 def landing():
     """The standalone landing page (its own document, no app shell)."""
     return _page("landing.html")
 
 
-@app.get("/app")
-@app.get("/app/")
+@app.api_route("/app", methods=["GET", "HEAD"])
+@app.api_route("/app/", methods=["GET", "HEAD"])
 def index():
     """The chat app. Hash routes (#/ask, #/r/<id>, #/audit ...) are handled in the browser."""
     return _page("index.html")
