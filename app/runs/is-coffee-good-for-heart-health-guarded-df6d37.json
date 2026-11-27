@@ -1,0 +1,693 @@
+{
+ "question": "Is coffee good for heart health?",
+ "mode": "guarded",
+ "config": {
+  "mode": "guarded",
+  "hops": 4,
+  "k": 6,
+  "per_source": 3,
+  "sources": null,
+  "baqd_threshold": 0.05,
+  "skew_threshold": 0.5,
+  "closed_corpus": false,
+  "corpus_size": 0
+ },
+ "hops": [
+  {
+   "hop": 1,
+   "query": "Is coffee good for heart health?",
+   "origin": "question",
+   "fetched": {
+    "wikipedia": 3,
+    "openalex": 3,
+    "pubmed": 2,
+    "web": 3
+   },
+   "pool_size": 46,
+   "passages": [
+    {
+     "pid": "8250bf2040d2#0",
+     "title": "Is coffee good for your heart?",
+     "url": "https://doi.org/10.5281/zenodo.22101962",
+     "domain": "doi.org/10.5281",
+     "source": "openalex",
+     "year": 2026,
+     "text": "Is coffee good for your heart?. Coffee is one of the most widely consumed and studied beverages on the planet, and yet the answer is still not as simple. A review article in the European Heart Journal brought together decades of research on coffee and heart health. The Small Print brings you here the evidence, broken down into what we can say and what we can't. The Small Print is an independent editorial project. This content does not represent the position of any institution.",
+     "stance": "neutral",
+     "reason": "Says the answer is not simple, but gives no direction on benefit or harm."
+    },
+    {
+     "pid": "2bfd11bef8a3#0",
+     "title": "Polyphenols and Oxidative Stress in Atherosclerosis-Related Ischemic Heart Disease and Stroke.",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/29317985/",
+     "domain": "pubmed.ncbi.nlm.nih.gov",
+     "source": "pubmed",
+     "year": 2017,
+     "text": "Polyphenols and Oxidative Stress in Atherosclerosis-Related Ischemic Heart Disease and Stroke.. Good nutrition could maintain health and life. Polyphenols are common nutrient mainly derived from fruits, vegetables, tea, coffee, cocoa, mushrooms, beverages, and traditional medicinal herbs. They are potential substances against oxidative-related diseases, for example, cardiovascular disease, specifically, atherosclerosis-related ischemic heart disease and stroke, which are health and economic problems recognized worldwide.",
+     "stance": "neutral",
+     "reason": "Discusses polyphenols broadly, including coffee, without specific claims about coffee and heart health."
+    },
+    {
+     "pid": "c2800bd0fc24#1",
+     "title": "Impact of coffee consumption on heart health: An Overview",
+     "url": "https://doi.org/10.33545/26649020.2024.v6.i2c.86",
+     "domain": "doi.org/10.33545",
+     "source": "openalex",
+     "year": 2024,
+     "text": "However, it is important to note that too much of a good thing can have negative effects; those who are sensitive to caffeine or partake in excess consumption may experience arrhythmias, high blood pressure, or rapid heartbeats. It is also important to understand that the effects of coffee on heart health are influenced by lifestyle factors, genetic factors, and brewing techniques, and vice versa: coffee’s impact on heart health is a two-way street. Lastly, given the various benefits and risks that accompany coffee consumption, the review calls for tailored recommendations. To aid in gathering complete information and better serve the general public, further research must address the multifaceted relationships between coffee components, genetic predispositions, and cardiac events.",
+     "stance": "neutral",
+     "reason": "Notes both benefits and risks of coffee depending on sensitivity, dose and genetics; takes no clear side."
+    },
+    {
+     "pid": "9de9c10251c1#0",
+     "title": "Is coffee bad for your heart? Here's the latest science",
+     "url": "https://www.heart.org/en/news/2026/07/29/is-coffee-bad-for-your-heart-heres-the-latest-science",
+     "domain": "heart.org",
+     "source": "web",
+     "year": null,
+     "text": "Is coffee bad for your heart? Here's the latest science. Caffeinated coffee may benefit heart health, but energy drinks may have too much caffeine. Here's what an @American_Heart report says about caffeine and cardiovascular health",
+     "stance": "supports",
+     "reason": "States caffeinated coffee may benefit heart health, per an American Heart report."
+    },
+    {
+     "pid": "1e5642249056#1",
+     "title": "Does coffee help or harm your heart? - Harvard Health",
+     "url": "https://www.health.harvard.edu/heart-health/does-coffee-help-or-harm-your-heart",
+     "domain": "health.harvard.edu",
+     "source": "web",
+     "year": null,
+     "text": "Early medically induced menopause may increase cardiovascular risks Consensus grows for widening use of menopausal hormone therapy Many people can't imagine starting their day without a cup or two of coffee. Despite its popularity, however, coffee has been a bit controversial when it comes to heart health. \"The thinking about coffee's effects on the heart has swung in both directions,\" says Dr. J. Michael Gaziano, professor of medicine at Harvard Medical School. In the 1960s, coffee was considered a risk factor for coronary artery disease, although later research suggested that only heavy coffee consumption (more than five or six cups a day) might harm the heart.",
+     "stance": "supports",
+     "reason": "Notes early fears were reversed; only heavy intake (over five or six cups) was later thought to harm the heart."
+    },
+    {
+     "pid": "312cd47bc74d#0",
+     "title": "Good news for coffee addicts.",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/19496470/",
+     "domain": "pubmed.ncbi.nlm.nih.gov",
+     "source": "pubmed",
+     "year": 2009,
+     "text": "Good news for coffee addicts.. Whether it's a basic Mr. Coffee or a gadget that sports a snazzy device for grinding beans on demand, the office coffee machine offers a place for serendipitous encounters that can improve the social aspect of work and generate new ideas. What's more, a steaming cup of joe may be as good for your health as it is for the bottom line, says Lee, a professor of medicine at Harvard Medical School and the CEO of Partners Community HealthCare. Fears of coffee's carcinogenic effects now appear to be unfounded, and, in fact, the brew might even protect against some types of cancer.",
+     "stance": "neutral",
+     "reason": "Discusses coffee and cancer and workplace benefits, not heart health."
+    }
+   ],
+   "belief": "Moderate coffee consumption appears neutral to beneficial for heart health, while heavy intake and caffeine sensitivity may pose risks.",
+   "confidence": 60,
+   "next_query": "moderate coffee consumption cardiovascular disease risk meta-analysis European Heart Journal review",
+   "baqd": null,
+   "support": 2,
+   "contradict": 0,
+   "neutral": 4,
+   "skew": 1.0,
+   "balance_loss": 1.0,
+   "domains": 5,
+   "sources": 3,
+   "cumulative": {
+    "support": 2,
+    "contradict": 0,
+    "neutral": 4,
+    "passages": 6
+   },
+   "cqi": true
+  },
+  {
+   "hop": 2,
+   "query": "coffee consumption increased arrhythmia atrial fibrillation harm heart patients randomized trial",
+   "origin": "counter",
+   "fetched": {
+    "wikipedia": 1,
+    "openalex": 3,
+    "arxiv": 1,
+    "pubmed": 1,
+    "web": 3
+   },
+   "pool_size": 81,
+   "passages": [
+    {
+     "pid": "76b933e1894a#0",
+     "title": "Caffeinated Coffee Consumption or Abstinence to... : JAMA",
+     "url": "https://www.ovid.com/journals/jama/fulltext/10.1001/jama.2025.21056~caffeinated-coffee-consumption-or-abstinence-to-reduce",
+     "domain": "ovid.com",
+     "source": "web",
+     "year": null,
+     "text": "Caffeinated Coffee Consumption or Abstinence to Reduce Atrial Fibrillation JAMA 335(4):p 317-325, January 27, 2026. | DOI: 10.1001/jama.2025.21056 Conventional wisdom holds that caffeinated coffee is proarrhythmic. Coffee is the most commonly consumed caffeinated beverage in the US, and a randomized trial assessing caffeinated coffee consumption in patients with atrial fibrillation (AF) has not previously been performed. To determine the effect of caffeinated coffee consumption compared with abstinence from coffee and caffeine on recurrent AF.",
+     "stance": "neutral",
+     "reason": "Describes an RCT design on coffee and AF recurrence without reporting results."
+    },
+    {
+     "pid": "1ffb0bf0641c#6",
+     "title": "Coffee and cardiac arrhythmias: Up-date review of the literature and ...",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10508080/",
+     "domain": "pmc.ncbi.nlm.nih.gov",
+     "source": "web",
+     "year": null,
+     "text": "An important contributor to cardiac arrhythmias, including AF, is played by modifiable risk factors such as smoking, alcohol abuse, lack of physical activity and sedentary lifestyle, arterial hypertension, obesity, and inappropriate nutritional behavior [14]. Nonetheless, the influence of coffee consumption on the risk of arrhythmias remains a controversial issue. A large percentage of doctors recommend patients with heart palpitations to stop or reduce using coffee [15]. In a randomized clinical trial by Groh et al. [16], out of 957 patients with paroxysmal AF, 28% reported consumption of caffeine as a trigger for this arrhythmia.",
+     "stance": "contradicts",
+     "reason": "Says coffee's effect on arrhythmias is controversial and many doctors advise reducing it for palpitations."
+    },
+    {
+     "pid": "d490f254eb76#2",
+     "title": "Caffeine and Cardiovascular Disease: A Scientific Statement From the American Heart Association.",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42473796/",
+     "domain": "pubmed.ncbi.nlm.nih.gov",
+     "source": "pubmed",
+     "year": 2026,
+     "text": "Randomized controlled trial data among regular caffeinated coffee drinkers showed that caffeinated coffee decreases the risk of atrial fibrillation occurrence but increases the frequency of premature ventricular contractions. Data are fairly consistent that moderate caffeine consumption, again studied primarily in the setting of coffee consumption, was associated with a lower risk of stroke. Data on high doses of caffeine such as that found in energy drinks are limited and generally suggest cardiovascular harm.",
+     "stance": "supports",
+     "reason": "AHA statement: coffee lowers AF risk and moderate caffeine linked to lower stroke risk."
+    },
+    {
+     "pid": "bbdf1c945a38#0",
+     "title": "Caffeinated Coffee Consumption or Abstinence to Reduce Atrial ...",
+     "url": "https://jamanetwork.com/journals/jama/fullarticle/2841253",
+     "domain": "jamanetwork.com",
+     "source": "web",
+     "year": null,
+     "text": "Caffeinated Coffee Consumption or Abstinence to Reduce Atrial .... This clinical trial compares the effect of caffeinated coffee consumption vs abstinence from coffee and caffeine on recurrent atrial fibrillation",
+     "stance": "neutral",
+     "reason": "Only a trial description with no findings on heart health."
+    },
+    {
+     "pid": "63527c12bb61#0",
+     "title": "Coffee and the Risk of Atrial Fibrillation",
+     "url": "https://doi.org/10.14740/cr2320",
+     "domain": "doi.org/10.14740",
+     "source": "openalex",
+     "year": 2026,
+     "text": "Coffee and the Risk of Atrial Fibrillation. Most hospitals and cardiac rehabilitation facilities provide decaffeinated coffee to cardiac patients in place of regular coffee. Recent studies, however, suggest that coffee drinking may decrease the risk of developing cardiovascular diseases. Review of controlled studies shows that drinking regular coffee in moderation is safe. It may even lead to a decrease in atrial arrhythmias such as atrial fibrillation, and it is safe in patients with ventricular arrhythmias. This is particularly true in patients who drink coffee regularly and in moderation. Energy drinks, however, that contain large doses of caffeine may indeed be harmful and should be avoided. The policies of serving only decaffeinated coffee in hospitals and rehabilitation facilities should be revisited.",
+     "stance": "supports",
+     "reason": "Review says moderate regular coffee is safe and may decrease atrial arrhythmias."
+    },
+    {
+     "pid": "cff32bddb06c#1",
+     "title": "Management of atrial fibrillation in older adults",
+     "url": "https://doi.org/10.1136/bmj-2023-076246",
+     "domain": "doi.org/10.1136",
+     "source": "openalex",
+     "year": 2024,
+     "text": "After contextualizing the burden of comorbidities and geriatric syndromes in people with atrial fibrillation, it applies an aging focused approach to the pillars of atrial fibrillation management, describing screening for atrial fibrillation, lifestyle interventions, symptoms and complications, rate and rhythm control, coexisting heart failure, anticoagulation therapy, and left atrial appendage occlusion devices. Throughout, a framework is suggested that prioritizes patients' goals and applies existing evidence to all older adults, whether atrial fibrillation is their sole condition, one among many, or a bystander at the end of life.",
+     "stance": "neutral",
+     "reason": "General AF management review; does not address coffee consumption."
+    }
+   ],
+   "belief": "Moderate coffee consumption is probably neutral to beneficial for heart health, with heavy intake and energy drinks posing risks.",
+   "confidence": 65,
+   "next_query": "Caffeinated coffee randomized trial atrial fibrillation recurrence results 2026 JAMA",
+   "baqd": -0.08635740073546674,
+   "support": 2,
+   "contradict": 1,
+   "neutral": 3,
+   "skew": 0.3333333333333333,
+   "balance_loss": 0.3333333333333333,
+   "domains": 6,
+   "sources": 3,
+   "cumulative": {
+    "support": 4,
+    "contradict": 1,
+    "neutral": 7,
+    "passages": 12
+   }
+  },
+  {
+   "hop": 3,
+   "query": "Caffeinated coffee randomized trial atrial fibrillation recurrence results 2026 JAMA",
+   "origin": "model",
+   "fetched": {
+    "openalex": 3,
+    "pubmed": 2,
+    "web": 3
+   },
+   "pool_size": 99,
+   "passages": [
+    {
+     "pid": "ad447af36900#0",
+     "title": "Caffeinated Coffee Consumption or Abstinence to... : JAMA",
+     "url": "https://qa-ai.ovid.com/jnls/jama/fulltext/10.1001/jama.2025.21056~caffeinated-coffee-consumption-or-abstinence-to-reduce",
+     "domain": "qa-ai.ovid.com",
+     "source": "web",
+     "year": null,
+     "text": "Caffeinated Coffee Consumption or Abstinence to Reduce Atrial Fibrillation JAMA 335(4):p 317-325, January 27, 2026. | DOI: 10.1001/jama.2025.21056 Conventional wisdom holds that caffeinated coffee is proarrhythmic. Coffee is the most commonly consumed caffeinated beverage in the US, and a randomized trial assessing caffeinated coffee consumption in patients with atrial fibrillation (AF) has not previously been performed. To determine the effect of caffeinated coffee consumption compared with abstinence from coffee and caffeine on recurrent AF.",
+     "stance": "neutral",
+     "reason": "Trial setup only; states conventional wisdom but reports no outcome supporting or contradicting the belief."
+    },
+    {
+     "pid": "e3cc200edfc8#0",
+     "title": "Understanding unexpected results from randomized clinical trials - Does coffee reduce atrial fibrillation recurrences?",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42431360/",
+     "domain": "pubmed.ncbi.nlm.nih.gov",
+     "source": "pubmed",
+     "year": 2026,
+     "text": "Understanding unexpected results from randomized clinical trials - Does coffee reduce atrial fibrillation recurrences?. Objective: To explore the interpretation of unexpected results from a randomized controlled trial (RCT). Study design and setting: Adjunctive frequentist (power and type-M error) and Bayesian analyses were performed on a recently published RCT reporting a statistically significant relative risk reduction (p < 0.01) for caffeinated coffee drinkers compared with abstinence on atrial fibrillation (AF) recurrence. Individual patient data for the Bayesian survival models were reconstructed from the RCT published material and priors informed by the RCT power calculations.",
+     "stance": "contradicts",
+     "reason": "Questions whether the RCT's significant coffee benefit for AF recurrence is reliable, undermining the beneficial framing."
+    },
+    {
+     "pid": "76b933e1894a#3",
+     "title": "Caffeinated Coffee Consumption or Abstinence to... : JAMA",
+     "url": "https://www.ovid.com/journals/jama/fulltext/10.1001/jama.2025.21056~caffeinated-coffee-consumption-or-abstinence-to-reduce",
+     "domain": "ovid.com",
+     "source": "web",
+     "year": null,
+     "text": "In the primary analysis, AF or atrial flutter recurrence was less in the coffee consumption (47%) than the coffee abstinence (64%) group, resulting in a 39% lower hazard of recurrence (hazard ratio, 0.61 [95% CI, 0.42-0.89]; P = .01). A comparable benefit of coffee consumption was observed with AF recurrence only. There was no significant difference in adverse events. In this clinical trial of coffee drinkers after successful cardioversion, allocation to consumption of caffeinated coffee averaging 1 cup a day was associated with less recurrence of AF or atrial flutter compared with abstinence from coffee and caffeinated products. Copyright © 2026 by the American Medical Association. All Rights Reserved. Applicable FARS/DFARS Restrictions Apply to Government Use. American Medical Association, 515 N. State St, Chicago, IL 60610.",
+     "stance": "supports",
+     "reason": "DECAF trial reports coffee consumption linked to 39% lower AF recurrence hazard, with no added adverse events."
+    },
+    {
+     "pid": "7591d78c5ea0#4",
+     "title": "Caffeinated Coffee Consumption or Abstinence to Reduce Atrial Fibrillation: The DECAF Randomized Clinical Trial.",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41206802/",
+     "domain": "pubmed.ncbi.nlm.nih.gov",
+     "source": "pubmed",
+     "year": 2026,
+     "text": "Conclusions and relevance: In this clinical trial of coffee drinkers after successful cardioversion, allocation to consumption of caffeinated coffee averaging 1 cup a day was associated with less recurrence of AF or atrial flutter compared with abstinence from coffee and caffeinated products. Trial registration: ClinicalTrials.gov Identifier: NCT05121519.",
+     "stance": "supports",
+     "reason": "Reports caffeinated coffee of about 1 cup daily associated with less AF recurrence than abstinence."
+    },
+    {
+     "pid": "60a3512672e3#0",
+     "title": "Caffeinated Coffee Consumption and Atrial Arrhythmia Recurrence After Pulmonary Vein Isolation",
+     "url": "https://doi.org/10.3390/jcm15155841",
+     "domain": "doi.org/10.3390",
+     "source": "openalex",
+     "year": 2026,
+     "text": "Caffeinated Coffee Consumption and Atrial Arrhythmia Recurrence After Pulmonary Vein Isolation. Background: The impact of caffeinated coffee consumption on atrial fibrillation (AF) recurrence after pulmonary vein isolation (PVI) remains uncertain, and clinical recommendations regarding caffeine intake are inconsistent. Methods: This retrospective observational cohort study included consecutive patients undergoing first-time PVI using a high-power short-duration technique between 2019 and 2023. Patients were stratified according to self-reported daily coffee consumption into a high-consumption group (≥2 cups/day) and a low-consumption group (0-1 cup/day). The primary endpoint was recurrence of atrial arrhythmia within 12 months after PVI, excluding a 90-day blanking period.",
+     "stance": "contradicts",
+     "reason": "Retrospective cohort compares high versus low coffee intake for AF recurrence; its results are not stated, so this is an open question."
+    },
+    {
+     "pid": "bc95d7d8ef5d#0",
+     "title": "Caffeinated Coffee Consumption or Abstinence to Reduce Atrial ...",
+     "url": "https://jamanetwork.com/journals/jama/fullarticle/2841252",
+     "domain": "jamanetwork.com",
+     "source": "web",
+     "year": null,
+     "text": "Caffeinated Coffee Consumption or Abstinence to Reduce Atrial .... This study investigated whether consuming caffeinated coffee affects the risk of recurrent atrial fibrillation episodes compared with abstaining from coffee and caffeine after successful cardioversion",
+     "stance": "neutral",
+     "reason": "Study description only, with no findings reported."
+    }
+   ],
+   "belief": "Moderate coffee intake (about 1 cup daily) appears neutral to beneficial for heart rhythm and arrhythmia outcomes, such as AF recurrence, though evidence is limited and heavy intake and energy drinks carry risks.",
+   "confidence": 60,
+   "next_query": "Coffee intake heavy consumption arrhythmia risk meta-analysis cohort cardiovascular mortality",
+   "baqd": -0.15905374281365262,
+   "support": 2,
+   "contradict": 2,
+   "neutral": 2,
+   "skew": 0.0,
+   "balance_loss": 0.0,
+   "domains": 5,
+   "sources": 3,
+   "cumulative": {
+    "support": 6,
+    "contradict": 3,
+    "neutral": 9,
+    "passages": 18
+   }
+  },
+  {
+   "hop": 4,
+   "query": "Coffee intake heavy consumption arrhythmia risk meta-analysis cohort cardiovascular mortality",
+   "origin": "model",
+   "fetched": {
+    "wikipedia": 3,
+    "openalex": 3,
+    "pubmed": 3,
+    "web": 3
+   },
+   "pool_size": 147,
+   "passages": [
+    {
+     "pid": "cef9dd04771d#8",
+     "title": "Coffee, caffeine, and cardiovascular health: navigating risks and ...",
+     "url": "https://link.springer.com/article/10.1186/s12872-026-05693-0",
+     "domain": "link.springer.com",
+     "source": "web",
+     "year": null,
+     "text": "Collectively, these reviews suggest that coffee consumption has several cardiovascular health benefits and risks. However, important limitations remain. First, coffee consumption and caffeine intake have been used as interchangeable exposures, despite coffee containing other non-caffeine components. Second, these reviews do not incorporate the most recent cohort studies published in the past few years. Finally, most statistical analyses have focused on composite cardiovascular outcomes, which limits insights condition-specific risks, such as arrhythmias. Therefore, we conducted an updated meta-analysis to comprehensively examine the relationship between coffee or caffeine with a wide range of cardiovascular outcomes. Compared to previous reviews, the current meta-analysis uniquely evaluates coffee and caffeine as separate exposures, includes recently published cohort studies, and",
+     "stance": "neutral",
+     "reason": "Describes a meta-analysis aim with benefits and risks; takes no clear side on heart health."
+    },
+    {
+     "pid": "2b4073fa78cd#0",
+     "title": "Coffee, caffeine, and cardiovascular health: navigating risks and benefits—an updated systematic review and meta-analysis",
+     "url": "https://doi.org/10.1186/s12872-026-05693-0",
+     "domain": "doi.org/10.1186",
+     "source": "openalex",
+     "year": 2026,
+     "text": "Coffee, caffeine, and cardiovascular health: navigating risks and benefits—an updated systematic review and meta-analysis. BACKGROUND: The association between coffee or caffeine intake and cardiovascular diseases (CVDs) and their risk factors has been extensively researched. However, there has been conflicting evidence. Therefore, the current updated meta-analysis assessed the relationship between coffee or caffeine with CVDs, such as coronary heart diseases (CHDs), myocardial infarction (MI), heart failure (HF), stroke, cardiac arrhythmias, and CVD mortality. METHODS: Five electronic databases, namely PubMed, Web of Science, Cochrane Library, Embase, and Scopus, were extensively searched for all records published between January 2000 and December 2025.",
+     "stance": "neutral",
+     "reason": "Abstract states conflicting evidence and study aims without reporting a direction of effect."
+    },
+    {
+     "pid": "1ffb0bf0641c#2",
+     "title": "Coffee and cardiac arrhythmias: Up-date review of the literature and ...",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10508080/",
+     "domain": "pmc.ncbi.nlm.nih.gov",
+     "source": "web",
+     "year": null,
+     "text": "Many mechanisms by which coffee can increase and decrease the risk of arrhythmias have been described. Habitual consumption of moderate amounts of coffee seems to lead to less arrhythmias, which is reflected in the results of many clinical trials and meta-analyzes. This review summarizes the mechanisms of coffee action on the heart muscle and the results of the most recent important clinical trials assessing the impact of coffee consumption on the risk of various cardiac arrhythmias. Keywords: coffee, heart arrhythmia, atrial arrhythmia, ventricular arrhythmia Coffee is the most consumed drink next to water and tea.",
+     "stance": "supports",
+     "reason": "States habitual moderate coffee consumption seems to lead to fewer arrhythmias, supporting neutral-to-beneficial view."
+    },
+    {
+     "pid": "20e7def65c16#0",
+     "title": "Association of Coffee, Tea, and Caffeine Consumption With All-Cause Risk and Specific Mortality for Cardiovascular Disease Patients",
+     "url": "https://doi.org/10.3389/fnut.2022.842856",
+     "domain": "doi.org/10.3389",
+     "source": "openalex",
+     "year": 2022,
+     "text": "Association of Coffee, Tea, and Caffeine Consumption With All-Cause Risk and Specific Mortality for Cardiovascular Disease Patients. Aim: The aim of the study was to examine the relationship between coffee, tea, caffeine consumption and risk of all-cause death and cardiovascular disease (CVD) death in CVD population. Methods: This cohort study included 626 CVD participants aged ≥18 years old who derived from the National Health and Nutrition Examination Surveys (NHANES) database 2003-2006. The end time of follow-up was 2015, and with a median follow-up time of 113.5 (63, 133) months.",
+     "stance": "neutral",
+     "reason": "Study design description only; no result on coffee effects reported in passage."
+    },
+    {
+     "pid": "59ad76e67367#0",
+     "title": "Coffee, caffeine, and cardiovascular health: navigating risks ... - PubMed",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42098622/",
+     "domain": "pubmed.ncbi.nlm.nih.gov",
+     "source": "web",
+     "year": null,
+     "text": "Coffee, caffeine, and cardiovascular health: navigating risks ... - PubMed. Background: The association between coffee or caffeine intake and cardiovascular diseases (CVDs) and their risk factors has been extensively researched. However, there has been conflicting evidence. Therefore, the current updated meta-analysis assessed the relationship between coffee or caffeine with CVDs, such as coronary heart diseases (CHDs), myocardial infarction (MI), heart failure (HF",
+     "stance": "neutral",
+     "reason": "Title and background only; no finding on direction of coffee's cardiovascular effect."
+    },
+    {
+     "pid": "60a3512672e3#1",
+     "title": "Caffeinated Coffee Consumption and Atrial Arrhythmia Recurrence After Pulmonary Vein Isolation",
+     "url": "https://doi.org/10.3390/jcm15155841",
+     "domain": "doi.org/10.3390",
+     "source": "openalex",
+     "year": 2026,
+     "text": "Multivariable logistic regression was performed to assess the association between coffee consumption and arrhythmia recurrence. Results: A total of 199 patients were included, of whom 124 (62.3%) reported high coffee consumption and 75 (37.7%) low consumption. Baseline characteristics and procedural parameters were comparable between groups. At 12 months, atrial arrhythmia recurrence occurred in 24 patients (19.4%) in the high-consumption group and 25 patients (33.3%) in the low-consumption group (p = 0.03). In multivariable analysis, higher coffee consumption was independently associated with a lower risk of recurrence (adjusted OR 0.47, 95% CI 0.23-0.95; p = 0.036).",
+     "stance": "supports",
+     "reason": "Higher coffee consumption linked to lower atrial arrhythmia recurrence after ablation, adjusted OR 0.47."
+    }
+   ],
+   "belief": "Moderate coffee intake appears neutral to beneficial for heart health, especially rhythm outcomes, though evidence is mixed and heavy intake may carry risks.",
+   "confidence": 60,
+   "next_query": "coffee intake heavy consumption cardiovascular risk meta-analysis dose response",
+   "baqd": 0.16647415325135956,
+   "support": 2,
+   "contradict": 0,
+   "neutral": 4,
+   "skew": 1.0,
+   "balance_loss": 1.0,
+   "domains": 6,
+   "sources": 2,
+   "cumulative": {
+    "support": 8,
+    "contradict": 3,
+    "neutral": 13,
+    "passages": 24
+   }
+  }
+ ],
+ "cqi_events": [
+  {
+   "hop": 1,
+   "trigger": {
+    "baqd": null,
+    "skew": 1.0
+   },
+   "original_query": "moderate coffee consumption cardiovascular disease risk meta-analysis European Heart Journal review",
+   "counter_query": "coffee consumption increased arrhythmia atrial fibrillation harm heart patients randomized trial",
+   "why": "This looks for evidence that coffee harms cardiac rhythm or shows no protective effect, which would challenge the belief that moderate intake is neutral to beneficial."
+  }
+ ],
+ "synthesis": {
+  "answer": "Moderate coffee intake appears generally benign or beneficial for the heart, though the evidence is mixed and depends on the outcome. The American Heart Association statement says caffeinated coffee may benefit heart health, that coffee lowers atrial fibrillation risk while raising premature ventricular contractions, and that moderate caffeine intake is associated with lower stroke risk [d490f254eb76#2] [9de9c10251c1#0]. A randomized DECAF trial found that drinking about one cup of caffeinated coffee daily was linked to less atrial fibrillation recurrence than abstinence [7591d78c5ea0#4]. Harvard Health notes that only heavy intake, above five or six cups a day, was once thought to harm the heart [1e5642249056#1]. The contradicting side is real: a reanalysis of the DECAF trial questioned whether its statistically significant result was robust, given unexpected findings [e3cc200edfc8#0]. A review also notes that many doctors advise palpitation patients to cut coffee, and caffeine was a trigger for many patients with AF [1ffb0bf0641c#6]. Energy drinks with large caffeine doses are linked to cardiovascular harm [d490f254eb76#2]. Overall, moderate coffee looks reasonably safe, but the evidence is not conclusive.",
+  "confidence": 65,
+  "one_line": "Moderate coffee seems heart-safe and may lower some arrhythmia and stroke risks, but evidence is mixed and high caffeine doses are harmful."
+ },
+ "audit": {
+  "claims": [
+   {
+    "cid": "c1",
+    "text": "The American Heart Association statement says caffeinated coffee may benefit heart health.",
+    "cited_pids": [
+     "d490f254eb76#2"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "9de9c10251c1#0",
+      "relation": "supports",
+      "title": "Is coffee bad for your heart? Here's the latest science",
+      "url": "https://www.heart.org/en/news/2026/07/29/is-coffee-bad-for-your-heart-heres-the-latest-science",
+      "domain": "heart.org",
+      "source": "web"
+     },
+     {
+      "pid": "d490f254eb76#2",
+      "relation": "supports",
+      "title": "Caffeine and Cardiovascular Disease: A Scientific Statement From the American Heart Association.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42473796/",
+      "domain": "pubmed.ncbi.nlm.nih.gov",
+      "source": "pubmed"
+     }
+    ],
+    "note": "The AHA statement passage reports caffeinated coffee lowers atrial fibrillation risk and moderate caffeine is linked to lower stroke risk; a web summary says caffeinated coffee may benefit heart health.",
+    "independent_sources": 2
+   },
+   {
+    "cid": "c2",
+    "text": "Coffee lowers atrial fibrillation risk while raising premature ventricular contractions.",
+    "cited_pids": [
+     "9de9c10251c1#0"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "d490f254eb76#2",
+      "relation": "supports",
+      "title": "Caffeine and Cardiovascular Disease: A Scientific Statement From the American Heart Association.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42473796/",
+      "domain": "pubmed.ncbi.nlm.nih.gov",
+      "source": "pubmed"
+     },
+     {
+      "pid": "1e5642249056#6",
+      "relation": "supports",
+      "title": "Does coffee help or harm your heart? - Harvard Health",
+      "url": "https://www.health.harvard.edu/heart-health/does-coffee-help-or-harm-your-heart",
+      "domain": "health.harvard.edu",
+      "source": "web"
+     },
+     {
+      "pid": "63527c12bb61#0",
+      "relation": "supports",
+      "title": "Coffee and the Risk of Atrial Fibrillation",
+      "url": "https://doi.org/10.14740/cr2320",
+      "domain": "doi.org/10.14740",
+      "source": "openalex"
+     }
+    ],
+    "note": "AHA statement says coffee decreases atrial fibrillation risk but increases premature ventricular contractions; Harvard and an openalex review corroborate the PVC increase and AF decrease.",
+    "independent_sources": 3
+   },
+   {
+    "cid": "c3",
+    "text": "Moderate caffeine intake is associated with lower stroke risk.",
+    "cited_pids": [
+     "9de9c10251c1#0"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "d490f254eb76#2",
+      "relation": "supports",
+      "title": "Caffeine and Cardiovascular Disease: A Scientific Statement From the American Heart Association.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42473796/",
+      "domain": "pubmed.ncbi.nlm.nih.gov",
+      "source": "pubmed"
+     },
+     {
+      "pid": "2b4073fa78cd#2",
+      "relation": "supports",
+      "title": "Coffee, caffeine, and cardiovascular health: navigating risks and benefits—an updated systematic review and meta-analysis",
+      "url": "https://doi.org/10.1186/s12872-026-05693-0",
+      "domain": "doi.org/10.1186",
+      "source": "openalex"
+     },
+     {
+      "pid": "cef9dd04771d#7",
+      "relation": "supports",
+      "title": "Coffee, caffeine, and cardiovascular health: navigating risks and ...",
+      "url": "https://link.springer.com/article/10.1186/s12872-026-05693-0",
+      "domain": "link.springer.com",
+      "source": "web"
+     }
+    ],
+    "note": "AHA statement says moderate caffeine consumption, mainly via coffee, is fairly consistently associated with lower stroke risk; meta-analysis reports inverse stroke association.",
+    "independent_sources": 3
+   },
+   {
+    "cid": "c4",
+    "text": "In the randomized DECAF trial, drinking about one cup of caffeinated coffee daily was linked to less atrial fibrillation recurrence than abstinence.",
+    "cited_pids": [
+     "7591d78c5ea0#4"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "7591d78c5ea0#4",
+      "relation": "supports",
+      "title": "Caffeinated Coffee Consumption or Abstinence to Reduce Atrial Fibrillation: The DECAF Randomized Clinical Trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41206802/",
+      "domain": "pubmed.ncbi.nlm.nih.gov",
+      "source": "pubmed"
+     }
+    ],
+    "note": "Conclusions state caffeinated coffee averaging 1 cup daily was associated with less AF or flutter recurrence than abstinence in the randomized DECAF trial.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c5",
+    "text": "Harvard Health notes that only heavy coffee intake, above five or six cups a day, was once thought to harm the heart.",
+    "cited_pids": [
+     "1e5642249056#1"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "1e5642249056#1",
+      "relation": "supports",
+      "title": "Does coffee help or harm your heart? - Harvard Health",
+      "url": "https://www.health.harvard.edu/heart-health/does-coffee-help-or-harm-your-heart",
+      "domain": "health.harvard.edu",
+      "source": "web"
+     }
+    ],
+    "note": "Harvard Health passage says heavy coffee intake (more than five or six cups a day) was later suggested as the only harmful level, after 1960s considered coffee a coronary risk factor.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c6",
+    "text": "A reanalysis of the DECAF trial questioned whether its statistically significant result was robust.",
+    "cited_pids": [
+     "e3cc200edfc8#0"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "e3cc200edfc8#0",
+      "relation": "supports",
+      "title": "Understanding unexpected results from randomized clinical trials - Does coffee reduce atrial fibrillation recurrences?",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42431360/",
+      "domain": "pubmed.ncbi.nlm.nih.gov",
+      "source": "pubmed"
+     }
+    ],
+    "note": "Passage e3cc200edfc8#0 reports adjunctive frequentist and Bayesian reanalysis of the DECAF RCT's significant result, including type-M error and priors, questioning its robustness.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c7",
+    "text": "Many doctors advise palpitation patients to cut back on coffee, and caffeine was a trigger for many atrial fibrillation patients.",
+    "cited_pids": [
+     "1ffb0bf0641c#6"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "1ffb0bf0641c#6",
+      "relation": "supports",
+      "title": "Coffee and cardiac arrhythmias: Up-date review of the literature and ...",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10508080/",
+      "domain": "pmc.ncbi.nlm.nih.gov",
+      "source": "web"
+     }
+    ],
+    "note": "Passage 1ffb0bf0641c#6 says a large percentage of doctors advise palpitation patients to stop or reduce coffee, and 28% of paroxysmal AF patients cited caffeine as a trigger. Other passages do not address this.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c8",
+    "text": "Energy drinks with large caffeine doses are linked to cardiovascular harm.",
+    "cited_pids": [
+     "d490f254eb76#2"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "d490f254eb76#2",
+      "relation": "supports",
+      "title": "Caffeine and Cardiovascular Disease: A Scientific Statement From the American Heart Association.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42473796/",
+      "domain": "pubmed.ncbi.nlm.nih.gov",
+      "source": "pubmed"
+     },
+     {
+      "pid": "63527c12bb61#0",
+      "relation": "supports",
+      "title": "Coffee and the Risk of Atrial Fibrillation",
+      "url": "https://doi.org/10.14740/cr2320",
+      "domain": "doi.org/10.14740",
+      "source": "openalex"
+     }
+    ],
+    "note": "AHA statement says high-dose caffeine from energy drinks generally suggests cardiovascular harm; the other passage echoes this. Evidence is limited, per the AHA statement.",
+    "independent_sources": 2
+   },
+   {
+    "cid": "c9",
+    "text": "Moderate coffee intake appears generally benign or beneficial for the heart, though evidence is mixed.",
+    "cited_pids": [],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "c2800bd0fc24#0",
+      "relation": "supports",
+      "title": "Impact of coffee consumption on heart health: An Overview",
+      "url": "https://doi.org/10.33545/26649020.2024.v6.i2c.86",
+      "domain": "doi.org/10.33545",
+      "source": "openalex"
+     },
+     {
+      "pid": "d79c828c529e#2",
+      "relation": "supports",
+      "title": "Impact of Coffee Consumption on Cardiovascular Health",
+      "url": "https://doi.org/10.31486/toj.22.0073",
+      "domain": "doi.org/10.31486",
+      "source": "openalex"
+     },
+     {
+      "pid": "91e2c3a4a49a#1",
+      "relation": "contradicts",
+      "title": "Lifestyle modifications and non-pharmacological management in elderly hypertension.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39505584/",
+      "domain": "pubmed.ncbi.nlm.nih.gov",
+      "source": "pubmed"
+     }
+    ],
+    "note": "Overview and meta-analysis passages link moderate coffee to benefit, with no conclusive CHD link; one hypertension passage says heavy intake raises blood pressure, so evidence is mixed overall.",
+    "independent_sources": 2
+   }
+  ],
+  "scores": {
+   "claims_checked": 9,
+   "evidence_support_score": 100.0,
+   "multi_source_share": 55.6,
+   "contradicted_share": 0.0,
+   "unverified_share": 0.0,
+   "mixed_share": 0.0,
+   "citation_faithfulness": 75.0,
+   "distinct_domains": 9,
+   "stated_confidence": 65,
+   "calibration_gap": -35.0
+  },
+  "grade": "Well supported",
+  "pool_size": 147
+ },
+ "usage": {
+  "calls": 16,
+  "cached_calls": 0,
+  "input_tokens": 34460,
+  "output_tokens": 4364,
+  "cost_usd": 0.005628
+ },
+ "seconds": 38.89,
+ "run_id": "is-coffee-good-for-heart-health-guarded-df6d37",
+ "saved_at": "2026-11-26T21:37:46"
+}

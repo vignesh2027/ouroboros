@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ouroboros</title>
+<meta name="description" content="Ouroboros is an agentic RAG research system. Ask a question and read an answer with numbered sources, then see how much of it the evidence actually backs.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F7F3EE">
+<link rel="icon" href="/static/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/static/img/favicon-64.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/static/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Jost:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Jost:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap"></noscript>
+<script>
+/* Honour the theme chosen inside the app, before first paint. */
+try { var t = localStorage.getItem('ouro-theme'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+<link rel="stylesheet" href="/static/css/tokens.css">
+<link rel="stylesheet" href="/static/css/base.css">
+<link rel="stylesheet" href="/static/css/landing.css">
+</head>
+<body class="landing">
+<a class="skip" href="#main">Skip to content</a>
+<div id="landing"></div>
+<noscript><p style="padding:24px;max-width:60ch;margin:0 auto">Ouroboros asks a question across five source types and checks every claim in the answer against the evidence it found. This page needs JavaScript. You can <a href="/app">open the app</a> directly.</p></noscript>
+<script src="/static/js/landing.js" defer></script>
+</body>
+</html>

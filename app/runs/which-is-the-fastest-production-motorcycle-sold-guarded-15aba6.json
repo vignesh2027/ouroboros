@@ -1,0 +1,754 @@
+{
+ "question": "Which is the fastest production motorcycle sold in India?",
+ "mode": "guarded",
+ "config": {
+  "mode": "guarded",
+  "hops": 4,
+  "k": 6,
+  "per_source": 3,
+  "sources": null,
+  "baqd_threshold": 0.05,
+  "skew_threshold": 0.5,
+  "closed_corpus": false,
+  "corpus_size": 0
+ },
+ "hops": [
+  {
+   "hop": 1,
+   "query": "Which is the fastest production motorcycle sold in India?",
+   "origin": "question",
+   "fetched": {
+    "wikipedia": 3,
+    "openalex": 3,
+    "pubmed": 1,
+    "web": 3
+   },
+   "pool_size": 73,
+   "passages": [
+    {
+     "pid": "697bafcb9fda#4",
+     "title": "Yezdi",
+     "url": "https://en.wikipedia.org/wiki/Yezdi",
+     "domain": "en.wikipedia.org",
+     "source": "wikipedia",
+     "year": null,
+     "text": "All three used a 334 cc single-cylinder liquid-cooled engine in differing states of tune, and were sold through the dealer network already established for Jawa motorcycles. Yezdi motorcycles are assembled at Classic Legends' plant at Pithampur in Madhya Pradesh, which also builds the company's Jawa and BSA models. In 2026, Yezdi was described as one of the fastest-growing brands in India's 350 cc-and-above motorcycle segment. Before production ended in 1996, Yezdi produced motorcycles in several engine capacities. Its models included the 250 cc Model B, Oilking, Roadking, Classic, Deluxe, CL II and Monarch, along with the 350 Twin, 175, Jet and Colt.",
+     "stance": "neutral",
+     "reason": "Covers Yezdi history and engines, not top speed of fastest production bike."
+    },
+    {
+     "pid": "e3effe5ed347#2",
+     "title": "Fastest Bikes in India 2026 - Top Speed Ranked | BikeDetailsHub",
+     "url": "https://bikedetailshub.com/articles/fastest-bikes-in-india/",
+     "domain": "bikedetailshub.com",
+     "source": "web",
+     "year": null,
+     "text": "Its inline-four engine, aerodynamic bodywork and advanced electronics make it extremely quick. What Makes a Bike Fast? Top speed depends on much more than engine displacement. Power, gearing, aerodynamics, weight, rider position, tyres, wind and electronic limitations all affect the final speed. A higher horsepower figure does not automatically guarantee the highest top speed. For outright performance, the Kawasaki Ninja H2 is one of the strongest candidates for India's fastest production motorcycle. However, exact top speed figures can vary by market specification, electronic limits and testing conditions, so claimed, speedometer and GPS speeds should not be treated as identical.",
+     "stance": "supports",
+     "reason": "Names Kawasaki Ninja H2 as a strong candidate for India's fastest production motorcycle."
+    },
+    {
+     "pid": "79ceb6c7615a#0",
+     "title": "What Holds Its Value Price Determinants in Indias Used Motorcycle Market and the Absence of the Yamaha RX100",
+     "url": "https://doi.org/10.22214/ijraset.2026.84923",
+     "domain": "doi.org/10.22214",
+     "source": "openalex",
+     "year": 2026,
+     "text": "What Holds Its Value Price Determinants in Indias Used Motorcycle Market and the Absence of the Yamaha RX100. The Yamaha RX100 retains a strong reputation among Indian motorcycle enthusiasts, yet it does not appear once in 7,324 listings of used motorcycles offered for sale online in India. This paper starts from that absence and asks a broader question: what determines the asking price of a used two-wheeler in India? The data are a public, CC0-licensed file of listings scraped from the marketplace droom.in.",
+     "stance": "neutral",
+     "reason": "About used motorcycle pricing and Yamaha RX100 listings, not top speed."
+    },
+    {
+     "pid": "602c9dac7c9e#0",
+     "title": "The potential for involving India in regional production networks: Analyzing vertically specialized trade patterns between India and ASEAN",
+     "url": "https://openalex.org/W3174444257",
+     "domain": "openalex.org",
+     "source": "openalex",
+     "year": 2015,
+     "text": "The potential for involving India in regional production networks: Analyzing vertically specialized trade patterns between India and ASEAN. At a time when regional production networks have been resurgent, especially in Asia, why has India's integration in regional markets had not been deeper? Using highly disaggregated trade data and an analysis of industry perspectives based on semi-structured interviews with a sample of firms and industry associations relevant to India's trade with ASEAN, the paper found that despite low volumes, vertically specialized trade has been growing between India and ASEAN.",
+     "stance": "neutral",
+     "reason": "About India-ASEAN trade patterns, unrelated to motorcycles."
+    },
+    {
+     "pid": "17c1493a4394#0",
+     "title": "Top 10 Fastest Indian Motorcycles Ranked by Top Speed",
+     "url": "https://roarontheshore.com/fastest-indian-motorcycles/",
+     "domain": "roarontheshore.com",
+     "source": "web",
+     "year": null,
+     "text": "The Indian FTR 1200 is the fastest production Indian in history, with a stock US electronic limit near 125 mph and an unrestricted potential of approximately 147 mph. Indian Motorcycle does not publish official top speed figures for any current production model; every number here comes from GPS-tested instrumented sources, named publication road tests, or consistent owner-reported data. The PowerPlus-powered Challenger and Pursuit share the same ~125 mph governed ceiling despite very different weights and riding missions. Top speed figures for the 2025 Scout lineup are estimates only – no GPS-instrumented test results have been published for these models.",
+     "stance": "neutral",
+     "reason": "Concerns Indian-brand motorcycles (Indian FTR), not the fastest bike sold in India overall."
+    },
+    {
+     "pid": "432a4537bf4d#3",
+     "title": "List of production car speed records",
+     "url": "https://en.wikipedia.org/wiki/List_of_production_car_speed_records",
+     "domain": "en.wikipedia.org",
+     "source": "wikipedia",
+     "year": null,
+     "text": "W09 are eligible; cars modified by them with Porsche's WMI, WP0, aren't) Pre-1981 vehicles must be made by the original vehicle manufacturer and not modified by either professional tuners or individuals Sold in more than one national market.",
+     "stance": "neutral",
+     "reason": "Covers car speed record eligibility rules, not motorcycles."
+    }
+   ],
+   "belief": "The Kawasaki Ninja H2 is likely the fastest production motorcycle sold in India, though this is unverified.",
+   "confidence": 45,
+   "next_query": "Kawasaki Ninja H2 top speed India price versus Ducati Panigale V4 R",
+   "baqd": null,
+   "support": 1,
+   "contradict": 0,
+   "neutral": 5,
+   "skew": 1.0,
+   "balance_loss": 1.0,
+   "domains": 5,
+   "sources": 3,
+   "cumulative": {
+    "support": 1,
+    "contradict": 0,
+    "neutral": 5,
+    "passages": 6
+   },
+   "cqi": true
+  },
+  {
+   "hop": 2,
+   "query": "fastest production motorcycle India top speed BMW M 1000 RR Ducati Panigale V4 Superleggera",
+   "origin": "counter",
+   "fetched": {
+    "wikipedia": 1,
+    "pubmed": 1,
+    "web": 3
+   },
+   "pool_size": 107,
+   "passages": [
+    {
+     "pid": "301df91bcbc6#0",
+     "title": "BMW M 1000 RR To Ducati Panigale V4: 5 Bikes In India ... - NDTV.com",
+     "url": "https://www.ndtv.com/auto/bmw-m-1000-rr-to-ducati-panigale-v4-5-bikes-in-india-packing-over-200-hp-11397663",
+     "domain": "ndtv.com",
+     "source": "web",
+     "year": null,
+     "text": "BMW M 1000 RR To Ducati Panigale V4: 5 Bikes In India ... - NDTV.com. BMW M 1000 RR To Ducati Panigale V4: 5 Bikes In India Packing Over 200 HP India's 200 HP superbike segment features high-performance machines with advanced engineering, extreme power outputs, and",
+     "stance": "neutral",
+     "reason": "Lists 200 HP bikes in India but does not name a fastest bike."
+    },
+    {
+     "pid": "e3effe5ed347#3",
+     "title": "Fastest Bikes in India 2026 - Top Speed Ranked | BikeDetailsHub",
+     "url": "https://bikedetailshub.com/articles/fastest-bikes-in-india/",
+     "domain": "bikedetailshub.com",
+     "source": "web",
+     "year": null,
+     "text": "If your goal is extreme acceleration and high-speed performance, the Ninja H2 sits near the top of the list. The BMW M 1000 RR and Ducati Panigale V4 are also serious superbikes, while the Hayabusa remains one of the most iconic high-speed motorcycles in India.",
+     "stance": "supports",
+     "reason": "Says Ninja H2 sits near the top for extreme acceleration and high-speed performance in India."
+    },
+    {
+     "pid": "5bab82194822#5",
+     "title": "Fastest Bikes in India 2026: Top Speed & Fastest Superbikes",
+     "url": "https://www.zurichkotak.com/knowledge-center/two-wheeler-insurance/fastest-bikes-in-india",
+     "domain": "zurichkotak.com",
+     "source": "web",
+     "year": null,
+     "text": "On Indian roads, though, the real limits are traffic, road quality and rider skill, so no one gets near these numbers in the real world. The fastest bikes you can actually ride in India Among road-legal bikes, the Ducati Panigale V4 R and BMW M 1000 RR are the true top-speed kings, the supercharged Kawasaki Ninja H2 is the road-legal outlier for sheer force and a cluster of ~200 PS superbikes share the 299 km/h cap. The Ducati Panigale V4 R is the most extreme road-legal bike here, with around 218 PS and the ability to exceed 330 km/h with its race exhaust, priced at Rs. 84.99 lakh.",
+     "stance": "contradicts",
+     "reason": "Names Ducati Panigale V4 R and BMW M 1000 RR as top-speed kings among road-legal bikes, with H2 as an outlier."
+    },
+    {
+     "pid": "0d96b47079bb#2",
+     "title": "World's Fastest Bikes in 2026 - ACKO",
+     "url": "https://www.acko.com/bike-guide/worlds-fastest-bikes/",
+     "domain": "acko.com",
+     "source": "web",
+     "year": null,
+     "text": "One of the fastest bikes in the world in km/h is the Dodge Tomahawk. This high-speed bike was introduced in the market in 2003 and can traverse from 0 to 60 mph in just 2.5 seconds. It has a 150 cc engine and can cost more than $1000. Another bike on our list is the Ducati Superleggera V4, which will be priced at Rs.1,13,65,274 in the Indian market. A total of 500 pieces will be manufactured for this exclusive bike. This bike is designed with 1285 cc so that it delivers outstanding performance of 208.9 bhp power and 146.5 Nm torque.",
+     "stance": "neutral",
+     "reason": "Covers Dodge Tomahawk and Ducati Superleggera; not a clear answer about Indian-sold fastest bike."
+    },
+    {
+     "pid": "5bab82194822#7",
+     "title": "Fastest Bikes in India 2026: Top Speed & Fastest Superbikes",
+     "url": "https://www.zurichkotak.com/knowledge-center/two-wheeler-insurance/fastest-bikes-in-india",
+     "domain": "zurichkotak.com",
+     "source": "web",
+     "year": null,
+     "text": "This is where most of the famous names sit, all electronically limited to about 299 km/h and separated by power, feel and price. They include the Aprilia RSV4 (around 217 PS), the Ducati Panigale V4 (around 215 PS), the BMW S 1000 RR (around 210 PS), the Kawasaki ZX-10R (around 203 PS) and the Suzuki Hayabusa (around 190 PS). The Hayabusa adds effortless high-speed cruising thanks to its big torque.",
+     "stance": "neutral",
+     "reason": "Lists many ~299 km/h capped superbikes without ranking the H2 as fastest."
+    },
+    {
+     "pid": "5bab82194822#2",
+     "title": "Fastest Bikes in India 2026: Top Speed & Fastest Superbikes",
+     "url": "https://www.zurichkotak.com/knowledge-center/two-wheeler-insurance/fastest-bikes-in-india",
+     "domain": "zurichkotak.com",
+     "source": "web",
+     "year": null,
+     "text": "The Kawasaki Ninja H2R is the fastest of all at nearly 400 km/h, but it is a track-only machine that cannot be ridden on Indian roads, so the fastest bikes you can legally ride are the Ducati Panigale V4 R, which exceeds 330 km/h with a race exhaust and the BMW M 1000 RR, homologated to around 314 km/h, with the supercharged Kawasaki Ninja H2 close behind. That single answer already explains the conflicting lists. Some rank the track-only H2R, some rank the fastest road-legal bikes and some simply quote the 299 km/h figure that many superbikes share. All are talking about different things, so it helps to separate them.",
+     "stance": "contradicts",
+     "reason": "Says Panigale V4 R and BMW M 1000 RR are fastest legal bikes, H2 close behind; H2R is track-only."
+    }
+   ],
+   "belief": "The Ducati Panigale V4 R or BMW M 1000 RR, not the Kawasaki Ninja H2, is likely the fastest road-legal production motorcycle sold in India, though unverified.",
+   "confidence": 55,
+   "next_query": "Ducati Panigale V4 R vs BMW M 1000 RR top speed India verified",
+   "baqd": -0.3606470889128338,
+   "support": 1,
+   "contradict": 2,
+   "neutral": 3,
+   "skew": -0.3333333333333333,
+   "balance_loss": 0.3333333333333333,
+   "domains": 4,
+   "sources": 1,
+   "cumulative": {
+    "support": 2,
+    "contradict": 2,
+    "neutral": 8,
+    "passages": 12
+   }
+  },
+  {
+   "hop": 3,
+   "query": "Ducati Panigale V4 R vs BMW M 1000 RR top speed India verified",
+   "origin": "model",
+   "fetched": {
+    "wikipedia": 1,
+    "web": 3
+   },
+   "pool_size": 114,
+   "passages": [
+    {
+     "pid": "cdeda4dc4c1a#0",
+     "title": "BMW M 1000 RR vs Ducati Panigale V4 R - FastestLaps.com",
+     "url": "https://fastestlaps.com/comparisons/5nnmmzg74z17",
+     "domain": "fastestlaps.com",
+     "source": "web",
+     "year": null,
+     "text": "BMW M 1000 RR vs Ducati Panigale V4 R - FastestLaps.com. Compare performance of Ducati Panigale V4 R and BMW M 1000 RR",
+     "stance": "neutral",
+     "reason": "Generic comparison page with no speed or India sales details."
+    },
+    {
+     "pid": "cc6a02260c30#0",
+     "title": "BMW M 1000 RR vs Ducati Panigale V4 R - BikeWale",
+     "url": "https://www.bikewale.com/compare-bikes/bmw-m-1000-rr-vs-ducati-panigale-v4-r/",
+     "domain": "bikewale.com",
+     "source": "web",
+     "year": null,
+     "text": "BMW M 1000 RR vs Ducati Panigale V4 R BikeWale brings you comparison of BMW M 1000 RR and Ducati Panigale V4 R. The ex-showroom price of BMW M 1000 RR is ₹ N/A and Ducati Panigale V4 R is ₹ 84,99,000. BMW M 1000 RR is available in 2 colours and 2 variants and Ducati Panigale V4 R is available in 1 colour and 1 variant. Apart from prices, you can also find comparison of these bikes based on displacement, mileage, performance, and many more parameters.",
+     "stance": "neutral",
+     "reason": "Lists Indian price for Panigale V4 R but no speed or top-speed evidence."
+    },
+    {
+     "pid": "af60106bfb3d#0",
+     "title": "Ducati Panigale V4 R 2026 vs. BMW M 1000 RR 2026",
+     "url": "https://www.1000ps.com/en-us/comparison/485504/ducati-panigale-v4-r-2026-vs-bmw-m-1000-rr-2026",
+     "domain": "1000ps.com",
+     "source": "web",
+     "year": null,
+     "text": "Ducati Panigale V4 R 2026 vs. BMW M 1000 RR 2026 Overview - Ducati Panigale V4 R 2026 vs BMW M 1000 RR 2026 Technical Specifications Ducati Panigale V4 R 2026 compared to BMW M 1000 RR 2026 LED daytime running lights, LED-Headlights, TFT display, Modern electronics, Automatic turn signal reset, Lighting The Ducati Panigale V4 R is not a normal supersport bike, but a road-legal racing bike. Its greatest strength lies in the fact that it does not seem uncontrollable despite its almost absurd power. The engine, chassis, aerodynamics, brakes and electronics interlock so precisely that the V4 R remains extremely fast but surprisingly confidence-inspiring to ride.",
+     "stance": "supports",
+     "reason": "Describes Panigale V4 R as an extremely fast road-legal racing bike, consistent with the belief."
+    },
+    {
+     "pid": "cc6a02260c30#1",
+     "title": "BMW M 1000 RR vs Ducati Panigale V4 R - BikeWale",
+     "url": "https://www.bikewale.com/compare-bikes/bmw-m-1000-rr-vs-ducati-panigale-v4-r/",
+     "domain": "bikewale.com",
+     "source": "web",
+     "year": null,
+     "text": "Comparison between these bikes have been carried out to help users make correct buying decision between BMW M 1000 RR and Ducati Panigale V4 R. BMW M 1000 RR vs Ducati Panigale V4 R Comparison Overview Ducati Panigale V4 R WSBK I Championship Winning Bike I Walkaround I BikeWale M 1000 RR vs Ninja H2 SX SE Q: Which bike is better BMW M 1000 RR or Ducati Panigale V4 R? According to our average user rating, BMW M 1000 RR has a score of 4.8/5 while Ducati Panigale V4 R is rated 4.3/5.",
+     "stance": "neutral",
+     "reason": "Only user ratings and comparison framing; no speed claim."
+    },
+    {
+     "pid": "cc6a02260c30#2",
+     "title": "BMW M 1000 RR vs Ducati Panigale V4 R - BikeWale",
+     "url": "https://www.bikewale.com/compare-bikes/bmw-m-1000-rr-vs-ducati-panigale-v4-r/",
+     "domain": "bikewale.com",
+     "source": "web",
+     "year": null,
+     "text": "BikeWale take utmost care in providing you the accurate information about prices, feature, specs, and colors for comparison of BMW M 1000 RR vs Ducati Panigale V4 R. However, BikeWale can't be held liable for any direct/indirect damage or loss. For comparison of BMW M 1000 RR vs Ducati Panigale V4 R, the base version has been considered. You can compare any version for the comparison of BMW M 1000 RR vs Ducati Panigale V4 R.",
+     "stance": "neutral",
+     "reason": "Disclaimer text about base version comparison; takes no side on speed."
+    },
+    {
+     "pid": "af60106bfb3d#2",
+     "title": "Ducati Panigale V4 R 2026 vs. BMW M 1000 RR 2026",
+     "url": "https://www.1000ps.com/en-us/comparison/485504/ducati-panigale-v4-r-2026-vs-bmw-m-1000-rr-2026",
+     "domain": "1000ps.com",
+     "source": "web",
+     "year": null,
+     "text": "A supersports car that is surprisingly accessible to drive, but whose absolute perfection poses a dilemma for tuning enthusiasts: Do I buy the expensive, perfect M version or the cheaper S 1000 RR to customise myself? Ideal for purists, problematic for individualists. suitable for direct use on the race track without modifications Price Comparison Average Market Price Ducati Panigale V4 R vs BMW M 1000 RR",
+     "stance": "neutral",
+     "reason": "Discusses pricing and track suitability, not speed ranking or Indian availability."
+    }
+   ],
+   "belief": "The Ducati Panigale V4 R is likely the fastest road-legal production motorcycle sold in India, though this is unverified and the BMW M 1000 RR is a close rival.",
+   "confidence": 40,
+   "next_query": "Fastest production motorcycle India top speed 0-100 kmph Panigale V4 R M 1000 RR",
+   "baqd": -0.01229167593843744,
+   "support": 1,
+   "contradict": 0,
+   "neutral": 5,
+   "skew": 1.0,
+   "balance_loss": 1.0,
+   "domains": 3,
+   "sources": 1,
+   "cumulative": {
+    "support": 3,
+    "contradict": 2,
+    "neutral": 13,
+    "passages": 18
+   },
+   "cqi": true
+  },
+  {
+   "hop": 4,
+   "query": "India sold superbike top speed claim Kawasaki H2R Ninja H2 BMW M 1000 RR",
+   "origin": "counter",
+   "fetched": {
+    "web": 3
+   },
+   "pool_size": 117,
+   "passages": [
+    {
+     "pid": "0618079a2be5#0",
+     "title": "5 Superbikes With 299 km/h Top Speed, BMW M 1000 RR, Kawasaki Ninja H2 ...",
+     "url": "https://www.timesnownews.com/web-stories/auto/5-superbikes-with-299-km/h-top-speed/photostory/151156192.cms",
+     "domain": "timesnownews.com",
+     "source": "web",
+     "year": null,
+     "text": "The BMW M 1000 RR retails in India at Rs 49 lakh (ex-showroom) and is powered by a 999 cc, in-line, four-cylinder engine that produces 212 hp and 113 Nm of peak torque. It can sprint from 0 to 100 km/h in 3.1 seconds and reach a top speed of 306 km/h. The Ninja H2 SX SE sports tourer derives power from a 998 cc, supercharged, in-line, four-cylinder engine producing 197 hp and 137.3 Nm of peak torque. It can dash from 0 to 100 km/h in 3.1 seconds and achieve a top speed of 330 km/h. It retails in India at Rs 32.95 (ex-showroom).",
+     "stance": "contradicts",
+     "reason": "Claims Kawasaki Ninja H2 SX SE has 330 km/h top speed, and BMW M 1000 RR 306 km/h, exceeding Panigale V4 R's 299 km/h."
+    },
+    {
+     "pid": "5bab82194822#6",
+     "title": "Fastest Bikes in India 2026: Top Speed & Fastest Superbikes",
+     "url": "https://www.zurichkotak.com/knowledge-center/two-wheeler-insurance/fastest-bikes-in-india",
+     "domain": "zurichkotak.com",
+     "source": "web",
+     "year": null,
+     "text": "The BMW M 1000 RR, at around 212 PS, is homologated to about 314 km/h and costs roughly Rs. 49 lakh. These two go faster than the 299 cap because they are not capped in the same way. The Kawasaki Ninja H2 is the road-legal member of Kawasaki’s supercharged family, using a 998cc supercharged engine making around 231 PS. It is capable of well over 300 km/h and is the closest a road-legal bike gets to the track-only H2R, at around Rs. 35 lakh to Rs. 36 lakh.",
+     "stance": "contradicts",
+     "reason": "States Ninja H2 is well over 300 km/h and M 1000 RR homologated near 314 km/h, both above Panigale V4 R."
+    },
+    {
+     "pid": "e3effe5ed347#0",
+     "title": "Fastest Bikes in India 2026 - Top Speed Ranked | BikeDetailsHub",
+     "url": "https://bikedetailshub.com/articles/fastest-bikes-in-india/",
+     "domain": "bikedetailshub.com",
+     "source": "web",
+     "year": null,
+     "text": "Fastest Bikes in India 2026 – Top Speed Ranked India has motorcycles ranging from lightweight sportbikes to extremely powerful superbikes. This list focuses on motorcycles known for very high top-speed potential, rather than simply ranking bikes by engine size. The Ninja H2 is one of the most extreme performance motorcycles available in India. Its supercharged engine, aerodynamic design and huge power output put it in a completely different category from normal street bikes. The M 1000 RR is BMW's high-performance superbike built around a race-focused platform. Its powerful inline-four engine, aerodynamic winglets and aggressive electronics package make it one of the fastest motorcycles you can buy.",
+     "stance": "neutral",
+     "reason": "Says Ninja H2 is extreme performance but gives no top speed figure to settle the ranking."
+    },
+    {
+     "pid": "0d96b47079bb#1",
+     "title": "World's Fastest Bikes in 2026 - ACKO",
+     "url": "https://www.acko.com/bike-guide/worlds-fastest-bikes/",
+     "domain": "acko.com",
+     "source": "web",
+     "year": null,
+     "text": "How to Interpret Superbike Top Speed Claims? Top speeds are manufacturer-homologated, electronically limited or independently recorded figures. Prices are starting ex-showroom in India, where the bike is officially sold. Also read: List of All the Latest Bikes in India in 2026 The Ninja H2R is the fastest production bike you can buy, with a top speed of nearly 400 km/h, thanks to a 998 cc supercharged inline-four producing up to 326 PS. It is sold as a special-order, closed-course machine and is not road-legal in India. Choose the bike if you have track access and the budget for a toy priced at roughly Rs 79.90 lakh.",
+     "stance": "contradicts",
+     "reason": "Ninja H2R is fastest production bike at nearly 400 km/h, but it is not road-legal or sold in India in standard form."
+    },
+    {
+     "pid": "0618079a2be5#2",
+     "title": "5 Superbikes With 299 km/h Top Speed, BMW M 1000 RR, Kawasaki Ninja H2 ...",
+     "url": "https://www.timesnownews.com/web-stories/auto/5-superbikes-with-299-km/h-top-speed/photostory/151156192.cms",
+     "domain": "timesnownews.com",
+     "source": "web",
+     "year": null,
+     "text": "Another Italian superbike on our list is the Aprilia RSV4 1100 Factory. This 1,099 cc, four-cylinder engine makes 213 hp and 125 Nm of peak torque. Aprilia claims this bike can achieve a top speed of 305 km/h and sprint from 0 to 100 km/h in 3.2 seconds. It retails in India at Rs 31.26 lakh (ex-showroom). Next: Top 7 Highest-Selling Car Brands In India In January 2025",
+     "stance": "neutral",
+     "reason": "Aprilia RSV4 at 305 km/h is off the core question of the fastest bike."
+    },
+    {
+     "pid": "0618079a2be5#1",
+     "title": "5 Superbikes With 299 km/h Top Speed, BMW M 1000 RR, Kawasaki Ninja H2 ...",
+     "url": "https://www.timesnownews.com/web-stories/auto/5-superbikes-with-299-km/h-top-speed/photostory/151156192.cms",
+     "domain": "timesnownews.com",
+     "source": "web",
+     "year": null,
+     "text": "The Panigale V4 R retails in India at Rs 69.99 lakh (ex-showroom). This Italian superbike is powered by a 998 cc, V4 engine that produces 218 hp and 111.3 Nm of peak torque. It can sprint from 0 to 100 km/h in 3.1 seconds and clock a top speed of 299 km/h. The sinister-looking BMW S 1000 RR retails in India at Rs 21.10 lakh (ex-showroom). It is powered by a 999 cc, in-line four-cylinder water/oil-cooled engine that produces 210 hp and 113 Nm of peak torque. It can sprint from 0 to 100 km/h in 3.1 seconds and achieve a top speed of 307 km/h.",
+     "stance": "contradicts",
+     "reason": "Panigale V4 R at 299 km/h is slower than the BMW M 1000 RR and Ninja H2 cited in other passages."
+    }
+   ],
+   "belief": "The Kawasaki Ninja H2 (or H2R, sold in India as a special-order track bike) is the fastest production motorcycle sold in India, not the Ducati Panigale V4 R.",
+   "confidence": 55,
+   "next_query": "Kawasaki Ninja H2R India price availability road legal top speed verified",
+   "baqd": -0.1439119056881005,
+   "support": 0,
+   "contradict": 4,
+   "neutral": 2,
+   "skew": -1.0,
+   "balance_loss": 1.0,
+   "domains": 4,
+   "sources": 1,
+   "cumulative": {
+    "support": 3,
+    "contradict": 6,
+    "neutral": 15,
+    "passages": 24
+   }
+  }
+ ],
+ "cqi_events": [
+  {
+   "hop": 1,
+   "trigger": {
+    "baqd": null,
+    "skew": 1.0
+   },
+   "original_query": "Kawasaki Ninja H2 top speed India price versus Ducati Panigale V4 R",
+   "counter_query": "fastest production motorcycle India top speed BMW M 1000 RR Ducati Panigale V4 Superleggera",
+   "why": "It looks for rival high-performance bikes sold in India, such as the BMW M 1000 RR or Panigale V4 Superleggera, that could outrun the Ninja H2 on verified top speed or price-tier comparisons."
+  },
+  {
+   "hop": 3,
+   "trigger": {
+    "baqd": -0.01229167593843744,
+    "skew": 1.0
+   },
+   "original_query": "Fastest production motorcycle India top speed 0-100 kmph Panigale V4 R M 1000 RR",
+   "counter_query": "India sold superbike top speed claim Kawasaki H2R Ninja H2 BMW M 1000 RR",
+   "why": "It searches for India-specific sales or top-speed claims for other ultra-high-output bikes such as the Kawasaki Ninja H2 or H2R, which could displace the Panigale V4 R or BMW M 1000 RR as the fastest model sold there."
+  }
+ ],
+ "synthesis": {
+  "answer": "The passages point to the Kawasaki Ninja H2 as a leading candidate, but they disagree on which bike is fastest. The supporting sources call the Ninja H2 one of the strongest candidates for India's fastest production motorcycle, and say it sits near the top of the speed list [e3effe5ed347#2] [e3effe5ed347#3]. The contradicting sources add nuance: the Kawasaki Ninja H2R reaches nearly 400 km/h but is track-only and not road-legal in India [5bab82194822#2] [0d96b47079bb#1]. Among road-legal bikes, the Ducati Panigale V4 R is described as exceeding 330 km/h with a race exhaust [5bab82194822#5] [5bab82194822#2], while the Ninja H2 SX SE is listed at 330 km/h top speed [0618079a2be5#0]. The BMW M 1000 RR is homologated to about 314 km/h [5bab82194822#6]. Many sources also cite a 299 km/h cap shared by several superbikes [0618079a2be5#1]. Overall, the H2R is the fastest production bike overall, but among road-legal bikes the Panigale V4 R or Ninja H2 are the contenders, with the evidence roughly balanced.",
+  "confidence": 55,
+  "one_line": "Kawasaki Ninja H2R is fastest overall but track-only; among road-legal bikes, Ducati Panigale V4 R or Ninja H2 lead, sources disagree."
+ },
+ "audit": {
+  "claims": [
+   {
+    "cid": "c1",
+    "text": "The Kawasaki Ninja H2 is a leading candidate for India's fastest production motorcycle.",
+    "cited_pids": [
+     "e3effe5ed347#2",
+     "e3effe5ed347#3"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "e3effe5ed347#2",
+      "relation": "supports",
+      "title": "Fastest Bikes in India 2026 - Top Speed Ranked | BikeDetailsHub",
+      "url": "https://bikedetailshub.com/articles/fastest-bikes-in-india/",
+      "domain": "bikedetailshub.com",
+      "source": "web"
+     },
+     {
+      "pid": "e3effe5ed347#3",
+      "relation": "supports",
+      "title": "Fastest Bikes in India 2026 - Top Speed Ranked | BikeDetailsHub",
+      "url": "https://bikedetailshub.com/articles/fastest-bikes-in-india/",
+      "domain": "bikedetailshub.com",
+      "source": "web"
+     },
+     {
+      "pid": "5bab82194822#6",
+      "relation": "supports",
+      "title": "Fastest Bikes in India 2026: Top Speed & Fastest Superbikes",
+      "url": "https://www.zurichkotak.com/knowledge-center/two-wheeler-insurance/fastest-bikes-in-india",
+      "domain": "zurichkotak.com",
+      "source": "web"
+     }
+    ],
+    "note": "Multiple passages call the Ninja H2 one of the strongest candidates for India's fastest production motorcycle, and one says it sits near the top of the list.",
+    "independent_sources": 2
+   },
+   {
+    "cid": "c2",
+    "text": "The Kawasaki Ninja H2R reaches nearly 400 km/h.",
+    "cited_pids": [
+     "5bab82194822#2"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "5bab82194822#2",
+      "relation": "supports",
+      "title": "Fastest Bikes in India 2026: Top Speed & Fastest Superbikes",
+      "url": "https://www.zurichkotak.com/knowledge-center/two-wheeler-insurance/fastest-bikes-in-india",
+      "domain": "zurichkotak.com",
+      "source": "web"
+     },
+     {
+      "pid": "0d96b47079bb#9",
+      "relation": "supports",
+      "title": "World's Fastest Bikes in 2026 - ACKO",
+      "url": "https://www.acko.com/bike-guide/worlds-fastest-bikes/",
+      "domain": "acko.com",
+      "source": "web"
+     },
+     {
+      "pid": "5bab82194822#8",
+      "relation": "supports",
+      "title": "Fastest Bikes in India 2026: Top Speed & Fastest Superbikes",
+      "url": "https://www.zurichkotak.com/knowledge-center/two-wheeler-insurance/fastest-bikes-in-india",
+      "domain": "zurichkotak.com",
+      "source": "web"
+     }
+    ],
+    "note": "Multiple passages state the Ninja H2R reaches nearly 400 km/h, though it is track-only and not road-legal.",
+    "independent_sources": 2
+   },
+   {
+    "cid": "c3",
+    "text": "The Kawasaki Ninja H2R is track-only and not road-legal in India.",
+    "cited_pids": [
+     "0d96b47079bb#1"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "0d96b47079bb#1",
+      "relation": "supports",
+      "title": "World's Fastest Bikes in 2026 - ACKO",
+      "url": "https://www.acko.com/bike-guide/worlds-fastest-bikes/",
+      "domain": "acko.com",
+      "source": "web"
+     },
+     {
+      "pid": "5bab82194822#2",
+      "relation": "supports",
+      "title": "Fastest Bikes in India 2026: Top Speed & Fastest Superbikes",
+      "url": "https://www.zurichkotak.com/knowledge-center/two-wheeler-insurance/fastest-bikes-in-india",
+      "domain": "zurichkotak.com",
+      "source": "web"
+     },
+     {
+      "pid": "0d96b47079bb#9",
+      "relation": "supports",
+      "title": "World's Fastest Bikes in 2026 - ACKO",
+      "url": "https://www.acko.com/bike-guide/worlds-fastest-bikes/",
+      "domain": "acko.com",
+      "source": "web"
+     }
+    ],
+    "note": "Multiple passages state the Ninja H2R is track-only and not road-legal in India, sold as a special-order closed-course machine.",
+    "independent_sources": 2
+   },
+   {
+    "cid": "c4",
+    "text": "The Ducati Panigale V4 R is described as exceeding 330 km/h with a race exhaust.",
+    "cited_pids": [
+     "5bab82194822#5",
+     "5bab82194822#2"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "5bab82194822#5",
+      "relation": "supports",
+      "title": "Fastest Bikes in India 2026: Top Speed & Fastest Superbikes",
+      "url": "https://www.zurichkotak.com/knowledge-center/two-wheeler-insurance/fastest-bikes-in-india",
+      "domain": "zurichkotak.com",
+      "source": "web"
+     },
+     {
+      "pid": "5bab82194822#2",
+      "relation": "supports",
+      "title": "Fastest Bikes in India 2026: Top Speed & Fastest Superbikes",
+      "url": "https://www.zurichkotak.com/knowledge-center/two-wheeler-insurance/fastest-bikes-in-india",
+      "domain": "zurichkotak.com",
+      "source": "web"
+     },
+     {
+      "pid": "0d96b47079bb#5",
+      "relation": "supports",
+      "title": "World's Fastest Bikes in 2026 - ACKO",
+      "url": "https://www.acko.com/bike-guide/worlds-fastest-bikes/",
+      "domain": "acko.com",
+      "source": "web"
+     }
+    ],
+    "note": "Multiple passages state the Panigale V4 R can exceed 330 km/h with its race exhaust, though one says 232 bhp rather than 218 PS, which does not affect the claim.",
+    "independent_sources": 2
+   },
+   {
+    "cid": "c5",
+    "text": "The Kawasaki Ninja H2 SX SE is listed with a 330 km/h top speed.",
+    "cited_pids": [
+     "0618079a2be5#0"
+    ],
+    "verdict": "mixed",
+    "evidence": [
+     {
+      "pid": "0618079a2be5#0",
+      "relation": "supports",
+      "title": "5 Superbikes With 299 km/h Top Speed, BMW M 1000 RR, Kawasaki Ninja H2 ...",
+      "url": "https://www.timesnownews.com/web-stories/auto/5-superbikes-with-299-km/h-top-speed/photostory/151156192.cms",
+      "domain": "timesnownews.com",
+      "source": "web"
+     },
+     {
+      "pid": "5bab82194822#2",
+      "relation": "contradicts",
+      "title": "Fastest Bikes in India 2026: Top Speed & Fastest Superbikes",
+      "url": "https://www.zurichkotak.com/knowledge-center/two-wheeler-insurance/fastest-bikes-in-india",
+      "domain": "zurichkotak.com",
+      "source": "web"
+     },
+     {
+      "pid": "0d96b47079bb#0",
+      "relation": "contradicts",
+      "title": "World's Fastest Bikes in 2026 - ACKO",
+      "url": "https://www.acko.com/bike-guide/worlds-fastest-bikes/",
+      "domain": "acko.com",
+      "source": "web"
+     }
+    ],
+    "note": "Timesnownews states the Ninja H2 SX SE reaches 330 km/h. Other passages cite about 314 km/h or only say the supercharged H2 is close behind, without a figure for the SX SE.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c6",
+    "text": "The BMW M 1000 RR is homologated to about 314 km/h.",
+    "cited_pids": [
+     "5bab82194822#6"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "5bab82194822#6",
+      "relation": "supports",
+      "title": "Fastest Bikes in India 2026: Top Speed & Fastest Superbikes",
+      "url": "https://www.zurichkotak.com/knowledge-center/two-wheeler-insurance/fastest-bikes-in-india",
+      "domain": "zurichkotak.com",
+      "source": "web"
+     }
+    ],
+    "note": "One passage states the BMW M 1000 RR is homologated to about 314 km/h. Another gives a 306 km/h top speed, which is a different figure but does not directly contradict the homologation claim.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c7",
+    "text": "Many superbikes are cited as electronically limited to a 299 km/h top speed.",
+    "cited_pids": [
+     "0618079a2be5#1"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "5bab82194822#3",
+      "relation": "supports",
+      "title": "Fastest Bikes in India 2026: Top Speed & Fastest Superbikes",
+      "url": "https://www.zurichkotak.com/knowledge-center/two-wheeler-insurance/fastest-bikes-in-india",
+      "domain": "zurichkotak.com",
+      "source": "web"
+     },
+     {
+      "pid": "5bab82194822#9",
+      "relation": "supports",
+      "title": "Fastest Bikes in India 2026: Top Speed & Fastest Superbikes",
+      "url": "https://www.zurichkotak.com/knowledge-center/two-wheeler-insurance/fastest-bikes-in-india",
+      "domain": "zurichkotak.com",
+      "source": "web"
+     },
+     {
+      "pid": "0d96b47079bb#4",
+      "relation": "supports",
+      "title": "World's Fastest Bikes in 2026 - ACKO",
+      "url": "https://www.acko.com/bike-guide/worlds-fastest-bikes/",
+      "domain": "acko.com",
+      "source": "web"
+     }
+    ],
+    "note": "Multiple passages state many fast road superbikes, including the Hayabusa, are electronically limited to about 299 km/h under an industry agreement.",
+    "independent_sources": 2
+   },
+   {
+    "cid": "c8",
+    "text": "The Kawasaki Ninja H2R is the fastest production motorcycle overall.",
+    "cited_pids": [],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "0d96b47079bb#9",
+      "relation": "supports",
+      "title": "World's Fastest Bikes in 2026 - ACKO",
+      "url": "https://www.acko.com/bike-guide/worlds-fastest-bikes/",
+      "domain": "acko.com",
+      "source": "web"
+     },
+     {
+      "pid": "5bab82194822#8",
+      "relation": "supports",
+      "title": "Fastest Bikes in India 2026: Top Speed & Fastest Superbikes",
+      "url": "https://www.zurichkotak.com/knowledge-center/two-wheeler-insurance/fastest-bikes-in-india",
+      "domain": "zurichkotak.com",
+      "source": "web"
+     }
+    ],
+    "note": "Two passages call the H2R the overall fastest, though both stress it is track-only and not road-legal. The claim omits that caveat.",
+    "independent_sources": 2
+   },
+   {
+    "cid": "c9",
+    "text": "Among road-legal bikes, the Ducati Panigale V4 R or Kawasaki Ninja H2 are the leading contenders for fastest.",
+    "cited_pids": [],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "5bab82194822#5",
+      "relation": "supports",
+      "title": "Fastest Bikes in India 2026: Top Speed & Fastest Superbikes",
+      "url": "https://www.zurichkotak.com/knowledge-center/two-wheeler-insurance/fastest-bikes-in-india",
+      "domain": "zurichkotak.com",
+      "source": "web"
+     },
+     {
+      "pid": "0d96b47079bb#0",
+      "relation": "supports",
+      "title": "World's Fastest Bikes in 2026 - ACKO",
+      "url": "https://www.acko.com/bike-guide/worlds-fastest-bikes/",
+      "domain": "acko.com",
+      "source": "web"
+     },
+     {
+      "pid": "af60106bfb3d#0",
+      "relation": "supports",
+      "title": "Ducati Panigale V4 R 2026 vs. BMW M 1000 RR 2026",
+      "url": "https://www.1000ps.com/en-us/comparison/485504/ducati-panigale-v4-r-2026-vs-bmw-m-1000-rr-2026",
+      "domain": "1000ps.com",
+      "source": "web"
+     }
+    ],
+    "note": "Passages call the Panigale V4 R the top road-legal speed contender, and describe the Ninja H2 as a road-legal outlier for force. The Ninja H2R is track-only.",
+    "independent_sources": 3
+   }
+  ],
+  "scores": {
+   "claims_checked": 9,
+   "evidence_support_score": 94.4,
+   "multi_source_share": 87.5,
+   "contradicted_share": 0.0,
+   "unverified_share": 0.0,
+   "mixed_share": 11.1,
+   "citation_faithfulness": 85.7,
+   "distinct_domains": 5,
+   "stated_confidence": 55,
+   "calibration_gap": -39.4
+  },
+  "grade": "Well supported",
+  "pool_size": 117
+ },
+ "usage": {
+  "calls": 17,
+  "cached_calls": 17,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": 0.0
+ },
+ "seconds": 0.08,
+ "run_id": "which-is-the-fastest-production-motorcycle-sold-guarded-15aba6",
+ "saved_at": "2026-11-26T21:21:08"
+}

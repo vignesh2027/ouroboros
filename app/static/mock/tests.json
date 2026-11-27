@@ -1,0 +1,686 @@
+{
+ "automated": [
+  {
+   "id": "TC-01",
+   "input": "identical vectors give one",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestCosine"
+  },
+  {
+   "id": "TC-02",
+   "input": "orthogonal vectors give zero",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestCosine"
+  },
+  {
+   "id": "TC-03",
+   "input": "zero vector does not divide by zero",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestCosine"
+  },
+  {
+   "id": "TC-04",
+   "input": "opposite vectors give minus one",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestCosine"
+  },
+  {
+   "id": "TC-05",
+   "input": "result stays within minus one and one",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestCosine"
+  },
+  {
+   "id": "TC-06",
+   "input": "query equal to question gives zero",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestBaqd"
+  },
+  {
+   "id": "TC-07",
+   "input": "query aligned with belief is positive",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestBaqd"
+  },
+  {
+   "id": "TC-08",
+   "input": "query away from belief is negative",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestBaqd"
+  },
+  {
+   "id": "TC-09",
+   "input": "zero belief is handled",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestBaqd"
+  },
+  {
+   "id": "TC-10",
+   "input": "all supporting gives plus one",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestEvidenceBalance"
+  },
+  {
+   "id": "TC-11",
+   "input": "all opposing gives minus one",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestEvidenceBalance"
+  },
+  {
+   "id": "TC-12",
+   "input": "balanced set gives zero",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestEvidenceBalance"
+  },
+  {
+   "id": "TC-13",
+   "input": "empty set does not crash",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestEvidenceBalance"
+  },
+  {
+   "id": "TC-14",
+   "input": "balance loss is never negative",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestEvidenceBalance"
+  },
+  {
+   "id": "TC-15",
+   "input": "encoding is deterministic",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestEncoder"
+  },
+  {
+   "id": "TC-16",
+   "input": "out of vocabulary text gives zero vector",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestEncoder"
+  },
+  {
+   "id": "TC-17",
+   "input": "empty string does not crash",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestEncoder"
+  },
+  {
+   "id": "TC-18",
+   "input": "encode many matches encode one",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestEncoder"
+  },
+  {
+   "id": "TC-19",
+   "input": "returns exactly k results",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestRetriever"
+  },
+  {
+   "id": "TC-20",
+   "input": "k larger than corpus returns whole corpus",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestRetriever"
+  },
+  {
+   "id": "TC-21",
+   "input": "ranking is deterministic",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestRetriever"
+  },
+  {
+   "id": "TC-22",
+   "input": "scores are in descending order",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestRetriever"
+  },
+  {
+   "id": "TC-23",
+   "input": "every hit carries a stance",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestRetriever"
+  },
+  {
+   "id": "TC-24",
+   "input": "out of vocabulary query still returns k results",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestRetriever"
+  },
+  {
+   "id": "TC-25",
+   "input": "leading query outranks opposing passages",
+   "expected": "A query using only supporting vocabulary should surface supporting text first.",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestRetriever"
+  },
+  {
+   "id": "TC-26",
+   "input": "retriever does not mutate the corpus",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestRetriever"
+  },
+  {
+   "id": "TC-27",
+   "input": "every contested question is balanced",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestCorpusIntegrity"
+  },
+  {
+   "id": "TC-28",
+   "input": "settled questions are one sided",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestCorpusIntegrity"
+  },
+  {
+   "id": "TC-29",
+   "input": "stance is only plus or minus one",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestCorpusIntegrity"
+  },
+  {
+   "id": "TC-30",
+   "input": "question ids are unique",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestCorpusIntegrity"
+  },
+  {
+   "id": "TC-31",
+   "input": "both arms have the same number of hops",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestCorpusIntegrity"
+  },
+  {
+   "id": "TC-32",
+   "input": "first query of each arm is the neutral question",
+   "expected": "Hop 1 must be identical in both arms, otherwise the comparison is unfair.",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestCorpusIntegrity"
+  },
+  {
+   "id": "TC-33",
+   "input": "no passage text is duplicated",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestCorpusIntegrity"
+  },
+  {
+   "id": "TC-34",
+   "input": "no query is empty",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestCorpusIntegrity"
+  },
+  {
+   "id": "TC-35",
+   "input": "k of zero returns empty list",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestRetrieverEdges"
+  },
+  {
+   "id": "TC-36",
+   "input": "negative k returns empty list not whole corpus",
+   "expected": "A negative k must not silently slice from the end of the ranking.",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestRetrieverEdges"
+  },
+  {
+   "id": "TC-37",
+   "input": "score is rounded to four places",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestRetrieverEdges"
+  },
+  {
+   "id": "TC-38",
+   "input": "encoder must be fitted on the whole collection",
+   "expected": "Fitting on one question's passages alone destroys the ranking signal.",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestEncoderRegression"
+  },
+  {
+   "id": "TC-39",
+   "input": "trace log has one row per retrieval",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestExperimentInvariants"
+  },
+  {
+   "id": "TC-40",
+   "input": "hop one drift score is zero by construction",
+   "expected": "At hop 1 the query is the question and the belief is the question.",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestExperimentInvariants"
+  },
+  {
+   "id": "TC-41",
+   "input": "settled questions cannot lose balance",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestExperimentInvariants"
+  },
+  {
+   "id": "TC-42",
+   "input": "oracle spread is the full range",
+   "expected": "The headline claim: query wording can reach both extremes.",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestExperimentInvariants"
+  },
+  {
+   "id": "TC-43",
+   "input": "balance loss matches manual computation",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestBalanceHelper"
+  },
+  {
+   "id": "TEST_AGENT_CRASH_BECOMES_ERROR_EVENT",
+   "input": "test agent crash becomes error event",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestStreams"
+  },
+  {
+   "id": "TEST_ALLOWED",
+   "input": "test allowed",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestAllowList"
+  },
+  {
+   "id": "TEST_BAD_MAX_WORDS",
+   "input": "test bad max words",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "ChunkTests"
+  },
+  {
+   "id": "TEST_BM25_ORDERING",
+   "input": "test bm25 ordering",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "SearchTests"
+  },
+  {
+   "id": "TEST_COMPARE_STREAM_LANES",
+   "input": "test compare stream lanes",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestStreams"
+  },
+  {
+   "id": "TEST_DEFAULT_IS_WHOLE_SENTENCES_IN_RANGE",
+   "input": "test default is whole sentences in range",
+   "expected": "Behaviour holds as specified",
+   "actual": "Did not match",
+   "status": "FAIL",
+   "remarks": "ChunkTests"
+  },
+  {
+   "id": "TEST_DICTS",
+   "input": "test dicts",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "SourceDiversityTest"
+  },
+  {
+   "id": "TEST_DIVERSITY_ZERO_IS_PURE_SCORE_ORDER",
+   "input": "test diversity zero is pure score order",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "DiversityTests"
+  },
+  {
+   "id": "TEST_DUPLICATE_DOCS_SKIPPED_AND_GET",
+   "input": "test duplicate docs skipped and get",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "SearchTests"
+  },
+  {
+   "id": "TEST_EMPTY",
+   "input": "test empty",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "SourceDiversityTest"
+  },
+  {
+   "id": "TEST_EMPTY_AND_METADATA",
+   "input": "test empty and metadata",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "ChunkTests"
+  },
+  {
+   "id": "TEST_EMPTY_RUN",
+   "input": "test empty run",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "RunSummaryTest"
+  },
+  {
+   "id": "TEST_ENDPOINT_STATUS",
+   "input": "test endpoint status",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestAllowList"
+  },
+  {
+   "id": "TEST_EXCLUDE",
+   "input": "test exclude",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "SearchTests"
+  },
+  {
+   "id": "TEST_FULL",
+   "input": "test full",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "RunSummaryTest"
+  },
+  {
+   "id": "TEST_HOP1_NULL_EXCLUDED",
+   "input": "test hop1 null excluded",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "RunSummaryTest"
+  },
+  {
+   "id": "TEST_K_AND_EMPTY_POOL",
+   "input": "test k and empty pool",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "SearchTests"
+  },
+  {
+   "id": "TEST_LAZY_REFIT_SEES_NEW_DOCUMENTS",
+   "input": "test lazy refit sees new documents",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "SearchTests"
+  },
+  {
+   "id": "TEST_LONG_SENTENCE_IS_SPLIT",
+   "input": "test long sentence is split",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "ChunkTests"
+  },
+  {
+   "id": "TEST_MISSING",
+   "input": "test missing",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "CalibrationGapTest"
+  },
+  {
+   "id": "TEST_MISSING_FILES",
+   "input": "test missing files",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestBenchmark"
+  },
+  {
+   "id": "TEST_NO_OVERLAP_RETURNS_NOTHING",
+   "input": "test no overlap returns nothing",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "SearchTests"
+  },
+  {
+   "id": "TEST_OBJECTS",
+   "input": "test objects",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "SourceDiversityTest"
+  },
+  {
+   "id": "TEST_OFFLINE_ENV",
+   "input": "test offline env",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestHealthAndRuns"
+  },
+  {
+   "id": "TEST_PARSE_PHASE1",
+   "input": "test parse phase1",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestBenchmark"
+  },
+  {
+   "id": "TEST_REAL_OUTPUTS",
+   "input": "test real outputs",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestBenchmark"
+  },
+  {
+   "id": "TEST_REJECTED",
+   "input": "test rejected",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestAllowList"
+  },
+  {
+   "id": "TEST_REPEAT_AND_ORDER_INDEPENDENT_TIES",
+   "input": "test repeat and order independent ties",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "DeterminismTests"
+  },
+  {
+   "id": "TEST_RESEARCH_STREAM_AND_SAVE",
+   "input": "test research stream and save",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestStreams"
+  },
+  {
+   "id": "TEST_RUN_ID_AND_BAD_RUN_LOOKUP",
+   "input": "test run id and bad run lookup",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestHealthAndRuns"
+  },
+  {
+   "id": "TEST_SAME_DOC_CHUNKS_SPREAD",
+   "input": "test same doc chunks spread",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "DiversityTests"
+  },
+  {
+   "id": "TEST_SAME_DOMAIN_NOT_BOTH_TOP2_WITH_DIVERSITY",
+   "input": "test same domain not both top2 with diversity",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "DiversityTests"
+  },
+  {
+   "id": "TEST_SAVE_AND_LIST",
+   "input": "test save and list",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestHealthAndRuns"
+  },
+  {
+   "id": "TEST_SEARCH_DOES_NOT_MUTATE_POOL",
+   "input": "test search does not mutate pool",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "SearchTests"
+  },
+  {
+   "id": "TEST_SIZES_AND_IDS",
+   "input": "test sizes and ids",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "ChunkTests"
+  },
+  {
+   "id": "TEST_SYMLINK_ESCAPE",
+   "input": "test symlink escape",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestAllowList"
+  },
+  {
+   "id": "TEST_VALIDATION_ERRORS_ARE_EVENTS",
+   "input": "test validation errors are events",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "TestStreams"
+  },
+  {
+   "id": "TEST_VALUES",
+   "input": "test values",
+   "expected": "Behaviour holds as specified",
+   "actual": "As expected",
+   "status": "PASS",
+   "remarks": "CalibrationGapTest"
+  }
+ ],
+ "defects": [
+  {
+   "id": "TC-36",
+   "input": "Retriever.search(query, k=-1)",
+   "expected": "Empty list, because a negative k is not a valid request",
+   "actual": "Returned 7 of 8 passages, the worst ranked ones",
+   "status": "FAIL",
+   "remarks": "Python slice scored[:-1] cuts from the end, so a negative k silently returned the lowest scoring matches instead of nothing"
+  },
+  {
+   "id": "TC-36-R1",
+   "input": "Retriever.search(query, k=-1) after adding a guard for k <= 0",
+   "expected": "Empty list",
+   "actual": "Empty list",
+   "status": "PASS"
+  },
+  {
+   "id": "TC-38",
+   "input": "Encoder fitted on one question's 8 passages, then asked to encode a query using vocabulary from another question",
+   "expected": "A usable vector, so ranking still works across the collection",
+   "actual": "All zero vector, so every passage scored 0.0 and ranking was noise",
+   "status": "FAIL",
+   "remarks": "Inverse document frequency was computed over 8 documents. The first experiment run produced meaningless balance figures"
+  },
+  {
+   "id": "TC-38-R1",
+   "input": "Same query after fitting the encoder over the whole collection",
+   "expected": "A non zero vector",
+   "actual": "Non zero vector, ranking restored",
+   "status": "PASS"
+  }
+ ],
+ "total": 81,
+ "failures": 1
+}

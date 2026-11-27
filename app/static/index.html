@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ouroboros: Research answers you can check</title>
+<meta name="description" content="Ask a question and read an answer with numbered sources, then see how much of it the evidence actually backs. Check answers from ChatGPT, Claude and Gemini the same way.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F7F3EE">
+<link rel="icon" href="/static/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/static/img/favicon-64.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/static/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Jost:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Jost:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap"></noscript>
+<script>
+/* Apply a saved theme before first paint so there is no flash. */
+try { var t = localStorage.getItem('ouro-theme'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+<link rel="stylesheet" href="/static/css/tokens.css">
+<link rel="stylesheet" href="/static/css/base.css">
+<link rel="stylesheet" href="/static/css/home.css">
+<link rel="stylesheet" href="/static/css/thread.css">
+<link rel="stylesheet" href="/static/css/pages.css">
+</head>
+<body>
+<a class="skip" href="#view">Skip to content</a>
+
+<div class="app">
+  <aside class="sidebar" id="sidebar" aria-label="Main">
+    <button type="button" class="btn btn-icon sb-close" id="nav-close" aria-label="Close menu"></button>
+    <a class="sb-brand" href="#/ask" aria-label="Ouroboros, ask a question"><span data-slot="logo"></span><span class="wordmark">Ouroboros</span></a>
+    <a class="sb-new" href="#/ask" id="new-question"><span data-slot="icon-plus"></span>New question</a>
+    <nav class="sb-nav" aria-label="Sections">
+      <a class="sb-link" href="#/audit" data-route="audit"><span data-slot="icon-shield"></span>Check an AI answer</a>
+      <a class="sb-link" href="#/compare" data-route="compare"><span data-slot="icon-columns"></span>Compare</a>
+      <a class="sb-link" href="#/benchmark" data-route="benchmark"><span data-slot="icon-chart"></span>Benchmark</a>
+      <a class="sb-link" href="#/how" data-route="how"><span data-slot="icon-flow"></span>How it works</a>
+    </nav>
+    <div class="sb-label">Recent</div>
+    <div class="sb-recent" id="sb-recent" role="list" aria-label="Recent research"><div class="sb-skel" aria-hidden="true"><span></span><span></span><span></span></div></div>
+    <a class="sb-about" href="/">About Ouroboros</a>
+    <div class="sb-foot">
+      <div class="theme-toggle" id="theme-toggle" role="group" aria-label="Colour theme"></div>
+      <div class="conn" id="conn" role="status" data-state="pending" title="Checking"><span class="conn-dot"></span><span id="conn-text">Checking</span></div>
+    </div>
+  </aside>
+
+  <div class="main-col">
+    <header class="topbar">
+      <a class="sb-brand" href="#/ask" aria-label="Ouroboros, ask a question"><span data-slot="logo"></span><span class="wordmark">Ouroboros</span></a>
+      <button type="button" class="btn btn-icon" id="nav-open" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false"></button>
+    </header>
+    <div id="mock-banner" class="mock-banner" hidden>Sample data mode. You are looking at a hand-made example replayed through the real page. No server or source was contacted, and every name and number in it is invented.</div>
+    <main id="view" tabindex="-1"></main>
+    <footer class="site-foot"><p>Ouroboros, a final-year project. The Evidence Support Score is the share of an answer's claims backed by the evidence we retrieved. It does not say whether an answer is true.</p></footer>
+  </div>
+</div>
+<div class="scrim" id="scrim"></div>
+<div class="popover" id="popover" role="tooltip" hidden></div>
+
+<script src="/static/js/core.js" defer></script>
+<script src="/static/js/home.js" defer></script>
+<script src="/static/js/thread.js" defer></script>
+<script src="/static/js/pages.js" defer></script>
+</body>
+</html>

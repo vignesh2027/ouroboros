@@ -1,0 +1,24 @@
+/* Ask page. Tokens only, no raw colours. One focal point: the headline and the ask box. */
+.home { padding-bottom: var(--s-7); }
+
+.hero { max-width: 776px; margin: 0 auto; padding: clamp(40px, 13vh, 140px) var(--s-5) 0; text-align: center; }
+.hero-title { font-size: var(--text-hero); line-height: 1.1; letter-spacing: -0.02em; font-weight: 400; margin: 0 auto var(--s-4); text-wrap: balance; }
+.hero-title .br { display: block; }
+.hero-dim { color: var(--ink-2); }
+.hero-sub { text-wrap: balance; font-size: var(--text-base); color: var(--muted); margin: 0 auto var(--s-5); }
+.hero-composer { max-width: 728px; margin: 0 auto; }
+.hero-composer .composer, .hero-composer .composer:focus-within { box-shadow: var(--shadow-2); }
+.hero-composer .composer textarea { min-height: 56px; }
+
+.home-body { max-width: 776px; margin: 0 auto; padding: var(--s-6) var(--s-5) 0; }
+.home-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 0 var(--s-5); margin: var(--s-4) 0 0; font-size: var(--text-sm); }
+.home-links a { display: inline-flex; align-items: center; min-height: var(--tap); color: var(--primary); text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 4px; transition: color 0.15s, text-decoration-color 0.15s; }
+.home-links a:hover { color: var(--primary-hover); text-decoration-color: var(--primary); }
+
+@media (max-width: 860px) {
+  .hero { padding: var(--s-6) var(--s-4) 0; }
+  .hero-title { font-size: clamp(28px, 8vw, 34px); }
+  .hero-sub { margin-bottom: var(--s-5); }
+  .home-body { padding: var(--s-6) var(--s-4) 0; }
+  .ex-item { font-size: var(--text-lg); }
+}
