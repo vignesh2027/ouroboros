@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"7aabe982f481#1\",\"relation\":\"supports\"}],\"note\":\"First passage lists older adults as an at-risk patient group and notes supplements can help correct deficiencies; the others do not directly address recommendation for at-risk groups.\"}", "tag": "audit_verify", "input_tokens": 1815, "output_tokens": 99}

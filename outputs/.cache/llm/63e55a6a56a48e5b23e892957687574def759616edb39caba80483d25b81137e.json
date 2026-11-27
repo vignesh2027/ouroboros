@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"0ad353ba1b7a#2\",\"relation\":\"supports\"},{\"pid\":\"60e469276e13#2\",\"relation\":\"supports\"}],\"note\":\"Younger subgroup (11-31 years) showed SMD 0.03, CI -0.14 to 0.20, P=0.72, not significant, per the meta-analysis abstract.\"}", "tag": "audit_verify", "input_tokens": 2000, "output_tokens": 132}

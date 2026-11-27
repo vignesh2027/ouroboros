@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"abefd158b9c2#2\",\"relation\":\"supports\"}],\"note\":\"The passage states full-remote work (5 days a week) has the risk of worsening presenteeism; it does not explicitly name a Japanese study, but the finding matches the claim.\"}", "tag": "audit_verify", "input_tokens": 1745, "output_tokens": 103}

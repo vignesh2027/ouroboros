@@ -1,0 +1,637 @@
+{
+ "question": "Does raising the minimum wage reduce employment?",
+ "mode": "guarded",
+ "config": {
+  "mode": "guarded",
+  "hops": 4,
+  "k": 6,
+  "per_source": 3,
+  "sources": null,
+  "baqd_threshold": 0.05,
+  "skew_threshold": 0.5,
+  "closed_corpus": false,
+  "corpus_size": 0
+ },
+ "hops": [
+  {
+   "hop": 1,
+   "query": "Does raising the minimum wage reduce employment?",
+   "origin": "question",
+   "fetched": {
+    "wikipedia": 3,
+    "openalex": 3,
+    "arxiv": 2,
+    "pubmed": 3,
+    "web": 3
+   },
+   "pool_size": 54,
+   "passages": [
+    {
+     "pid": "fe7361004976#0",
+     "title": "Why minimum wage hikes may not reduce employment",
+     "url": "https://openalex.org/W1571783914",
+     "domain": "openalex.org",
+     "source": "openalex",
+     "year": 1998,
+     "text": "Why minimum wage hikes may not reduce employment. Recent research has challenged the conventional wisdom among economists that increases in the minimum wage reduce employment among low-wage workers. Although some studies continue to find negative effects, others suggest that moderately raising the minimum wage may not reduce employment.",
+     "stance": "neutral",
+     "reason": "Summarizes debate; says moderate hikes may not reduce employment, which is mixed evidence rather than a clear side."
+    },
+    {
+     "pid": "5f591435f1d8#0",
+     "title": "Does the UK Minimum Wage Reduce Employment? A Meta‐Regression Analysis",
+     "url": "https://doi.org/10.1111/bjir.12031",
+     "domain": "doi.org/10.1111",
+     "source": "openalex",
+     "year": 2013,
+     "text": "Does the UK Minimum Wage Reduce Employment? A Meta‐Regression Analysis. The employment effect from raising the minimum wage has long been studied but remains in dispute. Our meta‐analysis of 236 estimated minimum wage elasticities and 710 partial correlation coefficients from 16 UK studies finds no overall practically significant adverse employment effect. Unlike US studies, there seems to be little, if any, overall reporting bias. Multivariate meta‐regression analysis identifies several research dimensions that are associated with differential employment effects. In particular, the residential home care industry may exhibit a genuinely adverse employment effect.",
+     "stance": "supports",
+     "reason": "Meta-analysis of UK studies finds no overall practically significant adverse employment effect."
+    },
+    {
+     "pid": "cb6fd29ac7f5#0",
+     "title": "Do minimum wage hikes result in job losses? It depends on the labor ...",
+     "url": "https://www.iese.edu/insight/articles/minimum-wage-labor-job-losses/",
+     "domain": "iese.edu",
+     "source": "web",
+     "year": null,
+     "text": "Do minimum wage hikes result in job losses? It depends on the labor market José Azar sheds light on the nuances of raising the minimum wage in different labor markets. In the ongoing debate over the economic impact of raising the minimum wage, one question continues to dominate: Does it cost jobs? Previous studies have found that — contrary to what some economists expected — raising the minimum wage does not always result in lower employment rates. But why is that? In our research published in The Review of Economic Studies, my co-authors and I conclude that it depends on labor market concentration.",
+     "stance": "neutral",
+     "reason": "Says effect depends on labor market concentration; does not directly state the overall answer."
+    },
+    {
+     "pid": "6de9116294ca#3",
+     "title": "Minimum wage in the United States",
+     "url": "https://en.wikipedia.org/wiki/Minimum_wage_in_the_United_States",
+     "domain": "en.wikipedia.org",
+     "source": "wikipedia",
+     "year": null,
+     "text": "In 2021, the Congressional Budget Office estimated that incrementally raising the federal minimum wage to $15 an hour by 2025 would impact 17 million employed persons but would also reduce employment by ~1.4 million people. Additionally, 900,000 people might be lifted out of poverty and potentially raise wages for 10 million more workers. Furthermore, the increase would be expected to cause prices to rise and overall economic output to decrease slightly, and increase the federal budget deficit by $54 billion over the next 10 years.",
+     "stance": "contradicts",
+     "reason": "CBO projected a federal $15 increase would reduce employment by about 1.4 million."
+    },
+    {
+     "pid": "0174c900cf5f#0",
+     "title": "Minimum Wage Basics: Employment and Business Effects of Minimum Wage ...",
+     "url": "https://www.nelp.org/insights-research/minimum-wage-basics-employment-and-business-effects-of-minimum-wage-increases/",
+     "domain": "nelp.org",
+     "source": "web",
+     "year": null,
+     "text": "Minimum Wage Basics: Employment and Business Effects of Minimum Wage .... The bulk of rigorous research examining hundreds of case studies of minimum wage increases at the state and local levels finds that raising the minimum wage boosts incomes for low-paid workers without reducing overall employment or job growt h to any significant degree",
+     "stance": "supports",
+     "reason": "Says bulk of rigorous research finds no significant overall employment reduction from increases."
+    },
+    {
+     "pid": "6bc17d95795b#1",
+     "title": "Machine Learning Analysis of the Impact of Increasing the Minimum Wage on Income Inequality in Spain from 2001 to 2021",
+     "url": "http://arxiv.org/abs/2402.02402v1",
+     "domain": "arxiv.org",
+     "source": "arxiv",
+     "year": 2024,
+     "text": "Therefore, the study reflects results and analyses based on historical data from the Spanish Salary Census 2001-2021. Various machine-learning models show that income inequality has been reduced by raising the minimum wage. Raising the minimum wage has not led to inflation or increased unemployment. On the contrary, it has been consistent with increased net employment, contained prices, and increased corporate profit margins. The most important conclusion is that an increase in the minimum wage in the period analyzed has led to an increase in the wealth of the country, increasing employment and company profits, and is postulated, under the conditions analyzed, as an effective method for the redistribution of wealth.",
+     "stance": "supports",
+     "reason": "Spanish machine-learning study reports increased net employment after minimum wage rises."
+    }
+   ],
+   "belief": "Evidence mostly suggests raising the minimum wage has small or no overall employment reduction, though some studies, especially for larger increases or concentrated labor markets, find job losses.",
+   "confidence": 60,
+   "next_query": "minimum wage employment effect meta-analysis large increases disemployment evidence",
+   "baqd": null,
+   "support": 3,
+   "contradict": 1,
+   "neutral": 2,
+   "skew": 0.5,
+   "balance_loss": 0.5,
+   "domains": 6,
+   "sources": 4,
+   "cumulative": {
+    "support": 3,
+    "contradict": 1,
+    "neutral": 2,
+    "passages": 6
+   },
+   "cqi": true
+  },
+  {
+   "hop": 2,
+   "query": "minimum wage increase job losses evidence disemployment teens low-skilled workers negative effects",
+   "origin": "counter",
+   "fetched": {
+    "wikipedia": 1,
+    "openalex": 3,
+    "arxiv": 2,
+    "pubmed": 3,
+    "web": 3
+   },
+   "pool_size": 98,
+   "passages": [
+    {
+     "pid": "ab2ba547baf0#0",
+     "title": "The Minimum Wage and the Great Recession: Evidence of Effects on the Employment and Income Trajectories of Low-Skilled Workers",
+     "url": "https://doi.org/10.3386/w20724",
+     "domain": "doi.org/10.3386",
+     "source": "openalex",
+     "year": 2014,
+     "text": "The Minimum Wage and the Great Recession: Evidence of Effects on the Employment and Income Trajectories of Low-Skilled Workers.",
+     "stance": "neutral",
+     "reason": "Title only about Great Recession minimum wage effects; no finding stated."
+    },
+    {
+     "pid": "f3df8a818b8c#0",
+     "title": "Most minimum wage studies have found little or no job loss",
+     "url": "https://www.epi.org/blog/most-minimum-wage-studies-have-found-little-or-no-job-loss/",
+     "domain": "epi.org",
+     "source": "web",
+     "year": null,
+     "text": "Most minimum wage studies have found little or no job loss. A new review that I co-authored with Arindrajit Dube finds that most minimum wage studies find no job losses or only small disemployment effects. In other words, the vast majority of minimum wage research implies that minimum wage policies have unambiguously raised the total earnings of low-wage workers",
+     "stance": "supports",
+     "reason": "Review finds most studies show no job losses or only small disemployment effects."
+    },
+    {
+     "pid": "e0f83db9d354#1",
+     "title": "The Effect of Minimum Wages on Low-Wage Jobs*",
+     "url": "https://doi.org/10.1093/qje/qjz014",
+     "domain": "doi.org/10.1093",
+     "source": "openalex",
+     "year": 2019,
+     "text": "We find that the overall number of low-wage jobs remained essentially unchanged over the five years following the increase. At the same time, the direct effect of the minimum wage on average earnings was amplified by modest wage spillovers at the bottom of the wage distribution. Our estimates by detailed demographic groups show that the lack of job loss is not explained by labor-labor substitution at the bottom of the wage distribution. We also find no evidence of disemployment when we consider higher levels of minimum wages. However, we do find some evidence of reduced employment in tradeable sectors. We also show how decomposing the overall employment effect by wage bins allows a transparent way of assessing the plausibility of estimates.",
+     "stance": "supports",
+     "reason": "Finds low-wage job counts unchanged; no disemployment at higher levels, minor tradeable-sector losses."
+    },
+    {
+     "pid": "9e1f48f1f498#1",
+     "title": "Employment Policies Institute",
+     "url": "https://en.wikipedia.org/wiki/Employment_Policies_Institute",
+     "domain": "en.wikipedia.org",
+     "source": "wikipedia",
+     "year": null,
+     "text": "The Employment Policies Institute has released a number of studies that look at the economic effects of policies (like the minimum wage, health care mandates, and employment tax credits) on low-wage labor markets. It also regularly analyzes job market data in the United States Typically, studies are contracted by university economists and published under its name. In 2009, The Employment Policies Institute launched a campaign, Defeat The Debt, focusing on the national debt. The Employment Policies Institute argues that increases to the minimum wage also increase unemployment among groups of workers like teens and less-educated and unskilled workers. Economists have varied views on the impact of minimum wage laws.",
+     "stance": "neutral",
+     "reason": "Describes an institute's claims of teen job losses; notes economists have varied views, no direct evidence."
+    },
+    {
+     "pid": "a3642eb883ac#2",
+     "title": "The 2026 State Minimum Wage Increases and Their Potential Costs and ...",
+     "url": "https://www.americanactionforum.org/insight/the-2026-state-minimum-wage-increases-and-their-potential-costs-and-consequences/",
+     "domain": "americanactionforum.org",
+     "source": "web",
+     "year": null,
+     "text": "Advocates of increasing the minimum wage generally argue that doing so would boost workers’ pay, protecting them from exploitation and ensuring a livable wage. While it is true that some workers will receive a pay increase due to a hike in the minimum wage, requiring employers to pay above-market wages can come with unintended consequences, such as job loss and a reduction of benefits. Furthermore, such a policy can disproportionately hurt the least skilled and least experienced workers, which is best illustrated in its negative effect on teenage employment.",
+     "stance": "contradicts",
+     "reason": "Argues minimum wage increases cause job loss, especially for teens; opposes the belief."
+    },
+    {
+     "pid": "dceba609cb8c#0",
+     "title": "Declining teen employment: minimum wages, returns to schooling, and ...",
+     "url": "https://www.sciencedirect.com/science/article/pii/S0927537119300442",
+     "domain": "sciencedirect.com",
+     "source": "web",
+     "year": null,
+     "text": "Declining teen employment: minimum wages, returns to schooling, and .... The declining teen participation rate may have many causes. Rising minimum wages could reduce employment opportunities for young workers, and could also spur increased investment in schooling (Ehrenberg and Marcus 1982). Growth in the number of low-skilled immigrants could have increased competition for jobs held by teens (Smith, 2012). And a decline in teen employment may reflect a direct",
+     "stance": "neutral",
+     "reason": "Says minimum wages could reduce teen employment as one possible cause; speculative, not decisive."
+    }
+   ],
+   "belief": "Raising the minimum wage generally has small or no overall employment effect, though larger increases and some groups such as teens may see job losses.",
+   "confidence": 70,
+   "next_query": "minimum wage employment effects teens meta-analysis recent evidence large increases",
+   "baqd": 0.01843762527064291,
+   "support": 2,
+   "contradict": 1,
+   "neutral": 3,
+   "skew": 0.3333333333333333,
+   "balance_loss": 0.3333333333333333,
+   "domains": 6,
+   "sources": 3,
+   "cumulative": {
+    "support": 5,
+    "contradict": 2,
+    "neutral": 5,
+    "passages": 12
+   }
+  },
+  {
+   "hop": 3,
+   "query": "minimum wage employment effects teens meta-analysis recent evidence large increases",
+   "origin": "model",
+   "fetched": {
+    "wikipedia": 3,
+    "openalex": 3,
+    "arxiv": 3,
+    "pubmed": 3,
+    "web": 3
+   },
+   "pool_size": 140,
+   "passages": [
+    {
+     "pid": "3ed11781c282#0",
+     "title": "Integrated analysis of informality, minimum wage, and monopsony power: A synthesis of meta-analyses with unified theoretical underpinnings",
+     "url": "http://arxiv.org/abs/2509.20465v1",
+     "domain": "arxiv.org",
+     "source": "arxiv",
+     "year": 2025,
+     "text": "Integrated analysis of informality, minimum wage, and monopsony power: A synthesis of meta-analyses with unified theoretical underpinnings. This document offers a synthesis of recent economic literature on three interconnected areas of labor markets: informality, the effects of the minimum wage, and monopsony power. Through the consolidation and meta-analysis of findings from multiple existing systematic reviews and meta-analyses, their causes, consequences, and associated public policies are examined. It is concluded that conventional views on these topics often overestimate the magnitude of effects. Policies to reduce informality based solely on lowering formalization costs are largely ineffective, while increased enforcement at the extensive margin shows more promising results.",
+     "stance": "neutral",
+     "reason": "Synthesis says conventional views overestimate effects, but does not directly address employment reduction from minimum wage."
+    },
+    {
+     "pid": "ac971685797d#0",
+     "title": "PDF The Effects of Minimum Wages on (Almost) Everything? a Review National ...",
+     "url": "https://www.nber.org/system/files/working_papers/w31191/revisions/w31191.rev0.pdf",
+     "domain": "nber.org",
+     "source": "web",
+     "year": null,
+     "text": "PDF The Effects of Minimum Wages on (Almost) Everything? a Review National .... ABSTRACT The effects of minimum wages on employment, wages, earnings, and incomes, have been studied and debated for decades. In recent years, however, researchers have turned to the effects on a multitude of other behaviors and outcomes - largely related to health. I review and assess the large and growing body of evidence on minimum wage effects on a wide variety of health outcomes and",
+     "stance": "neutral",
+     "reason": "Review focuses on health outcomes of minimum wages, not employment effects."
+    },
+    {
+     "pid": "255e405f480d#0",
+     "title": "Minimum Wage Increases, Wages, and Low-Wage Employment: Evidence from Seattle",
+     "url": "https://doi.org/10.3386/w23532",
+     "domain": "doi.org/10.3386",
+     "source": "openalex",
+     "year": 2017,
+     "text": "Minimum Wage Increases, Wages, and Low-Wage Employment: Evidence from Seattle.",
+     "stance": "neutral",
+     "reason": "Title only; Seattle study on low-wage employment, no finding stated."
+    },
+    {
+     "pid": "59c7d48f7cbf#0",
+     "title": "NEW ANALYSIS: High Teen Unemployment Tied to State Wage Hikes",
+     "url": "https://minimumwage.com/2025/07/new-analysis-high-teen-unemployment-tied-to-state-wage-hikes/",
+     "domain": "minimumwage.com",
+     "source": "web",
+     "year": null,
+     "text": "NEW ANALYSIS: High Teen Unemployment Tied to State Wage Hikes. The first week of July marks the height of summer, and it also brings a wave of minimum wage increases at the state and local level. For teenagers hoping to earn extra money before the school year begins, higher wages might seem appetizing. However, a new EPI analysis of Census Bureau data shows this summer might just be serving up unemployment for teens hoping to get a job. Previous EPI",
+     "stance": "supports",
+     "reason": "EPI analysis links state wage hikes to high teen unemployment, supporting job losses for teens."
+    },
+    {
+     "pid": "fe7361004976#1",
+     "title": "Why minimum wage hikes may not reduce employment",
+     "url": "https://openalex.org/W1571783914",
+     "domain": "openalex.org",
+     "source": "openalex",
+     "year": 1998,
+     "text": "The author of this article describes and evaluates several models that may explain the controversial recent findings and proposes avenues for future research that would help determine the validity of these models. ; The author notes that if the recent findings that minimum wage increases do not always adversely affect employment are correct, economists may need to reconsider their views of how labor markets work. In addition, research on other effects of minimum wage increases is needed. For example, the distributional consequences are important, particularly if higher-skilled workers displace lower-skilled workers when the minimum wage is raised.",
+     "stance": "contradicts",
+     "reason": "Argues minimum wage hikes may not reduce employment, contrary to the disemployment belief."
+    },
+    {
+     "pid": "39a319a8bc00#2",
+     "title": "Minimum Wages and Employment",
+     "url": "https://doi.org/10.1561/0700000015",
+     "domain": "doi.org/10.1561",
+     "source": "openalex",
+     "year": 2006,
+     "text": "First, we see very few – if any – studies that provide convincing evidence of positive employment effects of minimum wages, especially from those studies that focus on the broader groups (rather than a narrow industry) for which the competitive model generally predicts disemployment effects. Second, the studies that focus on the least-skilled groups that are likely most directly affected by minimum wage increases provide relatively overwhelming evidence of stronger disemployment effects for these groups.",
+     "stance": "supports",
+     "reason": "Reports strong disemployment effects for least-skilled groups, supporting the belief that employment falls."
+    }
+   ],
+   "belief": "Minimum wage increases have small or no overall employment effect, but reduce employment for teens and the least-skilled, with the effect depending on size.",
+   "confidence": 60,
+   "next_query": "meta-analysis minimum wage employment elasticity teens low-skilled recent evidence",
+   "baqd": 0.03245093215874359,
+   "support": 2,
+   "contradict": 1,
+   "neutral": 3,
+   "skew": 0.3333333333333333,
+   "balance_loss": 0.3333333333333333,
+   "domains": 6,
+   "sources": 3,
+   "cumulative": {
+    "support": 7,
+    "contradict": 3,
+    "neutral": 8,
+    "passages": 18
+   }
+  },
+  {
+   "hop": 4,
+   "query": "meta-analysis minimum wage employment elasticity teens low-skilled recent evidence",
+   "origin": "model",
+   "fetched": {
+    "wikipedia": 1,
+    "openalex": 3,
+    "arxiv": 1,
+    "pubmed": 3,
+    "web": 3
+   },
+   "pool_size": 154,
+   "passages": [
+    {
+     "pid": "ab2ba547baf0#1",
+     "title": "The Minimum Wage and the Great Recession: Evidence of Effects on the Employment and Income Trajectories of Low-Skilled Workers",
+     "url": "https://doi.org/10.3386/w20724",
+     "domain": "doi.org/10.3386",
+     "source": "openalex",
+     "year": 2014,
+     "text": "We estimate the minimum wage's effects on low-skilled workers' employment and income trajectories.Our approach exploits two dimensions of the data we analyze.First, we compare workers in states that were bound by recent increases in the federal minimum wage to workers in states that were not.Second, we use 12 months of baseline data to divide low-skilled workers into a \"target\" group, whose baseline wage rates were directly affected, and a \"within-state control\" group with slightly higher baseline wage rates.Over three subsequent years, we find that binding minimum wage increases had significant, negative effects on the employment and income growth of targeted workers.Lost income reflects contributions from employment declines, increased probabilities of",
+     "stance": "supports",
+     "reason": "Binding minimum wage increases had significant negative effects on employment of targeted low-skilled workers."
+    },
+    {
+     "pid": "fd4721f094e4#0",
+     "title": "The effect of minimum wages on employment in the presence of productivity fluctuations",
+     "url": "http://arxiv.org/abs/2502.18261v3",
+     "domain": "arxiv.org",
+     "source": "arxiv",
+     "year": 2025,
+     "text": "The effect of minimum wages on employment in the presence of productivity fluctuations. Traditionally, the impact of minimum wages on employment has been studied, and it is generally believed to have a negative effect. Yet, some recent studies have shown that the impact of minimum wages on employment can sometimes be positive. In addition, certain recent proposals set a higher minimum wage than the wage earned by some high-productivity workers. However, the impact of minimum wages on employment has been primarily studied on low-skilled workers, whereas there is limited research on high-skilled workers.",
+     "stance": "neutral",
+     "reason": "Discusses theory of minimum wage employment effects with productivity fluctuations; takes no clear side on the net effect."
+    },
+    {
+     "pid": "3cfe9f0ba42b#0",
+     "title": "Do social protection programmes have a causal effect on suicide mortality? A protocol for a systematic review and meta-analysis.",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/35459667/",
+     "domain": "pubmed.ncbi.nlm.nih.gov",
+     "source": "pubmed",
+     "year": 2022,
+     "text": "Do social protection programmes have a causal effect on suicide mortality? A protocol for a systematic review and meta-analysis.. Introduction: Recent international and national strategies to reduce suicide mortality have suggested that social protection programmes may be an effective multisectoral response given the link between material deprivation and suicides in observational studies. However, there is a lack of evidence on the causal relationship between social protection programmes and suicide, which may hinder substantial national budget reallocations necessary to implement these policies.",
+     "stance": "neutral",
+     "reason": "Off topic: protocol on social protection programmes and suicide mortality."
+    },
+    {
+     "pid": "39a319a8bc00#0",
+     "title": "Minimum Wages and Employment",
+     "url": "https://doi.org/10.1561/0700000015",
+     "domain": "doi.org/10.1561",
+     "source": "openalex",
+     "year": 2006,
+     "text": "Minimum Wages and Employment. We review the burgeoning literature on the employment effects of minimum wages – in the United States and in other countries – that was spurred by the new minimum wage research beginning in the early 1990s. Our review indicates that there is a wide range of existing estimates and, accordingly, a lack of consensus about the overall effects on low-wage employment of an increase in the minimum wage. However, the oft-stated assertion that recent research fails to support the conclusion that the minimum wage reduces employment of low-skilled workers is clearly incorrect.",
+     "stance": "contradicts",
+     "reason": "Review finds no consensus that minimum wages reduce low-wage employment, contradicting a clear negative effect claim."
+    },
+    {
+     "pid": "74e0f77cb169#0",
+     "title": "PDF Own-Wage Elasticity: Quantifying the Impact of Minimum Wages on Employment",
+     "url": "https://www.nber.org/system/files/working_papers/w32925/w32925.pdf",
+     "domain": "nber.org",
+     "source": "web",
+     "year": null,
+     "text": "PDF Own-Wage Elasticity: Quantifying the Impact of Minimum Wages on Employment. The own-wage elasticity (OWE) of employment estimated using minimum wage increases provides an economically meaningful measure of the policy on jobs. We discuss how to interpret the magnitude of the OWE, including in terms of welfare and under alternative models of the labor market",
+     "stance": "neutral",
+     "reason": "Describes own-wage elasticity measurement approach without stating a direction or magnitude."
+    },
+    {
+     "pid": "e24c333a886f#0",
+     "title": "Employment Effect of Minimum Wages - MDPI",
+     "url": "https://www.mdpi.com/2673-8392/2/4/130",
+     "domain": "mdpi.com",
+     "source": "web",
+     "year": null,
+     "text": "Employment Effect of Minimum Wages - MDPI. The effect of minimum wages on employment is a mature, continuously researched topic. This study discusses the core theoretical approaches on the relationship between the minimum wage and employment, which is reflected by the empirical results from the international literature. Moreover, it presents the findings of the most recent research and the results of meta-analyses of this issue. While",
+     "stance": "neutral",
+     "reason": "Describes the literature and meta-analyses generally without stating a finding."
+    }
+   ],
+   "belief": "Minimum wage increases have small or no overall employment effect, with negative effects concentrated among teens and the least-skilled, and magnitude varying by study and size of increase.",
+   "confidence": 60,
+   "next_query": "meta-analysis minimum wage employment elasticity teens low-skilled heterogeneity bite",
+   "baqd": 0.04378130827519078,
+   "support": 1,
+   "contradict": 1,
+   "neutral": 4,
+   "skew": 0.0,
+   "balance_loss": 0.0,
+   "domains": 6,
+   "sources": 4,
+   "cumulative": {
+    "support": 8,
+    "contradict": 4,
+    "neutral": 12,
+    "passages": 24
+   }
+  }
+ ],
+ "cqi_events": [
+  {
+   "hop": 1,
+   "trigger": {
+    "baqd": null,
+    "skew": 0.5
+   },
+   "original_query": "minimum wage employment effect meta-analysis large increases disemployment evidence",
+   "counter_query": "minimum wage increase job losses evidence disemployment teens low-skilled workers negative effects",
+   "why": "The current belief leans toward small or no employment effects, so this query targets studies documenting significant job losses, especially for teens and low-skilled workers, to test whether the null-leaning consensus is overstated."
+  }
+ ],
+ "synthesis": {
+  "answer": "The passages suggest that raising the minimum wage does not generally reduce overall employment, though the evidence is contested and some subgroups show losses. Supporting studies find little or no job loss: a UK meta-regression of 236 elasticities found no overall practically significant adverse employment effect, with a possible genuine adverse effect in residential home care [5f591435f1d8#0]. An EPI review reports most studies find no job losses or only small disemployment effects [f3df8a818b8c#0], and a study of low-wage jobs found their number essentially unchanged over five years [e0f83db9d354#1]. However, a study of the Great Recession found significant negative effects on employment and income for targeted low-skilled workers [ab2ba547baf0#1]. The contradicting side is substantial: the CBO projected that a $15 federal minimum wage would reduce employment by about 1.4 million people [6de9116294ca#3], and a review of the literature found no consensus, rejecting the claim that recent research fails to show disemployment for low-skilled workers [39a319a8bc00#0]. The evidence is therefore mixed, with weaker effects for broad groups and stronger disemployment for the least-skilled and teens.",
+  "confidence": 55,
+  "one_line": "Evidence is mixed: most studies find little overall job loss, but disemployment appears for low-skilled groups and some projections predict losses."
+ },
+ "audit": {
+  "claims": [
+   {
+    "cid": "c1",
+    "text": "A UK meta-regression of 236 elasticities found no overall practically significant adverse employment effect from minimum wage increases.",
+    "cited_pids": [
+     "5f591435f1d8#0"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "5f591435f1d8#0",
+      "relation": "supports",
+      "title": "Does the UK Minimum Wage Reduce Employment? A Meta‐Regression Analysis",
+      "url": "https://doi.org/10.1111/bjir.12031",
+      "domain": "doi.org/10.1111",
+      "source": "openalex"
+     }
+    ],
+    "note": "The UK meta-analysis passage reports 236 elasticities and finds no overall practically significant adverse employment effect, matching the claim directly.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c2",
+    "text": "The UK meta-regression found a possible genuine adverse employment effect in residential home care.",
+    "cited_pids": [
+     "5f591435f1d8#0"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "5f591435f1d8#0",
+      "relation": "supports",
+      "title": "Does the UK Minimum Wage Reduce Employment? A Meta‐Regression Analysis",
+      "url": "https://doi.org/10.1111/bjir.12031",
+      "domain": "doi.org/10.1111",
+      "source": "openalex"
+     }
+    ],
+    "note": "Passage states the residential home care industry may exhibit a genuinely adverse employment effect; 'may' signals a possible effect, matching the claim.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c3",
+    "text": "An EPI review reports that most minimum wage studies find no job losses or only small disemployment effects.",
+    "cited_pids": [
+     "f3df8a818b8c#0"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "f3df8a818b8c#0",
+      "relation": "supports",
+      "title": "Most minimum wage studies have found little or no job loss",
+      "url": "https://www.epi.org/blog/most-minimum-wage-studies-have-found-little-or-no-job-loss/",
+      "domain": "epi.org",
+      "source": "web"
+     }
+    ],
+    "note": "The EPI passage states that a review co-authored with Arindrajit Dube finds most minimum wage studies find no job losses or only small disemployment effects.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c4",
+    "text": "A study of low-wage jobs found their number essentially unchanged over five years after minimum wage increases.",
+    "cited_pids": [
+     "e0f83db9d354#1"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "e0f83db9d354#1",
+      "relation": "supports",
+      "title": "The Effect of Minimum Wages on Low-Wage Jobs*",
+      "url": "https://doi.org/10.1093/qje/qjz014",
+      "domain": "doi.org/10.1093",
+      "source": "openalex"
+     }
+    ],
+    "note": "First passage states the overall number of low-wage jobs remained essentially unchanged over the five years after the minimum wage increase. Other passages concern different settings or find reductions, so they do not bear on this claim directly.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c5",
+    "text": "A study of the Great Recession found significant negative effects on employment and income for targeted low-skilled workers.",
+    "cited_pids": [
+     "ab2ba547baf0#1"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "ab2ba547baf0#1",
+      "relation": "supports",
+      "title": "The Minimum Wage and the Great Recession: Evidence of Effects on the Employment and Income Trajectories of Low-Skilled Workers",
+      "url": "https://doi.org/10.3386/w20724",
+      "domain": "doi.org/10.3386",
+      "source": "openalex"
+     }
+    ],
+    "note": "Passage ab2ba547baf0#1 states binding minimum wage increases had significant negative effects on employment and income growth of targeted low-skilled workers during the Great Recession period.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c6",
+    "text": "The CBO projected that a $15 federal minimum wage would reduce employment by about 1.4 million people.",
+    "cited_pids": [
+     "6de9116294ca#3"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "6de9116294ca#3",
+      "relation": "supports",
+      "title": "Minimum wage in the United States",
+      "url": "https://en.wikipedia.org/wiki/Minimum_wage_in_the_United_States",
+      "domain": "en.wikipedia.org",
+      "source": "wikipedia"
+     }
+    ],
+    "note": "The Wikipedia passage states the CBO estimated a $15 federal minimum wage would reduce employment by about 1.4 million people, matching the claim.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c7",
+    "text": "A review of the literature found no consensus on whether minimum wage increases cause disemployment for low-skilled workers.",
+    "cited_pids": [
+     "39a319a8bc00#0"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "39a319a8bc00#0",
+      "relation": "supports",
+      "title": "Minimum Wages and Employment",
+      "url": "https://doi.org/10.1561/0700000015",
+      "domain": "doi.org/10.1561",
+      "source": "openalex"
+     },
+     {
+      "pid": "b9f7c09839cd#1",
+      "relation": "supports",
+      "title": "Minimum Wages and Employment: A Review of Evidence from the New Minimum Wage Research",
+      "url": "https://doi.org/10.3386/w12663",
+      "domain": "doi.org/10.3386",
+      "source": "openalex"
+     }
+    ],
+    "note": "Review passages state a wide range of estimates and a lack of consensus on low-wage employment effects of minimum wage increases.",
+    "independent_sources": 2
+   },
+   {
+    "cid": "c8",
+    "text": "Disemployment effects from minimum wage increases are stronger for the least-skilled workers and teens.",
+    "cited_pids": [],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "39a319a8bc00#2",
+      "relation": "supports",
+      "title": "Minimum Wages and Employment",
+      "url": "https://doi.org/10.1561/0700000015",
+      "domain": "doi.org/10.1561",
+      "source": "openalex"
+     },
+     {
+      "pid": "b9f7c09839cd#2",
+      "relation": "supports",
+      "title": "Minimum Wages and Employment: A Review of Evidence from the New Minimum Wage Research",
+      "url": "https://doi.org/10.3386/w12663",
+      "domain": "doi.org/10.3386",
+      "source": "openalex"
+     },
+     {
+      "pid": "a3642eb883ac#0",
+      "relation": "supports",
+      "title": "The 2026 State Minimum Wage Increases and Their Potential Costs and ...",
+      "url": "https://www.americanactionforum.org/insight/the-2026-state-minimum-wage-increases-and-their-potential-costs-and-consequences/",
+      "domain": "americanactionforum.org",
+      "source": "web"
+     }
+    ],
+    "note": "Review passages report stronger disemployment effects for least-skilled groups; the advocacy piece cites negative teen employment effects. Passages do not directly compare the effect size against other groups for teens specifically.",
+    "independent_sources": 3
+   }
+  ],
+  "scores": {
+   "claims_checked": 8,
+   "evidence_support_score": 100.0,
+   "multi_source_share": 25.0,
+   "contradicted_share": 0.0,
+   "unverified_share": 0.0,
+   "mixed_share": 0.0,
+   "citation_faithfulness": 100.0,
+   "distinct_domains": 7,
+   "stated_confidence": 55,
+   "calibration_gap": -45.0
+  },
+  "grade": "Partly supported",
+  "pool_size": 154
+ },
+ "usage": {
+  "calls": 15,
+  "cached_calls": 15,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": 0.0
+ },
+ "seconds": 0.08,
+ "run_id": "does-raising-the-minimum-wage-reduce-employment-guarded-aa1c4c",
+ "saved_at": "2026-11-26T21:21:08"
+}

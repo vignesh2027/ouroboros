@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"d3dba06e800d#2\",\"relation\":\"supports\"}],\"note\":\"Passage d3dba06e800d#2 reports the Saudi financial-sector study finding remote work raised productivity via job satisfaction and work-life balance. Other passages are background or unrelated.\"}", "tag": "audit_verify", "input_tokens": 1789, "output_tokens": 112}

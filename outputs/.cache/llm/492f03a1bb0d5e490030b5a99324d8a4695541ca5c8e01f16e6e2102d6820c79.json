@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"4ad48ebaaa3c#3\",\"relation\":\"supports\"}],\"note\":\"Passage 4ad48ebaaa3c#3 states electric scooter maintenance cost in India is \u20b91,500 to \u20b93,000 per year. Other passages do not address annual maintenance figures.\"}", "tag": "audit_verify", "input_tokens": 1963, "output_tokens": 118}

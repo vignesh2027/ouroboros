@@ -1,0 +1,203 @@
+/* Ouroboros design tokens. Light is the default. Dark redefines tokens only.
+   Never write a raw colour in another stylesheet: use a token from here. */
+
+:root {
+  color-scheme: light;
+
+  /* Surfaces and text */
+  --ground: #F7F3EE;
+  --surface: #FFFFFF;
+  --surface-2: #F2ECE5;
+  --ink: #2A1E16;
+  --ink-2: #4F3F34;
+  --muted: #6F5E51;
+  --line: #E7DED3;
+  --line-strong: #D6C9BA;
+
+  /* Brand */
+  --primary: #7A4B2A;
+  --primary-hover: #5F3919;
+  --primary-soft: #F0E6DB;
+  --on-primary: #FFFFFF;
+  --brass: #B98A47;
+  --focus: #B98A47;
+
+  /* Sidebar: a warm stone panel in light, near-black in dark */
+  --sidebar: #EFE8DF;
+  --sidebar-ink: #2A1E16;
+  --sidebar-muted: #6F5E51;
+  --sidebar-line: #E0D5C8;
+  --sidebar-hover: #E8DFD3;
+  --sidebar-active: #E2D6C7;
+  --sidebar-logo: #7A4B2A;
+
+  /* Meaning. Kept apart from the brand colours on purpose. */
+  --support: #3E7A4F;
+  --support-soft: #E6F0E8;
+  --contradict: #A8423A;
+  --contradict-soft: #F6E4E1;
+  --mixed: #A0742A;
+  --mixed-soft: #F5ECDB;
+  --neutral: #8A7D72;
+  --neutral-soft: #EEE8E2;
+
+  /* Domain badge tints (warm, quiet) */
+  --av-1: #8C5A36;
+  --av-2: #6F6A3F;
+  --av-3: #8A4B45;
+  --av-4: #5E6B5A;
+  --av-5: #85693A;
+  --av-6: #6D5547;
+
+  /* Helpers */
+  --overlay: rgba(31, 20, 13, 0.52);
+  --code-bg: #2B1D14;
+  --code-ink: #F1E7DC;
+  --code-muted: #8F7E6E;
+
+  /* Type */
+  --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-logo: "Jost", "Futura", "Avenir Next", "Century Gothic", system-ui, sans-serif;
+  --font-sans: "Figtree", -apple-system, "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  --text-xs: 0.75rem;      /* 12px meta, captions, counts */
+  --text-sm: 0.8125rem;    /* 13px secondary UI, table cells */
+  --text-base: 0.9375rem;  /* 15px body, UI, buttons, inputs */
+  --text-answer: 1rem;     /* 16px answer paragraphs */
+  --text-lg: 1.0625rem;    /* 17px lead, card titles */
+  --text-xl: 1.25rem;      /* 20px section headings */
+  --text-2xl: 1.5rem;      /* 24px page titles */
+  --text-q: 1.625rem;      /* 26px thread question */
+  --text-3xl: 1.5rem;
+  --text-hero: clamp(30px, 2rem + 1.2vw, 40px);
+  --text-mono: 0.8125rem;  /* 13px */
+
+  --measure: 66ch;
+
+  /* Space */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 56px;
+  --s-8: 96px;
+  --s-9: 140px;
+
+  /* Radii */
+  --r-sm: 6px;
+  --r: 10px;
+  --r-lg: 14px;
+  --r-xl: 20px;
+  --r-pill: 999px;
+
+  /* Shadows: warm and soft */
+  --shadow-1: none;
+  --shadow-2: 0 1px 2px rgba(60, 36, 18, 0.05), 0 6px 24px rgba(60, 36, 18, 0.05);
+  --shadow-3: 0 12px 40px rgba(60, 36, 18, 0.12);
+
+  /* Layout */
+  --sidebar-w: 240px;
+  --topbar-h: 52px;
+  --tap: 36px;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --z-sticky: 20;
+  --z-drawer: 60;
+  --z-pop: 80;
+  --z-toast: 90;
+}
+
+@media (pointer: coarse) { :root { --tap: 44px; } }
+
+/* Dark: follows the computer unless the person chose Light */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --ground: #14100C;
+    --surface: #1B1410;
+    --surface-2: #261C16;
+    --ink: #F2E9DF;
+    --ink-2: #D9CBBE;
+    --muted: #A99A8D;
+    --line: #2E231B;
+    --line-strong: #3F3025;
+    --primary: #D4A373;
+    --primary-hover: #E2B88E;
+    --primary-soft: #33251B;
+    --on-primary: #2A1E16;
+    --brass: #E0B872;
+    --focus: #E0B872;
+    --sidebar: #110C09;
+    --sidebar-ink: #F1E7DC;
+    --sidebar-muted: #A3927F;
+    --sidebar-line: #2A1F17;
+    --sidebar-hover: #1B130E;
+    --sidebar-active: #2C2017;
+    --sidebar-logo: #E9D3B8;
+    --support: #86BD94;
+    --support-soft: #1F2E24;
+    --contradict: #E58F85;
+    --contradict-soft: #38211E;
+    --mixed: #DDB062;
+    --mixed-soft: #35291A;
+    --neutral: #A99A8D;
+    --neutral-soft: #2A211B;
+    --av-1: #A8714A;
+    --av-2: #8A8550;
+    --av-3: #A9605A;
+    --av-4: #7B8A77;
+    --av-5: #A68548;
+    --av-6: #8A6F5E;
+    --overlay: rgba(0, 0, 0, 0.62);
+    --code-bg: #0E0A07;
+    --shadow-1: none;
+    --shadow-2: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 24px rgba(0, 0, 0, 0.35);
+    --shadow-3: 0 12px 40px rgba(0, 0, 0, 0.6);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ground: #14100C;
+  --surface: #1B1410;
+  --surface-2: #261C16;
+  --ink: #F2E9DF;
+  --ink-2: #D9CBBE;
+  --muted: #A99A8D;
+  --line: #2E231B;
+  --line-strong: #3F3025;
+  --primary: #D4A373;
+  --primary-hover: #E2B88E;
+  --primary-soft: #33251B;
+  --on-primary: #2A1E16;
+  --brass: #E0B872;
+  --focus: #E0B872;
+  --sidebar: #110C09;
+  --sidebar-ink: #F1E7DC;
+  --sidebar-muted: #A3927F;
+  --sidebar-line: #2A1F17;
+  --sidebar-hover: #1B130E;
+  --sidebar-active: #2C2017;
+  --sidebar-logo: #E9D3B8;
+  --support: #86BD94;
+  --support-soft: #1F2E24;
+  --contradict: #E58F85;
+  --contradict-soft: #38211E;
+  --mixed: #DDB062;
+  --mixed-soft: #35291A;
+  --neutral: #A99A8D;
+  --neutral-soft: #2A211B;
+  --av-1: #A8714A;
+  --av-2: #8A8550;
+  --av-3: #A9605A;
+  --av-4: #7B8A77;
+  --av-5: #A68548;
+  --av-6: #8A6F5E;
+  --overlay: rgba(0, 0, 0, 0.62);
+  --code-bg: #0E0A07;
+  --shadow-1: none;
+  --shadow-2: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 24px rgba(0, 0, 0, 0.35);
+  --shadow-3: 0 12px 40px rgba(0, 0, 0, 0.6);
+}

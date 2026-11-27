@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"8ef6c9360938#3\",\"relation\":\"supports\"}],\"note\":\"World Nuclear Association passage states nuclear power plants produce no greenhouse gas emissions during operation, directly matching the claim.\"}", "tag": "audit_verify", "input_tokens": 1865, "output_tokens": 91}

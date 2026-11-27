@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"d658dc380b73#6\",\"relation\":\"supports\"}],\"note\":\"Passage d658dc380b73#6 states Bloom's Ctrip study found a 13% performance increase for fully remote call center workers. Other passages only mention the trial without figures.}\"}", "tag": "audit_verify", "input_tokens": 1660, "output_tokens": 107}

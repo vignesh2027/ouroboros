@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"39a319a8bc00#0\",\"relation\":\"supports\"},{\"pid\":\"b9f7c09839cd#1\",\"relation\":\"supports\"}],\"note\":\"Review passages state a wide range of estimates and a lack of consensus on low-wage employment effects of minimum wage increases.\"}", "tag": "audit_verify", "input_tokens": 1712, "output_tokens": 113}

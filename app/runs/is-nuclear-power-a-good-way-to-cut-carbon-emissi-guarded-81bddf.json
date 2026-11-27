@@ -1,0 +1,634 @@
+{
+ "question": "Is nuclear power a good way to cut carbon emissions?",
+ "mode": "guarded",
+ "config": {
+  "mode": "guarded",
+  "hops": 4,
+  "k": 6,
+  "per_source": 3,
+  "sources": null,
+  "baqd_threshold": 0.05,
+  "skew_threshold": 0.5,
+  "closed_corpus": false,
+  "corpus_size": 0
+ },
+ "hops": [
+  {
+   "hop": 1,
+   "query": "Is nuclear power a good way to cut carbon emissions?",
+   "origin": "question",
+   "fetched": {
+    "wikipedia": 3,
+    "openalex": 3,
+    "arxiv": 3,
+    "pubmed": 3,
+    "web": 3
+   },
+   "pool_size": 62,
+   "passages": [
+    {
+     "pid": "e0043a22f8f3#0",
+     "title": "Nuclear power in a carbon-constrained world",
+     "url": "https://doi.org/10.1162/daed.2009.138.4.81",
+     "domain": "doi.org/10.1162",
+     "source": "openalex",
+     "year": 2009,
+     "text": "Nuclear power in a carbon-constrained world. 1 have spent nearly four decades in the utility industry grappling with the effort to make good use of the power man has acquired in learning to split the atom. I cut my teeth in private practice licensing the fleet of Commonwealth Edison, one of the nation's most nuclear-intensive utility companies. In my first CEO position, I worked to recover Central Maine Power's economically disastrous investments in the Seabrook",
+     "stance": "neutral",
+     "reason": "Utility executive memoir intro about nuclear in carbon-constrained world; takes no clear side on emissions benefit."
+    },
+    {
+     "pid": "9e449e75a4d1#9",
+     "title": "Carbon price",
+     "url": "https://en.wikipedia.org/wiki/Carbon_price",
+     "domain": "en.wikipedia.org",
+     "source": "wikipedia",
+     "year": null,
+     "text": "The Regional Greenhouse Gas Initiative, for example, sets an upper limit on allowance prices through its cost containment provision. However, industries may successfully lobby to exempt themselves from a carbon tax. It is therefore argued that with emissions trading, polluters have an incentive to cut emissions, but if they are exempted from a carbon tax, they have no incentive to cut emissions. On the other hand, freely distributing emission permits could potentially lead to corrupt behaviour. Most cap and trade programs have a descending cap, usually a fixed percentage every year, which gives",
+     "stance": "neutral",
+     "reason": "Discusses carbon pricing mechanisms, not nuclear power or its emissions effects."
+    },
+    {
+     "pid": "9c0942346a10#6",
+     "title": "Nuclear eclectic power.",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/17792564/",
+     "domain": "pubmed.ncbi.nlm.nih.gov",
+     "source": "pubmed",
+     "year": 1974,
+     "text": "So far, increasingly large amounts of energy have been used to turn resources into junk, from which activity we derive ephemeral benefit and pleasure; the track record is not too good. What will we do now?",
+     "stance": "neutral",
+     "reason": "Vague philosophical remark about energy use; does not address nuclear carbon emissions."
+    },
+    {
+     "pid": "6f3e7419a5f3#1",
+     "title": "Power Counting and Wilsonian Renormalization in Nuclear Effective Field Theory",
+     "url": "http://arxiv.org/abs/1604.01332v2",
+     "domain": "arxiv.org",
+     "source": "arxiv",
+     "year": 2016,
+     "text": "In nuclear physics they provide the possibility of a theoretically sound derivation of nuclear forces without having to solve quantum chromodynamics explicitly. However there is the problem of how to organize calculations within nuclear effective field theory: the traditional knowledge about power counting is perturbative but nuclear physics is not. Yet power counting can be derived in Wilsonian renormalization and there is already a fairly good understanding of how to apply these ideas to non-perturbative phenomena and in particular to nuclear physics.",
+     "stance": "neutral",
+     "reason": "Nuclear effective field theory in physics; unrelated to power generation or emissions."
+    },
+    {
+     "pid": "6b78e48604a1#0",
+     "title": "Does nuclear energy reduce carbon emissions despite using fuels and ...",
+     "url": "https://www.sciencedirect.com/science/article/pii/S1674987123000750",
+     "domain": "sciencedirect.com",
+     "source": "web",
+     "year": null,
+     "text": "Does nuclear energy reduce carbon emissions despite using fuels and .... The study found that rising demand for nuclear power helps to achieve a carbon-neutral agenda, but insufficient funding for renewable energy leads to higher carbon emissions. The research suggests increasing investment in nuclear energy and green financing can improve regional environmental quality",
+     "stance": "supports",
+     "reason": "Study finds rising nuclear demand helps achieve carbon-neutral goals and improves environmental quality."
+    },
+    {
+     "pid": "7e88e103d8fb#0",
+     "title": "Nuclear power and climate change | IAEA",
+     "url": "https://www.iaea.org/topics/nuclear-power-and-climate-change",
+     "domain": "iaea.org",
+     "source": "web",
+     "year": null,
+     "text": "Nuclear power and climate change | IAEA. Nuclear power is a low-carbon source of energy. In 2018, nuclear power produced about 10 percent of the world's electricity. Together with the expanding renewable energy sources and fuel switching from coal to gas, higher nuclear power production contributed to the levelling of global CO 2 emissions at 33 gigatonnes in 2019 1/",
+     "stance": "supports",
+     "reason": "IAEA states nuclear is low-carbon and contributed to levelling global CO2 emissions."
+    }
+   ],
+   "belief": "Nuclear power is a good way to cut carbon emissions because it is low-carbon and cheap-to-run at scale, though it has costs and tradeoffs.",
+   "confidence": 70,
+   "next_query": "lifecycle carbon emissions nuclear vs renewables cost per tonne abated",
+   "baqd": null,
+   "support": 2,
+   "contradict": 0,
+   "neutral": 4,
+   "skew": 1.0,
+   "balance_loss": 1.0,
+   "domains": 6,
+   "sources": 5,
+   "cumulative": {
+    "support": 2,
+    "contradict": 0,
+    "neutral": 4,
+    "passages": 6
+   },
+   "cqi": true
+  },
+  {
+   "hop": 2,
+   "query": "nuclear power cost overruns construction delays carbon savings lost relative to renewables",
+   "origin": "counter",
+   "fetched": {
+    "wikipedia": 3,
+    "openalex": 3,
+    "arxiv": 3,
+    "pubmed": 3,
+    "web": 3
+   },
+   "pool_size": 118,
+   "passages": [
+    {
+     "pid": "7e558d2ae926#0",
+     "title": "Analysis of Stakeholder Involvement in Nuclear Power Plant Cost Overruns and Implications for Contract Structuring",
+     "url": "https://doi.org/10.48550/arxiv.2601.14558",
+     "domain": "doi.org/10.48550",
+     "source": "openalex",
+     "year": 2026,
+     "text": "Analysis of Stakeholder Involvement in Nuclear Power Plant Cost Overruns and Implications for Contract Structuring. Existing evidence on nuclear power plant construction suggests that individual stakeholders involved in project delivery are often not responsible for all of the cost overruns in their scope of the project, which can lead to costly and time-consuming litigation to determine who is truly at fault for overruns. This study introduces a framework to model the share of overruns caused and received as payment by five stakeholders in a nuclear construction project: equipment suppliers, construction subcontractors, the design and management team, creditors, and the nuclear regulator.",
+     "stance": "neutral",
+     "reason": "Studies cost overrun responsibility sharing in contracts; does not address carbon emissions reduction."
+    },
+    {
+     "pid": "cf693cd44617#0",
+     "title": "QUANTITATIVE EVALUATION OF CONTRACTING MECHANISMS FOR SHARING COST AND RISK IN NUCLEAR CONSTRUCTION",
+     "url": "https://openalex.org/W7236542615",
+     "domain": "openalex.org",
+     "source": "openalex",
+     "year": 2026,
+     "text": "QUANTITATIVE EVALUATION OF CONTRACTING MECHANISMS FOR SHARING COST AND RISK IN NUCLEAR CONSTRUCTION. Nuclear construction projects have historically experienced significant cost overruns and schedule delays, increasing financial risk for utilities and limiting investment in new nuclear construction. Previous research has primarily focused on technical improvements and project management practices to reduce these risks, but comparatively less attention has been given to how contract structure distributes financial risk among project participants. This research presents a quantitative framework for evaluating the economic effects of Fixed Price, Cost-Plus, and Integrated Project Delivery (IPD) contracts for nuclear construction projects.",
+     "stance": "neutral",
+     "reason": "Evaluates contracting mechanisms for cost and risk; no direct bearing on emissions cuts."
+    },
+    {
+     "pid": "06384d0fb532#2",
+     "title": "Investment Risk for Energy Infrastructure Construction Is Highest for ...",
+     "url": "https://www.bu.edu/igs/2025/05/19/investment-risk-for-energy-infrastructure-construction-is-highest-for-nuclear-power-plants-lowest-for-solar/",
+     "domain": "bu.edu",
+     "source": "web",
+     "year": null,
+     "text": "Nuclear power plants are the worst offenders, with an average construction cost overrun typically twice as much as expected or more, and the most extreme time delays. To be exact, the average nuclear power plant has a construction cost overrun of 102.5% and ends up costing $1.56 billion more than expected. Looking at newer net-zero options reveals higher risk as well.",
+     "stance": "contradicts",
+     "reason": "Reports nuclear's large construction cost overruns and delays, undercutting the cheap-to-run framing of the belief."
+    },
+    {
+     "pid": "3f84053483c2#0",
+     "title": "Cost and system effects of nuclear power in carbon-neutral energy ...",
+     "url": "https://www.sciencedirect.com/science/article/pii/S0306261924010882",
+     "domain": "sciencedirect.com",
+     "source": "web",
+     "year": null,
+     "text": "Cost and system effects of nuclear power in carbon-neutral energy .... Moving towards carbon-neutral societies, both nuclear and renewable energy can potentially supply CO2-free electricity. While the cost of renewable energy has decreased significantly, the cost of nuclear has, however, increased in the past decades and now in general exceeds the cost of renewables. However, one cannot compare directly the per unit cost of electricity since temporal behavior in",
+     "stance": "neutral",
+     "reason": "Notes nuclear cost now exceeds renewables in carbon-neutral systems; mixed, mostly comparative, not decisive."
+    },
+    {
+     "pid": "4e9b20313655#3",
+     "title": "Nuclear power debate",
+     "url": "https://en.wikipedia.org/wiki/Nuclear_power_debate",
+     "domain": "en.wikipedia.org",
+     "source": "wikipedia",
+     "year": null,
+     "text": "Opponents say that nuclear power poses numerous threats to people and the environment and point to studies that question if it will ever be a sustainable energy source. There are health risks, accidents, and environmental damage associated with uranium mining, processing and transport. They highlight the high cost and delays in the construction and maintenance of nuclear power plants, and the fears associated with nuclear weapons proliferation, nuclear power opponents fear sabotage by terrorists of nuclear plants, diversion and misuse of radioactive fuels or fuel waste, as well as naturally occurring leakage from the unsolved and imperfect long-term storage process of radioactive nuclear waste.",
+     "stance": "contradicts",
+     "reason": "Opponents cite high costs, delays, waste and proliferation risks, challenging nuclear as a sustainable choice."
+    },
+    {
+     "pid": "2ef1f4e0e98f#0",
+     "title": "Economics of nuclear power.",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/17794111/",
+     "domain": "pubmed.ncbi.nlm.nih.gov",
+     "source": "pubmed",
+     "year": 1978,
+     "text": "Economics of nuclear power.. With 12 percent of U.S. electricity now being supplied by nuclear power, Commonwealth Edison has found nuclear plants to be good investments relative to other base load energy sources. The country's largest user of nuclear power, Commonwealth Edison, estimates that its commitment to nuclear saved its customers about 10 percent on their electric bills in 1977, compared to the cost with the next best alternative, coal. This advantage is seen as continuing, contrary to criticisms of the economics and reliability of nuclear power and claims that it has hidden subsidies. It is concluded that there is a need for both nuclear and coal and that government policy precluding or restricting either would be unwise.",
+     "stance": "supports",
+     "reason": "Older 1977 utility data claims nuclear saved customers money versus coal, supporting its economics."
+    }
+   ],
+   "belief": "Nuclear power is a low-carbon option that can cut emissions, but its high construction costs, delays and risks make it a contested, tradeoff-laden choice rather than an clearly good one.",
+   "confidence": 55,
+   "next_query": "nuclear versus renewables cost per tonne CO2 avoided lifecycle emissions",
+   "baqd": -0.5361201548809618,
+   "support": 1,
+   "contradict": 2,
+   "neutral": 3,
+   "skew": -0.3333333333333333,
+   "balance_loss": 0.3333333333333333,
+   "domains": 6,
+   "sources": 4,
+   "cumulative": {
+    "support": 3,
+    "contradict": 2,
+    "neutral": 7,
+    "passages": 12
+   }
+  },
+  {
+   "hop": 3,
+   "query": "nuclear versus renewables cost per tonne CO2 avoided lifecycle emissions",
+   "origin": "model",
+   "fetched": {
+    "wikipedia": 3,
+    "openalex": 3,
+    "arxiv": 3,
+    "pubmed": 2,
+    "web": 3
+   },
+   "pool_size": 167,
+   "passages": [
+    {
+     "pid": "20396829917c#0",
+     "title": "Lifecycle-aware microgrid design: quantifying embodied, operational, and avoided emissions in a grid-connected PV–Wind system",
+     "url": "https://doi.org/10.1186/s12302-026-01501-w",
+     "domain": "doi.org/10.1186",
+     "source": "openalex",
+     "year": 2026,
+     "text": "Lifecycle-aware microgrid design: quantifying embodied, operational, and avoided emissions in a grid-connected PV–Wind system. This study develops a high-renewable hybrid microgrid integrating solar photovoltaic (PV), wind turbine (WT), and grid interaction for a university campus, with a distinctive focus on lifecycle emission performance. Using HOMER Pro-based optimization, the system achieves a low cost of energy (COE), that is, the average cost of producing one kilowatt-hour of electricity over the project lifetime, of $0.0218/kWh, together with a net present cost (NPC) of $523,143, an operating cost of $3,624/year, and a renewable fraction of 81.7%.",
+     "stance": "neutral",
+     "reason": "Microgrid PV-wind lifecycle study; does not address nuclear power."
+    },
+    {
+     "pid": "a47bf4360985#2",
+     "title": "Carbon emission trading",
+     "url": "https://en.wikipedia.org/wiki/Carbon_emission_trading",
+     "domain": "en.wikipedia.org",
+     "source": "wikipedia",
+     "year": null,
+     "text": "Emission trade allowances currently cover a wide price range from €7 per tonne of CO2 in China's national carbon trading scheme to €63 per tonne of CO2 in the EU-ETS (as of September 2021). Other greenhouse gases can also be traded but are quoted as standard multiples of carbon dioxide with respect to their global warming potential. An international coalition to create a global carbon market, including a global, gradually declining, cap on emissions began to form in COP30. It can speed up emissions reduction seven-fold in all participating countries, while delivering $200 billion per year for clean-energy and social programs.",
+     "stance": "neutral",
+     "reason": "Carbon trading prices; off topic for nuclear power's emissions role."
+    },
+    {
+     "pid": "14f152cee622#0",
+     "title": "Decreasing market value of variable renewables can be avoided by policy action",
+     "url": "https://doi.org/10.1016/j.eneco.2021.105354",
+     "domain": "doi.org/10.1016",
+     "source": "openalex",
+     "year": 2021,
+     "text": "Decreasing market value of variable renewables can be avoided by policy action. Although recent studies have shown that electricity systems with shares of wind and solar above 80% can be affordable, economists have raised concerns about market integration. Correlated generation from variable renewable sources depresses market prices, which can cause wind and solar to cannibalise their own revenues and prevent them from covering their costs from the market. This cannibalisation appears to set limits on the integration of wind and solar, and thus to contradict studies that show that high shares are cost effective.",
+     "stance": "neutral",
+     "reason": "About variable renewables market value; does not concern nuclear."
+    },
+    {
+     "pid": "0819b42abe08#2",
+     "title": "Comparison of cost efficiencies of nuclear power and renewable energy ...",
+     "url": "https://link.springer.com/article/10.1007/s11356-020-10537-1",
+     "domain": "link.springer.com",
+     "source": "web",
+     "year": null,
+     "text": "Hence, we can conclude that nuclear power generation is more cost-efficient than is renewable energy generation in mitigating CO2 emissions, even with the external costs of accidents and health impact risks associated with nuclear power generation. Instant access to the full article PDF. CO2 emissions of nuclear power and renewable energies: a statistical analysis of European and global data Differences in carbon emissions reduction between countries pursuing renewable electricity versus nuclear power A Critical Analysis of Renewable and Sustainable Energy Technologies: Energy Concept and Conversion Techniques Discover the latest articles, books and news in related subjects, suggested using machine learning.",
+     "stance": "supports",
+     "reason": "Concludes nuclear is more cost-efficient than renewables for CO2 mitigation."
+    },
+    {
+     "pid": "946b45d61e84#0",
+     "title": "Comparison of cost efficiencies of nuclear power and renewable energy generation in mitigating CO2 emissions.",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32820449/",
+     "domain": "pubmed.ncbi.nlm.nih.gov",
+     "source": "pubmed",
+     "year": 2021,
+     "text": "Comparison of cost efficiencies of nuclear power and renewable energy generation in mitigating CO2 emissions.. The objective of this study is to compare the cost efficiencies of nuclear power and renewable energy generation in reducing CO2 emissions. To achieve this objective, we estimate the relationship between CO2 emissions and both nuclear power and renewable energy generation in 16 major nuclear power-generating countries, and compare the costs of both energy generation methods in reducing CO2 emissions by the same amount. The results show that, to reduce CO2 emissions by 1%, nuclear power and renewable energy generation should be increased by 2.907% and 4.902%, respectively.",
+     "stance": "supports",
+     "reason": "Finds nuclear needs smaller expansion per 1% CO2 cut than renewables."
+    },
+    {
+     "pid": "8ef6c9360938#3",
+     "title": "Nuclear Essentials - World Nuclear Association",
+     "url": "https://www.world-nuclear.org/nuclear-essentials/how-can-nuclear-combat-climate-change",
+     "domain": "world-nuclear.org",
+     "source": "web",
+     "year": null,
+     "text": "Fossil versus non-fossil fuel electricity generation in 2000 and 2017 (Source: IEA World Energy Outlook) Nuclear power plants produce no greenhouse gas emissions during operation, and over the course of its life-cycle, nuclear produces about the same amount of carbon dioxide-equivalent emissions per unit of electricity as wind, and one-third of the emissions per unit of electricity when compared with solar. Average life-cycle carbon dioxide-equivalent emissions for different electricity generators (Source: IPCC) Experts have concluded that in order to achieve the deep decarbonization required to keep the average rise in global temperatures to below 1.5°C, combating climate change would be much harder, without an increased role for nuclear.",
+     "stance": "supports",
+     "reason": "Nuclear life-cycle emissions are low and needed for deep decarbonization."
+    }
+   ],
+   "belief": "Nuclear power is a good way to cut carbon emissions: it is very low-carbon over its lifecycle and cost-effective for CO2 reduction, though its costs, delays and risks make it a tradeoff rather than an unambiguous choice.",
+   "confidence": 72,
+   "next_query": "nuclear power construction costs delays versus renewables decarbonization cost comparison studies",
+   "baqd": -0.27810977987997637,
+   "support": 3,
+   "contradict": 0,
+   "neutral": 3,
+   "skew": 1.0,
+   "balance_loss": 1.0,
+   "domains": 6,
+   "sources": 4,
+   "cumulative": {
+    "support": 6,
+    "contradict": 2,
+    "neutral": 10,
+    "passages": 18
+   },
+   "cqi": true
+  },
+  {
+   "hop": 4,
+   "query": "nuclear power cost overruns delays cheaper than renewables plus storage decarbonization study",
+   "origin": "counter",
+   "fetched": {
+    "wikipedia": 1,
+    "openalex": 3,
+    "arxiv": 3,
+    "pubmed": 3,
+    "web": 3
+   },
+   "pool_size": 195,
+   "passages": [
+    {
+     "pid": "a518156a3214#3",
+     "title": "Power Play: The Economics Of Nuclear Vs. Renewables",
+     "url": "https://www.worldnuclearreport.org/Power-Play-The-Economics-Of-Nuclear-Vs-Renewables",
+     "domain": "worldnuclearreport.org",
+     "source": "web",
+     "year": null,
+     "text": "The most notable drop occurred in utility-scale solar PV, which saw a 12% decrease from 2022. Onshore wind projects also saw a reduction in LCOE, dropping by 3% year-on-year, while the LCOE for offshore wind projects decreased by 7% compared to the previous year. Meanwhile, the cost of battery storage projects experienced a significant decline, falling by 89% from 2010 to 2023. In contrast, nuclear power continues to face cost overruns and long construction timelines.",
+     "stance": "contradicts",
+     "reason": "Says nuclear faces cost overruns and long construction timelines, undercutting cost-effectiveness of nuclear for cutting emissions."
+    },
+    {
+     "pid": "7e558d2ae926#1",
+     "title": "Analysis of Stakeholder Involvement in Nuclear Power Plant Cost Overruns and Implications for Contract Structuring",
+     "url": "https://doi.org/10.48550/arxiv.2601.14558",
+     "domain": "doi.org/10.48550",
+     "source": "openalex",
+     "year": 2026,
+     "text": "We then perform a contract analysis under three common contract structures - fixed-price, cost-plus, and performance-based - to show the profit misallocations that can result, revealing the advantages and disadvantages of each contract type for aligning stakeholder incentives. Regardless of the contract type chosen, strong owner involvement is crucial for project success, and we conclude with specific recommendations for project owners seeking to minimize cost overruns.",
+     "stance": "neutral",
+     "reason": "Analyses nuclear cost overruns and contract structures without addressing carbon reduction effectiveness."
+    },
+    {
+     "pid": "06384d0fb532#3",
+     "title": "Investment Risk for Energy Infrastructure Construction Is Highest for ...",
+     "url": "https://www.bu.edu/igs/2025/05/19/investment-risk-for-energy-infrastructure-construction-is-highest-for-nuclear-power-plants-lowest-for-solar/",
+     "domain": "bu.edu",
+     "source": "web",
+     "year": null,
+     "text": "Hydrogen infrastructure and carbon capture and storage both exhibit significant average time and cost overruns for construction, along with thermal power plants relying on natural gas, calling into question whether these can be scaled up quickly to meet emission reduction goals for climate mitigation. “Worryingly, these findings raise a legitimate red flag concerning efforts to substantially push forward a hydrogen economy,” says Benjamin Sovacool, lead and first author of the study, director of IGS, and professor of earth and environment. By contrast, solar energy and electricity grid transmission projects have the best construction track record and are often completed ahead of schedule or below expected cost.",
+     "stance": "contradicts",
+     "reason": "Flags large time and cost overruns for energy infrastructure, contrasting with solar and transmission; implies weaker emission-reduction scalability."
+    },
+    {
+     "pid": "6b0ccdbcf9aa#1",
+     "title": "The cost of a future low-carbon electricity system without nuclear power for Sweden",
+     "url": "http://arxiv.org/abs/2001.03679v1",
+     "domain": "arxiv.org",
+     "source": "arxiv",
+     "year": 2020,
+     "text": "We model the European electricity system with a focus on Sweden and run a techno-economic cost optimization model for capacity investment and dispatch of generation, transmission, storage and demand-response, under a CO2 emission constraint of 10 g/kWh. Our results show that there are no, or only minor, cost benefits to reinvest in nuclear power plants in Sweden once the old ones are decommissioned. This holds for a large range of assumptions on technology costs and possibilities for investment in additional transmission capacity. We contrast our results with the recent study that claims severe cost penalties for not allowing nuclear power in Sweden and discuss the implications of methodology choice.",
+     "stance": "contradicts",
+     "reason": "Finds no or minor cost benefit to reinvesting in Swedish nuclear for a low-carbon system."
+    },
+    {
+     "pid": "e6c53f24a838#0",
+     "title": "Comparison of cost efficiencies of nuclear power and renewable energy ...",
+     "url": "https://www.researchgate.net/publication/343795673_Comparison_of_cost_efficiencies_of_nuclear_power_and_renewable_energy_generation_in_mitigating_CO2_emissions",
+     "domain": "researchgate.net",
+     "source": "web",
+     "year": null,
+     "text": "Comparison of cost efficiencies of nuclear power and renewable energy .... The objective of this study is to compare the cost efficiencies of nuclear power and renewable energy generation in reducing CO2 emissions. To achieve this objective, we estimate the relationship",
+     "stance": "neutral",
+     "reason": "Abstract only states the study's objective of comparing cost efficiency in CO2 reduction; no findings given."
+    },
+    {
+     "pid": "11661a85d3a0#0",
+     "title": "The decarbonization transition and U.S. electricity markets: Impacts and innovations",
+     "url": "https://doi.org/10.1002/wene.449",
+     "domain": "doi.org/10.1002",
+     "source": "openalex",
+     "year": 2022,
+     "text": "The decarbonization transition and U.S. electricity markets: Impacts and innovations. Several factors in recent years have converged in the U.S. to spur a focused effort on decarbonizing the electricity sector. First, in response to the threat of climate change, policy at all levels of governance is increasingly promoting and incentivizing the deployment of zero carbon solutions, especially variable renewable energy (VRE) sources such as utility‐scale wind and solar PV, as well as distributed energy resources (DERs) such as rooftop solar PV and battery energy storage systems. Second, the costs of these technologies have declined to result in major increases in their market penetration.",
+     "stance": "neutral",
+     "reason": "Discusses U.S. decarbonization focused on variable renewables and storage; does not evaluate nuclear."
+    }
+   ],
+   "belief": "Nuclear power is low-carbon over its lifecycle and can cut emissions, but recent evidence shows high cost overruns and delays, making it a costly tradeoff that renewables often beat on cost per tonne.",
+   "confidence": 55,
+   "next_query": "nuclear versus renewables cost per tonne CO2 avoided meta-analysis",
+   "baqd": -0.36471949485603794,
+   "support": 0,
+   "contradict": 3,
+   "neutral": 3,
+   "skew": -1.0,
+   "balance_loss": 1.0,
+   "domains": 6,
+   "sources": 3,
+   "cumulative": {
+    "support": 6,
+    "contradict": 5,
+    "neutral": 13,
+    "passages": 24
+   }
+  }
+ ],
+ "cqi_events": [
+  {
+   "hop": 1,
+   "trigger": {
+    "baqd": null,
+    "skew": 1.0
+   },
+   "original_query": "lifecycle carbon emissions nuclear vs renewables cost per tonne abated",
+   "counter_query": "nuclear power cost overruns construction delays carbon savings lost relative to renewables",
+   "why": "It looks for evidence that nuclear's high construction costs, delays, and slow deployment undercut its cost-effectiveness and carbon abatement compared with renewables."
+  },
+  {
+   "hop": 3,
+   "trigger": {
+    "baqd": -0.27810977987997637,
+    "skew": 1.0
+   },
+   "original_query": "nuclear power construction costs delays versus renewables decarbonization cost comparison studies",
+   "counter_query": "nuclear power cost overruns delays cheaper than renewables plus storage decarbonization study",
+   "why": "It searches for analyses finding that renewables with storage or grid investment decarbonize more cheaply than nuclear once overruns and delays are counted, which would undercut the claim that nuclear is cost-effective for CO2 reduction."
+  }
+ ],
+ "synthesis": {
+  "answer": "Nuclear power appears to be an effective low-carbon option, though its costs and delays are contested. The IAEA reports nuclear is a low-carbon source producing about 10 percent of world electricity, and its higher output helped level global CO2 emissions in 2019 [7e88e103d8fb#0]. The World Nuclear Association states that nuclear plants emit no greenhouse gases in operation and that life-cycle emissions per unit of electricity are about the same as wind and one-third of solar [8ef6c9360938#3]. A study of 16 nuclear-generating countries found that cutting CO2 by 1% required a 2.907% increase in nuclear generation versus 4.902% for renewables, suggesting nuclear is more cost-efficient for mitigation [946b45d61e84#0]. The contrary evidence is substantial: an analysis of construction projects found nuclear plants average cost overruns of about 102.5% and the most extreme delays [06384d0fb532#2], and industry commentary notes continuing overruns while renewable costs fall [a518156a3214#3]. A Swedish model also found little cost benefit in rebuilding nuclear once old plants close, given low-carbon alternatives [6b0ccdbcf9aa#1]. Overall, nuclear cuts emissions well, but cost and schedule risks weigh against it.",
+  "confidence": 62,
+  "one_line": "Nuclear is a low-carbon, emissions-cutting option, but its high cost overruns and delays make it contested versus renewables."
+ },
+ "audit": {
+  "claims": [
+   {
+    "cid": "c1",
+    "text": "The IAEA reports nuclear is a low-carbon source producing about 10 percent of world electricity.",
+    "cited_pids": [
+     "7e88e103d8fb#0"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "7e88e103d8fb#0",
+      "relation": "supports",
+      "title": "Nuclear power and climate change | IAEA",
+      "url": "https://www.iaea.org/topics/nuclear-power-and-climate-change",
+      "domain": "iaea.org",
+      "source": "web"
+     }
+    ],
+    "note": "IAEA page states nuclear is low-carbon and produced about 10 percent of world electricity in 2018.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c2",
+    "text": "Higher nuclear output helped level global CO2 emissions in 2019.",
+    "cited_pids": [
+     "7e88e103d8fb#0"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "7e88e103d8fb#0",
+      "relation": "supports",
+      "title": "Nuclear power and climate change | IAEA",
+      "url": "https://www.iaea.org/topics/nuclear-power-and-climate-change",
+      "domain": "iaea.org",
+      "source": "web"
+     }
+    ],
+    "note": "IAEA passage states higher nuclear power production contributed, alongside renewables and fuel switching, to levelling global CO2 emissions at 33 Gt in 2019.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c3",
+    "text": "Nuclear plants emit no greenhouse gases during operation.",
+    "cited_pids": [
+     "8ef6c9360938#3"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "8ef6c9360938#3",
+      "relation": "supports",
+      "title": "Nuclear Essentials - World Nuclear Association",
+      "url": "https://www.world-nuclear.org/nuclear-essentials/how-can-nuclear-combat-climate-change",
+      "domain": "world-nuclear.org",
+      "source": "web"
+     }
+    ],
+    "note": "World Nuclear Association states nuclear plants produce no greenhouse gas emissions during operation; other passages do not address nuclear operation emissions.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c4",
+    "text": "Life-cycle emissions per unit of nuclear electricity are about the same as wind and one-third of solar.",
+    "cited_pids": [
+     "8ef6c9360938#3"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "8ef6c9360938#3",
+      "relation": "supports",
+      "title": "Nuclear Essentials - World Nuclear Association",
+      "url": "https://www.world-nuclear.org/nuclear-essentials/how-can-nuclear-combat-climate-change",
+      "domain": "world-nuclear.org",
+      "source": "web"
+     }
+    ],
+    "note": "World Nuclear Association passage states nuclear emits about the same CO2-eq per unit electricity as wind and one-third of solar, matching the claim directly.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c5",
+    "text": "In a study of 16 nuclear-generating countries, cutting CO2 by 1% required a 2.907% increase in nuclear generation versus 4.902% for renewables.",
+    "cited_pids": [
+     "946b45d61e84#0"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "946b45d61e84#0",
+      "relation": "supports",
+      "title": "Comparison of cost efficiencies of nuclear power and renewable energy generation in mitigating CO2 emissions.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32820449/",
+      "domain": "pubmed.ncbi.nlm.nih.gov",
+      "source": "pubmed"
+     },
+     {
+      "pid": "0819b42abe08#0",
+      "relation": "supports",
+      "title": "Comparison of cost efficiencies of nuclear power and renewable energy ...",
+      "url": "https://link.springer.com/article/10.1007/s11356-020-10537-1",
+      "domain": "link.springer.com",
+      "source": "web"
+     }
+    ],
+    "note": "Both passages state 16 major nuclear countries and that a 1% CO2 cut requires 2.907% nuclear and 4.902% renewable generation increases, matching the claim.",
+    "independent_sources": 2
+   },
+   {
+    "cid": "c6",
+    "text": "An analysis of construction projects found nuclear plants average cost overruns of about 102.5%.",
+    "cited_pids": [
+     "06384d0fb532#2"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "06384d0fb532#2",
+      "relation": "supports",
+      "title": "Investment Risk for Energy Infrastructure Construction Is Highest for ...",
+      "url": "https://www.bu.edu/igs/2025/05/19/investment-risk-for-energy-infrastructure-construction-is-highest-for-nuclear-power-plants-lowest-for-solar/",
+      "domain": "bu.edu",
+      "source": "web"
+     }
+    ],
+    "note": "First passage states the average nuclear plant construction cost overrun is 102.5%. Other passages discuss overruns generally without giving a figure.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c7",
+    "text": "Industry commentary notes nuclear cost overruns continue while renewable costs fall.",
+    "cited_pids": [
+     "a518156a3214#3"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "a518156a3214#3",
+      "relation": "supports",
+      "title": "Power Play: The Economics Of Nuclear Vs. Renewables",
+      "url": "https://www.worldnuclearreport.org/Power-Play-The-Economics-Of-Nuclear-Vs-Renewables",
+      "domain": "worldnuclearreport.org",
+      "source": "web"
+     }
+    ],
+    "note": "First passage states nuclear continues to face cost overruns while solar, wind and battery storage costs fell; other passages do not address renewable cost trends directly.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c8",
+    "text": "A Swedish model found little cost benefit in rebuilding nuclear once old plants close, given low-carbon alternatives.",
+    "cited_pids": [
+     "6b0ccdbcf9aa#1"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "6b0ccdbcf9aa#1",
+      "relation": "supports",
+      "title": "The cost of a future low-carbon electricity system without nuclear power for Sweden",
+      "url": "http://arxiv.org/abs/2001.03679v1",
+      "domain": "arxiv.org",
+      "source": "arxiv"
+     }
+    ],
+    "note": "The arXiv passage finds no or only minor cost benefits to reinvesting in Sweden's nuclear once old plants are decommissioned, under low-carbon constraints. The claim's 'Swedish model' wording is a reasonable match for the techno-economic optimization study.",
+    "independent_sources": 1
+   }
+  ],
+  "scores": {
+   "claims_checked": 8,
+   "evidence_support_score": 100.0,
+   "multi_source_share": 12.5,
+   "contradicted_share": 0.0,
+   "unverified_share": 0.0,
+   "mixed_share": 0.0,
+   "citation_faithfulness": 100.0,
+   "distinct_domains": 7,
+   "stated_confidence": 62,
+   "calibration_gap": -38.0
+  },
+  "grade": "Partly supported",
+  "pool_size": 195
+ },
+ "usage": {
+  "calls": 16,
+  "cached_calls": 16,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": 0.0
+ },
+ "seconds": 0.15,
+ "run_id": "is-nuclear-power-a-good-way-to-cut-carbon-emissi-guarded-81bddf",
+ "saved_at": "2026-11-26T21:23:50"
+}

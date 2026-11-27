@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"92e80c257b2f#0\",\"relation\":\"supports\"}],\"note\":\"Passage states VITAL and D-Health, conducted in mostly vitamin D-sufficient populations, found no mortality benefits of vitamin D supplementation.\"}", "tag": "audit_verify", "input_tokens": 1447, "output_tokens": 101}

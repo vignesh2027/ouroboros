@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"6b0ccdbcf9aa#1\",\"relation\":\"supports\"}],\"note\":\"The first passage states there are no, or only minor, cost benefits to reinvest in Swedish nuclear once old plants are decommissioned, matching the claim. Other passages do not address this.\"}", "tag": "audit_verify", "input_tokens": 1650, "output_tokens": 111}

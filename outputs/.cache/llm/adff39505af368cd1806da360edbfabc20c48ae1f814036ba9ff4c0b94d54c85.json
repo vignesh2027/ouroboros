@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"d658dc380b73#5\",\"relation\":\"supports\"}],\"note\":\"The employee-monitoring.net passage states the median impact is +10% for focused tasks and -4% for collaborative tasks across its 50+ studies. Other passages do not address these figures.\"}", "tag": "audit_verify", "input_tokens": 1819, "output_tokens": 106}

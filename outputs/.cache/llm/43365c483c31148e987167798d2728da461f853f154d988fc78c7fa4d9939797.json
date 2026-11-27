@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"fasting#1\",\"relation\":\"supports\"}],\"note\":\"Passage fasting#1 states adherence is higher for some participants under a simple eating window rule than under continuous calorie restriction, directly backing the claim.\"}", "tag": "audit_verify", "input_tokens": 1082, "output_tokens": 92}

@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"ev_cost#2\",\"relation\":\"supports\"}],\"note\":\"Passage 2 explicitly says savings grow as annual distance driven increases. Other passages discuss running costs but do not address how savings scale with distance.\"}", "tag": "audit_verify", "input_tokens": 1135, "output_tokens": 93}

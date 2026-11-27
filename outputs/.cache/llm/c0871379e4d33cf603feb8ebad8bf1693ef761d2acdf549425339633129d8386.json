@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"nuclear#2\",\"relation\":\"supports\"}],\"note\":\"Passage nuclear#2 directly states that countries with large nuclear fleets achieved grid decarbonisation faster than comparable renewables-only countries over the same period.\"}", "tag": "audit_verify", "input_tokens": 1123, "output_tokens": 98}

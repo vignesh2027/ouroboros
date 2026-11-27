@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"abefd158b9c2#2\",\"relation\":\"supports\"}],\"note\":\"The first passage states that five-day-a-week full-remote work was associated with reduced productivity and that full-remote work risks worsening presenteeism, directly backing the claim.\"}", "tag": "audit_verify", "input_tokens": 1558, "output_tokens": 102}

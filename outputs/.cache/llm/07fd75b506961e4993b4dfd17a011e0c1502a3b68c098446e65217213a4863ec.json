@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"remote_work#7\",\"relation\":\"supports\"}],\"note\":\"Passage 7 states self-reported productivity gains frequently fail to appear in objective output measures, directly matching the claim. Other passages do not address this gap.\"}", "tag": "audit_verify", "input_tokens": 1096, "output_tokens": 94}

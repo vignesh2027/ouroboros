@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"ef88116f982d#0\",\"relation\":\"supports\"}],\"note\":\"First passage reports a randomized field experiment with 187 participants revealing a preference for about two remote working days per week, matching the claim.\"}", "tag": "audit_verify", "input_tokens": 1584, "output_tokens": 88}

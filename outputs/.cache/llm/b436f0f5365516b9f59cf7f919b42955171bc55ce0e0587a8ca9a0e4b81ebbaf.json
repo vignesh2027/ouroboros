@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"8301af91d994#0\",\"relation\":\"supports\"}],\"note\":\"The BLS passage only describes a plotted relationship between remote work and TFP growth and states no conclusion, so the claim holds for the passage shown.\"}", "tag": "audit_verify", "input_tokens": 1839, "output_tokens": 395}

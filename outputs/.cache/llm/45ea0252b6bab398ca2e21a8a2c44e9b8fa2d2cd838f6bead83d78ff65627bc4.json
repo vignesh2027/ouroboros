@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"e3cc200edfc8#0\",\"relation\":\"supports\"}],\"note\":\"Passage e3cc200edfc8#0 reports adjunctive frequentist and Bayesian reanalysis of the DECAF RCT's significant result, including type-M error and priors, questioning its robustness.\"}", "tag": "audit_verify", "input_tokens": 2048, "output_tokens": 117}

@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"201567a834f8#1\",\"relation\":\"supports\"},{\"pid\":\"201567a834f8#0\",\"relation\":\"supports\"}],\"note\":\"Trial of obese type 2 diabetes patients: 16:8 weight change -4.02% vs 14:10 -3.15%, with the difference significant (P<0.001).\"}", "tag": "audit_verify", "input_tokens": 1887, "output_tokens": 126}

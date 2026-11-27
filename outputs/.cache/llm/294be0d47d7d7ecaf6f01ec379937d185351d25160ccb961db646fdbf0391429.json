@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"d658dc380b73#5\",\"relation\":\"supports\"}],\"note\":\"Passage states the net effect depends on the ratio of focused-to-collaborative work in a given role, directly matching the claim.\"}", "tag": "audit_verify", "input_tokens": 1795, "output_tokens": 86}

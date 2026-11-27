@@ -1,0 +1,419 @@
+{
+ "_fixture": true,
+ "_note": "Hand-made fixture for UI development. All names, sources and numbers are invented.",
+ "question": "Is intermittent fasting effective for weight loss?",
+ "mode": "standard",
+ "config": {
+  "mode": "standard",
+  "hops": 4,
+  "k": 4,
+  "per_source": 3,
+  "sources": null,
+  "baqd_threshold": 0.05,
+  "skew_threshold": 0.5
+ },
+ "hops": [
+  {
+   "hop": 1,
+   "query": "Is intermittent fasting effective for weight loss?",
+   "origin": "question",
+   "fetched": {
+    "wikipedia": 3,
+    "openalex": 3,
+    "arxiv": 2,
+    "pubmed": 3,
+    "web": 3
+   },
+   "pool_size": 212,
+   "passages": [
+    {
+     "pid": "f1bc00eaa754#1",
+     "title": "Intermittent fasting (fixture article)",
+     "url": "https://wiki-fixture.example/intermittent_fasting",
+     "domain": "wiki-fixture.example",
+     "source": "wikipedia",
+     "year": null,
+     "text": "Researchers report that people on these patterns often eat fewer total calories, which is the usual route to weight loss.",
+     "stance": "supports",
+     "reason": "Says people eat fewer calories and lose weight."
+    },
+    {
+     "pid": "2e240db3b253#0",
+     "title": "Time-restricted eating and body weight: a trial summary (fixture)",
+     "url": "https://journal-one.example/trial-a",
+     "domain": "journal-one.example",
+     "source": "pubmed",
+     "year": 2020,
+     "text": "Adults following an eight-hour eating window lost a modest amount of weight over twelve weeks. Most of the change came from lower daily calorie intake.",
+     "stance": "supports",
+     "reason": "Modest weight loss over twelve weeks."
+    },
+    {
+     "pid": "434ee86bde79#1",
+     "title": "Alternate-day fasting compared with daily calorie cutting (fixture)",
+     "url": "https://journal-two.example/trial-b",
+     "domain": "journal-two.example",
+     "source": "openalex",
+     "year": 2017,
+     "text": "Dropout was higher in the fasting group, and the authors say fasting offered no clear weight advantage.",
+     "stance": "contradicts",
+     "reason": "No advantage over daily calorie cutting."
+    },
+    {
+     "pid": "67a050ff68a6#0",
+     "title": "Clinic guide to fasting safety (fixture)",
+     "url": "https://clinic-guide.example/fasting",
+     "domain": "clinic-guide.example",
+     "source": "web",
+     "year": 2021,
+     "text": "Fasting is not suitable for everyone, including people with some medical conditions or who are pregnant. People on medication should speak with a clinician first.",
+     "stance": "neutral",
+     "reason": "About safety, not weight outcomes."
+    }
+   ],
+   "belief": "Intermittent fasting seems to help with weight loss, mostly by reducing calories.",
+   "confidence": 62,
+   "next_query": "intermittent fasting helps weight loss by reducing calorie intake",
+   "baqd": null,
+   "support": 2,
+   "contradict": 1,
+   "neutral": 1,
+   "skew": 0.333,
+   "balance_loss": 0.333,
+   "domains": 4,
+   "sources": 4
+  },
+  {
+   "hop": 2,
+   "query": "intermittent fasting helps weight loss by reducing calorie intake",
+   "origin": "model",
+   "fetched": {
+    "wikipedia": 3,
+    "openalex": 3,
+    "arxiv": 3,
+    "pubmed": 3,
+    "web": 3
+   },
+   "pool_size": 340,
+   "passages": [
+    {
+     "pid": "2e240db3b253#1",
+     "title": "Time-restricted eating and body weight: a trial summary (fixture)",
+     "url": "https://journal-one.example/trial-a",
+     "domain": "journal-one.example",
+     "source": "pubmed",
+     "year": 2020,
+     "text": "Participants reported the schedule was easy to keep for the length of the study.",
+     "stance": "supports",
+     "reason": "Easy to keep, helps weight loss."
+    },
+    {
+     "pid": "186b917e603b#0",
+     "title": "Why I lost weight with 16:8 (fixture blog)",
+     "url": "https://wellness-blog.example/16-8",
+     "domain": "wellness-blog.example",
+     "source": "web",
+     "year": 2023,
+     "text": "After three months on a 16:8 schedule I dropped several kilos and felt less hungry in the evenings. This is one person's experience and not a study.",
+     "stance": "supports",
+     "reason": "Personal report of weight loss."
+    },
+    {
+     "pid": "f1bc00eaa754#0",
+     "title": "Intermittent fasting (fixture article)",
+     "url": "https://wiki-fixture.example/intermittent_fasting",
+     "domain": "wiki-fixture.example",
+     "source": "wikipedia",
+     "year": null,
+     "text": "Intermittent fasting describes eating patterns that cycle between periods of eating and periods with little or no food. Common forms are daily time-restricted eating, alternate-day fasting and the 5:2 pattern.",
+     "stance": "supports",
+     "reason": "Describes common fasting patterns."
+    },
+    {
+     "pid": "f1bc00eaa754#1",
+     "title": "Intermittent fasting (fixture article)",
+     "url": "https://wiki-fixture.example/intermittent_fasting",
+     "domain": "wiki-fixture.example",
+     "source": "wikipedia",
+     "year": null,
+     "text": "Researchers report that people on these patterns often eat fewer total calories, which is the usual route to weight loss.",
+     "stance": "supports",
+     "reason": "People eat fewer calories."
+    }
+   ],
+   "belief": "Intermittent fasting is an effective way to lose weight for most people.",
+   "confidence": 78,
+   "next_query": "intermittent fasting weight loss success stories and benefits",
+   "baqd": 0.092,
+   "support": 4,
+   "contradict": 0,
+   "neutral": 0,
+   "skew": 1.0,
+   "balance_loss": 1.0,
+   "domains": 3,
+   "sources": 3
+  },
+  {
+   "hop": 3,
+   "query": "intermittent fasting weight loss success stories and benefits",
+   "origin": "model",
+   "fetched": {
+    "wikipedia": 3,
+    "openalex": 2,
+    "arxiv": 2,
+    "pubmed": 3,
+    "web": 3
+   },
+   "pool_size": 431,
+   "passages": [
+    {
+     "pid": "186b917e603b#0",
+     "title": "Why I lost weight with 16:8 (fixture blog)",
+     "url": "https://wellness-blog.example/16-8",
+     "domain": "wellness-blog.example",
+     "source": "web",
+     "year": 2023,
+     "text": "After three months on a 16:8 schedule I dropped several kilos and felt less hungry in the evenings. This is one person's experience and not a study.",
+     "stance": "supports",
+     "reason": "Personal weight loss story."
+    },
+    {
+     "pid": "2e240db3b253#0",
+     "title": "Time-restricted eating and body weight: a trial summary (fixture)",
+     "url": "https://journal-one.example/trial-a",
+     "domain": "journal-one.example",
+     "source": "pubmed",
+     "year": 2020,
+     "text": "Adults following an eight-hour eating window lost a modest amount of weight over twelve weeks. Most of the change came from lower daily calorie intake.",
+     "stance": "supports",
+     "reason": "Modest weight loss."
+    },
+    {
+     "pid": "f1bc00eaa754#1",
+     "title": "Intermittent fasting (fixture article)",
+     "url": "https://wiki-fixture.example/intermittent_fasting",
+     "domain": "wiki-fixture.example",
+     "source": "wikipedia",
+     "year": null,
+     "text": "Researchers report that people on these patterns often eat fewer total calories, which is the usual route to weight loss.",
+     "stance": "supports",
+     "reason": "Fewer calories eaten."
+    },
+    {
+     "pid": "67a050ff68a6#0",
+     "title": "Clinic guide to fasting safety (fixture)",
+     "url": "https://clinic-guide.example/fasting",
+     "domain": "clinic-guide.example",
+     "source": "web",
+     "year": 2021,
+     "text": "Fasting is not suitable for everyone, including people with some medical conditions or who are pregnant. People on medication should speak with a clinician first.",
+     "stance": "neutral",
+     "reason": "Safety advice."
+    }
+   ],
+   "belief": "Intermittent fasting reliably produces weight loss and is a good choice for most adults.",
+   "confidence": 88,
+   "next_query": "best intermittent fasting schedule for fastest weight loss",
+   "baqd": 0.121,
+   "support": 3,
+   "contradict": 0,
+   "neutral": 1,
+   "skew": 1.0,
+   "balance_loss": 1.0,
+   "domains": 4,
+   "sources": 3
+  },
+  {
+   "hop": 4,
+   "query": "best intermittent fasting schedule for fastest weight loss",
+   "origin": "model",
+   "fetched": {
+    "wikipedia": 3,
+    "openalex": 3,
+    "arxiv": 2,
+    "pubmed": 2,
+    "web": 3
+   },
+   "pool_size": 498,
+   "passages": [
+    {
+     "pid": "186b917e603b#0",
+     "title": "Why I lost weight with 16:8 (fixture blog)",
+     "url": "https://wellness-blog.example/16-8",
+     "domain": "wellness-blog.example",
+     "source": "web",
+     "year": 2023,
+     "text": "After three months on a 16:8 schedule I dropped several kilos and felt less hungry in the evenings. This is one person's experience and not a study.",
+     "stance": "supports",
+     "reason": "Personal weight loss story."
+    },
+    {
+     "pid": "2e240db3b253#1",
+     "title": "Time-restricted eating and body weight: a trial summary (fixture)",
+     "url": "https://journal-one.example/trial-a",
+     "domain": "journal-one.example",
+     "source": "pubmed",
+     "year": 2020,
+     "text": "Participants reported the schedule was easy to keep for the length of the study.",
+     "stance": "supports",
+     "reason": "Easy to keep."
+    },
+    {
+     "pid": "f1bc00eaa754#0",
+     "title": "Intermittent fasting (fixture article)",
+     "url": "https://wiki-fixture.example/intermittent_fasting",
+     "domain": "wiki-fixture.example",
+     "source": "wikipedia",
+     "year": null,
+     "text": "Intermittent fasting describes eating patterns that cycle between periods of eating and periods with little or no food. Common forms are daily time-restricted eating, alternate-day fasting and the 5:2 pattern.",
+     "stance": "supports",
+     "reason": "Fasting patterns."
+    },
+    {
+     "pid": "4cceb5c4db62#0",
+     "title": "Modelling adherence in fasting protocols (fixture preprint)",
+     "url": "https://preprint-fixture.example/adherence",
+     "domain": "preprint-fixture.example",
+     "source": "arxiv",
+     "year": 2022,
+     "text": "We model adherence to fasting protocols and find that drop-out rises sharply after the first month for strict schedules.",
+     "stance": "neutral",
+     "reason": "Adherence modelling."
+    }
+   ],
+   "belief": "Intermittent fasting is a proven, fast way to lose weight.",
+   "confidence": 91,
+   "next_query": "intermittent fasting results timeline",
+   "baqd": 0.147,
+   "support": 3,
+   "contradict": 0,
+   "neutral": 1,
+   "skew": 1.0,
+   "balance_loss": 1.0,
+   "domains": 4,
+   "sources": 4
+  }
+ ],
+ "cqi_events": [],
+ "synthesis": {
+  "answer": "Intermittent fasting is an effective and reliable way to lose weight [2e240db3b253#0]. It works because people eat fewer calories [f1bc00eaa754#1], and many people find it easy to keep up [2e240db3b253#1]. Personal reports describe steady weight loss and less evening hunger [186b917e603b#0]. It is a good first choice for most adults and results are fast [186b917e603b#0].",
+  "confidence": 91,
+  "one_line": "A proven, fast way to lose weight."
+ },
+ "audit": {
+  "claims": [
+   {
+    "cid": "c1",
+    "text": "Intermittent fasting is an effective and reliable way to lose weight.",
+    "verdict": "mixed",
+    "note": "One trial shows modest loss, another shows no edge.",
+    "evidence": [
+     {
+      "pid": "2e240db3b253#0",
+      "relation": "supports",
+      "title": "Time-restricted eating and body weight: a trial summary (fixture)",
+      "url": "https://journal-one.example/trial-a",
+      "domain": "journal-one.example",
+      "source": "pubmed"
+     },
+     {
+      "pid": "434ee86bde79#1",
+      "relation": "contradicts",
+      "title": "Alternate-day fasting compared with daily calorie cutting (fixture)",
+      "url": "https://journal-two.example/trial-b",
+      "domain": "journal-two.example",
+      "source": "openalex"
+     }
+    ],
+    "independent_sources": 1
+   },
+   {
+    "cid": "c2",
+    "text": "It works because people eat fewer calories.",
+    "verdict": "supported",
+    "note": "The article says so.",
+    "evidence": [
+     {
+      "pid": "f1bc00eaa754#1",
+      "relation": "supports",
+      "title": "Intermittent fasting (fixture article)",
+      "url": "https://wiki-fixture.example/intermittent_fasting",
+      "domain": "wiki-fixture.example",
+      "source": "wikipedia"
+     }
+    ],
+    "independent_sources": 1
+   },
+   {
+    "cid": "c3",
+    "text": "Many people find it easy to keep up.",
+    "verdict": "contradicted",
+    "note": "Preprint reports high drop-out on strict schedules.",
+    "evidence": [
+     {
+      "pid": "4cceb5c4db62#0",
+      "relation": "contradicts",
+      "title": "Modelling adherence in fasting protocols (fixture preprint)",
+      "url": "https://preprint-fixture.example/adherence",
+      "domain": "preprint-fixture.example",
+      "source": "arxiv"
+     },
+     {
+      "pid": "2e240db3b253#1",
+      "relation": "supports",
+      "title": "Time-restricted eating and body weight: a trial summary (fixture)",
+      "url": "https://journal-one.example/trial-a",
+      "domain": "journal-one.example",
+      "source": "pubmed"
+     }
+    ],
+    "independent_sources": 1
+   },
+   {
+    "cid": "c4",
+    "text": "Personal reports describe steady weight loss.",
+    "verdict": "supported",
+    "note": "A single blog post, not a study.",
+    "evidence": [
+     {
+      "pid": "186b917e603b#0",
+      "relation": "supports",
+      "title": "Why I lost weight with 16:8 (fixture blog)",
+      "url": "https://wellness-blog.example/16-8",
+      "domain": "wellness-blog.example",
+      "source": "web"
+     }
+    ],
+    "independent_sources": 1
+   },
+   {
+    "cid": "c5",
+    "text": "It is a good first choice for most adults and results are fast.",
+    "verdict": "not_verified",
+    "note": "No retrieved passage backs this.",
+    "evidence": [],
+    "independent_sources": 0
+   }
+  ],
+  "scores": {
+   "evidence_support_score": 50.0,
+   "multi_source_share": 0.0,
+   "contradicted_share": 20.0,
+   "unverified_share": 20.0,
+   "citation_faithfulness": 80.0,
+   "distinct_domains": 5,
+   "calibration_gap": 41.0,
+   "stated_confidence": 91
+  },
+  "grade": "Partly supported",
+  "pool_size": 498
+ },
+ "usage": {
+  "calls": 12,
+  "cached_calls": 0,
+  "input_tokens": 33900,
+  "output_tokens": 4300,
+  "cost_usd": 0.0055
+ },
+ "seconds": 31.2
+}

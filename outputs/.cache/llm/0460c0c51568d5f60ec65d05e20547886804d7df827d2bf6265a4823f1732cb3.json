@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"d658dc380b73#5\",\"relation\":\"supports\"}],\"note\":\"Passage d658dc380b73#5 states the 50+ studies median is +10% for focused tasks and -4% for collaborative tasks, matching the claim; the source is a single commercial website.\"}", "tag": "audit_verify", "input_tokens": 1829, "output_tokens": 108}

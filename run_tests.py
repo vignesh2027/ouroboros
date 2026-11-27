@@ -74,11 +74,24 @@ def main():
     loader = unittest.TestLoader()
     suite = loader.discover(os.path.join(HERE, "tests"), top_level_dir=HERE)
 
-    cases = []
-    for group in suite:
-        for sub in group:
-            for test in sub:
-                cases.append(test)
+    # A test module that fails to import (for example when numpy is missing)
+    # shows up as a single test case one level higher than usual, so walk the
+    # suite to any depth instead of assuming exactly three levels.
+    def iter_cases(node):
+        if isinstance(node, unittest.TestSuite):
+            for child in node:
+                yield from iter_cases(child)
+        else:
+            yield node
+
+    if loader.errors:
+        print("Some test modules could not be imported:")
+        for err in loader.errors:
+            print(err.strip().splitlines()[-1])
+        print("Install the dependencies first:  pip install -r requirements.txt")
+        return 1
+
+    cases = list(iter_cases(suite))
 
     stream = io.StringIO()
     runner = unittest.TextTestRunner(stream=stream, verbosity=0)

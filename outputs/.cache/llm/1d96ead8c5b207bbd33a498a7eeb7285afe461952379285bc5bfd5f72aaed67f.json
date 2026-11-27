@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"min_wage#7\",\"relation\":\"supports\"}],\"note\":\"Passage 7 states that reduced turnover and better retention offset labour cost rises, leaving headcount broadly unchanged in observed firms, matching the claim directly.\"}", "tag": "audit_verify", "input_tokens": 1118, "output_tokens": 98}

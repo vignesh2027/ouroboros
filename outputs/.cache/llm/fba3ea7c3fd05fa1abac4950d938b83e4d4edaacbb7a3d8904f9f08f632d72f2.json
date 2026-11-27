@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"23334c40ad6b#1\",\"relation\":\"supports\"}],\"note\":\"In obese women, the IFCR-liquid group lost more weight (3.9 kg) than the IFCR-food-based group (2.5 kg), P=0.04. The claim omits the liquid-diet qualifier.\"}", "tag": "audit_verify", "input_tokens": 2181, "output_tokens": 413}

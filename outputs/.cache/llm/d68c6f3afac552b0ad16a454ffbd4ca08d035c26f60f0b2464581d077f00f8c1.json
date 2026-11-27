@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"abefd158b9c2#2\",\"relation\":\"supports\"}],\"note\":\"Passage abefd158b9c2#2 states remote work of 5 days a week (full-remote) was associated with reduced work productivity. Other passages do not address this claim.\"}", "tag": "audit_verify", "input_tokens": 1793, "output_tokens": 102}

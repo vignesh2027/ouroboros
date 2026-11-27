@@ -1,0 +1,671 @@
+{
+ "question": "Is intermittent fasting effective for weight loss?",
+ "mode": "guarded",
+ "config": {
+  "mode": "guarded",
+  "hops": 4,
+  "k": 6,
+  "per_source": 3,
+  "sources": null,
+  "baqd_threshold": 0.05,
+  "skew_threshold": 0.5,
+  "closed_corpus": false,
+  "corpus_size": 0
+ },
+ "hops": [
+  {
+   "hop": 1,
+   "query": "Is intermittent fasting effective for weight loss?",
+   "origin": "question",
+   "fetched": {
+    "wikipedia": 3,
+    "openalex": 3,
+    "arxiv": 3,
+    "pubmed": 3,
+    "web": 3
+   },
+   "pool_size": 85,
+   "passages": [
+    {
+     "pid": "23334c40ad6b#0",
+     "title": "Intermittent fasting combined with calorie restriction is effective for weight loss and cardio-protection in obese women",
+     "url": "https://doi.org/10.1186/1475-2891-11-98",
+     "domain": "doi.org/10.1186",
+     "source": "openalex",
+     "year": 2012,
+     "text": "Intermittent fasting combined with calorie restriction is effective for weight loss and cardio-protection in obese women. BACKGROUND: Intermittent fasting (IF; severe restriction 1 d/week) facilitates weight loss and improves coronary heart disease (CHD) risk indicators. The degree to which weight loss can be enhanced if IF is combined with calorie restriction (CR) and liquid meals, remains unknown. OBJECTIVE: This study examined the effects of IF plus CR (with or without a liquid diet) on body weight, body composition, and CHD risk. METHODS: Obese women (n = 54) were randomized to either the IFCR-liquid (IFCR-L) or IFCR-food based (IFCR-F) diet.",
+     "stance": "supports",
+     "reason": "Reports IF combined with calorie restriction is effective for weight loss in obese women."
+    },
+    {
+     "pid": "a91c1c458e6b#0",
+     "title": "Exercise Training, Intermittent Fasting and Alkaline Supplementation as an Effective Strategy for Body Weight Loss: A 12-Week Placebo-Controlled Double-Blind Intervention with Overweight Subjects",
+     "url": "https://doi.org/10.3390/life10050074",
+     "domain": "doi.org/10.3390",
+     "source": "openalex",
+     "year": 2020,
+     "text": "Exercise Training, Intermittent Fasting and Alkaline Supplementation as an Effective Strategy for Body Weight Loss: A 12-Week Placebo-Controlled Double-Blind Intervention with Overweight Subjects. BACKGROUND: Intermittent fasting (IF) combined with exercise has been suggested to enhance weight loss. However, both procedures might negatively influence acid-base status. The aim of this study was to determine the combined effects of IF, exercise training and alkaline supplementation in overweight subjects on body composition and running performance. METHODS: 80 overweight subjects of age 45.5 ± 7.8 years were assigned to IF or non-intermittent fasting (nIF).",
+     "stance": "supports",
+     "reason": "IF combined with exercise and alkaline supplementation framed as effective for body weight loss."
+    },
+    {
+     "pid": "44e3472ec92d#7",
+     "title": "Diet Review: Intermittent Fasting for Weight Loss - The Nutrition Source",
+     "url": "https://nutritionsource.hsph.harvard.edu/healthy-weight/diet-reviews/intermittent-fasting/",
+     "domain": "nutritionsource.hsph.harvard.edu",
+     "source": "web",
+     "year": null,
+     "text": "Ten trials that investigated changes in appetite did not show an overall increase in appetite in the intermittent fasting groups despite significant weight loss and decreases in leptin hormone levels (a hormone that suppresses appetite). A randomized controlled trial that followed 100 obese individuals for one year did not find intermittent fasting to be more effective than daily calorie restriction.",
+     "stance": "neutral",
+     "reason": "Notes significant weight loss with IF but also that IF was not more effective than daily calorie restriction."
+    },
+    {
+     "pid": "c74e11d8769a#0",
+     "title": "High-Protein, Intermittent-Fasting Intervention is Effective in Weight Loss and Improving Arterial Function in Obese Adults",
+     "url": "https://doi.org/10.1249/01.mss.0000486630.06924.e2",
+     "domain": "doi.org/10.1249",
+     "source": "openalex",
+     "year": 2016,
+     "text": "High-Protein, Intermittent-Fasting Intervention is Effective in Weight Loss and Improving Arterial Function in Obese Adults. Weight loss (WL) interventions have been shown to benefit fat mass loss. However, adverse cardiovascular complications may be associated with WL. PURPOSE: To examine the effects of a high-protein, intermittent-fasting, low-calorie (HP-IF-LC) diet on blood lipids and arterial function during WL and weight-loss maintenance (WL-M). METHODS: Forty obese men (n = 21) and women (n = 19) participated in this study. This experiment was split into two consecutive phases: (a) 12-week HP-IF-LC diet (WL, Phase 1); (b) a 1-year WL maintenance comparing HP-IF with a heart healthy (HH) diet (WL-M, Phase 2).",
+     "stance": "supports",
+     "reason": "High-protein IF low-calorie diet titled as effective in weight loss in obese adults."
+    },
+    {
+     "pid": "d5b094e9e37f#4",
+     "title": "How Intermittent Fasting Can Help You Lose Weight - Healthline",
+     "url": "https://www.healthline.com/nutrition/intermittent-fasting-and-weight-loss",
+     "domain": "healthline.com",
+     "source": "web",
+     "year": null,
+     "text": "Then, on the other two days of the week, you reduce your calorie intake to one-quarter of your daily needs. For someone who regularly consumes 2,000 calories daily, this means reducing calorie intake to 500 calories per day, two days per week. According to a 2018 study, the 5:2 diet is as effective as daily calorie restriction for weight loss and blood glucose control among those with type 2 diabetes (8). Another study found that the 5:2 diet was just as effective as continuous calorie restriction for weight loss and the prevention of metabolic diseases like heart disease and diabetes (9).",
+     "stance": "supports",
+     "reason": "Says the 5:2 diet is as effective as daily calorie restriction for weight loss."
+    },
+    {
+     "pid": "e21d56f2e070#0",
+     "title": "Intermittent fasting and weight loss: Systematic review.",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32060194/",
+     "domain": "pubmed.ncbi.nlm.nih.gov",
+     "source": "pubmed",
+     "year": 2020,
+     "text": "Intermittent fasting and weight loss: Systematic review.. Objective: To examine the evidence for intermittent fasting (IF), an alternative to calorie-restricted diets, in treating obesity, an important health concern in Canada with few effective office-based treatment strategies. Data sources: A MEDLINE and EMBASE search from January 1, 2000, to July 1, 2019, yielded 1200 results using the key words fasting, time restricted feeding, meal skipping, alternate day fasting, intermittent fasting, and reduced meal frequency.",
+     "stance": "neutral",
+     "reason": "Describes a systematic review scope without stating a finding on effectiveness."
+    }
+   ],
+   "belief": "Intermittent fasting appears effective for weight loss, roughly as effective as daily calorie restriction, though evidence is mixed and often small-scale.",
+   "confidence": 65,
+   "next_query": "intermittent fasting versus continuous calorie restriction meta-analysis weight loss randomized trials",
+   "baqd": null,
+   "support": 4,
+   "contradict": 0,
+   "neutral": 2,
+   "skew": 1.0,
+   "balance_loss": 1.0,
+   "domains": 6,
+   "sources": 3,
+   "cumulative": {
+    "support": 4,
+    "contradict": 0,
+    "neutral": 2,
+    "passages": 6
+   },
+   "cqi": true
+  },
+  {
+   "hop": 2,
+   "query": "intermittent fasting no greater weight loss than daily calorie restriction trial null results",
+   "origin": "counter",
+   "fetched": {
+    "wikipedia": 2,
+    "openalex": 3,
+    "arxiv": 2,
+    "pubmed": 3,
+    "web": 3
+   },
+   "pool_size": 156,
+   "passages": [
+    {
+     "pid": "7df424019a22#0",
+     "title": "When a Calorie Is Not a Calorie: Metabolic and Molecular Effects of Intermittent Fasting in Humans; Exploratory Outcomes of a Randomized Clinical Trial",
+     "url": "https://doi.org/10.59368/agingbio.20230013",
+     "domain": "doi.org/10.59368",
+     "source": "openalex",
+     "year": 2023,
+     "text": "When a Calorie Is Not a Calorie: Metabolic and Molecular Effects of Intermittent Fasting in Humans; Exploratory Outcomes of a Randomized Clinical Trial. Intermittent fasting (IF) extends healthspan and lifespan in rodents and has been associated with metabolic benefits in humans, yet results so far have been inconsistent. In this study, we tested the effects of IF-induced weight loss on metabolic and molecular determinants of healthy aging. We performed a randomized clinical trial with a partial cross-over design in overweight men and women (30-65 y, average 49.3 ± 8.2 y) to test the effects of six-month IF (NCT01964118).",
+     "stance": "neutral",
+     "reason": "Describes trial design and aims without reporting a weight loss result."
+    },
+    {
+     "pid": "6de8c26070bb#3",
+     "title": "Intermittent fasting plus early time-restricted eating versus calorie restriction and standard care in adults at risk of type 2 diabetes: a randomized controlled trial.",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/37024596/",
+     "domain": "pubmed.ncbi.nlm.nih.gov",
+     "source": "pubmed",
+     "year": 2023,
+     "text": "In conclusion, incorporating advice for meal timing with prolonged fasting led to greater improvements in postprandial glucose metabolism in adults at increased risk of developing type 2 diabetes. ClinicalTrials.gov identifier NCT03689608 .",
+     "stance": "neutral",
+     "reason": "Reports glucose metabolism outcomes, not weight loss effectiveness."
+    },
+    {
+     "pid": "44e3472ec92d#8",
+     "title": "Diet Review: Intermittent Fasting for Weight Loss - The Nutrition Source",
+     "url": "https://nutritionsource.hsph.harvard.edu/healthy-weight/diet-reviews/intermittent-fasting/",
+     "domain": "nutritionsource.hsph.harvard.edu",
+     "source": "web",
+     "year": null,
+     "text": "[6] For the 6-month weight loss phase, subjects were either placed on an alternating day fast (alternating days of one meal of 25% of baseline calories versus 125% of baseline calories divided over three meals) or daily calorie restriction (75% of baseline calories divided over three meals) following the American Heart Association guidelines. After 6 months, calorie levels were increased by 25% in both groups with a goal of weight maintenance. Participant characteristics of the groups were similar; mostly women and generally healthy. The trial examined weight changes, compliance rates, and cardiovascular risk factors.",
+     "stance": "supports",
+     "reason": "Describes an alternate-day fasting vs daily restriction weight loss trial, consistent with comparable effectiveness."
+    },
+    {
+     "pid": "23334c40ad6b#1",
+     "title": "Intermittent fasting combined with calorie restriction is effective for weight loss and cardio-protection in obese women",
+     "url": "https://doi.org/10.1186/1475-2891-11-98",
+     "domain": "doi.org/10.1186",
+     "source": "openalex",
+     "year": 2012,
+     "text": "The trial had two phases: 1) 2-week weight maintenance period, and 2) 8-week weight loss period. RESULTS: Body weight decreased more (P = 0.04) in the IFCR-L group (3.9 ± 1.4 kg) versus the IFCR-F group (2.5 ± 0.6 kg). Fat mass decreased similarly (P < 0.0001) in the IFCR-L and IFCR-F groups (2.8 ± 1.2 kg and 1.9 ± 0.7 kg, respectively). Visceral fat was reduced (P < 0.001) by IFCR-L (0.7 ± 0.5 kg) and IFCR-F (0.3 ± 0.5 kg) diets.",
+     "stance": "supports",
+     "reason": "Reports IF combined with calorie restriction produced significant weight and fat loss in obese women."
+    },
+    {
+     "pid": "5a896703f2e3#0",
+     "title": "Intermittent fasting fails to beat standard dieting for weight loss",
+     "url": "https://www.sciencedaily.com/releases/2026/02/260218044620.htm",
+     "domain": "sciencedaily.com",
+     "source": "web",
+     "year": null,
+     "text": "Intermittent fasting fails to beat standard dieting for weight loss A major review finds intermittent fasting does not lead to greater weight loss than standard diet advice. Intermittent fasting has become one of the most talked-about weight loss trends in recent years, promising dramatic results with simple changes to when you eat. But a major Cochrane review suggests the reality may be far less exciting. After analyzing 22 clinical trials involving nearly 2,000 adults, researchers found that intermittent fasting did not produce significantly more weight loss than standard diet advice or even no structured plan at all.",
+     "stance": "contradicts",
+     "reason": "Cochrane review finds IF does not produce more weight loss than standard diet advice."
+    },
+    {
+     "pid": "13ed85eb2cce#4",
+     "title": "Intermittent fasting",
+     "url": "https://en.wikipedia.org/wiki/Intermittent_fasting",
+     "domain": "en.wikipedia.org",
+     "source": "wikipedia",
+     "year": null,
+     "text": "Modified alternate-day fasting (mADF) involves partial intermittent energy restriction which allows the consumption of up to 25% of daily calorie needs on fasting days instead of complete fasting. This is akin to alternating days with normal eating and days with a very-low-calorie diet. 5:2 diet is a type of periodic fasting (that does not follow a particular food pattern) which focuses entirely on calorie content. In other words, two days of the week are devoted to consumption of approximately 500 to 600 calories, or about 25% of regular daily caloric intake, with normal calorie intake during the other five days of the week.",
+     "stance": "neutral",
+     "reason": "Defines fasting diet variants without reporting efficacy outcomes."
+    }
+   ],
+   "belief": "Intermittent fasting produces weight loss roughly comparable to standard daily calorie restriction, not clearly superior, with evidence mixed and mostly modest in size.",
+   "confidence": 60,
+   "next_query": "Cochrane review intermittent fasting weight loss versus continuous energy restriction meta-analysis",
+   "baqd": -0.18836667473776286,
+   "support": 2,
+   "contradict": 1,
+   "neutral": 3,
+   "skew": 0.3333333333333333,
+   "balance_loss": 0.3333333333333333,
+   "domains": 6,
+   "sources": 4,
+   "cumulative": {
+    "support": 6,
+    "contradict": 1,
+    "neutral": 5,
+    "passages": 12
+   }
+  },
+  {
+   "hop": 3,
+   "query": "Cochrane review intermittent fasting weight loss versus continuous energy restriction meta-analysis",
+   "origin": "model",
+   "fetched": {
+    "wikipedia": 3,
+    "openalex": 3,
+    "pubmed": 3,
+    "web": 3
+   },
+   "pool_size": 207,
+   "passages": [
+    {
+     "pid": "e5aee0e45fc5#0",
+     "title": "Intermittent versus continuous energy restriction on weight loss and cardiometabolic outcomes: a systematic review and meta-analysis of randomized controlled trials",
+     "url": "https://doi.org/10.1186/s12967-018-1748-4",
+     "domain": "doi.org/10.1186",
+     "source": "openalex",
+     "year": 2018,
+     "text": "Intermittent versus continuous energy restriction on weight loss and cardiometabolic outcomes: a systematic review and meta-analysis of randomized controlled trials. BACKGROUND: This systematic review and meta-analysis summarized the most recent evidence on the efficacy of intermittent energy restriction (IER) versus continuous energy restriction on weight-loss, body composition, blood pressure and other cardiometabolic risk factors. METHODS: Randomized controlled trials were systematically searched from MEDLINE, Cochrane Library, TRIP databases, EMBASE and CINAHL until May 2018. Effect sizes were expressed as weighted mean difference (WMD) and 95% confidence intervals (CI). RESULTS: Eleven trials were included (duration range 8-24 weeks).",
+     "stance": "supports",
+     "reason": "Meta-analysis of IER vs CER trials reports weight loss comparisons, consistent with comparable efficacy."
+    },
+    {
+     "pid": "ebc373b389d7#0",
+     "title": "Intermittent Versus Continuous Energy Restriction for Weight Loss and Metabolic Improvement: A Meta‐Analysis and Systematic Review",
+     "url": "https://doi.org/10.1002/oby.23023",
+     "domain": "doi.org/10.1002",
+     "source": "openalex",
+     "year": 2020,
+     "text": "Intermittent Versus Continuous Energy Restriction for Weight Loss and Metabolic Improvement: A Meta‐Analysis and Systematic Review. OBJECTIVE: This study aimed to evaluate the effects of intermittent energy restriction (IER; only for 2-3 d/wk) versus continuous energy restriction (CER) on weight loss and metabolic outcomes in adults with overweight or obesity. METHODS: Methods included searching databases from the last decade to December 18, 2019, for randomized controlled trials (RCTs) that assessed weight loss and metabolic outcomes in IER and CER. RevMan version 5.3 software was used for statistical analysis of the data. The effect sizes were expressed as weight mean differences and 95% CI.",
+     "stance": "supports",
+     "reason": "Meta-analysis comparing IER and CER on weight loss; framing consistent with roughly comparable effects."
+    },
+    {
+     "pid": "ca5b59bbba75#0",
+     "title": "Intermittent versus continuous energy restriction on weight loss and ...",
+     "url": "https://link.springer.com/article/10.1186/s12967-018-1748-4",
+     "domain": "link.springer.com",
+     "source": "web",
+     "year": null,
+     "text": "BMC journals have moved to Springer Nature Link. Learn more about website changes. You have full access to this open access article This systematic review and meta-analysis summarized the most recent evidence on the efficacy of intermittent energy restriction (IER) versus continuous energy restriction on weight-loss, body composition, blood pressure and other cardiometabolic risk factors. Randomized controlled trials were systematically searched from MEDLINE, Cochrane Library, TRIP databases, EMBASE and CINAHL until May 2018. Effect sizes were expressed as weighted mean difference (WMD) and 95% confidence intervals (CI). Eleven trials were included (duration range 8–24 weeks).",
+     "stance": "supports",
+     "reason": "Same IER versus CER meta-analysis summary; no direct superiority claim, consistent with comparable outcomes."
+    },
+    {
+     "pid": "e5e8a6defcd9#0",
+     "title": "Intermittent Fasting versus Continuous Calorie Restriction: Which Is Better for Weight Loss?",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/35565749/",
+     "domain": "pubmed.ncbi.nlm.nih.gov",
+     "source": "pubmed",
+     "year": 2022,
+     "text": "Intermittent Fasting versus Continuous Calorie Restriction: Which Is Better for Weight Loss?. We conducted a systematic review and meta-analysis of randomized clinical trials and pilot trial studies to compare the effectiveness of intermittent fasting (IF) and continuous calorie restriction (CCR) in overweight and obese people. The parameters included body mass index (BMI), body weight, and other metabolism-related indicators. A systematic search in PubMed, Embase, Cochrane Library, and Web of Science was conducted up to January 2022. Standardized mean differences (SMDs) with 95% confidence intervals (CIs) were used to measure the effectiveness. Publication bias was assessed using Egger's test. The stability of the results was evaluated using sensitivity analyses.",
+     "stance": "neutral",
+     "reason": "Describes methods of IF vs CCR comparison without reporting the findings."
+    },
+    {
+     "pid": "f5eeafdf6fc3#0",
+     "title": "Intermittent Fasting versus Continuous Calorie Restriction: Which Is Better for Weight Loss?",
+     "url": "https://doi.org/10.3390/nu14091781",
+     "domain": "doi.org/10.3390",
+     "source": "openalex",
+     "year": 2022,
+     "text": "Intermittent Fasting versus Continuous Calorie Restriction: Which Is Better for Weight Loss?. We conducted a systematic review and meta-analysis of randomized clinical trials and pilot trial studies to compare the effectiveness of intermittent fasting (IF) and continuous calorie restriction (CCR) in overweight and obese people. The parameters included body mass index (BMI), body weight, and other metabolism-related indicators. A systematic search in PubMed, Embase, Cochrane Library, and Web of Science was conducted up to January 2022. Standardized mean differences (SMDs) with 95% confidence intervals (CIs) were used to measure the effectiveness. Publication bias was assessed using Egger's test. The stability of the results was evaluated using sensitivity analyses.",
+     "stance": "neutral",
+     "reason": "Same abstract as the PubMed entry; methods only, no reported result."
+    },
+    {
+     "pid": "7ec171d90b08#0",
+     "title": "Is isocaloric intermittent fasting superior to calorie restriction? A ...",
+     "url": "https://www.sciencedirect.com/science/article/pii/S0939475324004393",
+     "domain": "sciencedirect.com",
+     "source": "web",
+     "year": null,
+     "text": "Is isocaloric intermittent fasting superior to calorie restriction? A .... Intermittent fasting (IF) has been demonstrated to enhance human health through several mechanisms. However, it is still unclear whether those health benefits are independent of caloric restriction (CR)-induced weight loss. This systematic review and meta-analysis aimed to compare isocaloric IF and CR regarding anthropometric measurements, adherence, metabolic profile, inflammatory biomarkers",
+     "stance": "neutral",
+     "reason": "Asks whether isocaloric IF is superior to CR; states question without giving a finding."
+    }
+   ],
+   "belief": "Intermittent fasting produces weight loss roughly comparable to daily calorie restriction, not clearly superior, with modest and mixed evidence.",
+   "confidence": 62,
+   "next_query": "intermittent fasting versus continuous calorie restriction weight loss pooled effect size results",
+   "baqd": -0.035354750615960676,
+   "support": 3,
+   "contradict": 0,
+   "neutral": 3,
+   "skew": 1.0,
+   "balance_loss": 1.0,
+   "domains": 6,
+   "sources": 3,
+   "cumulative": {
+    "support": 9,
+    "contradict": 1,
+    "neutral": 8,
+    "passages": 18
+   },
+   "cqi": true
+  },
+  {
+   "hop": 4,
+   "query": "intermittent fasting superior weight loss than daily calorie restriction randomized trial",
+   "origin": "counter",
+   "fetched": {
+    "wikipedia": 3,
+    "openalex": 3,
+    "arxiv": 3,
+    "pubmed": 3,
+    "web": 3
+   },
+   "pool_size": 245,
+   "passages": [
+    {
+     "pid": "fbe963555b49#0",
+     "title": "Intermittent Fasting versus Continuous Calorie Restriction: Which Is ...",
+     "url": "https://www.researchgate.net/publication/360176321_Intermittent_Fasting_versus_Continuous_Calorie_Restriction_Which_Is_Better_for_Weight_Loss",
+     "domain": "researchgate.net",
+     "source": "web",
+     "year": null,
+     "text": "Intermittent Fasting versus Continuous Calorie Restriction: Which Is .... W e conducted a systematic review and meta-analysis of randomized clinical trials and pilot trial studies to compare the effectiveness of intermittent fasting (IF) and continuous calorie restriction",
+     "stance": "neutral",
+     "reason": "Only describes a meta-analysis comparing IF and CCR; reports no result."
+    },
+    {
+     "pid": "fc9a269d39e5#0",
+     "title": "Is Fasting Superior to Continuous Caloric Restriction for Weight Loss and Metabolic Outcomes in Obese Adults? A Systematic Review and Meta-Analysis of Randomized Clinical Trials.",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39458528/",
+     "domain": "pubmed.ncbi.nlm.nih.gov",
+     "source": "pubmed",
+     "year": 2024,
+     "text": "Is Fasting Superior to Continuous Caloric Restriction for Weight Loss and Metabolic Outcomes in Obese Adults? A Systematic Review and Meta-Analysis of Randomized Clinical Trials.. Background: fasting-based strategies (FBS) and continuous caloric restriction (CCR) are popular methods for weight loss and improving metabolic health. FBS alternates between eating and fasting periods, while CCR reduces daily calorie intake consistently. Both aim to create a calorie deficit, but it is still uncertain as to which is more effective for short- and long-term weight and metabolic outcomes. Objectives: this systematic review and meta-analysis aimed to compare the effectiveness of FBS and CCR on these parameters in obese adults.",
+     "stance": "neutral",
+     "reason": "Abstract states the question but gives no finding on whether fasting is superior."
+    },
+    {
+     "pid": "44e3472ec92d#2",
+     "title": "Diet Review: Intermittent Fasting for Weight Loss - The Nutrition Source",
+     "url": "https://nutritionsource.hsph.harvard.edu/healthy-weight/diet-reviews/intermittent-fasting/",
+     "domain": "nutritionsource.hsph.harvard.edu",
+     "source": "web",
+     "year": null,
+     "text": "[2] Intermittent fasting attempts to address this problem by cycling between a low calorie level for a brief time followed by normal eating, which may prevent these adaptations. However, research does not consistently show that intermittent fasting is superior to continuous low calorie diets for weight loss efficiency. The most common methods are fasting on alternate days, for whole days with a specific frequency per week, or during a set time frame. [3] Alternate-day fasting—Alternating between days of no food restriction with days that consist of one meal that provides about 25% of daily calorie needs. Example: Mon-Wed-Fri consists of fasting, while alternate days have no food restrictions.",
+     "stance": "supports",
+     "reason": "States research does not consistently show IF is superior to continuous low-calorie diets."
+    },
+    {
+     "pid": "7df424019a22#2",
+     "title": "When a Calorie Is Not a Calorie: Metabolic and Molecular Effects of Intermittent Fasting in Humans; Exploratory Outcomes of a Randomized Clinical Trial",
+     "url": "https://doi.org/10.59368/agingbio.20230013",
+     "domain": "doi.org/10.59368",
+     "source": "openalex",
+     "year": 2023,
+     "text": "Preliminary multi-omic data analysis suggests that a nonlinear relationship exists between IF-induced weight loss and inhibition of multiple key nutrient-sensing aging pathways. More trials are needed to understand the impact of different degrees of energy restriction on metabolic and molecular health in humans, and how fasting should be complemented with diet quality changes during feast days to maximize clinical and longevity outcomes.",
+     "stance": "neutral",
+     "reason": "Discusses IF-induced weight loss mechanisms without comparing effectiveness to continuous restriction."
+    },
+    {
+     "pid": "f5eeafdf6fc3#1",
+     "title": "Intermittent Fasting versus Continuous Calorie Restriction: Which Is Better for Weight Loss?",
+     "url": "https://doi.org/10.3390/nu14091781",
+     "domain": "doi.org/10.3390",
+     "source": "openalex",
+     "year": 2022,
+     "text": "The significance of body weight change (SMD = -0.21, 95% CI (-0.40, -0.02) p = 0.028) was more significant after IF than CCR. There was no significant difference in BMI (SMD = 0.02, 95% CI (-0.16, 0.20) p = 0.848) between IF and CCR. These findings suggest that IF may be superior to CCR for weight loss in some respects.",
+     "stance": "contradicts",
+     "reason": "Reports IF produced significantly greater body weight reduction than CCR, suggesting superiority."
+    },
+    {
+     "pid": "cdebd78108ae#0",
+     "title": "Intermittent fasting and protein pacing are superior to caloric restriction for weight and visceral fat loss",
+     "url": "https://doi.org/10.1002/oby.23660",
+     "domain": "doi.org/10.1002",
+     "source": "openalex",
+     "year": 2022,
+     "text": "Intermittent fasting and protein pacing are superior to caloric restriction for weight and visceral fat loss. OBJECTIVE: This study compared intermittent fasting and protein pacing (IF-P) versus a heart-healthy caloric restriction (CR) diet, matched for energy intake and physical activity energy expenditure, on body weight, total and visceral fat mass, and cardiometabolic health outcomes in adults with obesity. METHODS: IF-P (n = 21) and CR (n = 20) were assessed pre- (week 0), mid- (week 5), and post- (week 9) intervention. RESULTS: Both groups reduced (p < 0.05) weight, total and visceral fat mass, blood pressure and lipids, and desire to eat food and increased proportion of fat-free mass.",
+     "stance": "neutral",
+     "reason": "Both IF-protein pacing and calorie restriction reduced weight similarly; title claims superiority but data shows both groups lost weight."
+    }
+   ],
+   "belief": "Intermittent fasting produces weight loss roughly comparable to continuous calorie restriction, with mixed evidence and possibly small advantages in some trials.",
+   "confidence": 60,
+   "next_query": "intermittent fasting versus continuous calorie restriction meta-analysis weight loss long-term adherence",
+   "baqd": 0.21381446600486514,
+   "support": 1,
+   "contradict": 1,
+   "neutral": 4,
+   "skew": 0.0,
+   "balance_loss": 0.0,
+   "domains": 6,
+   "sources": 3,
+   "cumulative": {
+    "support": 10,
+    "contradict": 2,
+    "neutral": 12,
+    "passages": 24
+   }
+  }
+ ],
+ "cqi_events": [
+  {
+   "hop": 1,
+   "trigger": {
+    "baqd": null,
+    "skew": 1.0
+   },
+   "original_query": "intermittent fasting versus continuous calorie restriction meta-analysis weight loss randomized trials",
+   "counter_query": "intermittent fasting no greater weight loss than daily calorie restriction trial null results",
+   "why": "This targets studies reporting that intermittent fasting fails to outperform or matches standard continuous restriction only by adherence, which would limit the belief that it is effective and comparable."
+  },
+  {
+   "hop": 3,
+   "trigger": {
+    "baqd": -0.035354750615960676,
+    "skew": 1.0
+   },
+   "original_query": "intermittent fasting versus continuous calorie restriction weight loss pooled effect size results",
+   "counter_query": "intermittent fasting superior weight loss than daily calorie restriction randomized trial",
+   "why": "This looks for trials or meta-analyses reporting that intermittent fasting outperforms continuous calorie restriction, which would challenge the belief that the two are roughly comparable."
+  }
+ ],
+ "synthesis": {
+  "answer": "The evidence is mixed, with several trials suggesting benefit but the best synthesis finding no clear advantage over standard calorie restriction. Supporting trials report that intermittent fasting combined with calorie restriction produced greater weight loss in obese women than the comparison diet [23334c40ad6b#1], and a high-protein intermittent-fasting diet produced weight loss in obese adults [c74e11d8769a#0]. A meta-analysis found intermittent energy restriction comparable to continuous restriction on weight loss and cardiometabolic outcomes [e5aee0e45fc5#0]. The contradicting evidence is substantial: a major Cochrane review of 22 trials with nearly 2,000 adults found intermittent fasting did not produce significantly more weight loss than standard diet advice [5a896703f2e3#0]. A Harvard review notes that research does not consistently show intermittent fasting is superior to continuous low calorie diets [44e3472ec92d#2], and a one-year trial of 100 obese individuals found it no more effective than daily restriction [44e3472ec92d#7]. One meta-analysis reported a modest advantage for fasting in body weight change [f5eeafdf6fc3#1]. Overall, it works about as well as continuous calorie reduction, but not clearly better.",
+  "confidence": 62,
+  "one_line": "Intermittent fasting produces weight loss, but major reviews find it generally no better than standard calorie restriction."
+ },
+ "audit": {
+  "claims": [
+   {
+    "cid": "c1",
+    "text": "Intermittent fasting combined with calorie restriction produced greater weight loss in obese women than the comparison diet.",
+    "cited_pids": [
+     "23334c40ad6b#1"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "23334c40ad6b#1",
+      "relation": "supports",
+      "title": "Intermittent fasting combined with calorie restriction is effective for weight loss and cardio-protection in obese women",
+      "url": "https://doi.org/10.1186/1475-2891-11-98",
+      "domain": "doi.org/10.1186",
+      "source": "openalex"
+     },
+     {
+      "pid": "23334c40ad6b#0",
+      "relation": "supports",
+      "title": "Intermittent fasting combined with calorie restriction is effective for weight loss and cardio-protection in obese women",
+      "url": "https://doi.org/10.1186/1475-2891-11-98",
+      "domain": "doi.org/10.1186",
+      "source": "openalex"
+     }
+    ],
+    "note": "Trial in obese women: IF plus calorie restriction (liquid arm) produced greater body weight loss (3.9 vs 2.5 kg, P=0.04) than food-based comparison arm.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c2",
+    "text": "A high-protein intermittent-fasting diet produced weight loss in obese adults.",
+    "cited_pids": [
+     "c74e11d8769a#0"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "c74e11d8769a#0",
+      "relation": "supports",
+      "title": "High-Protein, Intermittent-Fasting Intervention is Effective in Weight Loss and Improving Arterial Function in Obese Adults",
+      "url": "https://doi.org/10.1249/01.mss.0000486630.06924.e2",
+      "domain": "doi.org/10.1249",
+      "source": "openalex"
+     },
+     {
+      "pid": "cdebd78108ae#0",
+      "relation": "supports",
+      "title": "Intermittent fasting and protein pacing are superior to caloric restriction for weight and visceral fat loss",
+      "url": "https://doi.org/10.1002/oby.23660",
+      "domain": "doi.org/10.1002",
+      "source": "openalex"
+     }
+    ],
+    "note": "Passages report weight loss with high-protein intermittent fasting in obese adults; the claim's wording is broadly backed, though one passage is an abstract fragment and the Cochrane passage is about overweight/obese adults generally without protein focus.",
+    "independent_sources": 2
+   },
+   {
+    "cid": "c3",
+    "text": "A meta-analysis found intermittent energy restriction comparable to continuous restriction on weight loss and cardiometabolic outcomes.",
+    "cited_pids": [
+     "e5aee0e45fc5#0"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "ebc373b389d7#0",
+      "relation": "supports",
+      "title": "Intermittent Versus Continuous Energy Restriction for Weight Loss and Metabolic Improvement: A Meta‐Analysis and Systematic Review",
+      "url": "https://doi.org/10.1002/oby.23023",
+      "domain": "doi.org/10.1002",
+      "source": "openalex"
+     },
+     {
+      "pid": "ca5b59bbba75#2",
+      "relation": "supports",
+      "title": "Intermittent versus continuous energy restriction on weight loss and ...",
+      "url": "https://link.springer.com/article/10.1186/s12967-018-1748-4",
+      "domain": "link.springer.com",
+      "source": "web"
+     }
+    ],
+    "note": "Meta-analyses report both intermittent and continuous restriction achieved comparable weight-loss and metabolic improvements; one notes a slight insulin reduction with IER of uncertain relevance.",
+    "independent_sources": 2
+   },
+   {
+    "cid": "c4",
+    "text": "A Cochrane review of 22 trials with nearly 2,000 adults found intermittent fasting did not produce significantly more weight loss than standard diet advice.",
+    "cited_pids": [
+     "5a896703f2e3#0"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "5a896703f2e3#0",
+      "relation": "supports",
+      "title": "Intermittent fasting fails to beat standard dieting for weight loss",
+      "url": "https://www.sciencedaily.com/releases/2026/02/260218044620.htm",
+      "domain": "sciencedaily.com",
+      "source": "web"
+     },
+     {
+      "pid": "b4cf99ddeaae#1",
+      "relation": "supports",
+      "title": "Evidence behind intermittent fasting for weight loss fails ... - Cochrane",
+      "url": "https://www.cochrane.org/about-us/news/evidence-behind-intermittent-fasting-weight-loss-fails-match-hype",
+      "domain": "cochrane.org",
+      "source": "web"
+     }
+    ],
+    "note": "Two passages report the Cochrane review of 22 trials with 1,995 adults finding no significant extra weight loss versus standard dietary advice.",
+    "independent_sources": 2
+   },
+   {
+    "cid": "c5",
+    "text": "A Harvard review notes that research does not consistently show intermittent fasting is superior to continuous low calorie diets.",
+    "cited_pids": [
+     "44e3472ec92d#2"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "44e3472ec92d#2",
+      "relation": "supports",
+      "title": "Diet Review: Intermittent Fasting for Weight Loss - The Nutrition Source",
+      "url": "https://nutritionsource.hsph.harvard.edu/healthy-weight/diet-reviews/intermittent-fasting/",
+      "domain": "nutritionsource.hsph.harvard.edu",
+      "source": "web"
+     }
+    ],
+    "note": "Harvard Nutrition Source states research does not consistently show intermittent fasting is superior to continuous low calorie diets for weight loss.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c6",
+    "text": "A one-year trial of 100 obese individuals found intermittent fasting no more effective than daily calorie restriction.",
+    "cited_pids": [
+     "44e3472ec92d#7"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "44e3472ec92d#7",
+      "relation": "supports",
+      "title": "Diet Review: Intermittent Fasting for Weight Loss - The Nutrition Source",
+      "url": "https://nutritionsource.hsph.harvard.edu/healthy-weight/diet-reviews/intermittent-fasting/",
+      "domain": "nutritionsource.hsph.harvard.edu",
+      "source": "web"
+     }
+    ],
+    "note": "Harvard Nutrition Source passage states a randomized trial of 100 obese individuals for one year found intermittent fasting not more effective than daily calorie restriction, matching the claim.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c7",
+    "text": "One meta-analysis reported a modest advantage for fasting in body weight change.",
+    "cited_pids": [
+     "f5eeafdf6fc3#1"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "f5eeafdf6fc3#1",
+      "relation": "supports",
+      "title": "Intermittent Fasting versus Continuous Calorie Restriction: Which Is Better for Weight Loss?",
+      "url": "https://doi.org/10.3390/nu14091781",
+      "domain": "doi.org/10.3390",
+      "source": "openalex"
+     },
+     {
+      "pid": "38b8396aceb6#3",
+      "relation": "supports",
+      "title": "Evaluation of the effectiveness of intermittent fasting versus caloric ...",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11930668/",
+      "domain": "pmc.ncbi.nlm.nih.gov",
+      "source": "web"
+     }
+    ],
+    "note": "Passage f5eeafdf6fc3#1 reports a small pooled body weight SMD favouring IF (-0.21); 38b8396aceb6#3 says IF is slightly advantageous for body weight.",
+    "independent_sources": 2
+   },
+   {
+    "cid": "c8",
+    "text": "Overall, intermittent fasting works about as well as continuous calorie reduction but not clearly better.",
+    "cited_pids": [],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "ca5b59bbba75#2",
+      "relation": "supports",
+      "title": "Intermittent versus continuous energy restriction on weight loss and ...",
+      "url": "https://link.springer.com/article/10.1186/s12967-018-1748-4",
+      "domain": "link.springer.com",
+      "source": "web"
+     },
+     {
+      "pid": "44e3472ec92d#6",
+      "relation": "supports",
+      "title": "Diet Review: Intermittent Fasting for Weight Loss - The Nutrition Source",
+      "url": "https://nutritionsource.hsph.harvard.edu/healthy-weight/diet-reviews/intermittent-fasting/",
+      "domain": "nutritionsource.hsph.harvard.edu",
+      "source": "web"
+     }
+    ],
+    "note": "Springer passage says both regimens achieved comparable weight loss; Harvard summary finds no significant weight loss difference across 12 trials. Neither shows IF clearly better.",
+    "independent_sources": 2
+   }
+  ],
+  "scores": {
+   "claims_checked": 8,
+   "evidence_support_score": 100.0,
+   "multi_source_share": 62.5,
+   "contradicted_share": 0.0,
+   "unverified_share": 0.0,
+   "mixed_share": 0.0,
+   "citation_faithfulness": 85.7,
+   "distinct_domains": 9,
+   "stated_confidence": 62,
+   "calibration_gap": -38.0
+  },
+  "grade": "Well supported",
+  "pool_size": 245
+ },
+ "usage": {
+  "calls": 16,
+  "cached_calls": 16,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": 0.0
+ },
+ "seconds": 0.25,
+ "run_id": "is-intermittent-fasting-effective-for-weight-los-guarded-67c231",
+ "saved_at": "2026-11-26T21:24:34"
+}

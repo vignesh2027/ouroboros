@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"min_wage#4\",\"relation\":\"supports\"}],\"note\":\"Passage 4 states the Card and Krueger study found no employment decline in New Jersey after a minimum wage increase. Other passages are general and do not contradict it.\"}", "tag": "audit_verify", "input_tokens": 1099, "output_tokens": 96}

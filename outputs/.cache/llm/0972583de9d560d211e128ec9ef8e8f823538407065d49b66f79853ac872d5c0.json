@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"0a130e4f39dc#0\",\"relation\":\"supports\"}],\"note\":\"Passage 0a130e4f39dc#0 reports the meta-analysis of 3,574 estimates from 82 studies finding a small but positive average WFH productivity effect; the claim matches.\"}", "tag": "audit_verify", "input_tokens": 1815, "output_tokens": 112}

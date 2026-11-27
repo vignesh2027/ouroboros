@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"7591d78c5ea0#4\",\"relation\":\"supports\"}],\"note\":\"Conclusions state caffeinated coffee averaging 1 cup daily was associated with less AF or flutter recurrence than abstinence in the randomized DECAF trial.\"}", "tag": "audit_verify", "input_tokens": 1698, "output_tokens": 105}

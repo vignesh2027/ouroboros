@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"23334c40ad6b#0\",\"relation\":\"supports\"},{\"pid\":\"23334c40ad6b#1\",\"relation\":\"supports\"}],\"note\":\"Randomized trial in 54 obese women: IF plus calorie restriction reduced body weight, fat mass and visceral fat, per passage results.\"}", "tag": "audit_verify", "input_tokens": 2387, "output_tokens": 120}

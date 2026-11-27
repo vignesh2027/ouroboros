@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"44e3472ec92d#6\",\"relation\":\"supports\"}],\"note\":\"Review found no significant difference in dropout rates between intermittent fasting and continuous calorie restriction, so rates were not lower for fasting.\"}", "tag": "audit_verify", "input_tokens": 1806, "output_tokens": 93}

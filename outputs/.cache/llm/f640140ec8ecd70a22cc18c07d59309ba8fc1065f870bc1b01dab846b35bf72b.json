@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"d658dc380b73#5\",\"relation\":\"supports\"}],\"note\":\"Employee-monitoring site states a net positive effect on individual output with median +10% for focused tasks. Source is a vendor blog, not a clearly labelled meta-analysis summary.\"}", "tag": "audit_verify", "input_tokens": 1712, "output_tokens": 106}

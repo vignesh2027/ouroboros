@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"06384d0fb532#2\",\"relation\":\"supports\"}],\"note\":\"Passage 06384d0fb532#2 states the average nuclear plant has a 102.5% construction cost overrun and extreme time delays; other passages do not address the figure.\"}", "tag": "audit_verify", "input_tokens": 1794, "output_tokens": 102}

@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"e0f83db9d354#1\",\"relation\":\"supports\"}],\"note\":\"The first passage states the overall number of low-wage jobs remained essentially unchanged over the five years after the minimum wage increase, matching the claim directly.\"}", "tag": "audit_verify", "input_tokens": 1710, "output_tokens": 96}

@@ -1,0 +1,634 @@
+{
+ "question": "Does remote work increase productivity?",
+ "mode": "standard",
+ "config": {
+  "mode": "standard",
+  "hops": 4,
+  "k": 6,
+  "per_source": 3,
+  "sources": null,
+  "baqd_threshold": 0.05,
+  "skew_threshold": 0.5,
+  "closed_corpus": false,
+  "corpus_size": 0
+ },
+ "hops": [
+  {
+   "hop": 1,
+   "query": "Does remote work increase productivity?",
+   "origin": "question",
+   "fetched": {
+    "wikipedia": 3,
+    "openalex": 3,
+    "arxiv": 3,
+    "pubmed": 3,
+    "web": 3
+   },
+   "pool_size": 78,
+   "passages": [
+    {
+     "pid": "8301af91d994#0",
+     "title": "Productivity and Remote Work - U.S. Bureau of Labor Statistics",
+     "url": "https://www.bls.gov/productivity/articles-and-research/remote-work/productivity-and-remote-work.htm",
+     "domain": "bls.gov",
+     "source": "web",
+     "year": null,
+     "text": "Productivity and Remote Work - U.S. Bureau of Labor Statistics. To better measure the association of the rise in remote work with productivity, we plot the relationship between the increase in the percentage of remote workers and the excess in TFP growth in the pandemic period (2019-21) over the prior-business-cycle TFP growth (2007-19)",
+     "stance": "neutral",
+     "reason": "Describes a BLS plot method for remote work and TFP but gives no result on direction."
+    },
+    {
+     "pid": "7e0a814b280e#5",
+     "title": "What a 4-Year Study Reveals About Remote Work - Great Place To Work®",
+     "url": "https://www.greatplacetowork.com/resources/blog/remote-work-productivity-study-finds-surprising-reality-2-year-study",
+     "domain": "greatplacetowork.com",
+     "source": "web",
+     "year": null,
+     "text": "At high-trust workplaces, such as those found on the 100 Best Companies list, this paradox diminishes significantly due to exemplary leadership. In our 2025 Fortune 100 Best survey, 81% of employees at these companies described their workplace as psychologically and emotionally healthy — a stark contrast to the 45% reported in typical U.S. workplaces. This 45% higher rating underscores how strong leadership and intentional support create an environment where productivity and well-being thrive. Does remote work increase productivity? Historical data shows that working from home can be just as productive, if not more so, than traditional office setups.",
+     "stance": "supports",
+     "reason": "Claims historical data shows remote work can be as productive or more so than offices."
+    },
+    {
+     "pid": "365d3a2f178e#2",
+     "title": "Remote Work: Driver or Deterrent of Digital Product Innovation",
+     "url": "http://arxiv.org/abs/2607.03718v1",
+     "domain": "arxiv.org",
+     "source": "arxiv",
+     "year": 2026,
+     "text": "We also find that remote work enables teams to expand their workforce and increase their collective skill capacity, both of which are associated with improved digital product innovation outcomes. In contrast, reductions in commuting time and app maturity do not explain the observed digital product innovation gains. Overall, our findings suggest that remote work can enhance continuous digital product innovation at the team level without compromising innovation novelty.",
+     "stance": "neutral",
+     "reason": "About digital product innovation at team level, not overall productivity."
+    },
+    {
+     "pid": "540002c57ede#0",
+     "title": "EFFECTIVE TECHNOLOGIES TO SUPPORT PRODUCTIVITY IN REMOTE WORK CONDITIONS",
+     "url": "https://doi.org/10.20998/2519-4461.2024.5.80",
+     "domain": "doi.org/10.20998",
+     "source": "openalex",
+     "year": 2024,
+     "text": "EFFECTIVE TECHNOLOGIES TO SUPPORT PRODUCTIVITY IN REMOTE WORK CONDITIONS. Features of remote work are highlighted: transition to asynchronous cooperation from different locations; independent distribution of working hours during the day; the main thing is the work itself; combination of work process and entertainment; adjust life to passion; past success does not guarantee future success; intellectual activity; a new level of personal self-discipline, persistence in keeping to the schedule.",
+     "stance": "neutral",
+     "reason": "Lists features of remote work and technologies; takes no side on productivity effect."
+    },
+    {
+     "pid": "abefd158b9c2#2",
+     "title": "Remote Work Decreases Psychological and Physical Stress Responses, but Full-Remote Work Increases Presenteeism",
+     "url": "https://doi.org/10.3389/fpsyg.2021.730969",
+     "domain": "doi.org/10.3389",
+     "source": "openalex",
+     "year": 2021,
+     "text": "On the other hand, remote work of 5 days a week (full-remote) was associated with the reduction of work productivity. Conclusion: Promoting remote work can reduce psychological and physical stress responses, however, full-remote work has the risk of worsening presenteeism. From the viewpoint of mental health, the review of working styles is expected to have positive effects, even after the end of the COVID-19 pandemic.",
+     "stance": "contradicts",
+     "reason": "Full-remote five days a week was associated with reduced work productivity."
+    },
+    {
+     "pid": "44ecc13330bd#0",
+     "title": "Personality traits, remote work and productivity",
+     "url": "https://doi.org/10.16995/ilr.18853",
+     "domain": "doi.org/10.16995",
+     "source": "openalex",
+     "year": 2025,
+     "text": "Personality traits, remote work and productivity. This article investigates the link between personality traits and workers’ productivity when working from home (WFH). We exploit a survey conducted in Latvia in 2021, providing measures of the “Big Five” personality traits for more than 1,700 recent teleworkers. Other things being equal, Conscientiousness is positively associated with reporting higher productivity for WFH. Moreover, Conscientiousness and Openness to Experience are positively linked with willingness to WFH post-pandemic. These results suggest that pro-teleworking employers will observe positive selection into their workforce based on personality traits. On the other hand, the link between Extraversion and preference for WFH is negative. Our findings suggest that a one-size-fits-all policy is unlikely to maximize either firms’ productivity or workers’ satisfaction",
+     "stance": "neutral",
+     "reason": "Links personality traits to WFH productivity; does not directly estimate remote work's effect."
+    }
+   ],
+   "belief": "Remote work's effect on productivity is mixed and context-dependent: it can modestly raise it for some workers and teams, but full-time remote work may reduce it.",
+   "confidence": 45,
+   "next_query": "meta-analysis remote work productivity effect randomized controlled trials field experiments",
+   "baqd": null,
+   "support": 1,
+   "contradict": 1,
+   "neutral": 4,
+   "skew": 0.0,
+   "balance_loss": 0.0,
+   "domains": 6,
+   "sources": 3,
+   "cumulative": {
+    "support": 1,
+    "contradict": 1,
+    "neutral": 4,
+    "passages": 6
+   }
+  },
+  {
+   "hop": 2,
+   "query": "meta-analysis remote work productivity effect randomized controlled trials field experiments",
+   "origin": "model",
+   "fetched": {
+    "wikipedia": 3,
+    "openalex": 3,
+    "arxiv": 3,
+    "pubmed": 3,
+    "web": 3
+   },
+   "pool_size": 147,
+   "passages": [
+    {
+     "pid": "4e751d15099e#0",
+     "title": "Extensive variability of work participation outcomes measured in randomized controlled trials: a systematic review",
+     "url": "https://doi.org/10.1016/j.jclinepi.2021.10.013",
+     "domain": "doi.org/10.1016",
+     "source": "openalex",
+     "year": 2021,
+     "text": "Extensive variability of work participation outcomes measured in randomized controlled trials: a systematic review. OBJECTIVE: To investigate how work participation outcomes in randomized controlled trials are measured internationally and across disciplines. STUDY DESIGN AND SETTING: We identified trials that reported on work participation in Medline, Embase, PsycINFO and Cochrane Central published between 2014 and 2019. Screening, selection, and data extraction were done by two authors independently. We grouped outcomes into four categories (\"employment status\", \"absence from work\", \"at-work productivity loss,\" and \"employability\") and created subcategories according to how the outcome was measured. RESULTS: From 10,022 database hits we selected 269 trials reporting on 435 work participation outcomes.",
+     "stance": "neutral",
+     "reason": "Systematic review on how work participation outcomes are measured in trials; does not address remote work productivity."
+    },
+    {
+     "pid": "d658dc380b73#2",
+     "title": "Remote Work Productivity Study 2026: 50+ Studies | E-Monitor",
+     "url": "https://www.employee-monitoring.net/blog/remote-work-productivity-research-meta-analysis",
+     "domain": "employee-monitoring.net",
+     "source": "web",
+     "year": null,
+     "text": "The truth, as this meta-analysis shows, sits between those poles and varies dramatically by context. This article synthesizes the most rigorous research available into clear, actionable findings for business leaders making decisions about work location policies in 2026. This remote work productivity meta-analysis applies inclusion criteria borrowed from systematic review methodology in social science research. Not every \"study\" deserves equal weight. We prioritized evidence based on three factors: methodological rigor, sample size, and recency. We ranked studies using a four-tier evidence hierarchy. Tier 1 consists of randomized controlled trials (RCTs), the gold standard in productivity research.",
+     "stance": "neutral",
+     "reason": "Describes a meta-analysis framing and evidence hierarchy but reports no concrete productivity finding in this excerpt."
+    },
+    {
+     "pid": "f5735e7bd858#0",
+     "title": "Portable robots for upper-limb rehabilitation after stroke: a systematic review and meta-analysis.",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38640459/",
+     "domain": "pubmed.ncbi.nlm.nih.gov",
+     "source": "pubmed",
+     "year": 2024,
+     "text": "Portable robots for upper-limb rehabilitation after stroke: a systematic review and meta-analysis.. Background: Robot-assisted upper-limb rehabilitation has been studied for many years, with many randomised controlled trials (RCTs) investigating the effects of robotic-assisted training on affected limbs. The current trend directs towards end-effector devices. However, most studies have focused on the effectiveness of rehabilitation devices, but studies on device sizes are relatively few. Goal: Systematically review the effect of a portable rehabilitation robot (PRR) on the rehabilitation effectiveness of paralysed upper limbs compared with non-robotic therapy.",
+     "stance": "neutral",
+     "reason": "Portable stroke rehabilitation robots; off topic."
+    },
+    {
+     "pid": "ef88116f982d#0",
+     "title": "Discretionary Remote Working Helps Mothers Without Harming Non-mothers: Evidence from a Field Experiment",
+     "url": "https://doi.org/10.1287/mnsc.2018.3237",
+     "domain": "doi.org/10.1287",
+     "source": "openalex",
+     "year": 2019,
+     "text": "Discretionary Remote Working Helps Mothers Without Harming Non-mothers: Evidence from a Field Experiment. Because mothers remain disproportionately responsible for childcare, the daily requirement for physical presence at work disadvantages them compared with otherwise equivalent men and childless women. Relaxing this requirement may therefore enhance the well-being and productivity of working mothers. I tested this idea with a randomized field experiment, using a within-subjects analysis from a repeated crossover design. The 187 participants in the experiment, which ran for four weeks and yielded 748 person-week observations, revealed a preference for about two remote working days per week.",
+     "stance": "supports",
+     "reason": "Field experiment finds discretionary remote work helps mothers' well-being and productivity without harming non-mothers."
+    },
+    {
+     "pid": "5d9fb60c63fa#0",
+     "title": "The effect of sustainable agricultural practices on crop productivity in Ethiopia: insights from a meta-analysis",
+     "url": "https://doi.org/10.3389/fsufs.2024.1499412",
+     "domain": "doi.org/10.3389",
+     "source": "openalex",
+     "year": 2025,
+     "text": "The effect of sustainable agricultural practices on crop productivity in Ethiopia: insights from a meta-analysis. Conventional agriculture harms the environment and threatens sustainability. To address these issues, sustainable agricultural practices (SAPs) have become imperative. This study utilizes a meta-analysis approach to comprehensively assess empirical studies, investigate the impact of SAPs on crop productivity, identify influencing factors, and examine their temporal evolution. The findings reveal that (1) SAP adoption significantly and positively influences crop productivity, with multiple practices exhibiting the most substantial impact, followed by sustainable agricultural technology. Individuals who adopted SAPs achieved crop productivity that was 980 kilograms per hectare higher than those who did not.",
+     "stance": "neutral",
+     "reason": "Sustainable agriculture meta-analysis; off topic."
+    },
+    {
+     "pid": "5ce6d2af13c1#0",
+     "title": "A dual pathway model of remote work intensity: A meta‐analysis of its ...",
+     "url": "https://www.researchgate.net/publication/378654027_A_dual_pathway_model_of_remote_work_intensity_A_meta-analysis_of_its_simultaneous_positive_and_negative_effects",
+     "domain": "researchgate.net",
+     "source": "web",
+     "year": null,
+     "text": "A dual pathway model of remote work intensity: A meta‐analysis of its .... Request PDF | A dual pathway model of remote work intensity: A meta‐analysis of its simultaneous positive and negative effects | As the COVID‐19 pandemic wanes, many organizations are asking",
+     "stance": "neutral",
+     "reason": "Meta-analysis abstract signals simultaneous positive and negative remote work effects; no direction stated."
+    }
+   ],
+   "belief": "Remote work's effect on productivity is mixed and context-dependent: it can modestly raise it for some workers, such as mothers with discretionary days, while full-time remote work may reduce it.",
+   "confidence": 45,
+   "next_query": "meta-analysis remote work productivity hybrid versus fully remote randomized trials",
+   "baqd": -0.017451129394484843,
+   "support": 1,
+   "contradict": 0,
+   "neutral": 5,
+   "skew": 1.0,
+   "balance_loss": 1.0,
+   "domains": 6,
+   "sources": 3,
+   "cumulative": {
+    "support": 2,
+    "contradict": 1,
+    "neutral": 9,
+    "passages": 12
+   }
+  },
+  {
+   "hop": 3,
+   "query": "meta-analysis remote work productivity hybrid versus fully remote randomized trials",
+   "origin": "model",
+   "fetched": {
+    "wikipedia": 1,
+    "openalex": 3,
+    "arxiv": 3,
+    "pubmed": 3,
+    "web": 3
+   },
+   "pool_size": 175,
+   "passages": [
+    {
+     "pid": "e6c79bb09406#0",
+     "title": "Remote and Hybrid Work: What the Trials Show | Future Proof",
+     "url": "https://www.future-proof.app/research-remote-hybrid-work/",
+     "domain": "future-proof.app",
+     "source": "web",
+     "year": null,
+     "text": "Remote and Hybrid Work: What the Trials Show | Future Proof. The Ctrip RCT, the Nature hybrid trial, and the collaboration-network evidence — what randomized studies actually say about remote work and productivity",
+     "stance": "neutral",
+     "reason": "Title only describes randomized trial evidence without stating a finding on productivity direction."
+    },
+    {
+     "pid": "d658dc380b73#5",
+     "title": "Remote Work Productivity Study 2026: 50+ Studies | E-Monitor",
+     "url": "https://www.employee-monitoring.net/blog/remote-work-productivity-research-meta-analysis",
+     "domain": "employee-monitoring.net",
+     "source": "web",
+     "year": null,
+     "text": "The Headline Finding: Remote Work Productivity Is Positive, With Conditions Remote work productivity research, taken as a whole, shows a net positive effect on individual output. Across our 50+ studies, the median productivity impact of remote work is +10% for individual focused tasks and -4% for collaborative tasks. The net effect depends on the ratio of focused-to-collaborative work in a given role. How does this break down by arrangement type? Bloom's latest randomized trial at Trip.com (published in Nature, June 2024) provides the clearest answer. Employees randomized into a hybrid schedule (three office days, two remote days) showed no measurable productivity difference from their fully in-office peers.",
+     "stance": "supports",
+     "reason": "Reports a net positive median productivity effect for focused tasks, though with conditions and a null hybrid result."
+    },
+    {
+     "pid": "7e0a814b280e#1",
+     "title": "What a 4-Year Study Reveals About Remote Work - Great Place To Work®",
+     "url": "https://www.greatplacetowork.com/resources/blog/remote-work-productivity-study-finds-surprising-reality-2-year-study",
+     "domain": "greatplacetowork.com",
+     "source": "web",
+     "year": null,
+     "text": "But how it works best is shifting — it all comes down to culture, trust, and leadership. In this updated post, we’ll walk you through our latest findings, compare them to our earlier research from 2019–2020, and share what leading companies are doing now to sustain performance and engagement. As of February 2025, Gallup’s ongoing tracking of hybrid work arrangements in the U.S. found that 52% of U.S. employees whose jobs can be done remotely work in a hybrid environment. Another 27% are fully remote. That’s 79% of employees spending at least some of their time working remotely — a significant enough percentage to shape how organizations operate.",
+     "stance": "neutral",
+     "reason": "Covers remote work prevalence and culture, not a productivity effect."
+    },
+    {
+     "pid": "4e751d15099e#1",
+     "title": "Extensive variability of work participation outcomes measured in randomized controlled trials: a systematic review",
+     "url": "https://doi.org/10.1016/j.jclinepi.2021.10.013",
+     "domain": "doi.org/10.1016",
+     "source": "openalex",
+     "year": 2021,
+     "text": "Authors used inconsistent outcome terminology to describe the measured constructs. Grouped in four main categories we identified 70 outcomes that reported on \"employment status\", 196 on \"absence from work\" and return-to-work, 132 on \"at-work productivity loss,\" and 37 on \"employability\" outcomes. Variability in measurement methods existed across all categories. Employment status and absenteeism measures consisted mostly of clinimetrically unvalidated tools. \"At-work productivity loss\" and \"employability\" were measured by at least 41 different questionnaires. CONCLUSION: Extensive variability exists among trials in the measurement of outcomes, measurement methods and measurement instruments that focus on work participation. This study is a first step towards the development of a Core Outcome Set for work participation.",
+     "stance": "neutral",
+     "reason": "Systematic review of work participation outcome measurement, unrelated to remote work productivity."
+    },
+    {
+     "pid": "478a0dab5e0a#0",
+     "title": "Remote Work and the Changing Organization: Management, Productivity and Employee Well-Being in the Post-Pandemic Workplace",
+     "url": "https://doi.org/10.68740/jjss22",
+     "domain": "doi.org/10.68740",
+     "source": "openalex",
+     "year": 2026,
+     "text": "Remote Work and the Changing Organization: Management, Productivity and Employee Well-Being in the Post-Pandemic Workplace. Remote and hybrid work moved from the margins of organizational life to the center of it within a matter of weeks in 2020, and a large share of it has stayed. This article reviews what the research says about what that shift means for organizations. It traces the evolution of remote work, sets out the main theoretical perspectives, and then looks at productivity, motivation, work-life boundaries, management practices, digital collaboration and organizational culture. It also considers inequality and access, hybrid arrangements, international evidence and the future of work.",
+     "stance": "neutral",
+     "reason": "Review abstract mentions productivity but states no finding on its direction."
+    },
+    {
+     "pid": "f4685a331222#1",
+     "title": "Effectiveness of interventions for caregiver burden and quality of life of informal caregivers of stroke survivors: a systematic review and meta-analysis.",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42909033/",
+     "domain": "pubmed.ncbi.nlm.nih.gov",
+     "source": "pubmed",
+     "year": 2026,
+     "text": "Methods: A systematic search of eight databases (PubMed, MEDLINE, Embase, Cochrane Library, Scopus, Web of Science, CINAHL, and PsycINFO) was conducted until June 18, 2026. Randomized controlled trials (RCTs) published in English were included if they investigated the caregiver burden or QoL of informal caregivers of stroke survivors. The revised Cochrane risk-of-bias tool (RoB 2.0) was used to assess the risk of bias in the eligible studies. Random-effects meta-analyses using the DerSimonian-Laird method were conducted to pool data on caregiver burden and QoL. Subgroup analyses were performed based on the defined intervention characteristics. Results: Overall, 39 RCTs involving 3,096 informal caregivers of stroke survivors were included in this analysis.",
+     "stance": "neutral",
+     "reason": "Caregiver burden review for stroke survivors, off topic."
+    }
+   ],
+   "belief": "Remote work's effect on productivity is mixed and context-dependent: modest gains for focused tasks and some workers, small or null effects for hybrid, and losses for collaborative work.",
+   "confidence": 55,
+   "next_query": "Bloom Nature 2024 Ctrip hybrid remote work productivity randomized trial results",
+   "baqd": -0.052445822965684966,
+   "support": 1,
+   "contradict": 0,
+   "neutral": 5,
+   "skew": 1.0,
+   "balance_loss": 1.0,
+   "domains": 6,
+   "sources": 3,
+   "cumulative": {
+    "support": 3,
+    "contradict": 1,
+    "neutral": 14,
+    "passages": 18
+   }
+  },
+  {
+   "hop": 4,
+   "query": "Bloom Nature 2024 Ctrip hybrid remote work productivity randomized trial results",
+   "origin": "model",
+   "fetched": {
+    "openalex": 3,
+    "arxiv": 3,
+    "pubmed": 3,
+    "web": 3
+   },
+   "pool_size": 209,
+   "passages": [
+    {
+     "pid": "3af2ae48e707#0",
+     "title": "(PDF) Hybrid working from home improves retention without damaging ...",
+     "url": "https://www.researchgate.net/publication/381373698_Hybrid_working_from_home_improves_retention_without_damaging_performance",
+     "domain": "researchgate.net",
+     "source": "web",
+     "year": null,
+     "text": "(PDF) Hybrid working from home improves retention without damaging .... Bloom, Han and Liang (2024) conducted a randomized controlled trial (RCT) of a hybrid work arrangement that involved two days of remote work per week, which found no negative effects of such a",
+     "stance": "neutral",
+     "reason": "Reports Bloom RCT finding no negative effects of hybrid remote work; not a clear side on productivity gains."
+    },
+    {
+     "pid": "d658dc380b73#7",
+     "title": "Remote Work Productivity Study 2026: 50+ Studies | E-Monitor",
+     "url": "https://www.employee-monitoring.net/blog/remote-work-productivity-research-meta-analysis",
+     "domain": "employee-monitoring.net",
+     "source": "web",
+     "year": null,
+     "text": "The difference is not about remote work itself; it is about which tasks and which workers benefit from location flexibility. Stanford economist Nicholas Bloom's remote work productivity research program is the single most influential body of evidence on this topic. His work deserves detailed examination because it uses the gold standard of randomized controlled trials rather than the observational or survey-based methods common in corporate reports. Bloom's first major study randomly assigned 249 call center employees at Ctrip (now Trip.com) to work from home four days per week or remain in the office.",
+     "stance": "neutral",
+     "reason": "Introduces Bloom research program without reporting productivity results; says effects depend on tasks and workers."
+    },
+    {
+     "pid": "29431675589b#6",
+     "title": "Hybrid working from home improves retention without damaging ... - Nature",
+     "url": "https://www.nature.com/articles/s41586-024-07500-2",
+     "domain": "nature.com",
+     "source": "web",
+     "year": null,
+     "text": "Our study describes a randomized control trial from August 2021 to January 2022, which involved 1,612 graduate employees in the Airfare and IT divisions of a large Chinese travel technology multinational called Trip.com. Employees were randomized by even or odd birthdays into the option to WFH on Wednesday and Friday and come into the office on the other three days, or to come into the office on all five days.",
+     "stance": "neutral",
+     "reason": "Describes RCT design at Trip.com; no productivity outcome stated."
+    },
+    {
+     "pid": "a5a6c6342091#0",
+     "title": "Hybrid working from home improves retention without damaging performance.",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38867040/",
+     "domain": "pubmed.ncbi.nlm.nih.gov",
+     "source": "pubmed",
+     "year": 2024,
+     "text": "Hybrid working from home improves retention without damaging performance.. Working from home has become standard for employees with a university degree. The most common scheme, which has been adopted by around 100 million employees in Europe and North America, is a hybrid schedule, in which individuals spend a mix of days at home and at work each week1,2. However, the effects of hybrid working on employees and firms have been debated, and some executives argue that it damages productivity, innovation and career development3-5. Here we ran a six-month randomized control trial investigating the effects of hybrid working from home on 1,612 employees in a Chinese technology company in 2021-2022.",
+     "stance": "neutral",
+     "reason": "Abstract says hybrid WFH improves retention without damaging performance; no productivity gain reported, so only partly relevant."
+    },
+    {
+     "pid": "7e0a814b280e#0",
+     "title": "What a 4-Year Study Reveals About Remote Work - Great Place To Work®",
+     "url": "https://www.greatplacetowork.com/resources/blog/remote-work-productivity-study-finds-surprising-reality-2-year-study",
+     "domain": "greatplacetowork.com",
+     "source": "web",
+     "year": null,
+     "text": "What a 4-Year Study Reveals About Remote Work Benchmarks & Trends, Employee Experience, Remote & Hybrid Culture, Research Editor’s note: This article was originally published in 2020 and updated in 2025 to include new research and findings from 2024. The original study remains below for context and comparison. Remote work isn’t new, but it is evolving. With millions still working outside traditional offices, questions about productivity, culture, and collaboration continue to shape the future of work. That’s why we revisited our original research with fresh 2024 data, analyzing responses from millions of employees across industries. Spoiler: Remote work still works.",
+     "stance": "neutral",
+     "reason": "Company-sourced survey claiming remote work still works; no causal productivity evidence described."
+    },
+    {
+     "pid": "1b4d0a52006f#1",
+     "title": "On Learning Spatial Provenance in Privacy-Constrained Wireless Networks",
+     "url": "http://arxiv.org/abs/2402.03702v1",
+     "domain": "arxiv.org",
+     "source": "arxiv",
+     "year": 2024,
+     "text": "In this framework, the RSUs and the vehicles agree upon fragmenting the coverage area into several smaller regions so that the vehicles can embed the identity of their regions through Bloom filters. Given the probabilistic nature of Bloom filters, we derive an analytical expression on the error-rates in provenance recovery and then pose an optimization problem to choose the underlying parameters. With the help of extensive simulation results, we show that our method offers near-optimal Bloom filter parameters in learning spatial provenance. Some interesting trade-offs between the communication-overhead, spatial privacy of the vehicles and the error rates in provenance recovery are also discussed.",
+     "stance": "neutral",
+     "reason": "Off topic: Bloom filters in wireless networks."
+    }
+   ],
+   "belief": "Remote work's effect on productivity is mixed and context-dependent: modest gains for some workers and focused tasks, roughly null for hybrid arrangements, and possible losses for collaborative work.",
+   "confidence": 50,
+   "next_query": "Bloom Ctrip randomized trial remote work productivity performance ratings results",
+   "baqd": -0.02132797634517515,
+   "support": 0,
+   "contradict": 0,
+   "neutral": 6,
+   "skew": 0.0,
+   "balance_loss": 0.0,
+   "domains": 6,
+   "sources": 3,
+   "cumulative": {
+    "support": 3,
+    "contradict": 1,
+    "neutral": 20,
+    "passages": 24
+   }
+  }
+ ],
+ "cqi_events": [],
+ "synthesis": {
+  "answer": "The evidence is mixed and depends on context. A meta-analysis summary reports a net positive effect of remote work on individual output, with a median of +10% for focused tasks and -4% for collaborative tasks [d658dc380b73#5]. The same source notes that the net effect depends on the mix of focused and collaborative work in a role [d658dc380b73#5]. A randomized trial at Trip.com found that a hybrid schedule showed no measurable productivity difference from fully in-office peers [d658dc380b73#5]. A field experiment on discretionary remote work found that about two remote days per week was preferred and helped mothers without harming non-mothers [ef88116f982d#0]. However, a study of full-time remote work (five days a week) reported an association with reduced work productivity and higher presenteeism [abefd158b9c2#2]. Overall, the passages suggest remote work can raise productivity for focused tasks, but full-time remote work may lower it.",
+  "confidence": 60,
+  "one_line": "Mixed evidence: remote work may boost focused-task output, while full-time remote work was linked to lower productivity and higher presenteeism."
+ },
+ "audit": {
+  "claims": [
+   {
+    "cid": "c1",
+    "text": "A meta-analysis summary reports a net positive effect of remote work on individual output, with a median of +10% for focused tasks.",
+    "cited_pids": [
+     "d658dc380b73#5"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "d658dc380b73#5",
+      "relation": "supports",
+      "title": "Remote Work Productivity Study 2026: 50+ Studies | E-Monitor",
+      "url": "https://www.employee-monitoring.net/blog/remote-work-productivity-research-meta-analysis",
+      "domain": "employee-monitoring.net",
+      "source": "web"
+     }
+    ],
+    "note": "Employee-monitoring site states a net positive effect on individual output with median +10% for focused tasks. Source is a vendor blog, not a clearly labelled meta-analysis summary.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c2",
+    "text": "The meta-analysis summary reports a median of -4% effect of remote work on output for collaborative tasks.",
+    "cited_pids": [
+     "d658dc380b73#5"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "d658dc380b73#5",
+      "relation": "supports",
+      "title": "Remote Work Productivity Study 2026: 50+ Studies | E-Monitor",
+      "url": "https://www.employee-monitoring.net/blog/remote-work-productivity-research-meta-analysis",
+      "domain": "employee-monitoring.net",
+      "source": "web"
+     }
+    ],
+    "note": "Passage states median productivity impact is -4% for collaborative tasks across its 50+ studies; the claim's 'meta-analysis summary' wording is a close paraphrase of that source.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c3",
+    "text": "The net effect of remote work depends on the mix of focused and collaborative work in a role.",
+    "cited_pids": [
+     "d658dc380b73#5"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "d658dc380b73#5",
+      "relation": "supports",
+      "title": "Remote Work Productivity Study 2026: 50+ Studies | E-Monitor",
+      "url": "https://www.employee-monitoring.net/blog/remote-work-productivity-research-meta-analysis",
+      "domain": "employee-monitoring.net",
+      "source": "web"
+     }
+    ],
+    "note": "Passage states the net effect depends on the ratio of focused-to-collaborative work in a given role, directly matching the claim.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c4",
+    "text": "A randomized trial at Trip.com found that a hybrid schedule showed no measurable productivity difference from fully in-office peers.",
+    "cited_pids": [
+     "d658dc380b73#5"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "d658dc380b73#5",
+      "relation": "supports",
+      "title": "Remote Work Productivity Study 2026: 50+ Studies | E-Monitor",
+      "url": "https://www.employee-monitoring.net/blog/remote-work-productivity-research-meta-analysis",
+      "domain": "employee-monitoring.net",
+      "source": "web"
+     },
+     {
+      "pid": "ab525b508709#1",
+      "relation": "supports",
+      "title": "Hybrid working from home improves retention without ... - EconPapers",
+      "url": "https://econpapers.repec.org/RePEc:nat:nature:v:630:y:2024:i:8018:d:10.1038_s41586-024-07500-2",
+      "domain": "econpapers.repec.org",
+      "source": "web"
+     },
+     {
+      "pid": "a5a6c6342091#1",
+      "relation": "supports",
+      "title": "Hybrid working from home improves retention without damaging performance.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38867040/",
+      "domain": "pubmed.ncbi.nlm.nih.gov",
+      "source": "pubmed"
+     }
+    ],
+    "note": "Trip.com RCT passages report null effects on performance grades and lines of code. The blog passage states the claim directly but is secondary.",
+    "independent_sources": 3
+   },
+   {
+    "cid": "c5",
+    "text": "A field experiment on discretionary remote work found that about two remote days per week was preferred.",
+    "cited_pids": [
+     "ef88116f982d#0"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "ef88116f982d#0",
+      "relation": "supports",
+      "title": "Discretionary Remote Working Helps Mothers Without Harming Non-mothers: Evidence from a Field Experiment",
+      "url": "https://doi.org/10.1287/mnsc.2018.3237",
+      "domain": "doi.org/10.1287",
+      "source": "openalex"
+     }
+    ],
+    "note": "First passage reports a randomized field experiment with 187 participants revealing a preference for about two remote working days per week, matching the claim.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c6",
+    "text": "The field experiment found that discretionary remote work helped mothers without harming non-mothers.",
+    "cited_pids": [
+     "ef88116f982d#0"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "ef88116f982d#0",
+      "relation": "supports",
+      "title": "Discretionary Remote Working Helps Mothers Without Harming Non-mothers: Evidence from a Field Experiment",
+      "url": "https://doi.org/10.1287/mnsc.2018.3237",
+      "domain": "doi.org/10.1287",
+      "source": "openalex"
+     },
+     {
+      "pid": "ef88116f982d#1",
+      "relation": "supports",
+      "title": "Discretionary Remote Working Helps Mothers Without Harming Non-mothers: Evidence from a Field Experiment",
+      "url": "https://doi.org/10.1287/mnsc.2018.3237",
+      "domain": "doi.org/10.1287",
+      "source": "openalex"
+     }
+    ],
+    "note": "The first paper reports mothers benefited (reduced family-work conflict, greater performance gains) and no significant differences in uptake versus non-mothers; the claim of no harm to non-mothers is inferred from this, not stated directly.",
+    "independent_sources": 1
+   },
+   {
+    "cid": "c7",
+    "text": "A study of full-time remote work (five days a week) reported an association with reduced work productivity.",
+    "cited_pids": [
+     "abefd158b9c2#2"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "abefd158b9c2#2",
+      "relation": "supports",
+      "title": "Remote Work Decreases Psychological and Physical Stress Responses, but Full-Remote Work Increases Presenteeism",
+      "url": "https://doi.org/10.3389/fpsyg.2021.730969",
+      "domain": "doi.org/10.3389",
+      "source": "openalex"
+     },
+     {
+      "pid": "29431675589b#4",
+      "relation": "supports",
+      "title": "Hybrid working from home improves retention without damaging ... - Nature",
+      "url": "https://www.nature.com/articles/s41586-024-07500-2",
+      "domain": "nature.com",
+      "source": "web"
+     }
+    ],
+    "note": "First passage directly states 5-day remote work was associated with reduced work productivity; Nature passage says fully remote effects are often negative, corroborating.",
+    "independent_sources": 2
+   },
+   {
+    "cid": "c8",
+    "text": "A study of full-time remote work (five days a week) reported an association with higher presenteeism.",
+    "cited_pids": [
+     "abefd158b9c2#2"
+    ],
+    "verdict": "supported",
+    "evidence": [
+     {
+      "pid": "abefd158b9c2#2",
+      "relation": "supports",
+      "title": "Remote Work Decreases Psychological and Physical Stress Responses, but Full-Remote Work Increases Presenteeism",
+      "url": "https://doi.org/10.3389/fpsyg.2021.730969",
+      "domain": "doi.org/10.3389",
+      "source": "openalex"
+     }
+    ],
+    "note": "The first passage states that five-day-a-week full-remote work was associated with reduced productivity and that full-remote work risks worsening presenteeism, directly backing the claim.",
+    "independent_sources": 1
+   }
+  ],
+  "scores": {
+   "claims_checked": 8,
+   "evidence_support_score": 100.0,
+   "multi_source_share": 25.0,
+   "contradicted_share": 0.0,
+   "unverified_share": 0.0,
+   "mixed_share": 0.0,
+   "citation_faithfulness": 100.0,
+   "distinct_domains": 6,
+   "stated_confidence": 60,
+   "calibration_gap": -40.0
+  },
+  "grade": "Partly supported",
+  "pool_size": 209
+ },
+ "usage": {
+  "calls": 14,
+  "cached_calls": 14,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_usd": 0.0
+ },
+ "seconds": 0.26,
+ "run_id": "does-remote-work-increase-productivity-standard-ccc4fc",
+ "saved_at": "2026-11-26T21:21:08"
+}

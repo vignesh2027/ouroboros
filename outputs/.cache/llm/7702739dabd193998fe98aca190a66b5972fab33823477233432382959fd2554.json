@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"8f7161b0be98#5\",\"relation\":\"supports\"},{\"pid\":\"8f7161b0be98#3\",\"relation\":\"supports\"}],\"note\":\"The trial found significantly lower radial BMD with high-dose vitamin D, and no significant differences in radius or tibia bone strength.\"}", "tag": "audit_verify", "input_tokens": 1919, "output_tokens": 116}

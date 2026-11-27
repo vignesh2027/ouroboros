@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"vitamin_d#4\",\"relation\":\"supports\"}],\"note\":\"Passage 4 states VITAL found no significant effect of vitamin D on cardiovascular events or cancer incidence, matching the claim. Other passages do not address this trial.\"}", "tag": "audit_verify", "input_tokens": 1153, "output_tokens": 102}

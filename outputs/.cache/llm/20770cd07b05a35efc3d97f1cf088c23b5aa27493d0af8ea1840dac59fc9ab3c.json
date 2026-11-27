@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"vitamin_d#7\",\"relation\":\"supports\"}],\"note\":\"Passage 7 states high dose supplementation is linked to hypercalcaemia and, in some trials, increased fall risk. Other passages do not address these points.\"}", "tag": "audit_verify", "input_tokens": 1149, "output_tokens": 96}

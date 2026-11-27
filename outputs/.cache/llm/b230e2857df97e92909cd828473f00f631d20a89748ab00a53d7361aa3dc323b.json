@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"nuclear#6\",\"relation\":\"supports\"}],\"note\":\"Passage 6 states no country has commissioned a permanent high-level waste repository at scale, leaving long-term disposal costs and liabilities unresolved, which backs the claim.\"}", "tag": "audit_verify", "input_tokens": 1103, "output_tokens": 101}

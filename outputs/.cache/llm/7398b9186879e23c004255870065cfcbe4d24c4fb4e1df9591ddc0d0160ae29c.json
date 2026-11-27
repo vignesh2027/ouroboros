@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"min_wage#6\",\"relation\":\"supports\"}],\"note\":\"Passage 6 states a meta-analysis finds employment effects clustered near zero and publication bias inflating apparent negative findings, matching the claim directly.\"}", "tag": "audit_verify", "input_tokens": 1103, "output_tokens": 94}

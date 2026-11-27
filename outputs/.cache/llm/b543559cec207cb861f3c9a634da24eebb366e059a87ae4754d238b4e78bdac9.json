@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"smoking#0\",\"relation\":\"supports\"}],\"note\":\"Passage smoking#0 directly states cohort studies show lung cancer incidence rising steeply with cumulative cigarette exposure in a dose response relationship.\"}", "tag": "audit_verify", "input_tokens": 1105, "output_tokens": 95}

@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"remote_work#1\",\"relation\":\"supports\"}],\"note\":\"Passage 1 states self-reported focus time rises substantially for roles built around individual deep work. Other passages address productivity and onboarding, not focus time.\"}", "tag": "audit_verify", "input_tokens": 1091, "output_tokens": 93}

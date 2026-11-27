@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"fbce4d7a6120#3\",\"relation\":\"supports\"}],\"note\":\"Passage states large trials of vitamin D-replete adults showed no benefit for bone density or risk of falls; other passages do not address the claim directly.\"}", "tag": "audit_verify", "input_tokens": 1746, "output_tokens": 96}

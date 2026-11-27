@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"nuclear#1\",\"relation\":\"supports\"}],\"note\":\"Passage nuclear#1 states nuclear gives firm output independent of weather, reducing storage needed for a decarbonised grid, matching the claim directly.\"}", "tag": "audit_verify", "input_tokens": 1120, "output_tokens": 95}

@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"9c98e4515e3d#0\",\"relation\":\"supports\"}],\"note\":\"Passage states the US Preventive Services Task Force recommends against vitamin D and calcium supplementation for fracture prevention in otherwise healthy postmenopausal women.\"}", "tag": "audit_verify", "input_tokens": 1639, "output_tokens": 105}

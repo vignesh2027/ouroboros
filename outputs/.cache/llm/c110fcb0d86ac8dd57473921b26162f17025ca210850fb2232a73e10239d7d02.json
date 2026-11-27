@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"f5eeafdf6fc3#1\",\"relation\":\"supports\"}],\"note\":\"Passage reports no significant BMI difference between IF and CCR (SMD 0.02, p=0.848). It does not explicitly name the review as systematic, though it is the meta-analysis described.\"}", "tag": "audit_verify", "input_tokens": 1500, "output_tokens": 114}

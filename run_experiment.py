@@ -140,8 +140,9 @@ def report(rows, bench):
     print(f"  Balance loss at hop 3, drift arm  : {_mean([r['balance_loss'] for r in d3]):.3f}")
     print(f"  Balance loss at hop 3, neutral arm: {_mean([r['balance_loss'] for r in n3]):.3f}")
 
-    onesided = sum(1 for r in d3 if r["oppose"] == 0)
-    onesided_n = sum(1 for r in n3 if r["oppose"] == 0)
+    # one-sided in either direction: no opposing passage, or no supporting one
+    onesided = sum(1 for r in d3 if r["oppose"] == 0 or r["support"] == 0)
+    onesided_n = sum(1 for r in n3 if r["oppose"] == 0 or r["support"] == 0)
     print(f"  Fully one-sided results at hop 3  : drift {onesided}/{len(d3)}, "
           f"neutral {onesided_n}/{len(n3)}")
 
@@ -156,8 +157,17 @@ def report(rows, bench):
     print("READING")
     print("  Same questions, same corpora, same retriever, same number of hops.")
     print("  Only the wording of the query differs between the two arms.")
-    print("  Evidence balance collapses in the drift arm and holds in the neutral arm,")
-    print("  so hop count is not the cause. The wording of the query is.")
+    # The conclusion is computed from the numbers above, never written in advance.
+    loss_d = _mean([r["balance_loss"] for r in d3])
+    loss_n = _mean([r["balance_loss"] for r in n3])
+    gap = loss_d - loss_n
+    if gap > 0.1:
+        print(f"  Balance loss at hop 3 is {gap:.3f} higher in the drift arm than in the")
+        print("  neutral arm, so the wording of the query, not hop count, moved the evidence.")
+    else:
+        print(f"  Balance loss at hop 3 differs by {gap:+.3f} between the arms (drift minus")
+        print("  neutral). The drift arm did not lose more balance than the neutral arm,")
+        print("  so this run does not show query wording collapsing evidence balance.")
     print(line)
 
 

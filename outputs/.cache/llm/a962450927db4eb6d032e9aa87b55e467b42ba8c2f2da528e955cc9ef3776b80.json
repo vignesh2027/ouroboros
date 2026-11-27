@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"6b0ccdbcf9aa#1\",\"relation\":\"supports\"}],\"note\":\"Arxiv passage 6b0ccdbcf9aa#1 reports no or only minor cost benefits to reinvesting in Swedish nuclear power after decommissioning, matching the claim.\"}", "tag": "audit_verify", "input_tokens": 1618, "output_tokens": 116}

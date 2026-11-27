@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"not_verified\",\"evidence\":[{\"pid\":\"vitamin_d#5\",\"relation\":\"supports\"}],\"note\":\"Passages discuss supplementation effects in non-deficient adults but never state that testing vitamin D status guides whether supplementation is worthwhile; the link is only implied.\"}", "tag": "audit_verify", "input_tokens": 1141, "output_tokens": 102}

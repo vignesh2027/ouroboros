@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"vaccines_measles#0\",\"relation\":\"supports\"}],\"note\":\"Passage 0 states two doses give approximately 97 percent protection against infection in controlled effectiveness studies, matching the claim. Other passages do not address this figure.\"}", "tag": "audit_verify", "input_tokens": 1134, "output_tokens": 100}

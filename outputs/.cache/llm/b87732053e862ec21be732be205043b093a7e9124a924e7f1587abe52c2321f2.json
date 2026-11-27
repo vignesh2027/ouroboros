@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"d5e2c7e6914b#1\",\"relation\":\"supports\"}],\"note\":\"The first passage states the annotated bibliography summarizes about 30 literature reviews on these neurotrophic interventions, matching the claim.\"}", "tag": "audit_verify", "input_tokens": 1731, "output_tokens": 94}

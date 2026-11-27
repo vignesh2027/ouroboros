@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"vitamin_d#5\",\"relation\":\"supports\"}],\"note\":\"Passage 5 states a Cochrane review found no reduction in all-cause mortality from vitamin D supplementation in adults not deficient at baseline, matching the claim directly.\"}", "tag": "audit_verify", "input_tokens": 1166, "output_tokens": 103}

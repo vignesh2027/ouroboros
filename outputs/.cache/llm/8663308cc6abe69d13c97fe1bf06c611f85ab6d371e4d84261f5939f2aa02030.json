@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"ev_cost#7\",\"relation\":\"supports\"}],\"note\":\"Passage ev_cost#7 states that without home charging, rapid charging cost per kWh approaches petrol equivalence, eroding the running cost advantage. Other passages do not contradict this.\"}", "tag": "audit_verify", "input_tokens": 1149, "output_tokens": 107}

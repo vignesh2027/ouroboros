@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"nuclear#6\",\"relation\":\"supports\"}],\"note\":\"Passage nuclear#6 states that no country has yet commissioned a permanent high level waste repository at scale, directly matching the claim.\"}", "tag": "audit_verify", "input_tokens": 1110, "output_tokens": 87}

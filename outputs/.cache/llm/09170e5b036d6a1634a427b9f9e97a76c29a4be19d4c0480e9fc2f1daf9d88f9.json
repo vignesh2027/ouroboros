@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"29552994a8fa#0\",\"relation\":\"supports\"}],\"note\":\"The medium.com passage states that true polymorphism in Java exists only through method overriding, not overloading, matching the claim.\"}", "tag": "audit_verify", "input_tokens": 1439, "output_tokens": 85}

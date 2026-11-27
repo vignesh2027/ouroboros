@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"44e3472ec92d#6\",\"relation\":\"supports\"}],\"note\":\"Harvard Nutrition Source summary states no significant difference in weight loss or body composition between intermittent fasting and continuous calorie restriction across 12 trials.\"}", "tag": "audit_verify", "input_tokens": 1790, "output_tokens": 101}

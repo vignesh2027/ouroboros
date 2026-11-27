@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"804053d3931c#0\",\"relation\":\"supports\"}],\"note\":\"The nuclear coupling passage mentions only generic benefits and obstacles, with no lifecycle emissions, cost, or safety evidence. Other passages concern software, satellites, and I/O devices.\"}", "tag": "audit_verify", "input_tokens": 3640, "output_tokens": 1561}

@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"smoking#4\",\"relation\":\"supports\"}],\"note\":\"Passage smoking#4 directly states case control studies across many countries and decades report consistent and large effect sizes linking smoking to lung cancer, matching the claim.\"}", "tag": "audit_verify", "input_tokens": 1098, "output_tokens": 95}

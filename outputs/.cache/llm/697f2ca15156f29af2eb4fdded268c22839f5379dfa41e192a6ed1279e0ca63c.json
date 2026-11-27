@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"5c86224028e3#0\",\"relation\":\"supports\"}],\"note\":\"The tuberculosis passage concerns a randomized TB treatment trial and does not mention fasting, matching the claim.\"}", "tag": "audit_verify", "input_tokens": 1989, "output_tokens": 191}
