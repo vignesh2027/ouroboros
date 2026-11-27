@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<PubmedArticleSet>
+<PubmedArticle><MedlineCitation><PMID Version="1">12345</PMID>
+<Article><Journal><JournalIssue><PubDate><Year>2019</Year></PubDate></JournalIssue><Title>Obesity Journal</Title></Journal>
+<ArticleTitle>Intermittent fasting and <i>weight</i> loss: a trial.</ArticleTitle>
+<Abstract><AbstractText Label="BACKGROUND">Fasting is popular.</AbstractText><AbstractText Label="RESULTS">Weight fell by 3 kg &amp; fat mass dropped.</AbstractText></Abstract>
+<AuthorList><Author><LastName>Smith</LastName><ForeName>Jo</ForeName></Author></AuthorList></Article></MedlineCitation></PubmedArticle>
+<PubmedArticle><MedlineCitation><PMID>999</PMID><Article><Journal><JournalIssue><PubDate><MedlineDate>2011 Jan-Feb</MedlineDate></PubDate></JournalIssue></Journal><ArticleTitle>No abstract here</ArticleTitle></Article></MedlineCitation></PubmedArticle>
+</PubmedArticleSet>
