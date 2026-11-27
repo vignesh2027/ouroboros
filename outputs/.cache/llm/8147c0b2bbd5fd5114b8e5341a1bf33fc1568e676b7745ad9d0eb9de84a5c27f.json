@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"d658dc380b73#6\",\"relation\":\"supports\"}],\"note\":\"Passage d658dc380b73#6 states a 2023 Bloom-coauthored paper found fully remote work reduced output by 10-20% for some roles, especially collaboration-heavy or newly hired workers.\"}", "tag": "audit_verify", "input_tokens": 1904, "output_tokens": 116}

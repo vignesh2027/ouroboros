@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"fasting#7\",\"relation\":\"supports\"}],\"note\":\"Passage 7 states benefits from short trials largely disappear once total energy intake is controlled. Other passages do not address this directly.\"}", "tag": "audit_verify", "input_tokens": 1095, "output_tokens": 84}

@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"remote_work#2\",\"relation\":\"supports\"}],\"note\":\"Passage 2 states attrition falls under flexible remote policies. Other passages cover onboarding, collaboration and productivity, not attrition, so they are not counted.\"}", "tag": "audit_verify", "input_tokens": 1098, "output_tokens": 97}

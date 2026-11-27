@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"504dd1c8446c#0\",\"relation\":\"supports\"}],\"note\":\"Mayo Clinic passage states 600 IU for people ages 1 to 70 years, matching the claim exactly.\"}", "tag": "audit_verify", "input_tokens": 1523, "output_tokens": 86}

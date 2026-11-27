@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"e21d56f2e070#2\",\"relation\":\"supports\"},{\"pid\":\"f781c705b786#3\",\"relation\":\"supports\"}],\"note\":\"The systematic review states the studies have been small and of short duration, and that longer-term research is needed.\"}", "tag": "audit_verify", "input_tokens": 1732, "output_tokens": 100}

@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"smoking#1\",\"relation\":\"supports\"}],\"note\":\"Passage 1 directly states tobacco smoke carcinogens form DNA adducts in bronchial epithelium. Passages 6 and 7 concern lung cancer causation generally and do not address the claim.\"}", "tag": "audit_verify", "input_tokens": 1010, "output_tokens": 110}

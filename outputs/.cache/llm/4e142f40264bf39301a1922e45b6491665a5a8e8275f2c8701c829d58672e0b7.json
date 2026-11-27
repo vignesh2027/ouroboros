@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"06384d0fb532#2\",\"relation\":\"supports\"}],\"note\":\"First passage states the average nuclear plant construction cost overrun is 102.5%. Other passages discuss overruns generally without giving a figure.\"}", "tag": "audit_verify", "input_tokens": 1771, "output_tokens": 92}

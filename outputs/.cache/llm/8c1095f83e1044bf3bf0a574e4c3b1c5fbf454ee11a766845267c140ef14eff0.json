@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"remote_work#0\",\"relation\":\"supports\"}],\"note\":\"Passage 0 states the 13 percent call completion gain among remote staff was attributed to a quieter environment and fewer breaks, matching the claim directly.\"}", "tag": "audit_verify", "input_tokens": 1110, "output_tokens": 94}

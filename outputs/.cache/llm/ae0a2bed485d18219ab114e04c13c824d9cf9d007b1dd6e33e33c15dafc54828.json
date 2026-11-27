@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"0ad353ba1b7a#2\",\"relation\":\"supports\"},{\"pid\":\"76edb6246d21#5\",\"relation\":\"supports\"}],\"note\":\"Passages describe a meta-analysis and a call for larger robust trials, indicating limited evidence base for older adults' memory benefit.\"}", "tag": "audit_verify", "input_tokens": 1892, "output_tokens": 117}

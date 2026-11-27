@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"504dd1c8446c#0\",\"relation\":\"supports\"}],\"note\":\"Mayo Clinic page states 800 IU recommended daily for people over 70 years, matching the claim.\"}", "tag": "audit_verify", "input_tokens": 1518, "output_tokens": 82}

@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"vitamin_d#1\",\"relation\":\"supports\"}],\"note\":\"Passage 1 states a meta-analysis reports a modest benefit in older adults when vitamin D is combined with calcium, matching the claim directly.\"}", "tag": "audit_verify", "input_tokens": 1148, "output_tokens": 94}

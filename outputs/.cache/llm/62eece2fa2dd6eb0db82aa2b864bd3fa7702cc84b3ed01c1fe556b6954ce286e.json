@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"0b67acc0837f#0\",\"relation\":\"supports\"}],\"note\":\"Passage 0b67acc0837f#0 states the efficacy and safety of vitamin D for fracture prevention in elderly healthy individuals is still unclear, matching the claim.\"}", "tag": "audit_verify", "input_tokens": 1655, "output_tokens": 107}

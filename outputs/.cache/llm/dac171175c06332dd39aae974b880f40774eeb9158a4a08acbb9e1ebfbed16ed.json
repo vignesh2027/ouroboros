@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"f3c7338ed619#1\",\"relation\":\"supports\"}],\"note\":\"Passage #1 states a nearly 100% variable renewable system with long-term storage and no new nuclear is the most cost-effective design, matching the claim.\"}", "tag": "audit_verify", "input_tokens": 1605, "output_tokens": 97}

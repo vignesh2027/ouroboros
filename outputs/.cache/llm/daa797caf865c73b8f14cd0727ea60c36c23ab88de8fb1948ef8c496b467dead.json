@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"remote_work#1\",\"relation\":\"supports\"}],\"note\":\"Passage 1 states eliminating commuting returns usable hours to the working day. Other passages address productivity, siloing and attrition, not commuting-freed hours directly.\"}", "tag": "audit_verify", "input_tokens": 1089, "output_tokens": 98}

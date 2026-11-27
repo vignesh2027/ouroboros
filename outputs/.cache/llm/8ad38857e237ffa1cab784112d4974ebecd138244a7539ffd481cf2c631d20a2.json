@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"vaccines_measles#4\",\"relation\":\"supports\"}],\"note\":\"Passage 4 states regions with sustained high coverage have interrupted endemic transmission entirely. Other passages concern mortality, incidence and resurgence, not this specific claim.\"}", "tag": "audit_verify", "input_tokens": 1112, "output_tokens": 105}

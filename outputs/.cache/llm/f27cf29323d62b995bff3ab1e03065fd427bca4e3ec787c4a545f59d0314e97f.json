@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"e5aee0e45fc5#1\",\"relation\":\"supports\"}],\"note\":\"Passage e5aee0e45fc5#1 reports comparable weight loss with WMD -0.61 kg (95% CI -1.70 to 0.47; p=0.87), i.e. non-significant, matching the claim.\"}", "tag": "audit_verify", "input_tokens": 2167, "output_tokens": 123}

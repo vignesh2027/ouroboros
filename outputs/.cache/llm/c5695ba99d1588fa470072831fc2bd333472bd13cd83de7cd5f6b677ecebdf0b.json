@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"d658dc380b73#5\",\"relation\":\"supports\"}],\"note\":\"Passage says across its 50+ studies the median productivity impact is -4% for collaborative tasks, matching the claim. It is a web source, not a peer-reviewed review.\"}", "tag": "audit_verify", "input_tokens": 1839, "output_tokens": 102}

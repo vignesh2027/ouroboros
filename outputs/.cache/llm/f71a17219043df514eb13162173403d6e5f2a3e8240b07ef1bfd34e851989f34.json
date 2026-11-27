@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"abefd158b9c2#2\",\"relation\":\"supports\"}],\"note\":\"Passage states full-remote work (5 days a week) has risk of worsening presenteeism, matching the claim; it is a review, not explicitly a single study.\"}", "tag": "audit_verify", "input_tokens": 1723, "output_tokens": 97}

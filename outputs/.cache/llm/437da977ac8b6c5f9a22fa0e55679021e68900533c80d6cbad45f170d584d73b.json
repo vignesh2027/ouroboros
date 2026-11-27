@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"vaccines_measles#2\",\"relation\":\"supports\"}],\"note\":\"Passage 2 states outbreak investigations consistently find attack rates concentrated among unvaccinated individuals, directly backing the claim.\"}", "tag": "audit_verify", "input_tokens": 1109, "output_tokens": 92}

@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"0dafa2c8c11c#3\",\"relation\":\"supports\"}],\"note\":\"The Finnish Vitamin D Trial conclusions state vitamin D3 did not lower incidence of major CVD events or invasive cancer among older adults.\"}", "tag": "audit_verify", "input_tokens": 1878, "output_tokens": 101}

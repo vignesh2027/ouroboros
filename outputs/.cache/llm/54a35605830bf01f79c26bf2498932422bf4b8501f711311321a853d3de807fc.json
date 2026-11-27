@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"3ed11781c282#1\",\"relation\":\"supports\"}],\"note\":\"Passage 3ed11781c282#1 states that corrected estimates, after accounting for publication bias, generally approach zero, directly matching the claim.\"}", "tag": "audit_verify", "input_tokens": 2018, "output_tokens": 95}

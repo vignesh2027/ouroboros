@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"fasting#5\",\"relation\":\"supports\"}],\"note\":\"Passage fasting#5 states a randomised time-restricted eating trial reported greater lean mass loss in the fasting arm, matching the claim.\"}", "tag": "audit_verify", "input_tokens": 1084, "output_tokens": 90}

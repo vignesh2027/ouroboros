@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"ev_cost#5\",\"relation\":\"supports\"}],\"note\":\"Passage 5 states depreciation on older electric models has been steeper than on comparable petrol cars, directly backing the claim. No passage contradicts it.\"}", "tag": "audit_verify", "input_tokens": 1110, "output_tokens": 94}

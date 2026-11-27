@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"min_wage#1\",\"relation\":\"supports\"}],\"note\":\"Passage 1 states studies of large local increases report reduced scheduled hours for low-wage workers. No other passage addresses hours.\"}", "tag": "audit_verify", "input_tokens": 1108, "output_tokens": 86}

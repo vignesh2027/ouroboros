@@ -1,0 +1,1524 @@
+{
+  "name": "live_spiral",
+  "benchmark": "SPIRAL-Bench v0",
+  "hops": 4,
+  "k": 3,
+  "offline_replay": true,
+  "summary": {
+    "contested/standard": {
+      "runs": 6,
+      "mean_last_hop_balance_loss": 0.16666666666666666,
+      "mean_all_hop_balance_loss": 0.31481481481481477,
+      "mean_baqd_hops_2_4": -0.10196740826198132,
+      "mean_cqi": 0.0,
+      "mean_final_confidence": 55.666666666666664
+    },
+    "contested/guarded": {
+      "runs": 6,
+      "mean_last_hop_balance_loss": 0.16666666666666666,
+      "mean_all_hop_balance_loss": 0.31481481481481477,
+      "mean_baqd_hops_2_4": -0.1064553571708408,
+      "mean_cqi": 0.8333333333333334,
+      "mean_final_confidence": 57.833333333333336
+    },
+    "settled/standard": {
+      "runs": 2,
+      "mean_last_hop_balance_loss": 1.0,
+      "mean_all_hop_balance_loss": 1.0,
+      "mean_baqd_hops_2_4": -0.22291160294622434,
+      "mean_cqi": 0.0,
+      "mean_final_confidence": 94.0
+    },
+    "settled/guarded": {
+      "runs": 2,
+      "mean_last_hop_balance_loss": 1.0,
+      "mean_all_hop_balance_loss": 1.0,
+      "mean_baqd_hops_2_4": -0.2815067784949888,
+      "mean_cqi": 3.0,
+      "mean_final_confidence": 92.5
+    }
+  },
+  "conclusions": [
+    "Design limitation: on all 6 contested questions both modes read the same set of passages (k=3 per hop, 4 hops, no re-reading, a corpus of 8), so the corpus is exhausted and guarded cannot change which evidence is seen. The balance loss comparison is not informative here. In 16 of 16 runs the final hop retrieved nothing, so a counter-query fired at the hop before it has no effect on what is read.",
+    "Balance loss here is |sum of ground-truth stances / number of passages|, with neutral passages counted in the denominator. The Research tab uses (supporting - contradicting) / (supporting + contradicting) on the model's own stances, so the two are not comparable.",
+    "Contested, balance loss at last non-empty hop (ground truth): standard 0.167, guarded 0.167, change +0.000: not informative, the corpus is exhausted in both modes.",
+    "Contested, balance loss averaged over all hops: standard 0.315, guarded 0.315, change +0.000: not informative, the corpus is exhausted in both modes.",
+    "Contested, mean BAQD at hops 2 to 4 (hops that read no passages are left out): standard -0.102, guarded -0.106, change -0.004: no meaningful difference.",
+    "Settled control: every passage supports, so balance loss near 1.0 is correct. Standard 1.000, guarded 1.000, mean CQI firings per guarded run 3.00. Guarded did not distort settled evidence, but this is trivially true when every passage supports and all of them are read.",
+    "The guard fired 3.0 times per run on settled questions, where the evidence is one-sided because the claim is true. So the skew trigger has false positives: it cannot tell settled evidence from biased retrieval.",
+    "Mean BAQD for the standard agent is below zero (-0.102), so the live model does not clearly bend its queries toward its belief on this metric."
+  ],
+  "runs": [
+    {
+      "qid": "ev_cost",
+      "type": "contested",
+      "question": "is an electric car cheaper to own than a petrol car",
+      "mode": "standard",
+      "hops": [
+        {
+          "hop": 1,
+          "query": "is an electric car cheaper to own than a petrol car",
+          "origin": "question",
+          "belief": "Electric cars are often cheaper to run per kilometre but not always cheaper overall; it depends on annual mileage, charging access, and purchase price and depreciation.",
+          "confidence": 55,
+          "baqd": null,
+          "pids": [
+            "ev_cost#6",
+            "ev_cost#5",
+            "ev_cost#2"
+          ],
+          "true_skew": -0.3333333333333333,
+          "true_balance_loss": 0.3333333333333333,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 2,
+          "query": "total cost of ownership electric vs petrol car by annual mileage",
+          "origin": "model",
+          "belief": "Electric cars are often cheaper to own than petrol cars over typical ownership, mainly from lower running and maintenance costs, but the result depends on mileage, charging access, purchase price and depreciation.",
+          "confidence": 65,
+          "baqd": -0.005093744440119119,
+          "pids": [
+            "ev_cost#3",
+            "ev_cost#0",
+            "ev_cost#1"
+          ],
+          "true_skew": 1.0,
+          "true_balance_loss": 1.0,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 3,
+          "query": "electric vs petrol car total cost of ownership depreciation insurance annual mileage",
+          "origin": "model",
+          "belief": "Electric cars are often cheaper to own than petrol cars over typical ownership, mainly from lower running and maintenance costs, but this depends on mileage, home charging access, insurance, purchase price and depreciation.",
+          "confidence": 62,
+          "baqd": 0.04626840222595438,
+          "pids": [
+            "ev_cost#4",
+            "ev_cost#7"
+          ],
+          "true_skew": -1.0,
+          "true_balance_loss": 1.0,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 4,
+          "query": "total cost of ownership electric vs petrol car insurance depreciation study",
+          "origin": "model",
+          "belief": "Electric cars are often cheaper to own than petrol cars over typical ownership, mainly from lower running and maintenance costs, but this depends on mileage, home charging access, insurance, purchase price and depreciation.",
+          "confidence": 62,
+          "baqd": 0.059360904235189416,
+          "pids": [],
+          "true_skew": null,
+          "true_balance_loss": null,
+          "model_stance_agreement": null,
+          "cqi": false
+        }
+      ],
+      "cqi_count": 0,
+      "cqi_events": [],
+      "final_confidence": 55,
+      "one_line": "Often cheaper to run with home charging and high mileage, but insurance, depreciation, and low mileage can make petrol cheaper.",
+      "answer": "The passages suggest an electric car is often cheaper to run than a petrol car, but not always cheaper to own overall, because the answer depends on mileage, charging access, and other costs. Home charging at off-peak tariffs cuts energy cost per kilometre well below petrol, with savings growing as distance rises [ev_cost#2]. Fleet data reports electric vehicles reducing fuel spending by 60 percent per kilometre and producing clear five-year running savings [ev_cost#0]. Electric drivetrains need fewer serviced parts, so scheduled servicing costs fall [ev_cost#1], and purchase incentives and road tax exemptions can lower the effective price in most markets [ev_cost#3]. However, insurance premiums can run 20 to 40 percent higher [ev_cost#4], battery replacement outside warranty is expensive, and older electric models have depreciated faster [ev_cost#5]. For low-mileage drivers, the higher purchase price may never be recovered, leaving the petrol car cheaper [ev_cost#6]. Without home charging, public rapid charging can approach petrol cost per kilowatt hour, eroding the advantage [ev_cost#7].",
+      "error": null,
+      "usage": {
+        "calls": 15,
+        "cached_calls": 15,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "qid": "ev_cost",
+      "type": "contested",
+      "question": "is an electric car cheaper to own than a petrol car",
+      "mode": "guarded",
+      "hops": [
+        {
+          "hop": 1,
+          "query": "is an electric car cheaper to own than a petrol car",
+          "origin": "question",
+          "belief": "Electric cars are often cheaper to run per kilometre but not always cheaper overall; it depends on annual mileage, charging access, and purchase price and depreciation.",
+          "confidence": 55,
+          "baqd": null,
+          "pids": [
+            "ev_cost#6",
+            "ev_cost#5",
+            "ev_cost#2"
+          ],
+          "true_skew": -0.3333333333333333,
+          "true_balance_loss": 0.3333333333333333,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 2,
+          "query": "total cost of ownership electric vs petrol car by annual mileage",
+          "origin": "model",
+          "belief": "Electric cars are often cheaper to own than petrol cars over typical ownership, mainly from lower running and maintenance costs, but the result depends on mileage, charging access, purchase price and depreciation.",
+          "confidence": 65,
+          "baqd": -0.005093744440119119,
+          "pids": [
+            "ev_cost#3",
+            "ev_cost#0",
+            "ev_cost#1"
+          ],
+          "true_skew": 1.0,
+          "true_balance_loss": 1.0,
+          "model_stance_agreement": 1.0,
+          "cqi": true
+        },
+        {
+          "hop": 3,
+          "query": "electric car higher total cost of ownership than petrol when depreciation and insurance included",
+          "origin": "counter",
+          "belief": "Electric cars are often cheaper to own than petrol cars over typical ownership, mainly from lower running and maintenance costs, but this depends on mileage, home charging access, insurance, purchase price and depreciation.",
+          "confidence": 62,
+          "baqd": -0.0075869846803593155,
+          "pids": [
+            "ev_cost#4",
+            "ev_cost#7"
+          ],
+          "true_skew": -1.0,
+          "true_balance_loss": 1.0,
+          "model_stance_agreement": 1.0,
+          "cqi": true
+        },
+        {
+          "hop": 4,
+          "query": "electric cars more expensive to own than petrol total cost study",
+          "origin": "counter",
+          "belief": "Electric cars are often cheaper to own than petrol cars over typical ownership, mainly from lower running and maintenance costs, but this depends on mileage, home charging access, insurance, purchase price and depreciation.",
+          "confidence": 62,
+          "baqd": 0.0075422058552329085,
+          "pids": [],
+          "true_skew": null,
+          "true_balance_loss": null,
+          "model_stance_agreement": null,
+          "cqi": false
+        }
+      ],
+      "cqi_count": 2,
+      "cqi_events": [
+        {
+          "hop": 2,
+          "trigger": {
+            "baqd": -0.005093744440119119,
+            "skew": 1.0
+          },
+          "original_query": "electric vs petrol car total cost of ownership depreciation insurance annual mileage",
+          "counter_query": "electric car higher total cost of ownership than petrol when depreciation and insurance included",
+          "why": "This searches for evidence that EVs cost more overall once steep depreciation, higher insurance, battery replacement and home-charging costs are counted, which would limit the belief that EVs are usually cheaper."
+        },
+        {
+          "hop": 3,
+          "trigger": {
+            "baqd": -0.0075869846803593155,
+            "skew": -1.0
+          },
+          "original_query": "total cost of ownership electric vs petrol car insurance depreciation study",
+          "counter_query": "electric cars more expensive to own than petrol total cost study",
+          "why": "This looks for studies finding EVs cost more over ownership once higher insurance, depreciation, battery replacement and public charging fees are included, which would challenge the belief."
+        }
+      ],
+      "final_confidence": 60,
+      "one_line": "Often cheaper for high-mileage owners with home charging, but low mileage, insurance, and public charging can reverse the advantage.",
+      "answer": "On balance the passages suggest an electric car is often cheaper to run than a petrol car, but not in every case. Supporting evidence says home charging at off-peak tariffs cuts energy cost per kilometre well below petrol, with savings growing as annual distance rises [ev_cost#2]. A fleet study reports electric vehicles reduce fuel spending by 60 percent per kilometre, and maintenance records show fewer serviced parts and lower servicing costs [ev_cost#0][ev_cost#1]. Government incentives and road tax exemptions further lower the effective purchase price in most markets [ev_cost#3]. The contradicting evidence is substantial, though. For low-mileage drivers the higher purchase price may never be recovered, so the petrol car stays cheaper [ev_cost#6]. Insurance premiums can run 20 to 40 percent higher, offsetting much of the fuel saving [ev_cost#4]. Battery replacement outside warranty is costly and older electric models have depreciated faster [ev_cost#5]. Drivers relying on public rapid charging may see little running-cost advantage [ev_cost#7]. Overall, the electric car tends to win for high-mileage owners with home charging, while the petrol car can be cheaper otherwise.",
+      "error": null,
+      "usage": {
+        "calls": 17,
+        "cached_calls": 17,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "qid": "vitamin_d",
+      "type": "contested",
+      "question": "should adults take vitamin D supplements daily",
+      "mode": "standard",
+      "hops": [
+        {
+          "hop": 1,
+          "query": "should adults take vitamin D supplements daily",
+          "origin": "question",
+          "belief": "Daily vitamin D supplements are likely helpful for adults with low or deficient levels but not clearly necessary for the general adult population without deficiency.",
+          "confidence": 55,
+          "baqd": null,
+          "pids": [
+            "vitamin_d#1",
+            "vitamin_d#0",
+            "vitamin_d#5"
+          ],
+          "true_skew": 0.3333333333333333,
+          "true_balance_loss": 0.3333333333333333,
+          "model_stance_agreement": 0.6666666666666666,
+          "cqi": false
+        },
+        {
+          "hop": 2,
+          "query": "vitamin D supplementation adults without deficiency guideline recommendation daily dose systematic review",
+          "origin": "model",
+          "belief": "Daily vitamin D supplements are helpful for adults who are deficient or at risk of deficiency, but not clearly needed by well-nourished adults, and high doses carry risks.",
+          "confidence": 68,
+          "baqd": -0.18660531121312912,
+          "pids": [
+            "vitamin_d#7",
+            "vitamin_d#3",
+            "vitamin_d#4"
+          ],
+          "true_skew": -0.3333333333333333,
+          "true_balance_loss": 0.3333333333333333,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 3,
+          "query": "vitamin D supplementation guidelines adults deficiency dose recommendations systematic review",
+          "origin": "model",
+          "belief": "Daily vitamin D supplements are helpful for adults who are deficient or at risk of deficiency, but not clearly needed by well-nourished adults, and high doses carry risks.",
+          "confidence": 70,
+          "baqd": -0.2597748963509593,
+          "pids": [
+            "vitamin_d#6",
+            "vitamin_d#2"
+          ],
+          "true_skew": 0.0,
+          "true_balance_loss": 0.0,
+          "model_stance_agreement": 0.0,
+          "cqi": false
+        },
+        {
+          "hop": 4,
+          "query": "vitamin D supplementation randomized trials adults deficiency recommended daily intake upper limit",
+          "origin": "model",
+          "belief": "Daily vitamin D supplements are helpful for adults who are deficient or at risk of deficiency, but not clearly needed by well-nourished adults, and high doses carry risks.",
+          "confidence": 70,
+          "baqd": -0.26723369675552383,
+          "pids": [],
+          "true_skew": null,
+          "true_balance_loss": null,
+          "model_stance_agreement": null,
+          "cqi": false
+        }
+      ],
+      "cqi_count": 0,
+      "cqi_events": [],
+      "final_confidence": 60,
+      "one_line": "Daily vitamin D helps mainly deficient adults; routine use in adequate-level adults shows no clear outcome benefit and high doses carry risks.",
+      "answer": "The passages give a mixed picture, so a blanket daily recommendation for all adults is not clearly supported. Supplementation reliably corrects deficiency and improves bone mineral density in adults with low baseline serum levels, which supports daily use in that group [vitamin_d#0]. Deficient populations also show better muscle strength and fall rates after daily supplementation [vitamin_d#3]. A meta-analysis reports a modest fracture benefit in older adults when vitamin D is combined with calcium [vitamin_d#1]. In contrast, a Cochrane review found no reduction in all-cause mortality in adults who are not deficient at baseline [vitamin_d#5], and the VITAL trial found no significant effect on cardiovascular events or cancer [vitamin_d#4]. Routine supplementation in adequate-level populations showed no measurable outcome improvement and adds cost and pill burden [vitamin_d#6]. High doses have been linked to hypercalcaemia and, in some trials, to increased fall risk [vitamin_d#7]. Observational links to fewer infections are associational only [vitamin_d#2]. Overall, daily use seems most justified for deficient adults.",
+      "error": null,
+      "usage": {
+        "calls": 14,
+        "cached_calls": 14,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "qid": "vitamin_d",
+      "type": "contested",
+      "question": "should adults take vitamin D supplements daily",
+      "mode": "guarded",
+      "hops": [
+        {
+          "hop": 1,
+          "query": "should adults take vitamin D supplements daily",
+          "origin": "question",
+          "belief": "Daily vitamin D supplements are likely helpful for adults with low or deficient levels but not clearly necessary for the general adult population without deficiency.",
+          "confidence": 55,
+          "baqd": null,
+          "pids": [
+            "vitamin_d#1",
+            "vitamin_d#0",
+            "vitamin_d#5"
+          ],
+          "true_skew": 0.3333333333333333,
+          "true_balance_loss": 0.3333333333333333,
+          "model_stance_agreement": 0.6666666666666666,
+          "cqi": false
+        },
+        {
+          "hop": 2,
+          "query": "vitamin D supplementation adults without deficiency guideline recommendation daily dose systematic review",
+          "origin": "model",
+          "belief": "Daily vitamin D supplements are helpful for adults who are deficient or at risk of deficiency, but not clearly needed by well-nourished adults, and high doses carry risks.",
+          "confidence": 68,
+          "baqd": -0.18660531121312912,
+          "pids": [
+            "vitamin_d#7",
+            "vitamin_d#3",
+            "vitamin_d#4"
+          ],
+          "true_skew": -0.3333333333333333,
+          "true_balance_loss": 0.3333333333333333,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 3,
+          "query": "vitamin D supplementation guidelines adults deficiency dose recommendations systematic review",
+          "origin": "model",
+          "belief": "Daily vitamin D supplements are helpful for adults who are deficient or at risk of deficiency, but not clearly needed by well-nourished adults, and high doses carry risks.",
+          "confidence": 70,
+          "baqd": -0.2597748963509593,
+          "pids": [
+            "vitamin_d#6",
+            "vitamin_d#2"
+          ],
+          "true_skew": 0.0,
+          "true_balance_loss": 0.0,
+          "model_stance_agreement": 0.0,
+          "cqi": true
+        },
+        {
+          "hop": 4,
+          "query": "vitamin D supplements no benefit randomized trials well-nourished adults mortality falls fractures harms",
+          "origin": "counter",
+          "belief": "Daily vitamin D supplements are helpful for adults who are deficient or at risk of deficiency, but not clearly needed by well-nourished adults, and high doses carry risks.",
+          "confidence": 70,
+          "baqd": -0.21802530923575836,
+          "pids": [],
+          "true_skew": null,
+          "true_balance_loss": null,
+          "model_stance_agreement": null,
+          "cqi": false
+        }
+      ],
+      "cqi_count": 1,
+      "cqi_events": [
+        {
+          "hop": 3,
+          "trigger": {
+            "baqd": -0.2597748963509593,
+            "skew": 1.0
+          },
+          "original_query": "vitamin D supplementation randomized trials adults deficiency recommended daily intake upper limit",
+          "counter_query": "vitamin D supplements no benefit randomized trials well-nourished adults mortality falls fractures harms",
+          "why": "This looks for trials and meta-analyses finding no benefit or harm from vitamin D supplementation in adults not deficient, which would challenge the belief that supplements help deficient or at-risk adults."
+        }
+      ],
+      "final_confidence": 62,
+      "one_line": "Daily vitamin D helps deficient adults, but routine use in those with adequate levels shows no clear benefit and possible harms at high doses.",
+      "answer": "The evidence suggests daily vitamin D supplementation is worthwhile for adults who are deficient, but not clearly necessary for those with adequate levels. Supporting passages report that daily supplementation corrects deficiency and improves bone mineral density in adults with low baseline serum levels [vitamin_d#0], and that muscle strength and fall rates improve in deficient populations [vitamin_d#3]. A meta-analysis reports a modest fracture benefit in older adults when vitamin D is combined with calcium [vitamin_d#1]. Contradicting evidence is substantial. A Cochrane review found no reduction in all-cause mortality in adults who were not deficient at baseline [vitamin_d#5], and the VITAL trial, with 25871 participants, found no significant effect on cardiovascular events or cancer [vitamin_d#4]. Routine supplementation in adequate-level populations shows no measurable outcome gain [vitamin_d#6]. High doses have been linked to hypercalcaemia and, in some trials, higher fall risk [vitamin_d#7]. Observational links to immune benefits [vitamin_d#2] are weaker than trial evidence. Overall, testing status matters, and routine daily use for all adults is not well supported.",
+      "error": null,
+      "usage": {
+        "calls": 16,
+        "cached_calls": 16,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "qid": "remote_work",
+      "type": "contested",
+      "question": "does remote work increase employee productivity",
+      "mode": "standard",
+      "hops": [
+        {
+          "hop": 1,
+          "query": "does remote work increase employee productivity",
+          "origin": "question",
+          "belief": "Remote work appears to modestly increase employee productivity in some settings, such as call centres and via lower turnover, but evidence is mixed and self-reports may overstate gains.",
+          "confidence": 55,
+          "baqd": null,
+          "pids": [
+            "remote_work#0",
+            "remote_work#2",
+            "remote_work#7"
+          ],
+          "true_skew": 0.3333333333333333,
+          "true_balance_loss": 0.3333333333333333,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 2,
+          "query": "meta-analysis remote work productivity objective output versus self-reported studies",
+          "origin": "model",
+          "belief": "Remote work appears to modestly increase productivity for some roles, such as individual deep-work and call centre jobs, but team-level effects are mixed or negative and the evidence is uncertain.",
+          "confidence": 45,
+          "baqd": -0.18324970959892292,
+          "pids": [
+            "remote_work#4",
+            "remote_work#1",
+            "remote_work#5"
+          ],
+          "true_skew": -0.3333333333333333,
+          "true_balance_loss": 0.3333333333333333,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 3,
+          "query": "randomized studies remote work productivity meta-analysis team output objective measures",
+          "origin": "model",
+          "belief": "Remote work's effect on productivity is mixed and role-dependent: it may modestly raise output for some knowledge or deep-work roles but can lower it for routine or team-based tasks.",
+          "confidence": 45,
+          "baqd": -0.07800580391203937,
+          "pids": [
+            "remote_work#3",
+            "remote_work#6"
+          ],
+          "true_skew": 0.0,
+          "true_balance_loss": 0.0,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 4,
+          "query": "meta-analysis remote work productivity effects by job type and team",
+          "origin": "model",
+          "belief": "Remote work's effect on productivity is mixed and role-dependent: it may modestly raise output for some knowledge or deep-work roles but can lower it for routine or team-based tasks.",
+          "confidence": 45,
+          "baqd": 0.006065257695031467,
+          "pids": [],
+          "true_skew": null,
+          "true_balance_loss": null,
+          "model_stance_agreement": null,
+          "cqi": false
+        }
+      ],
+      "cqi_count": 0,
+      "cqi_events": [],
+      "final_confidence": 40,
+      "one_line": "Remote work's productivity effect is mixed: gains in some call-centre and engineering settings, losses in data entry and team mentoring.",
+      "answer": "The evidence is mixed rather than uniform. A randomised call centre experiment found a 13 percent increase in completed calls among remote staff, attributed to a quieter environment and fewer breaks [remote_work#0]. Output per engineer measured by completed tickets held steady or improved after full transitions to distributed work in several large technology firms [remote_work#3]. Remote arrangements also reduce attrition, and lower turnover limits productivity losses from repeated hiring and retraining [remote_work#2]. Against this, a large field experiment found remote data entry workers were 18 percent less productive than office counterparts on identical tasks [remote_work#6]. Studies of software teams report slower onboarding and weaker mentoring for juniors, which can depress team output over time [remote_work#4]. Communication also becomes more siloed after a remote transition [remote_work#5]. Self-reported productivity gains often fail to appear in objective output measures [remote_work#7], so self-report evidence should be discounted.",
+      "error": null,
+      "usage": {
+        "calls": 13,
+        "cached_calls": 13,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "qid": "remote_work",
+      "type": "contested",
+      "question": "does remote work increase employee productivity",
+      "mode": "guarded",
+      "hops": [
+        {
+          "hop": 1,
+          "query": "does remote work increase employee productivity",
+          "origin": "question",
+          "belief": "Remote work appears to modestly increase employee productivity in some settings, such as call centres and via lower turnover, but evidence is mixed and self-reports may overstate gains.",
+          "confidence": 55,
+          "baqd": null,
+          "pids": [
+            "remote_work#0",
+            "remote_work#2",
+            "remote_work#7"
+          ],
+          "true_skew": 0.3333333333333333,
+          "true_balance_loss": 0.3333333333333333,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 2,
+          "query": "meta-analysis remote work productivity objective output versus self-reported studies",
+          "origin": "model",
+          "belief": "Remote work appears to modestly increase productivity for some roles, such as individual deep-work and call centre jobs, but team-level effects are mixed or negative and the evidence is uncertain.",
+          "confidence": 45,
+          "baqd": -0.18324970959892292,
+          "pids": [
+            "remote_work#4",
+            "remote_work#1",
+            "remote_work#5"
+          ],
+          "true_skew": -0.3333333333333333,
+          "true_balance_loss": 0.3333333333333333,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 3,
+          "query": "randomized studies remote work productivity meta-analysis team output objective measures",
+          "origin": "model",
+          "belief": "Remote work's effect on productivity is mixed and role-dependent: it may modestly raise output for some knowledge or deep-work roles but can lower it for routine or team-based tasks.",
+          "confidence": 45,
+          "baqd": -0.07800580391203937,
+          "pids": [
+            "remote_work#3",
+            "remote_work#6"
+          ],
+          "true_skew": 0.0,
+          "true_balance_loss": 0.0,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 4,
+          "query": "meta-analysis remote work productivity effects by job type and team",
+          "origin": "model",
+          "belief": "Remote work's effect on productivity is mixed and role-dependent: it may modestly raise output for some knowledge or deep-work roles but can lower it for routine or team-based tasks.",
+          "confidence": 45,
+          "baqd": 0.006065257695031467,
+          "pids": [],
+          "true_skew": null,
+          "true_balance_loss": null,
+          "model_stance_agreement": null,
+          "cqi": false
+        }
+      ],
+      "cqi_count": 0,
+      "cqi_events": [],
+      "final_confidence": 55,
+      "one_line": "Evidence is mixed: remote work boosts some roles, such as call centres and deep-work tasks, but hurts data entry and team mentoring.",
+      "answer": "The supporting passages suggest remote work can raise productivity. A randomised call centre experiment found a 13 percent increase in completed calls among remote staff, attributed to a quieter environment and fewer breaks [remote_work#0]. Eliminating commuting returns usable hours, and self-reported focus time rises substantially for deep-work roles [remote_work#1]. Lower attrition under flexible policies reduces the productivity loss from repeated hiring and retraining [remote_work#2]. Output per engineer held steady or improved after full transitions in several large technology firms [remote_work#3]. The contradicting passages weigh against a blanket conclusion. A large field experiment found remote data entry workers were 18 percent less productive than office counterparts on identical tasks [remote_work#6]. Studies of software teams report slower onboarding and weaker mentoring, which can depress team output over time [remote_work#4], and communication becomes more siloed after a remote transition [remote_work#5]. One passage also argues that self-reported gains often fail to appear in objective measures [remote_work#7]. Overall, the evidence is mixed and depends on task type, so confidence is moderate.",
+      "error": null,
+      "usage": {
+        "calls": 15,
+        "cached_calls": 15,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "qid": "min_wage",
+      "type": "contested",
+      "question": "does raising the minimum wage reduce employment",
+      "mode": "standard",
+      "hops": [
+        {
+          "hop": 1,
+          "query": "does raising the minimum wage reduce employment",
+          "origin": "question",
+          "belief": "The evidence is mixed: sharp or large increases may reduce teen and low-skill employment, while moderate increases often show little or no employment loss and may even raise it under monopsony.",
+          "confidence": 55,
+          "baqd": null,
+          "pids": [
+            "min_wage#3",
+            "min_wage#4",
+            "min_wage#5"
+          ],
+          "true_skew": -0.3333333333333333,
+          "true_balance_loss": 0.3333333333333333,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 2,
+          "query": "meta-analysis minimum wage employment effects teens recent empirical studies",
+          "origin": "model",
+          "belief": "Raising the minimum wage likely reduces employment for teens and low-skill workers when increases are large, while moderate increases show little or no employment loss.",
+          "confidence": 55,
+          "baqd": -0.13402866359043278,
+          "pids": [
+            "min_wage#6",
+            "min_wage#1",
+            "min_wage#2"
+          ],
+          "true_skew": 0.3333333333333333,
+          "true_balance_loss": 0.3333333333333333,
+          "model_stance_agreement": 0.6666666666666666,
+          "cqi": false
+        },
+        {
+          "hop": 3,
+          "query": "minimum wage employment effects teens meta-analysis large versus moderate increases",
+          "origin": "model",
+          "belief": "Raising the minimum wage likely reduces employment for teens and low-skill workers when increases are large, while moderate increases show little or no employment loss.",
+          "confidence": 55,
+          "baqd": 0.12479748693067844,
+          "pids": [
+            "min_wage#7",
+            "min_wage#0"
+          ],
+          "true_skew": 0.0,
+          "true_balance_loss": 0.0,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 4,
+          "query": "empirical minimum wage employment effects teens low-skill meta-analysis recent studies",
+          "origin": "model",
+          "belief": "Raising the minimum wage likely reduces employment for teens and low-skill workers when increases are large, while moderate increases show little or no employment loss.",
+          "confidence": 55,
+          "baqd": 0.015763205948369663,
+          "pids": [],
+          "true_skew": null,
+          "true_balance_loss": null,
+          "model_stance_agreement": null,
+          "cqi": false
+        }
+      ],
+      "cqi_count": 0,
+      "cqi_events": [],
+      "final_confidence": 55,
+      "one_line": "Evidence is mixed: competitive models predict job losses, but many studies find near-zero employment effects, with some negative local results.",
+      "answer": "The passages do not give a single verdict. Standard competitive models predict that a binding wage floor above equilibrium reduces labour demanded and so causes job losses [min_wage#0]. Some regional studies found falls in teen and low-skill employment after sharp increases [min_wage#3], and studies of large local rises report reduced scheduled hours for low-wage workers [min_wage#1]. Employers in low-margin sectors may also automate, cutting entry-level positions [min_wage#2]. Other evidence points the other way: the Card and Krueger fast food study found no employment decline in New Jersey [min_wage#4], monopsony models suggest a moderate floor can raise both wages and employment [min_wage#5], and a meta-analysis finds effects clustered near zero, with publication bias inflating negative findings [min_wage#6]. Some observed firms kept headcount broadly unchanged because lower turnover offset labour costs [min_wage#7]. On balance, the evidence suggests employment effects are small on average but can be negative in some settings, depending on the size of the increase and labour market structure.",
+      "error": null,
+      "usage": {
+        "calls": 15,
+        "cached_calls": 15,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "qid": "min_wage",
+      "type": "contested",
+      "question": "does raising the minimum wage reduce employment",
+      "mode": "guarded",
+      "hops": [
+        {
+          "hop": 1,
+          "query": "does raising the minimum wage reduce employment",
+          "origin": "question",
+          "belief": "The evidence is mixed: sharp or large increases may reduce teen and low-skill employment, while moderate increases often show little or no employment loss and may even raise it under monopsony.",
+          "confidence": 55,
+          "baqd": null,
+          "pids": [
+            "min_wage#3",
+            "min_wage#4",
+            "min_wage#5"
+          ],
+          "true_skew": -0.3333333333333333,
+          "true_balance_loss": 0.3333333333333333,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 2,
+          "query": "meta-analysis minimum wage employment effects teens recent empirical studies",
+          "origin": "model",
+          "belief": "Raising the minimum wage likely reduces employment for teens and low-skill workers when increases are large, while moderate increases show little or no employment loss.",
+          "confidence": 55,
+          "baqd": -0.13402866359043278,
+          "pids": [
+            "min_wage#6",
+            "min_wage#1",
+            "min_wage#2"
+          ],
+          "true_skew": 0.3333333333333333,
+          "true_balance_loss": 0.3333333333333333,
+          "model_stance_agreement": 0.6666666666666666,
+          "cqi": false
+        },
+        {
+          "hop": 3,
+          "query": "minimum wage employment effects teens meta-analysis large versus moderate increases",
+          "origin": "model",
+          "belief": "Raising the minimum wage likely reduces employment for teens and low-skill workers when increases are large, while moderate increases show little or no employment loss.",
+          "confidence": 55,
+          "baqd": 0.12479748693067844,
+          "pids": [
+            "min_wage#7",
+            "min_wage#0"
+          ],
+          "true_skew": 0.0,
+          "true_balance_loss": 0.0,
+          "model_stance_agreement": 1.0,
+          "cqi": true
+        },
+        {
+          "hop": 4,
+          "query": "minimum wage increase no employment effect teens evidence monopsony study",
+          "origin": "counter",
+          "belief": "Raising the minimum wage likely reduces employment for teens and low-skill workers when increases are large, while moderate increases show little or no employment loss.",
+          "confidence": 55,
+          "baqd": -0.09279270975703441,
+          "pids": [],
+          "true_skew": null,
+          "true_balance_loss": null,
+          "model_stance_agreement": null,
+          "cqi": false
+        }
+      ],
+      "cqi_count": 1,
+      "cqi_events": [
+        {
+          "hop": 3,
+          "trigger": {
+            "baqd": 0.12479748693067844,
+            "skew": 0.0
+          },
+          "original_query": "empirical minimum wage employment effects teens low-skill meta-analysis recent studies",
+          "counter_query": "minimum wage increase no employment effect teens evidence monopsony study",
+          "why": "This searches for research finding no or positive employment effects from minimum wage hikes, including large increases and monopsony models, which would challenge the belief that large increases reduce teen and low-skill employment."
+        }
+      ],
+      "final_confidence": 55,
+      "one_line": "Evidence is mixed: standard models predict job losses, but several studies, monopsony models, and a meta-analysis find near-zero or positive effects for moderate increases.",
+      "answer": "The passages give conflicting evidence. Supporting evidence says a binding wage floor above equilibrium reduces labour demanded, producing measurable job losses [min_wage#0]. Teen and low-skill employment fell in several regions after sharp increases relative to neighbours [min_wage#3], and low-margin employers may accelerate automation, cutting entry-level positions [min_wage#2]. Reduced scheduled hours for low-wage workers after large local increases also shrink earnings gains [min_wage#1]. The contradicting evidence is substantial. The Card and Krueger fast food study found no employment decline in New Jersey compared with neighbouring states [min_wage#4]. Monopsony models show a moderate floor can raise both wages and employment when employers have wage-setting power [min_wage#5]. A meta-analysis reports effects clustered near zero, with publication bias inflating negative findings [min_wage#6]. Lower turnover may leave headcount broadly unchanged [min_wage#7]. Overall, the evidence suggests that employment effects depend on the size of the increase and market structure, with small or moderate rises showing little or no job loss in several studies.",
+      "error": null,
+      "usage": {
+        "calls": 16,
+        "cached_calls": 16,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "qid": "fasting",
+      "type": "contested",
+      "question": "is intermittent fasting effective for weight loss",
+      "mode": "standard",
+      "hops": [
+        {
+          "hop": 1,
+          "query": "is intermittent fasting effective for weight loss",
+          "origin": "question",
+          "belief": "Intermittent fasting produces modest weight loss, mainly by reducing overall calorie intake, but it is not clearly superior to standard continuous calorie restriction.",
+          "confidence": 55,
+          "baqd": null,
+          "pids": [
+            "fasting#4",
+            "fasting#0",
+            "fasting#5"
+          ],
+          "true_skew": -0.3333333333333333,
+          "true_balance_loss": 0.3333333333333333,
+          "model_stance_agreement": 0.6666666666666666,
+          "cqi": false
+        },
+        {
+          "hop": 2,
+          "query": "intermittent fasting versus daily calorie restriction weight loss meta-analysis",
+          "origin": "model",
+          "belief": "Intermittent fasting produces modest weight loss similar to continuous calorie restriction, mainly through reduced calorie intake, with no clear superiority.",
+          "confidence": 62,
+          "baqd": 0.035111642071573385,
+          "pids": [
+            "fasting#1",
+            "fasting#6",
+            "fasting#2"
+          ],
+          "true_skew": 0.3333333333333333,
+          "true_balance_loss": 0.3333333333333333,
+          "model_stance_agreement": 0.6666666666666666,
+          "cqi": false
+        },
+        {
+          "hop": 3,
+          "query": "intermittent fasting versus daily calorie restriction weight loss randomized trials meta-analysis",
+          "origin": "model",
+          "belief": "Intermittent fasting is modestly effective for weight loss, roughly comparable to continuous calorie restriction, with the benefit mainly coming from reduced calorie intake rather than meal timing itself.",
+          "confidence": 70,
+          "baqd": -0.0017191832478806734,
+          "pids": [
+            "fasting#7",
+            "fasting#3"
+          ],
+          "true_skew": 0.0,
+          "true_balance_loss": 0.0,
+          "model_stance_agreement": 0.5,
+          "cqi": false
+        },
+        {
+          "hop": 4,
+          "query": "intermittent fasting versus daily calorie restriction weight loss randomized trial meta-analysis",
+          "origin": "model",
+          "belief": "Intermittent fasting is modestly effective for weight loss, roughly comparable to continuous calorie restriction, with the benefit mainly coming from reduced calorie intake rather than meal timing itself.",
+          "confidence": 70,
+          "baqd": -0.16826606286491969,
+          "pids": [],
+          "true_skew": null,
+          "true_balance_loss": null,
+          "model_stance_agreement": null,
+          "cqi": false
+        }
+      ],
+      "cqi_count": 0,
+      "cqi_events": [],
+      "final_confidence": 62,
+      "one_line": "Fasting produces weight loss mainly via calorie deficit; it shows no clear advantage over standard calorie restriction when intake is matched.",
+      "answer": "The passages suggest intermittent fasting can produce weight loss, but mainly through a calorie deficit rather than meal timing itself. Time restricted eating reduced total daily energy intake for many participants, producing weight loss over twelve week trials [fasting#0]. Some participants found an eating window easier to follow than continuous restriction, and reduced evening snacking helped account for part of the deficit [fasting#1][fasting#3]. However, head to head trials matching total calories found no weight loss advantage over continuous restriction across twelve months [fasting#4]. Benefits in short trials largely disappeared once total energy intake was controlled [fasting#7]. Dropout rates in fasting arms also exceeded those in standard restriction arms in several studies, undermining claims of superior long term adherence [fasting#6]. Overall, the evidence supports fasting as a route to weight loss only insofar as it creates an energy deficit.",
+      "error": null,
+      "usage": {
+        "calls": 12,
+        "cached_calls": 12,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "qid": "fasting",
+      "type": "contested",
+      "question": "is intermittent fasting effective for weight loss",
+      "mode": "guarded",
+      "hops": [
+        {
+          "hop": 1,
+          "query": "is intermittent fasting effective for weight loss",
+          "origin": "question",
+          "belief": "Intermittent fasting produces modest weight loss, mainly by reducing overall calorie intake, but it is not clearly superior to standard continuous calorie restriction.",
+          "confidence": 55,
+          "baqd": null,
+          "pids": [
+            "fasting#4",
+            "fasting#0",
+            "fasting#5"
+          ],
+          "true_skew": -0.3333333333333333,
+          "true_balance_loss": 0.3333333333333333,
+          "model_stance_agreement": 0.6666666666666666,
+          "cqi": false
+        },
+        {
+          "hop": 2,
+          "query": "intermittent fasting versus daily calorie restriction weight loss meta-analysis",
+          "origin": "model",
+          "belief": "Intermittent fasting produces modest weight loss similar to continuous calorie restriction, mainly through reduced calorie intake, with no clear superiority.",
+          "confidence": 62,
+          "baqd": 0.035111642071573385,
+          "pids": [
+            "fasting#1",
+            "fasting#6",
+            "fasting#2"
+          ],
+          "true_skew": 0.3333333333333333,
+          "true_balance_loss": 0.3333333333333333,
+          "model_stance_agreement": 0.6666666666666666,
+          "cqi": false
+        },
+        {
+          "hop": 3,
+          "query": "intermittent fasting versus daily calorie restriction weight loss randomized trials meta-analysis",
+          "origin": "model",
+          "belief": "Intermittent fasting is modestly effective for weight loss, roughly comparable to continuous calorie restriction, with the benefit mainly coming from reduced calorie intake rather than meal timing itself.",
+          "confidence": 70,
+          "baqd": -0.0017191832478806734,
+          "pids": [
+            "fasting#7",
+            "fasting#3"
+          ],
+          "true_skew": 0.0,
+          "true_balance_loss": 0.0,
+          "model_stance_agreement": 0.5,
+          "cqi": true
+        },
+        {
+          "hop": 4,
+          "query": "intermittent fasting superior weight loss independent of calorie intake trial",
+          "origin": "counter",
+          "belief": "Intermittent fasting is modestly effective for weight loss, roughly comparable to continuous calorie restriction, with the benefit mainly coming from reduced calorie intake rather than meal timing itself.",
+          "confidence": 70,
+          "baqd": -0.11566774553277345,
+          "pids": [],
+          "true_skew": null,
+          "true_balance_loss": null,
+          "model_stance_agreement": null,
+          "cqi": false
+        }
+      ],
+      "cqi_count": 1,
+      "cqi_events": [
+        {
+          "hop": 3,
+          "trigger": {
+            "baqd": -0.0017191832478806734,
+            "skew": 1.0
+          },
+          "original_query": "intermittent fasting versus daily calorie restriction weight loss randomized trial meta-analysis",
+          "counter_query": "intermittent fasting superior weight loss independent of calorie intake trial",
+          "why": "This looks for studies claiming meal timing itself produces weight loss beyond calorie restriction, which would contradict the belief that the benefit comes only from reduced intake."
+        }
+      ],
+      "final_confidence": 55,
+      "one_line": "Intermittent fasting may aid weight loss mainly via calorie deficit; calorie-matched trials show no clear advantage over standard restriction.",
+      "answer": "The passages suggest intermittent fasting can produce weight loss, but mainly through reduced total energy intake rather than meal timing itself. Supporting evidence reports that time restricted eating lowered daily energy intake and produced weight loss over twelve weeks [fasting#0]. An eating window rule was also reported to be easier to adhere to than continuous calorie restriction, and reduced evening snacking accounted for a meaningful share of the deficit [fasting#1][fasting#3]. However, the contradicting evidence is substantial: head-to-head trials matching total calories found no weight loss advantage over continuous restriction across twelve months [fasting#4]. Several studies also report higher dropout in fasting arms, undermining claims of better long-term adherence [fasting#6]. One short-trial account says benefits largely disappear once energy intake is controlled [fasting#7]. A trial also noted greater lean mass loss in the fasting arm [fasting#5]. Overall, fasting appears effective only as a route to a calorie deficit, with its unique advantage unproven.",
+      "error": null,
+      "usage": {
+        "calls": 14,
+        "cached_calls": 14,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "qid": "nuclear",
+      "type": "contested",
+      "question": "is nuclear power a good solution for reducing carbon emissions",
+      "mode": "standard",
+      "hops": [
+        {
+          "hop": 1,
+          "query": "is nuclear power a good solution for reducing carbon emissions",
+          "origin": "question",
+          "belief": "Nuclear power is a useful low-carbon source that helps decarbonise electricity, but its long build times limit how fast it can cut emissions, so it is a good but partial solution.",
+          "confidence": 62,
+          "baqd": null,
+          "pids": [
+            "nuclear#0",
+            "nuclear#1",
+            "nuclear#5"
+          ],
+          "true_skew": 0.3333333333333333,
+          "true_balance_loss": 0.3333333333333333,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 2,
+          "query": "nuclear versus renewables cost and speed of emissions reduction studies",
+          "origin": "model",
+          "belief": "Nuclear power is a useful low-carbon source that helps decarbonise electricity, but high costs, long build times and financial risk make it a partial rather than a clearly good solution.",
+          "confidence": 55,
+          "baqd": -0.32764367386228904,
+          "pids": [
+            "nuclear#4",
+            "nuclear#2",
+            "nuclear#7"
+          ],
+          "true_skew": -0.3333333333333333,
+          "true_balance_loss": 0.3333333333333333,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 3,
+          "query": "nuclear versus renewables cost per tonne carbon abated comparison studies",
+          "origin": "model",
+          "belief": "Nuclear power is a useful low-carbon source that helps decarbonise electricity, but high costs, long build times, waste liabilities and financial risk make it a partial rather than a clearly good solution.",
+          "confidence": 62,
+          "baqd": -0.25366544415620973,
+          "pids": [
+            "nuclear#3",
+            "nuclear#6"
+          ],
+          "true_skew": 0.0,
+          "true_balance_loss": 0.0,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 4,
+          "query": "nuclear power lifecycle emissions cost comparison with renewables 2024 study",
+          "origin": "model",
+          "belief": "Nuclear power is a useful low-carbon source that helps decarbonise electricity, but high costs, long build times, waste liabilities and financial risk make it a partial rather than a clearly good solution.",
+          "confidence": 62,
+          "baqd": -0.2273003083112294,
+          "pids": [],
+          "true_skew": null,
+          "true_balance_loss": null,
+          "model_stance_agreement": null,
+          "cqi": false
+        }
+      ],
+      "cqi_count": 0,
+      "cqi_events": [],
+      "final_confidence": 62,
+      "one_line": "Nuclear is low-carbon and firm, but slow, costly and unresolved on waste, so it is a partial solution.",
+      "answer": "The passages suggest nuclear power has real strengths for cutting carbon emissions but also serious drawbacks, so it is a partial rather than a clear-cut solution. On the positive side, lifecycle emissions per unit of nuclear electricity are comparable to wind and lower than solar [nuclear#0], and its firm output independent of weather could reduce the storage a decarbonised grid would need [nuclear#1]. Its land use is also far lower than wind or solar per unit of energy [nuclear#3], and countries with large nuclear fleets decarbonised their grids faster than those relying on renewables alone over the same period [nuclear#2]. On the negative side, construction takes a decade or more, so new plants may not cut emissions within near-term climate windows [nuclear#5]. Recent projects have run late and over budget, leaving nuclear costs uncompetitive with renewables in some cases [nuclear#4], and cost overruns have pushed some utilities into severe distress [nuclear#7]. Long-term waste disposal also remains unresolved, as no country has yet commissioned a large permanent high-level waste repository [nuclear#6].",
+      "error": null,
+      "usage": {
+        "calls": 15,
+        "cached_calls": 15,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "qid": "nuclear",
+      "type": "contested",
+      "question": "is nuclear power a good solution for reducing carbon emissions",
+      "mode": "guarded",
+      "hops": [
+        {
+          "hop": 1,
+          "query": "is nuclear power a good solution for reducing carbon emissions",
+          "origin": "question",
+          "belief": "Nuclear power is a useful low-carbon source that helps decarbonise electricity, but its long build times limit how fast it can cut emissions, so it is a good but partial solution.",
+          "confidence": 62,
+          "baqd": null,
+          "pids": [
+            "nuclear#0",
+            "nuclear#1",
+            "nuclear#5"
+          ],
+          "true_skew": 0.3333333333333333,
+          "true_balance_loss": 0.3333333333333333,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 2,
+          "query": "nuclear versus renewables cost and speed of emissions reduction studies",
+          "origin": "model",
+          "belief": "Nuclear power is a useful low-carbon source that helps decarbonise electricity, but high costs, long build times and financial risk make it a partial rather than a clearly good solution.",
+          "confidence": 55,
+          "baqd": -0.32764367386228904,
+          "pids": [
+            "nuclear#4",
+            "nuclear#2",
+            "nuclear#7"
+          ],
+          "true_skew": -0.3333333333333333,
+          "true_balance_loss": 0.3333333333333333,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 3,
+          "query": "nuclear versus renewables cost per tonne carbon abated comparison studies",
+          "origin": "model",
+          "belief": "Nuclear power is a useful low-carbon source that helps decarbonise electricity, but high costs, long build times, waste liabilities and financial risk make it a partial rather than a clearly good solution.",
+          "confidence": 62,
+          "baqd": -0.25366544415620973,
+          "pids": [
+            "nuclear#3",
+            "nuclear#6"
+          ],
+          "true_skew": 0.0,
+          "true_balance_loss": 0.0,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 4,
+          "query": "nuclear power lifecycle emissions cost comparison with renewables 2024 study",
+          "origin": "model",
+          "belief": "Nuclear power is a useful low-carbon source that helps decarbonise electricity, but high costs, long build times, waste liabilities and financial risk make it a partial rather than a clearly good solution.",
+          "confidence": 62,
+          "baqd": -0.2273003083112294,
+          "pids": [],
+          "true_skew": null,
+          "true_balance_loss": null,
+          "model_stance_agreement": null,
+          "cqi": false
+        }
+      ],
+      "cqi_count": 0,
+      "cqi_events": [],
+      "final_confidence": 60,
+      "one_line": "Nuclear is a low-carbon, firm power source with strong emissions credentials, but slow, costly construction and unresolved waste limit its near-term value.",
+      "answer": "Nuclear power has real strengths as a low-carbon option. Its lifecycle emissions per unit of electricity are comparable to wind and lower than solar, making it one of the lowest-carbon sources available [nuclear#0]. Its firm, weather-independent output could reduce the storage a decarbonised grid would otherwise need [nuclear#1], and countries with large existing nuclear fleets decarbonised their grids faster than comparable countries relying on renewables alone [nuclear#2]. Its land use per unit of energy is also far lower than wind or solar [nuclear#3]. The contradicting evidence is substantial, however. Construction timelines of a decade or more mean new reactors may not cut emissions within near-term climate windows [nuclear#5]. Recent European and North American projects ran years late and well over budget, making costs uncompetitive with renewables [nuclear#4], and cost overruns have pushed several utilities into severe distress [nuclear#7]. Waste disposal also remains unresolved, as no country has commissioned a permanent high-level waste repository at scale [nuclear#6]. On balance, nuclear is a strong low-carbon option for the long term, but its speed and cost are serious drawbacks, so confidence in it as a universal solution is moderate.",
+      "error": null,
+      "usage": {
+        "calls": 13,
+        "cached_calls": 13,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "qid": "smoking",
+      "type": "settled",
+      "question": "does smoking cause lung cancer",
+      "mode": "standard",
+      "hops": [
+        {
+          "hop": 1,
+          "query": "does smoking cause lung cancer",
+          "origin": "question",
+          "belief": "Yes, smoking is an established cause of lung cancer, supported by broad epidemiological and public health evidence.",
+          "confidence": 95,
+          "baqd": null,
+          "pids": [
+            "smoking#6",
+            "smoking#2",
+            "smoking#7"
+          ],
+          "true_skew": 1.0,
+          "true_balance_loss": 1.0,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 2,
+          "query": "smoking lung cancer causation evidence relative risk cohort studies review",
+          "origin": "model",
+          "belief": "Yes, smoking causes lung cancer; this is an established causal relationship supported by cohort, case-control, and cessation evidence.",
+          "confidence": 97,
+          "baqd": -0.1374635484835593,
+          "pids": [
+            "smoking#0",
+            "smoking#3",
+            "smoking#4"
+          ],
+          "true_skew": 1.0,
+          "true_balance_loss": 1.0,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 3,
+          "query": "smoking lung cancer causation meta-analysis relative risk quitting",
+          "origin": "model",
+          "belief": "Yes, smoking causes lung cancer; this is an established causal relationship supported by epidemiological, experimental, and mechanistic evidence.",
+          "confidence": 97,
+          "baqd": -0.05120943589692924,
+          "pids": [
+            "smoking#5",
+            "smoking#1"
+          ],
+          "true_skew": 1.0,
+          "true_balance_loss": 1.0,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 4,
+          "query": "smoking lung cancer risk relative risk cohort study meta-analysis",
+          "origin": "model",
+          "belief": "Yes, smoking causes lung cancer; this is an established causal relationship supported by epidemiological, experimental, and mechanistic evidence.",
+          "confidence": 97,
+          "baqd": -0.054452949083518026,
+          "pids": [],
+          "true_skew": null,
+          "true_balance_loss": null,
+          "model_stance_agreement": null,
+          "cqi": false
+        }
+      ],
+      "cqi_count": 0,
+      "cqi_events": [],
+      "final_confidence": 96,
+      "one_line": "Yes, smoking is an established cause of lung cancer, supported by dose response, cessation, mechanistic, and experimental evidence.",
+      "answer": "Yes, the passages support smoking as a cause of lung cancer. Major public health authorities classify tobacco smoking as an established cause of lung cancer based on the full weight of accumulated evidence [smoking#6]. Cohort studies show lung cancer incidence rising steeply with cumulative cigarette exposure in a clear dose response relationship [smoking#0]. Risk declines after cessation, with the size of the decline tracking years since quitting, which supports causation over confounding [smoking#3]. Case control studies across many countries and decades report consistent and large effect sizes [smoking#4]. Tobacco smoke contains identified carcinogens that form DNA adducts in bronchial epithelium, giving a biological mechanism for tumour initiation [smoking#1]. Animal experiments reproduce airway tumours [smoking#5], and population lung cancer rates fall after sustained declines in smoking [smoking#2]. Second hand smoke also raises risk in non smokers [smoking#7].",
+      "error": null,
+      "usage": {
+        "calls": 13,
+        "cached_calls": 13,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "qid": "smoking",
+      "type": "settled",
+      "question": "does smoking cause lung cancer",
+      "mode": "guarded",
+      "hops": [
+        {
+          "hop": 1,
+          "query": "does smoking cause lung cancer",
+          "origin": "question",
+          "belief": "Yes, smoking is an established cause of lung cancer, supported by broad epidemiological and public health evidence.",
+          "confidence": 95,
+          "baqd": null,
+          "pids": [
+            "smoking#6",
+            "smoking#2",
+            "smoking#7"
+          ],
+          "true_skew": 1.0,
+          "true_balance_loss": 1.0,
+          "model_stance_agreement": 1.0,
+          "cqi": true
+        },
+        {
+          "hop": 2,
+          "query": "smoking lung cancer no association confounding genetic explanation null findings criticism",
+          "origin": "counter",
+          "belief": "Yes, smoking causes lung cancer; this is an established causal relationship supported by epidemiological, experimental, and dose-response evidence.",
+          "confidence": 97,
+          "baqd": -0.21424088421264986,
+          "pids": [
+            "smoking#5",
+            "smoking#3",
+            "smoking#4"
+          ],
+          "true_skew": 1.0,
+          "true_balance_loss": 1.0,
+          "model_stance_agreement": 1.0,
+          "cqi": true
+        },
+        {
+          "hop": 3,
+          "query": "smoking lung cancer non-smokers adenocarcinoma confounding air pollution no association",
+          "origin": "counter",
+          "belief": "Yes, smoking causes lung cancer; the causal link is well established through epidemiological, dose-response, and mechanistic evidence.",
+          "confidence": 97,
+          "baqd": -0.058175634976116525,
+          "pids": [
+            "smoking#0",
+            "smoking#1"
+          ],
+          "true_skew": 1.0,
+          "true_balance_loss": 1.0,
+          "model_stance_agreement": 1.0,
+          "cqi": true
+        },
+        {
+          "hop": 4,
+          "query": "smoking lung cancer no association confounding reanalysis null findings critique",
+          "origin": "counter",
+          "belief": "Yes, smoking causes lung cancer; the causal link is well established through epidemiological, dose-response, and mechanistic evidence.",
+          "confidence": 97,
+          "baqd": -0.051875523227910766,
+          "pids": [],
+          "true_skew": null,
+          "true_balance_loss": null,
+          "model_stance_agreement": null,
+          "cqi": false
+        }
+      ],
+      "cqi_count": 3,
+      "cqi_events": [
+        {
+          "hop": 1,
+          "trigger": {
+            "baqd": null,
+            "skew": 1.0
+          },
+          "original_query": "smoking lung cancer causation evidence relative risk cohort studies review",
+          "counter_query": "smoking lung cancer no association confounding genetic explanation null findings criticism",
+          "why": "This query looks for studies or critiques arguing that the smoking-lung cancer link is confounded, weak, or absent, which would test whether the causal belief holds up against opposing evidence."
+        },
+        {
+          "hop": 2,
+          "trigger": {
+            "baqd": -0.21424088421264986,
+            "skew": 1.0
+          },
+          "original_query": "smoking lung cancer causal evidence review cohort studies mechanism carcinogens",
+          "counter_query": "smoking lung cancer non-smokers adenocarcinoma confounding air pollution no association",
+          "why": "This looks for studies where lung cancer occurs without smoking or where confounders like air pollution, occupational exposure, or genetics explain the association, which would complicate the causal claim."
+        },
+        {
+          "hop": 3,
+          "trigger": {
+            "baqd": -0.058175634976116525,
+            "skew": 1.0
+          },
+          "original_query": "Surgeon General report smoking causal lung cancer risk estimates cohort meta-analysis",
+          "counter_query": "smoking lung cancer no association confounding reanalysis null findings critique",
+          "why": "This looks for studies or reanalyses challenging the causal interpretation, such as confounding, reverse causation, or null results, which would complicate the belief that the link is firmly established."
+        }
+      ],
+      "final_confidence": 93,
+      "one_line": "Yes: epidemiological, dose-response, cessation, biological and animal evidence all support smoking as an established cause of lung cancer.",
+      "answer": "Yes, the passages support a causal link between smoking and lung cancer. Major public health authorities classify tobacco smoking as an established cause of lung cancer based on the full weight of accumulated evidence [smoking#6]. Cohort studies following millions of participants show lung cancer incidence rising steeply with cumulative cigarette exposure in a clear dose response relationship [smoking#0]. Case control studies across many countries and decades report consistent and large effect sizes [smoking#4]. Risk declines progressively after cessation, with the size of the decline tracking years since quitting, which supports causation over confounding [smoking#3]. Lung cancer rates fall in populations after sustained declines in smoking prevalence [smoking#2]. Tobacco smoke contains carcinogens that form DNA adducts in bronchial epithelium, providing a biological mechanism [smoking#1]. Animal experiments reproduce airway tumours [smoking#5]. Second-hand smoke also raises risk in non-smokers [smoking#7]. No contradicting passages were provided, so this conclusion rests on uniformly supportive evidence.",
+      "error": null,
+      "usage": {
+        "calls": 16,
+        "cached_calls": 16,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "qid": "vaccines_measles",
+      "type": "settled",
+      "question": "do measles vaccines prevent measles infection",
+      "mode": "standard",
+      "hops": [
+        {
+          "hop": 1,
+          "query": "do measles vaccines prevent measles infection",
+          "origin": "question",
+          "belief": "Yes, measles vaccines substantially prevent measles infection; two doses give roughly 97 percent protection in controlled studies.",
+          "confidence": 90,
+          "baqd": null,
+          "pids": [
+            "vaccines_measles#0",
+            "vaccines_measles#1",
+            "vaccines_measles#5"
+          ],
+          "true_skew": 1.0,
+          "true_balance_loss": 1.0,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 2,
+          "query": "measles vaccine failure rate breakthrough infection after one or two doses",
+          "origin": "model",
+          "belief": "Yes, measles vaccines substantially prevent measles infection, with two doses providing high protection that persists for decades.",
+          "confidence": 93,
+          "baqd": -0.29334811032581065,
+          "pids": [
+            "vaccines_measles#6",
+            "vaccines_measles#4",
+            "vaccines_measles#3"
+          ],
+          "true_skew": 1.0,
+          "true_balance_loss": 1.0,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 3,
+          "query": "measles vaccine two-dose effectiveness against infection outbreak studies meta-analysis",
+          "origin": "model",
+          "belief": "Yes, measles vaccines substantially prevent measles infection, with two doses providing high protection that persists for decades.",
+          "confidence": 90,
+          "baqd": -0.4096253170785981,
+          "pids": [
+            "vaccines_measles#2",
+            "vaccines_measles#7"
+          ],
+          "true_skew": 1.0,
+          "true_balance_loss": 1.0,
+          "model_stance_agreement": 1.0,
+          "cqi": false
+        },
+        {
+          "hop": 4,
+          "query": "measles vaccine effectiveness two doses long-term immunity studies",
+          "origin": "model",
+          "belief": "Yes, measles vaccines substantially prevent measles infection, with two doses providing high protection that persists for decades.",
+          "confidence": 90,
+          "baqd": -0.40329124327719046,
+          "pids": [],
+          "true_skew": null,
+          "true_balance_loss": null,
+          "model_stance_agreement": null,
+          "cqi": false
+        }
+      ],
+      "cqi_count": 0,
+      "cqi_events": [],
+      "final_confidence": 92,
+      "one_line": "Yes: two doses give about 97% protection against infection, with population-level declines in incidence supporting this.",
+      "answer": "Yes, the passages indicate that measles vaccines prevent measles infection. Two doses of a measles-containing vaccine give about 97 percent protection against infection in controlled effectiveness studies [vaccines_measles#0]. Serological studies show neutralising antibodies persisting for decades after the standard two-dose schedule [vaccines_measles#3]. At the population level, national incidence fell by more than 99 percent after routine childhood vaccination was introduced [vaccines_measles#1], and outbreaks concentrate among unvaccinated people [vaccines_measles#2]. Resurgence follows declines in coverage [vaccines_measles#7]. Post-exposure vaccination within 72 hours reduces the probability of clinical disease [vaccines_measles#6]. The passages support protection, though they do not address vaccine failure rates in detail beyond the roughly 97 percent figure.",
+      "error": null,
+      "usage": {
+        "calls": 12,
+        "cached_calls": 12,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      }
+    },
+    {
+      "qid": "vaccines_measles",
+      "type": "settled",
+      "question": "do measles vaccines prevent measles infection",
+      "mode": "guarded",
+      "hops": [
+        {
+          "hop": 1,
+          "query": "do measles vaccines prevent measles infection",
+          "origin": "question",
+          "belief": "Yes, measles vaccines substantially prevent measles infection; two doses give roughly 97 percent protection in controlled studies.",
+          "confidence": 90,
+          "baqd": null,
+          "pids": [
+            "vaccines_measles#0",
+            "vaccines_measles#1",
+            "vaccines_measles#5"
+          ],
+          "true_skew": 1.0,
+          "true_balance_loss": 1.0,
+          "model_stance_agreement": 1.0,
+          "cqi": true
+        },
+        {
+          "hop": 2,
+          "query": "measles vaccine effectiveness waning immunity outbreaks among fully vaccinated two-dose recipients",
+          "origin": "counter",
+          "belief": "Yes, measles vaccines prevent measles infection, with two doses providing very high protection that is durable over decades.",
+          "confidence": 90,
+          "baqd": -0.44030934790644405,
+          "pids": [
+            "vaccines_measles#3",
+            "vaccines_measles#2",
+            "vaccines_measles#6"
+          ],
+          "true_skew": 1.0,
+          "true_balance_loss": 1.0,
+          "model_stance_agreement": 1.0,
+          "cqi": true
+        },
+        {
+          "hop": 3,
+          "query": "measles vaccine failure two doses breakthrough infections waning immunity outbreaks",
+          "origin": "counter",
+          "belief": "Yes, measles vaccines prevent measles infection, with two doses giving very high, durable protection.",
+          "confidence": 90,
+          "baqd": -0.41330124688474473,
+          "pids": [
+            "vaccines_measles#4",
+            "vaccines_measles#7"
+          ],
+          "true_skew": 1.0,
+          "true_balance_loss": 1.0,
+          "model_stance_agreement": 1.0,
+          "cqi": true
+        },
+        {
+          "hop": 4,
+          "query": "measles vaccine failure waning immunity breakthrough infections two doses outbreaks studies",
+          "origin": "counter",
+          "belief": "Yes, measles vaccines prevent measles infection, with two doses giving very high, durable protection.",
+          "confidence": 90,
+          "baqd": -0.4628136070997011,
+          "pids": [],
+          "true_skew": null,
+          "true_balance_loss": null,
+          "model_stance_agreement": null,
+          "cqi": false
+        }
+      ],
+      "cqi_count": 3,
+      "cqi_events": [
+        {
+          "hop": 1,
+          "trigger": {
+            "baqd": null,
+            "skew": 1.0
+          },
+          "original_query": "measles vaccine failure rate breakthrough infection after one or two doses",
+          "counter_query": "measles vaccine effectiveness waning immunity outbreaks among fully vaccinated two-dose recipients",
+          "why": "This searches for evidence that two doses fail more often or wane over time in real-world outbreaks, which would limit the controlled-study 97 percent figure in the current belief."
+        },
+        {
+          "hop": 2,
+          "trigger": {
+            "baqd": -0.44030934790644405,
+            "skew": 1.0
+          },
+          "original_query": "measles vaccine two dose effectiveness field studies outbreak vaccine failure rates",
+          "counter_query": "measles vaccine failure two doses breakthrough infections waning immunity outbreaks",
+          "why": "This looks for field evidence of vaccine failure, breakthrough infections, and waning immunity after two doses, which would limit the belief that protection is very high and durable."
+        },
+        {
+          "hop": 3,
+          "trigger": {
+            "baqd": -0.41330124688474473,
+            "skew": 1.0
+          },
+          "original_query": "measles two-dose vaccine effectiveness duration of immunity studies",
+          "counter_query": "measles vaccine failure waning immunity breakthrough infections two doses outbreaks studies",
+          "why": "This looks for evidence that two doses do not reliably prevent infection, such as vaccine failure, waning immunity over time, or breakthrough outbreaks among vaccinated people."
+        }
+      ],
+      "final_confidence": 92,
+      "one_line": "Yes: two doses give about 97% protection against infection, supported by population-level declines and outbreak data; no contradicting evidence was retrieved.",
+      "answer": "Yes, the retrieved passages support the view that measles vaccines prevent measles infection. Two doses of measles-containing vaccine conferred about 97 percent protection against infection in controlled effectiveness studies [vaccines_measles#0]. Serological studies show neutralising antibody titres persisting for decades after the standard two-dose schedule [vaccines_measles#3]. At the population level, national incidence fell by more than 99 percent after routine childhood vaccination was introduced [vaccines_measles#1], and regions with sustained high coverage interrupted endemic transmission [vaccines_measles#4]. Outbreaks concentrate among unvaccinated individuals [vaccines_measles#2], and resurgence follows declines in coverage [vaccines_measles#7]. Post-exposure vaccination within 72 hours reduces the probability of clinical disease [vaccines_measles#6]. No passages in the retrieved set contradict these findings, so the evidence is one-sided, though the passages are summary-level and do not describe study methods in detail.",
+      "error": null,
+      "usage": {
+        "calls": 16,
+        "cached_calls": 16,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost_usd": 0.0
+      }
+    }
+  ],
+  "usage": {
+    "calls": 232,
+    "cached_calls": 232,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cost_usd": 0.0
+  },
+  "seconds": 6.7,
+  "note": "Skew and balance loss use ground-truth stances from the JSON, computed as sum(stances)/number of passages, so neutral passages count in the denominator. The Research tab's balance uses (supporting - contradicting)/(supporting + contradicting) on model stances. Mean BAQD leaves out hops that read no passages. Queries and beliefs are written by the live model.",
+  "design_limitation": "Design limitation: on all 6 contested questions both modes read the same set of passages (k=3 per hop, 4 hops, no re-reading, a corpus of 8), so the corpus is exhausted and guarded cannot change which evidence is seen. The balance loss comparison is not informative here. In 16 of 16 runs the final hop retrieved nothing, so a counter-query fired at the hop before it has no effect on what is read.",
+  "reanalysed": true
+}

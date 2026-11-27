@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"remote_work#0\",\"relation\":\"supports\"}],\"note\":\"Passage 0 states a randomised call centre experiment measured a 13 percent increase in completed calls among remote staff. Other passages do not address this specific experiment.\"}", "tag": "audit_verify", "input_tokens": 1096, "output_tokens": 96}

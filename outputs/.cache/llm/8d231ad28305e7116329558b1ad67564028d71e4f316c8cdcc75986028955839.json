@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"8482569026cb#0\",\"relation\":\"supports\"}],\"note\":\"The Total Cost of Mobility framework expresses costs per kilometre and treats annual usage as the decisive variable, matching the claim.\"}", "tag": "audit_verify", "input_tokens": 1865, "output_tokens": 90}

@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"nuclear#5\",\"relation\":\"supports\"}],\"note\":\"Passage 5 states construction timelines of a decade or more mean new nuclear cannot cut emissions within near-term climate windows, matching the claim. Other passages do not address timing.\"}", "tag": "audit_verify", "input_tokens": 1119, "output_tokens": 102}

@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"44e3472ec92d#7\",\"relation\":\"supports\"}],\"note\":\"Harvard Nutrition Source passage states a randomized controlled trial of 100 obese individuals over one year found intermittent fasting not more effective than daily calorie restriction.\"}", "tag": "audit_verify", "input_tokens": 1754, "output_tokens": 105}

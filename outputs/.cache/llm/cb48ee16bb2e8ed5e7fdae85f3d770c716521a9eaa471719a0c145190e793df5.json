@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"min_wage#7\",\"relation\":\"supports\"}],\"note\":\"Passage 7 states reduced turnover and retention after wage increases left headcount broadly unchanged in observed firms, directly matching the claim.\"}", "tag": "audit_verify", "input_tokens": 1104, "output_tokens": 90}

@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"5f591435f1d8#0\",\"relation\":\"supports\"}],\"note\":\"The meta-regression of 16 UK studies explicitly finds no overall practically significant adverse employment effect; other passages concern US or general research and are not directly relevant.\"}", "tag": "audit_verify", "input_tokens": 1520, "output_tokens": 101}

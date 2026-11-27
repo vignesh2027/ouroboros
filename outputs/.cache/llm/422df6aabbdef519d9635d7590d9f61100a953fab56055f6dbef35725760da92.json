@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"ev_cost#4\",\"relation\":\"supports\"}],\"note\":\"Passage ev_cost#4 states EV insurance premiums run 20 to 40 percent higher than the claim describes. No passage contradicts it.\"}", "tag": "audit_verify", "input_tokens": 1133, "output_tokens": 93}

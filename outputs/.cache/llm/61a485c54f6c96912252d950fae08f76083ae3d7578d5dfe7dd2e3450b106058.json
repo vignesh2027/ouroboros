@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"d658dc380b73#5\",\"relation\":\"supports\"}],\"note\":\"Passage states median productivity impact is -4% for collaborative tasks across its 50+ studies; the claim's 'meta-analysis summary' wording is a close paraphrase of that source.\"}", "tag": "audit_verify", "input_tokens": 1811, "output_tokens": 107}

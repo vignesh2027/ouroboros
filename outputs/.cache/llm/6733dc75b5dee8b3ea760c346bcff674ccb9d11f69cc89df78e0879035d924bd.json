@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"e5e8a6defcd9#1\",\"relation\":\"supports\"}],\"note\":\"Passage e5e8a6defcd9#1 reports a significant body weight reduction favoring IF (SMD -0.21, p=0.028) and no significant BMI difference (p=0.848), matching the claim.\"}", "tag": "audit_verify", "input_tokens": 1983, "output_tokens": 119}

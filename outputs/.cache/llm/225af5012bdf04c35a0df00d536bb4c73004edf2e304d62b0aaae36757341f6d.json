@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"vitamin_d#1\",\"relation\":\"supports\"}],\"note\":\"Passage 1 states a meta-analysis reports a modest benefit in older adults with vitamin D plus calcium over sustained daily use, matching the claim. Other passages do not contradict it.\"}", "tag": "audit_verify", "input_tokens": 1155, "output_tokens": 108}

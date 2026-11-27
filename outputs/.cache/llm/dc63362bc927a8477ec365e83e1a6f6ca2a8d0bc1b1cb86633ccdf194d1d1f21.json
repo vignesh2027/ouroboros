@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"5bab82194822#6\",\"relation\":\"supports\"}],\"note\":\"One passage states the BMW M 1000 RR is homologated to about 314 km/h. Another gives a 306 km/h top speed, which is a different figure but does not directly contradict the homologation claim.\"}", "tag": "audit_verify", "input_tokens": 1709, "output_tokens": 110}

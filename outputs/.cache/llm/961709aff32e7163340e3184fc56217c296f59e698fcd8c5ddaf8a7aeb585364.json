@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"smoking#5\",\"relation\":\"supports\"}],\"note\":\"Passage smoking#5 states animal exposure experiments reproduce airway tumours, directly backing the claim. Other passages do not address animal experiments.\"}", "tag": "audit_verify", "input_tokens": 1095, "output_tokens": 92}

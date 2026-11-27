@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"ev_cost#0\",\"relation\":\"supports\"}],\"note\":\"Passage ev_cost#0 states a fleet study finds EVs reduce fuel spending by 60 percent per kilometre. Other passages cover insurance, charging and depreciation, not this figure.\"}", "tag": "audit_verify", "input_tokens": 1135, "output_tokens": 110}

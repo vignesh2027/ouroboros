@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"remote_work#1\",\"relation\":\"supports\"}],\"note\":\"Passage 1 states that eliminating commuting returns usable hours to the working day, directly backing the claim. Passage 6 concerns productivity, not commuting time, so it is omitted.\"}", "tag": "audit_verify", "input_tokens": 889, "output_tokens": 104}

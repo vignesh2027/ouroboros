@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"fasting#3\",\"relation\":\"supports\"}],\"note\":\"Passage 3 states participants on an eating window reported reduced evening snacking, which accounts for a meaningful share of the energy deficit. Other passages do not address snacking.\"}", "tag": "audit_verify", "input_tokens": 1094, "output_tokens": 98}

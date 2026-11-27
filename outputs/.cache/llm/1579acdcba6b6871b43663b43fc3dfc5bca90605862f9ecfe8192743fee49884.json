@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"ad8b67a3ca55#10\",\"relation\":\"supports\"}],\"note\":\"Passage states a 1992 US study found a 10% minimum wage increase led to a 1\u20132% decline in teen employment, matching the claim.\"}", "tag": "audit_verify", "input_tokens": 1686, "output_tokens": 95}

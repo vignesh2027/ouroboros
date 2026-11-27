@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"d658dc380b73#6\",\"relation\":\"supports\"}],\"note\":\"Passage d658dc380b73#6 says Bloom's Ctrip study found the 13% gain was driven by fewer sick days and a quieter work environment, matching the claim.\"}", "tag": "audit_verify", "input_tokens": 1676, "output_tokens": 104}

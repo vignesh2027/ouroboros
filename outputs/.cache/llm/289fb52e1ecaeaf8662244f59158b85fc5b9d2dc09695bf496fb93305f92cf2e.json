@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"51a9f6b43450#1\",\"relation\":\"supports\"},{\"pid\":\"51a9f6b43450#0\",\"relation\":\"supports\"}],\"note\":\"The narrative review of creatine monohydrate in older adults reports beneficial effects on cognition and memory, matching the claim.\"}", "tag": "audit_verify", "input_tokens": 2006, "output_tokens": 113}

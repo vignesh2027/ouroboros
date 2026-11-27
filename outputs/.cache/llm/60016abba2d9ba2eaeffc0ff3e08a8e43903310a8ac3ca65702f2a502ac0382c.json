@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"0a130e4f39dc#0\",\"relation\":\"supports\"}],\"note\":\"The meta-analysis passage says the small positive WFH productivity effect was driven by gains in hourly productivity and increased hours worked, matching the claim.\"}", "tag": "audit_verify", "input_tokens": 1742, "output_tokens": 98}

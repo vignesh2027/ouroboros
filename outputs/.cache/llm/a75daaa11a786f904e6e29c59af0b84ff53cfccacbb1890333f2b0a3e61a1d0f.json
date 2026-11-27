@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"ev_cost#3\",\"relation\":\"supports\"}],\"note\":\"Passage 3 states purchase incentives and road tax exemptions lower the effective price in most markets. Other passages cover running costs and depreciation, not the claim.\"}", "tag": "audit_verify", "input_tokens": 1127, "output_tokens": 97}

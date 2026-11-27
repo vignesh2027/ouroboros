@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"ev_cost#6\",\"relation\":\"supports\"}],\"note\":\"Passage 6 directly states that for low annual mileage drivers the higher purchase price is never recovered, so the petrol car remains cheaper. Other passages do not contradict this.\"}", "tag": "audit_verify", "input_tokens": 1144, "output_tokens": 102}

@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"345f16942ce0#2\",\"relation\":\"supports\"},{\"pid\":\"76edb6246d21#5\",\"relation\":\"supports\"}],\"note\":\"The randomised study reports creatine might have a small beneficial effect and states larger studies are needed to confirm it.\"}", "tag": "audit_verify", "input_tokens": 1918, "output_tokens": 106}

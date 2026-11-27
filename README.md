@@ -6,6 +6,7 @@
 [![dataset](https://img.shields.io/badge/dataset-SPIRAL--Bench-yellow)](https://huggingface.co/datasets/vigneshwar234/spiral-bench)
 [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
+Live platform: **https://ouroboros.140-245-16-129.sslip.io**
 Project page: **https://vignesh2027.github.io/ouroboros**
 Dataset: **https://huggingface.co/datasets/vigneshwar234/spiral-bench**
 
@@ -113,6 +114,64 @@ python3 make_chart.py        # rebuilds the figure
 
 Continuous integration runs all three on every push, so the numbers above are checked rather than
 asserted.
+
+## Phase II: the live platform
+
+Phase I tested the mechanism with queries typed in advance. Phase II closes the loop. The repo now
+contains a local web app where you type any research question and a live model (a hosted language model)
+runs the search itself. At every hop it reads what was retrieved, writes down what it currently
+believes, then writes its own next query. We measure BAQD on that real belief and query, plus the
+balance of supporting and contradicting evidence and the diversity of sources. In guarded mode the
+agent injects a counter-query when drift or skew crosses a threshold, and the final answer has to
+weigh both sides. The answer is then checked claim by claim against the retrieved evidence. The
+Evidence Support Score is the share of claims backed by the evidence we retrieved. It is not the
+probability that the answer is true, and a claim no source covers is shown as not verified, never
+as false.
+
+The platform has two parts. The landing page at `/` explains the system: the problem, a diagram of how
+every part connects, how our retrieval works and the honest results so far. The app at `/app` is where you
+ask. Every answer comes with numbered sources and citations, an Evidence map that shows which sources back
+or contradict each claim (claims resting on a single source are marked), a Belief journey that shows how the
+agent's belief and searches moved round by round and where the balance guard stepped in, and a "How this
+answer was made" panel with the real numbers for that answer. There is also a Check an AI answer page for
+answers from ChatGPT, Claude or Gemini, a Compare view, a Benchmark view and a How it works view. It uses
+plain HTML, CSS and JavaScript with no build step, and follows the computer's light or dark setting.
+app/DEMO.md is the presenter script.
+
+The public copy runs with `PUBLIC_DEMO=1`: it never serves source files, lists only the featured example
+questions, and limits how many new questions each visitor can ask per hour and the whole site per day.
+
+To run the app:
+
+```bash
+bash run_platform.sh
+# landing page: http://localhost:8000   app: http://localhost:8000/app
+```
+
+Model access is configured on the server (see the private setup notes), and `OFFLINE=1` replays cached
+work only. Every model call is cached on disk under `outputs/.cache`.
+
+To rerun the live experiment on the SPIRAL-Bench v0 closed corpus (8 questions, both modes, 4 hops,
+top 3 of 8 passages per hop):
+
+```bash
+.venv/bin/python experiments/run_live_spiral.py            # live, cached
+.venv/bin/python experiments/run_live_spiral.py --offline  # replay from the cache
+```
+
+It writes `outputs/live_spiral.json`. Skew and balance loss use the ground-truth stances stored in
+the benchmark, while queries and beliefs are written by the model.
+
+**Headline result, stated plainly:** guarded mode did not beat standard mode on this benchmark. On
+the six contested questions the mean ground-truth balance loss at the last hop that retrieved
+anything was 0.167 for both modes, and mean BAQD over hops 2 to 4 was -0.100 for standard and
+-0.107 for guarded, a difference too small to call. The live model's BAQD sat near or below zero,
+so on this TF-IDF measure it did not visibly bend its queries toward its own belief. The guard did
+fire (0.83 counter-queries per contested guarded run, 3 per settled run) without distorting the
+settled controls. The main limit is the test itself: with only 8 passages and 3 read per hop, the
+pool runs dry at hop 3, so there is little room for query wording to change what is read. With 16
+runs and one sample each, this is a small, honest null result and not evidence either way for
+larger, real corpora.
 
 ## Honest limitations
 

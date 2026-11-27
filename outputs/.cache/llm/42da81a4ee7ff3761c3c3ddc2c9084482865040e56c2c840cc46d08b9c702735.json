@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"8ef6c9360938#3\",\"relation\":\"supports\"}],\"note\":\"World Nuclear Association passage states nuclear emits about the same CO2-eq per unit electricity as wind and one-third of solar, matching the claim directly.\"}", "tag": "audit_verify", "input_tokens": 1887, "output_tokens": 99}

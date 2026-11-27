@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"vaccines_measles#1\",\"relation\":\"supports\"}],\"note\":\"Passage 1 states measles incidence fell by more than 99 percent after routine childhood vaccination programmes were introduced, matching the claim directly.\"}", "tag": "audit_verify", "input_tokens": 1116, "output_tokens": 95}

@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"ev_cost#2\",\"relation\":\"supports\"}],\"note\":\"Passage 2 states that savings grow as annual distance driven increases. Other passages cover depreciation, incentives and insurance, not distance-based savings.\"}", "tag": "audit_verify", "input_tokens": 1114, "output_tokens": 94}

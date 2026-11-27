@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"nuclear#4\",\"relation\":\"supports\"}],\"note\":\"Passage nuclear#4 says recent European and North American reactor projects ran late and over budget, making levelised cost uncompetitive with renewables. This directly backs the claim.\"}", "tag": "audit_verify", "input_tokens": 1099, "output_tokens": 100}

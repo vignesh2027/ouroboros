@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"vaccines_measles#3\",\"relation\":\"supports\"}],\"note\":\"Passage 3 states serological studies confirm durable neutralising antibody titres persisting for decades after the standard two dose schedule, directly matching the claim.\"}", "tag": "audit_verify", "input_tokens": 1119, "output_tokens": 97}

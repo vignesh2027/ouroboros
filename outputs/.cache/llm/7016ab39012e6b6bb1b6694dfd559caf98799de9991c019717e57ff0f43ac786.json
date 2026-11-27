@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"11111599e4c1#0\",\"relation\":\"supports\"}],\"note\":\"The evindiaexpo.in passage states most electric scooters cost around \u20b915 to \u20b950 for a full charge, matching the claim's range directly.\"}", "tag": "audit_verify", "input_tokens": 1936, "output_tokens": 96}

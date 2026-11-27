@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"804053d3931c#0\",\"relation\":\"supports\"}],\"note\":\"Passage 804053d3931c#0 describes a thesis studying benefits and obstacles of coupling wind farms with nuclear power plants, matching the claim.\"}", "tag": "audit_verify", "input_tokens": 1579, "output_tokens": 98}

@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"fasting#6\",\"relation\":\"supports\"}],\"note\":\"Passage fasting#6 states dropout rates in fasting arms exceed standard restriction arms in several studies. Other passages address adherence, weight and insulin outcomes, not dropout rates.\"}", "tag": "audit_verify", "input_tokens": 1090, "output_tokens": 106}

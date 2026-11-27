@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"44e3472ec92d#6\",\"relation\":\"supports\"}],\"note\":\"Passage 44e3472ec92d#6 reports dropout rates with no significant difference between fasting and continuous restriction groups. Other passages do not address dropout.\"}", "tag": "audit_verify", "input_tokens": 1714, "output_tokens": 101}

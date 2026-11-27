@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"4e9b20313655#3\",\"relation\":\"supports\"}],\"note\":\"Passage 4e9b20313655#3 states opponents cite health risks, accidents, and waste storage problems, directly backing the claim.\"}", "tag": "audit_verify", "input_tokens": 1629, "output_tokens": 91}

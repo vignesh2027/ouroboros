@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"vitamin_d#4\",\"relation\":\"supports\"}],\"note\":\"Passage 4 states VITAL enrolled 25871 participants and found no significant effect on cardiovascular events or cancer incidence, matching the claim fully.\"}", "tag": "audit_verify", "input_tokens": 1154, "output_tokens": 98}

@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"min_wage#5\",\"relation\":\"supports\"}],\"note\":\"Passage 5 directly states that under monopsony a moderate wage floor can raise both wages and employment simultaneously, matching the claim.\"}", "tag": "audit_verify", "input_tokens": 1102, "output_tokens": 88}

@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"5bab82194822#5\",\"relation\":\"supports\"},{\"pid\":\"0d96b47079bb#0\",\"relation\":\"supports\"}],\"note\":\"Two passages state the Panigale V4 R can exceed or pass 330 km/h with its race exhaust. Other passages give no top-speed figure.\"}", "tag": "audit_verify", "input_tokens": 1719, "output_tokens": 119}

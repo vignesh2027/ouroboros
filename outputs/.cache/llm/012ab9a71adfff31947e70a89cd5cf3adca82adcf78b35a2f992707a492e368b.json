@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"nuclear#4\",\"relation\":\"supports\"}],\"note\":\"Passage nuclear#4 directly states recent reactor projects in Europe and North America ran years late and multiples over budget. Other passages do not address this claim.\"}", "tag": "audit_verify", "input_tokens": 1105, "output_tokens": 94}

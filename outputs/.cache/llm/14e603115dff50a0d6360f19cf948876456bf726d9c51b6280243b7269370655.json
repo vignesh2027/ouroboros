@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"abefd158b9c2#0\",\"relation\":\"supports\"},{\"pid\":\"abefd158b9c2#2\",\"relation\":\"supports\"}],\"note\":\"Two-wave panel of 3,123 office workers; full-remote five days a week linked to reduced productivity and increased presenteeism.\"}", "tag": "audit_verify", "input_tokens": 2147, "output_tokens": 116}

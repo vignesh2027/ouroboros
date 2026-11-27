@@ -1,0 +1,1 @@
+{"text": "{\"verdict\":\"supported\",\"evidence\":[{\"pid\":\"8279771cfc3d#4\",\"relation\":\"supports\"},{\"pid\":\"8279771cfc3d#7\",\"relation\":\"supports\"}],\"note\":\"Endocrine Society guideline suggests empiric vitamin D for adults over 75, citing potential to lower mortality risk.\"}", "tag": "audit_verify", "input_tokens": 1936, "output_tokens": 114}
