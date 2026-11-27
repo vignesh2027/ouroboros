@@ -149,3 +149,9 @@
 /* Evidence map on the Check an AI answer report */
 .pg-map-lead { color: var(--muted); font-size: var(--text-base); max-width: var(--measure); margin: 0 0 var(--s-4); }
 .pg-report .emap { margin-bottom: var(--s-2); }
+
+@media (max-width: 480px) {
+  .page .tbl-wrap td:first-child { min-width: 120px; }
+  .page .tbl-wrap th, .page .tbl-wrap td { padding-right: 8px; }
+  .page .tbl-wrap th.num, .page .tbl-wrap td.num { padding-left: 8px; }
+}

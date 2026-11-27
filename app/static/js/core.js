@@ -161,7 +161,7 @@
   O.isNum = function (v) { return typeof v === 'number' && isFinite(v); };
   O.fmt = function (v, d) { return O.isNum(v) ? v.toFixed(d == null ? 2 : d) : 'n/a'; };
   O.pct = function (v, d) { return O.isNum(v) ? v.toFixed(d == null ? 0 : d) + '%' : 'n/a'; };
-  O.plural = function (n, w) { return n + ' ' + w + (n === 1 ? '' : 's'); };
+  O.plural = function (n, w, pl) { return n + ' ' + (n === 1 ? w : (pl || w + 's')); };
   O.safeUrl = function (u) { return /^https?:\/\//i.test(u || '') ? u : null; };
   O.sleep = function (ms) { return new Promise(function (r) { setTimeout(r, ms); }); };
   O.trunc = function (s, n) { s = String(s || ''); return s.length > n ? s.slice(0, n - 1).replace(/\s+\S*$/, '') + '…' : s; };
@@ -270,7 +270,8 @@
     return fetch(path, opts).then(function (r) {
       if (!r.ok) {
         return r.json().catch(function () { return {}; }).then(function (j) {
-          throw new Error(j.error || j.detail || j.message || ('The server answered with status ' + r.status + '.'));
+          var d = typeof j.detail === 'string' ? j.detail : '';
+          throw new Error(j.error || d || j.message || 'Something went wrong on the server. Please try again.');
         });
       }
       return r.json();
@@ -313,7 +314,7 @@
     if (O.MOCK) return mockStream(url, onEvent);
     var ctrl = new AbortController();
     var done = fetch(url, { signal: ctrl.signal, headers: { Accept: 'text/event-stream' } }).then(function (r) {
-      if (!r.ok) throw new Error('The server answered with status ' + r.status + '.');
+      if (!r.ok) throw new Error('Something went wrong on the server. Please try again.');
       var reader = r.body.getReader(), dec = new TextDecoder(), buf = '';
       function pump() {
         return reader.read().then(function (res) {
@@ -594,7 +595,7 @@
     return h('section', { class: 'card evidence-card', 'aria-label': opts.title || 'Evidence' },
       h('div', { class: 'card-title' }, opts.title || 'Evidence'),
       h('div', { class: 'ec-head' }, O.scoreRing(score, { grade: report.grade }),
-        h('div', { class: 'ec-head-text' }, O.gradePill(report.grade), h('div', { class: 'ec-claims' }, nSup + ' of ' + plural(claims.length, 'claim') + ' backed'),
+        h('div', { class: 'ec-head-text' }, O.gradePill(report.grade), h('div', { class: 'ec-claims' }, nSup + ' of ' + plural(claims.length, 'claim') + (nMix ? ' fully backed' : ' backed')),
           nMix ? h('div', { class: 'hint' }, plural(nMix, 'mixed claim') + ' count as half') : null)),
       h('p', { class: 'ec-lead' }, 'Evidence Support Score: the share of the answer’s claims backed by the evidence we found.'),
       stats, gapEl,
@@ -819,9 +820,9 @@
     s.append(O.svg('line', { x1: m.l, x2: W - m.r, y1: H - m.b, y2: H - m.b, class: 'axis' }));
     for (var x = xmin; x <= xmax; x++) {
       s.append(O.svg('line', { x1: sx(x), x2: sx(x), y1: H - m.b, y2: H - m.b + 4, class: 'axis' }));
-      s.append(O.svg('text', { x: sx(x), y: H - m.b + 18, 'text-anchor': 'middle' }, 'Hop ' + x));
+      s.append(O.svg('text', { x: sx(x), y: H - m.b + 18, 'text-anchor': 'middle' }, 'Round ' + x));
     }
-    s.append(O.svg('text', { x: m.l + (W - m.l - m.r) / 2, y: H - 6, 'text-anchor': 'middle', class: 'ttl' }, o.xTitle || 'Hop'));
+    s.append(O.svg('text', { x: m.l + (W - m.l - m.r) / 2, y: H - 6, 'text-anchor': 'middle', class: 'ttl' }, o.xTitle || 'Round'));
     var cy0 = m.t + (H - m.t - m.b) / 2;
     s.append(O.svg('text', { x: 14, y: cy0, 'text-anchor': 'middle', class: 'ttl', transform: 'rotate(-90 14 ' + cy0 + ')' }, o.yTitle || ''));
     if (isNum(o.threshold)) {
@@ -906,7 +907,7 @@
     function set(state, text) { box.setAttribute('data-state', state); box.setAttribute('title', text); txt.textContent = text; }
     return O.api('/api/health').then(function (r) {
       if (r.mock) set('offline', 'Sample data');
-      else if (r.offline) set('offline', 'Offline mode');
+      else if (r.offline) set('offline', 'Saved answers');
       else set('ready', 'Connected');
     }).catch(function () { set('down', 'Not connected'); });
   };

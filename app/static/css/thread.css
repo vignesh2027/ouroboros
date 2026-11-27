@@ -376,3 +376,5 @@ a.passage-title:hover { color: var(--primary); text-decoration: underline; text-
   .xr-mark { flex-wrap: wrap; row-gap: 0; }
   .xr-us .xr-cc { color: var(--primary); font-weight: 600; }
 }
+
+.turn-q, .turn-rewrite, .xr-q, .sb-run-q { overflow-wrap: anywhere; min-width: 0; }

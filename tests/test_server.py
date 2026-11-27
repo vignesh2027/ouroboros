@@ -249,7 +249,7 @@ class TestStreams(unittest.TestCase):
             self.assertEqual(list(Path(d).glob("*.json")), [])
 
     def test_friendly_error(self):
-        self.assertIn("without internet", server.friendly_error("LLMOffline: offline and not cached (tag='read')"))
+        self.assertIn("not available right now", server.friendly_error("LLMOffline: offline and not cached (tag='read')"))
         self.assertEqual(server.friendly_error("plain"), "plain")
 
     def test_busy_when_slots_full(self):

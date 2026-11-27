@@ -47,7 +47,7 @@ All six example questions and the two Compare questions (fasting and remote work
 - The button "Get an unguarded answer to compare" shows a plain answer with no search. Skip it offline.
 
 **4. Compare, about 1 minute**
-- Click the fasting or remote work question, then Compare both agents.
+- Click the fasting or remote work question, then click Compare.
 - Say: "Same question. Left is a standard agent, right is the balanced one. Look at the table underneath."
 - Read the numbers on screen. Do not claim a win if the table does not show one.
 

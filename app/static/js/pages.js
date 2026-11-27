@@ -18,7 +18,7 @@
   function section(title, lead, kids) {
     return h('section', { class: 'pg-section' }, h('h2', null, title), lead ? h('p', { class: 'pg-lead' }, lead) : null, kids);
   }
-  function plural(n, w) { return O.plural(n, w); }
+  function plural(n, w, pl) { return O.plural(n, w, pl); }
 
   /* =====================================================================
      CHECK AN AI ANSWER
@@ -118,7 +118,7 @@
       h('p', { class: 'pg-lane-sub' }, mode === 'guarded' ? 'Swaps in an opposing search when the evidence leans one way.' : 'Follows its own next search every round, with no check.'),
       status, evHost, answerHost, fold);
     function setStatus(t, busy) { O.clear(status); if (t) { if (busy) status.append(O.spinner()); status.append(h('span', null, t)); } }
-    function sumText() { foldSum.textContent = 'Searches, ' + plural(nRounds, 'round') + (nCqi ? ', ' + plural(nCqi, 'counter-search') : ''); }
+    function sumText() { foldSum.textContent = 'Searches, ' + plural(nRounds, 'round') + (nCqi ? ', ' + plural(nCqi, 'counter-search', 'counter-searches') : ''); }
     function reset() { cites = new O.Citations(); rounds = {}; nRounds = 0; nCqi = 0; report = null; finished = false; O.clear(list); O.clear(answerHost); O.clear(evHost); fold.hidden = true; fold.open = false; setStatus('Waiting to start', true); }
     function round(n) { return rounds[n]; }
     function handle(ev) {
